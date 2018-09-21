@@ -8,6 +8,9 @@
 
 #import "ZHGMarketViewController.h"
 
+/**
+ 市场类控制器
+ */
 @interface ZHGMarketViewController ()
 
 @end
