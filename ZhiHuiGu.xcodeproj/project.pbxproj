@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2504FD1B215A0FFD00691990 /* ZHGButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 2504FD1A215A0FFD00691990 /* ZHGButton.m */; };
+		2532D511215B4C8100AFA29D /* ZHGFuncHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2532D510215B4C8100AFA29D /* ZHGFuncHeaderView.m */; };
+		2532D518215B552900AFA29D /* HomeFunctionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2532D515215B552900AFA29D /* HomeFunctionCell.xib */; };
+		2532D519215B552900AFA29D /* HomeFunctionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2532D516215B552900AFA29D /* HomeFunctionCell.m */; };
+		2532D51C215B558800AFA29D /* CategoryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2532D51B215B558800AFA29D /* CategoryModel.m */; };
+		256E3424215B770B00BD681F /* ZHGHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 256E3423215B770B00BD681F /* ZHGHeaderView.m */; };
+		256E342A215B8D9500BD681F /* ZHGSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 256E3429215B8D9500BD681F /* ZHGSearchBar.m */; };
 		258714CE215290CE0063ED99 /* ZhiHuiGuTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 258714CD215290CE0063ED99 /* ZhiHuiGuTests.m */; };
 		258714D9215290CF0063ED99 /* ZhiHuiGuUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 258714D8215290CF0063ED99 /* ZhiHuiGuUITests.m */; };
 		25B728402154B06A00D22E94 /* LCUserDefaultsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 25B7283C2154B06A00D22E94 /* LCUserDefaultsModel.m */; };
@@ -80,6 +87,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2504FD19215A0FFD00691990 /* ZHGButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZHGButton.h; sourceTree = "<group>"; };
+		2504FD1A215A0FFD00691990 /* ZHGButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZHGButton.m; sourceTree = "<group>"; };
+		2532D50F215B4C8100AFA29D /* ZHGFuncHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZHGFuncHeaderView.h; sourceTree = "<group>"; };
+		2532D510215B4C8100AFA29D /* ZHGFuncHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZHGFuncHeaderView.m; sourceTree = "<group>"; };
+		2532D515215B552900AFA29D /* HomeFunctionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeFunctionCell.xib; sourceTree = "<group>"; };
+		2532D516215B552900AFA29D /* HomeFunctionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeFunctionCell.m; sourceTree = "<group>"; };
+		2532D517215B552900AFA29D /* HomeFunctionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeFunctionCell.h; sourceTree = "<group>"; };
+		2532D51A215B558800AFA29D /* CategoryModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CategoryModel.h; sourceTree = "<group>"; };
+		2532D51B215B558800AFA29D /* CategoryModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CategoryModel.m; sourceTree = "<group>"; };
+		256E3422215B770B00BD681F /* ZHGHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZHGHeaderView.h; sourceTree = "<group>"; };
+		256E3423215B770B00BD681F /* ZHGHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZHGHeaderView.m; sourceTree = "<group>"; };
+		256E3428215B8D9500BD681F /* ZHGSearchBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZHGSearchBar.h; sourceTree = "<group>"; };
+		256E3429215B8D9500BD681F /* ZHGSearchBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZHGSearchBar.m; sourceTree = "<group>"; };
 		258714B1215290CE0063ED99 /* ZhiHuiGu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZhiHuiGu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		258714C2215290CE0063ED99 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		258714C9215290CE0063ED99 /* ZhiHuiGuTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZhiHuiGuTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -215,6 +235,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		256E3427215B8D6300BD681F /* CZHSearchBar */ = {
+			isa = PBXGroup;
+			children = (
+				256E3428215B8D9500BD681F /* ZHGSearchBar.h */,
+				256E3429215B8D9500BD681F /* ZHGSearchBar.m */,
+			);
+			path = CZHSearchBar;
+			sourceTree = "<group>";
+		};
 		258714A8215290CE0063ED99 = {
 			isa = PBXGroup;
 			children = (
@@ -379,6 +408,7 @@
 		25B7B90A2153DAB30053A2A5 /* homePage-首页 */ = {
 			isa = PBXGroup;
 			children = (
+				256E3427215B8D6300BD681F /* CZHSearchBar */,
 				25B7B9862153E4720053A2A5 /* CZHView */,
 				25B7B98D2153E4720053A2A5 /* CZHCategory */,
 				25B7B9902153E4720053A2A5 /* CZHScrollView */,
@@ -519,8 +549,19 @@
 				25B7B98B2153E4720053A2A5 /* CZHButton.m */,
 				25B7B9872153E4720053A2A5 /* CZHHeaderView.h */,
 				25B7B98C2153E4720053A2A5 /* CZHHeaderView.m */,
+				2532D51A215B558800AFA29D /* CategoryModel.h */,
+				2532D51B215B558800AFA29D /* CategoryModel.m */,
+				2532D517215B552900AFA29D /* HomeFunctionCell.h */,
+				2532D516215B552900AFA29D /* HomeFunctionCell.m */,
+				2532D515215B552900AFA29D /* HomeFunctionCell.xib */,
+				2532D50F215B4C8100AFA29D /* ZHGFuncHeaderView.h */,
+				2532D510215B4C8100AFA29D /* ZHGFuncHeaderView.m */,
 				25B7B9892153E4720053A2A5 /* CZHNavigationView.h */,
 				25B7B98A2153E4720053A2A5 /* CZHNavigationView.m */,
+				2504FD19215A0FFD00691990 /* ZHGButton.h */,
+				2504FD1A215A0FFD00691990 /* ZHGButton.m */,
+				256E3422215B770B00BD681F /* ZHGHeaderView.h */,
+				256E3423215B770B00BD681F /* ZHGHeaderView.m */,
 			);
 			path = CZHView;
 			sourceTree = "<group>";
@@ -649,6 +690,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2532D518215B552900AFA29D /* HomeFunctionCell.xib in Resources */,
 				25B7B9292153DAB30053A2A5 /* Assets.xcassets in Resources */,
 				25B7B91F2153DAB30053A2A5 /* MBProgressHUD.bundle in Resources */,
 				25B7B95F2153DFC70053A2A5 /* MJRefresh.bundle in Resources */,
@@ -677,6 +719,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				25B7B9262153DAB30053A2A5 /* ZHGShoppingMallViewController.m in Sources */,
+				256E3424215B770B00BD681F /* ZHGHeaderView.m in Sources */,
 				25B7B9232153DAB30053A2A5 /* CZHNavigationController.m in Sources */,
 				25B7B9662153DFC70053A2A5 /* MJRefreshAutoStateFooter.m in Sources */,
 				25B7B96B2153DFC70053A2A5 /* MJRefreshGifHeader.m in Sources */,
@@ -693,6 +736,7 @@
 				25B7B9622153DFC70053A2A5 /* UIView+MJExtension.m in Sources */,
 				25B7B99A2153E4720053A2A5 /* CZHTableView.m in Sources */,
 				25B7B9192153DAB30053A2A5 /* UIBarButtonItem+CZHExtension.m in Sources */,
+				2532D51C215B558800AFA29D /* CategoryModel.m in Sources */,
 				25B7B96E2153DFC70053A2A5 /* MJRefreshBackFooter.m in Sources */,
 				25B7B9172153DAB30053A2A5 /* NSDate+CZHExtension.m in Sources */,
 				25B7B96D2153DFC70053A2A5 /* MJRefreshHeader.m in Sources */,
@@ -719,11 +763,15 @@
 				25B7B9162153DAB30053A2A5 /* NSString+MD5Addition.m in Sources */,
 				25B728412154B06A00D22E94 /* NSUserDefaultsModel.m in Sources */,
 				25B7B9242153DAB30053A2A5 /* CZHTabBar.m in Sources */,
+				2532D511215B4C8100AFA29D /* ZHGFuncHeaderView.m in Sources */,
 				25B7B9962153E4720053A2A5 /* CZHButton.m in Sources */,
+				2504FD1B215A0FFD00691990 /* ZHGButton.m in Sources */,
 				25B7B9272153DAB30053A2A5 /* ZHGMeViewController.m in Sources */,
+				2532D519215B552900AFA29D /* HomeFunctionCell.m in Sources */,
 				25B7B91A2153DAB30053A2A5 /* UIViewController+Extend.m in Sources */,
 				25B7B9672153DFC70053A2A5 /* MJRefreshAutoGifFooter.m in Sources */,
 				25B7B91D2153DAB30053A2A5 /* MBProgressHUD.m in Sources */,
+				256E342A215B8D9500BD681F /* ZHGSearchBar.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -879,6 +927,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
+				GCC_PREFIX_HEADER = "/Users/cyj/Desktop/项目备份/ZhiHuiGu/ZhiHuiGu/Classes/publicFile-公共文件/PrefixHeader.pch";
 				INFOPLIST_FILE = ZhiHuiGu/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -898,6 +947,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
+				GCC_PREFIX_HEADER = "/Users/cyj/Desktop/项目备份/ZhiHuiGu/ZhiHuiGu/Classes/publicFile-公共文件/PrefixHeader.pch";
 				INFOPLIST_FILE = ZhiHuiGu/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (

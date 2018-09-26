@@ -17,15 +17,13 @@
 @property (nonatomic, strong) CZHScrollView *scrollView;
 /// navigation视图
 @property (nonatomic, strong) CZHNavigationView *navigationView;
-
-
 @end
 
 @implementation ZHGHomeViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"";
+    self.title = @"  ";
     self.view.backgroundColor = [UIColor whiteColor];
     [self setupNavBar];
 }
@@ -80,7 +78,6 @@
         _navigationView = [[CZHNavigationView alloc] initWithFrame:CGRectMake(0, 0, 120.f, 40.f)];
         _navigationView.hidden = YES;
     }
-    
     return _navigationView;
 }
 

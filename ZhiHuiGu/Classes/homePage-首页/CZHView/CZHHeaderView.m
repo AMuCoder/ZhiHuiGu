@@ -16,9 +16,9 @@
         self.backgroundColor = [UIColor colorWithRed:52.0 / 255.0 green:104.0 / 255.0 blue:206.0 / 255.0 alpha:1];
         
         CGFloat x = 0;
-        CGFloat screenWidth = [UIScreen mainScreen].bounds.size.width;
+        CGFloat screenWidth = Main_Screen_Width;
         for (int index = 0; index < 4; index++) {
-            CZHButton *button = [[CZHButton alloc] initWithFrame:CGRectMake(x, 0, screenWidth / 4, frame.size.height) type:index];
+            CZHButton *button = [[CZHButton alloc] initWithFrame:CGRectMake(x, 10, self.frame.size.width / 4, self.frame.size.width / 4) type:index];
             
             [self addSubview:button];
             

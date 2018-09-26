@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@class CZHButton;
 @interface CZHHeaderView : UIView
 
 /// 偏移量

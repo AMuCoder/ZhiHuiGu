@@ -14,6 +14,11 @@
 -(instancetype)initWithFrame:(CGRect)frame type:(CZHButtonType)type {
     if (self = [super initWithFrame:frame]) {
 
+        /**
+         偏移值
+
+         @param 上/右/下/左
+         */
         self.imageEdgeInsets = UIEdgeInsetsMake(10, 31, 45, 31);
         self.titleEdgeInsets = UIEdgeInsetsMake(55, -100, 0, 0);
         switch (type) {

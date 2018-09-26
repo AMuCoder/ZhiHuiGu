@@ -44,4 +44,8 @@
 #define Myuser                  [NSUserDefaults standardUserDefaults]
 #define Main_Screen_Height      [[UIScreen mainScreen] bounds].size.height
 #define Main_Screen_Width       [[UIScreen mainScreen] bounds].size.width
+
+#define KFAppHeight 230
+
+
 #endif

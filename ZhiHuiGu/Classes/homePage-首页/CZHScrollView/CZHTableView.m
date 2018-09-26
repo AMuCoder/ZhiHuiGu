@@ -9,7 +9,7 @@
 #import "CZHTableView.h"
 #import "UIView+Frame.h"
 
-#define kRowHeight 80.f
+#define kRowHeight 50.f
 
 @interface CZHTableView() <UITableViewDataSource, UITableViewDelegate>
 
