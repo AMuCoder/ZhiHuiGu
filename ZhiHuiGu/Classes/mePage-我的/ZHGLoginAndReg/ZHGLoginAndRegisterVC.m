@@ -12,6 +12,7 @@
 #import "TPKeyboardAvoidingScrollView.h"
 #import "ZHGRegisterVC.h"
 #import "ZHGForgotPwVC.h"
+#import "ZHGSMSOrPsdBtn.h"
 
 @interface ZHGLoginAndRegisterVC ()
 {
@@ -27,9 +28,9 @@
 //按钮
 @property (nonatomic, strong) ZHGLoginBtn *loginBtn;
 
-@property (nonatomic, strong) UIButton *button;
+@property (nonatomic, strong) ZHGSMSOrPsdBtn *button;
 
-@property (nonatomic, strong) UIButton *regisBtn;
+@property (nonatomic, strong) ZHGSMSOrPsdBtn *regisBtn;
 @end
 
 @implementation ZHGLoginAndRegisterVC
@@ -65,11 +66,12 @@
     ZHGLoginTextField *passwtextField = [[ZHGLoginTextField alloc] initWithFrame:CGRectMake(20, CGRectGetMaxY(self.self.nametextField.frame) + 30, Main_Screen_Width - 40, 44) placeHolder:@"请输入密码" boolLeftView:YES rightTitle:@"忘记密码"];
     [self.contentScrollView addSubview:passwtextField];
     _passwtextField = passwtextField;
-    __block ZHGLoginAndRegisterVC *blockSelf = self;
+    
+    __weak __typeof(self)weakSelf = self;
     [self.passwtextField.rBtn setClickBlock:^(UIButton *button) {
         CZHLog(@"--------回调成功！");
         ZHGForgotPwVC * vc = [[ZHGForgotPwVC alloc] init];
-        [blockSelf.navigationController pushViewController:vc animated:true];
+        [weakSelf.navigationController pushViewController:vc animated:true];
         // 需要执行的操作
     } andEvent:UIControlEventTouchUpInside];
     
@@ -81,13 +83,17 @@
     _loginBtn = loginBtn;
     [self.loginBtn addTarget:self action:@selector(loginBtnClick) forControlEvents:UIControlEventTouchUpInside];
     
-    self.button = [self addBtnWithFrame:CGRectMake(20, CGRectGetMaxY(self.loginBtn.frame) + 10, Main_Screen_Width/2 - 40, 40) title:@"短信验证码登录" action:@selector(buttonBackGroundNormal:)];
-    self.button.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
-    [self.contentScrollView addSubview:_button];
+    ZHGSMSOrPsdBtn *button = [[ZHGSMSOrPsdBtn alloc] initWithFrame:CGRectMake(20, CGRectGetMaxY(self.loginBtn.frame) + 10, Main_Screen_Width/2 - 40, 40) title:@"短信验证码登录"];
+    [button addTarget:self action:@selector(buttonBackGroundNormal:) forControlEvents:UIControlEventTouchUpInside];
+    button.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
+    [self.contentScrollView addSubview:button];
+    _button = button;
     
-    self.regisBtn = [self addBtnWithFrame:CGRectMake(Main_Screen_Width/2, CGRectGetMaxY(self.self.loginBtn.frame) + 10, Main_Screen_Width/2 - 20, 40) title:@"新用户注册" action:@selector(regBtnClick:)];
-    self.regisBtn.contentHorizontalAlignment = UIControlContentHorizontalAlignmentRight;
-    [self.contentScrollView addSubview:_regisBtn];
+    ZHGSMSOrPsdBtn *regisBtn = [[ZHGSMSOrPsdBtn alloc] initWithFrame:CGRectMake(Main_Screen_Width/2, CGRectGetMaxY(self.self.loginBtn.frame) + 10, Main_Screen_Width/2 - 20, 40) title:@"新用户注册"];
+    [regisBtn addTarget:self action:@selector(regBtnClick:) forControlEvents:UIControlEventTouchUpInside];
+    regisBtn.contentHorizontalAlignment = UIControlContentHorizontalAlignmentRight;
+    [self.contentScrollView addSubview:regisBtn];
+    _regisBtn = regisBtn;
     
 }
 - (void)loginBtnClick{
@@ -96,9 +102,7 @@
 //  button普通状态下的背景色
 - (void)buttonBackGroundNormal:(UIButton *)sender
 {
-    
-    __block ZHGLoginAndRegisterVC *blockSelf = self;
-    
+    __weak __typeof(self)weakSelf = self;
     if ([sender.titleLabel.text isEqualToString:@"短信验证码登录"]) {
         [self.passwtextField removeFromSuperview];
         [_button setTitle:@"账户密码登录" forState:UIControlStateNormal];
@@ -107,7 +111,7 @@
         [self.contentScrollView addSubview:self.passwtextField];
         [self.passwtextField.rBtn setClickBlock:^(UIButton *button) {
             // 需要执行的操作
-            [blockSelf sendCode];
+            [weakSelf sendCode];
         } andEvent:UIControlEventTouchUpInside];
     }
     else{
@@ -119,7 +123,7 @@
         [self.passwtextField.rBtn setClickBlock:^(UIButton *button) {
             CZHLog(@"--------回调成功！");
             ZHGForgotPwVC * vc = [[ZHGForgotPwVC alloc] init];
-            [blockSelf.navigationController pushViewController:vc animated:true];
+            [weakSelf.navigationController pushViewController:vc animated:true];
             // 需要执行的操作
         } andEvent:UIControlEventTouchUpInside];
     }

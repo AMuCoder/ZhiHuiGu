@@ -9,6 +9,7 @@
 #import "ZHGMeViewController.h"
 #import "ZHGMeUserView.h"
 #import "ZHGLoginAndRegisterVC.h"
+#import "ZHGLoginedVC.h"
 
 @interface ZHGMeViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -45,6 +46,8 @@
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     if (indexPath.row == 0) {
         cell.textLabel.text = @"用户注册与登录";
+    }else if (indexPath.row == 1){
+        cell.textLabel.text = @"登录";
     }else{
         cell.textLabel.text = [NSString stringWithFormat:@"这是第%ld行", indexPath.row];
     }
@@ -56,7 +59,7 @@
     return 20;
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 44;
+    return 100.f;
 }
 //-(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
 //
@@ -65,6 +68,10 @@
     if (indexPath.row == 0) {
         ZHGLoginAndRegisterVC *vc = [[ZHGLoginAndRegisterVC alloc] init];
         [self.navigationController pushViewController:vc animated:YES];
+    }else if (indexPath.row == 1){
+        ZHGLoginedVC *vc = [[ZHGLoginedVC alloc] init];
+        [self.navigationController pushViewController:vc animated:YES];
+    }else if (indexPath.row == 1){
     }
 }
 

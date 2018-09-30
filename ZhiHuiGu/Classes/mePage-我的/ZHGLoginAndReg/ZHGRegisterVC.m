@@ -107,10 +107,10 @@
     _backLoginBtn = backLoginBtn;
     [self.backLoginBtn addTarget:self action:@selector(backLoginBtnClick) forControlEvents:UIControlEventTouchUpInside];
     
-    __block ZHGRegisterVC *blockSelf = self;
+    __weak __typeof(self)weakSelf = self;
     [self.yzNum.rBtn setClickBlock:^(UIButton *button) {
             // 需要执行的操作
-        [blockSelf sendCode];
+        [weakSelf sendCode];
     } andEvent:UIControlEventTouchUpInside];
 }
 -(void)didClickCheckBox{

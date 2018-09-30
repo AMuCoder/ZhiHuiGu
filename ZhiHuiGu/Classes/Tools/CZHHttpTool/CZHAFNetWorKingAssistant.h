@@ -2,7 +2,13 @@
 //  创建者: CYJ 时间: 2018/9/30.
 //  Copyright © 2018年 CYJ. All rights reserved.
 //  AFNetworking单例封装
-
+/*
+ NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
+ parameters[@"loginName"] = _name.text;
+ parameters[@"loginPwd"]  = _pwd.text;
+ parameters[@"equipmentInfo"] = identifierforvendor;
+ parameters[@"iostoken"] = tokenValue;
+ */
 #import <Foundation/Foundation.h>
 
 #define ShareDefaultNetAssistant [CZHAFNetWorKingAssistant shareAssistant]

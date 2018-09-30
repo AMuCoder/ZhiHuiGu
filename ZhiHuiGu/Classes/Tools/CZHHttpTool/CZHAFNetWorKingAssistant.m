@@ -1,6 +1,7 @@
 //  文件名: CZHAFNetWorKingAssistant.m
 //  创建者: CYJ 时间: 2018/9/30.
-//  Copyright © 2018年 CYJ. All rights reserved.//
+//  Copyright © 2018年 CYJ. All rights reserved.
+//  AFNetworking单例封装
 
 #import "CZHAFNetWorKingAssistant.h"
 #import "AFNetworking.h"
@@ -28,8 +29,7 @@
 }
 
 -(instancetype)init{
-    self = [super init];
-    if (!self) {
+    if (self = [super init]) {
         _manager = [AFHTTPSessionManager manager];
         _manager.requestSerializer = [AFJSONRequestSerializer serializer];
         [_manager.requestSerializer setTimeoutInterval:10];

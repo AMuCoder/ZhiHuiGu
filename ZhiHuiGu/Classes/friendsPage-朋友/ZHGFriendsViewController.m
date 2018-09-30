@@ -9,9 +9,10 @@
 #import "ZHGFriendsViewController.h"
 #import "ZHGClickBtnView.h"
 #import "UIButton+CZHClickBtnBlock.h"
+#import "SwpNetworking.h"
 
 @interface ZHGFriendsViewController ()
-
+//@property (nonatomic, strong) CZHAFNetWorKingAssistant *afnetWorKingAssistant;
 @end
 
 @implementation ZHGFriendsViewController
@@ -34,7 +35,39 @@
 //        [self dismissViewControllerAnimated:YES completion:nil];
     } andEvent:UIControlEventTouchUpInside];
     
+    
+    //http://api.map.baidu.com/telematics/v3/weather?location=嘉兴&output=json&ak=5slgyqGDENN7Sy7pw29IUvrZ
+    NSString *url = @"http://api.map.baidu.com/telematics/v3/weather?location";
+    NSDictionary *parameters = @{@"location":@"",
+                              @"output":@"json",
+                              @"ak":@"5slgyqGDENN7Sy7pw29IUvrZ"
+                                 };
+//    [NSString stringWithFormat:@"%@/%@",CZH_MainURL,@"/v1/user/register"]
+    [SwpNetworking swpPOST:url parameters:parameters swpNetworkingSuccess:^(NSURLSessionDataTask * _Nonnull task, id  _Nonnull resultObject) {
+        NSLog(@"resultObject---------------------------%@", resultObject);
+        NSDictionary *dict = resultObject;
+        NSLog(@"%@",dict[@"message"]);
+        NSLog(@"%@",dict[@"status"]);
+    } swpNetworkingError:^(NSURLSessionDataTask * _Nonnull task, NSError * _Nonnull error, NSString * _Nonnull errorMessage) {
+        NSLog(@"afn***************************%@", errorMessage);
+    }];
 }
 
-
+//json格式字符串转字典：
+- (NSDictionary *)dictionaryWithJsonString:(NSString *)jsonString {
+    if (jsonString == nil) {
+        return nil;
+    }
+    NSData *jsonData = [jsonString dataUsingEncoding:NSUTF8StringEncoding];
+    NSError *err;
+    NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:jsonData
+                                                        options:NSJSONReadingMutableContainers
+                                                          error:&err];
+    
+    if(err){
+        NSLog(@"json解析失败：%@",err);
+        return nil;
+    }
+    return dic;
+}
 @end

@@ -15,12 +15,19 @@
 #import "TPKeyboardAvoidingScrollView.h"
 #import "UIButton+CZHClickBtnBlock.h"
 #import "ZHGpromptLabel.h"
+#import "AFNetworking.h"
+#import "UIView+Extension.h"
+#import "CZHAFNetWorKingAssistant.h"
+#import "CZH_HTTPTool.h"
 
+// 主请求路径
+//#define CZH_MainURL @"http://api.budejie.com/api/api_open.php"
+#define CZH_MainURL @"http://119.23.206.144:8000"
+
+#define CZH_weakSelf __weak __typeof(self)weakSelf = self
 //#import "CZHConst.h"
 //#import <MJRefresh.h>
-//#import "AFNetwork.h"
 //#import <Masonry.h>
-#import "UIView+Extension.h"
 //#import <MBProgressHUD.h>
 //#import "MBProgressHUD+MP.h"
 //#import <MJExtension.h>

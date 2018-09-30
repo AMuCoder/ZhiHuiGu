@@ -83,10 +83,10 @@
 }
 
 - (void)yzmBtnClick{
-    __block ZHGForgotPwVC *blockSelf = self;
+    __weak __typeof(self)weakSelf = self;
     [self.yzNumtextField.rBtn setClickBlock:^(UIButton *button) {
         // 需要执行的操作
-        [blockSelf sendCode];
+        [weakSelf sendCode];
     } andEvent:UIControlEventTouchUpInside];
 }
 
