@@ -7,18 +7,65 @@
 //
 
 #import "ZHGMeViewController.h"
+#import "ZHGMeUserView.h"
+#import "ZHGLoginAndRegisterVC.h"
 
-@interface ZHGMeViewController ()
+@interface ZHGMeViewController ()<UITableViewDelegate,UITableViewDataSource>
 
+@property (nonatomic , strong) UITableView *tableview;
+@property (nonatomic , strong) ZHGMeUserView *userView;
 @end
 
 @implementation ZHGMeViewController
 
+- (UITableView *)tableview {
+    if (_tableview == nil) {
+        _tableview = [[UITableView alloc] initWithFrame:self.view.frame];
+        _tableview.delegate = self;
+        _tableview.dataSource = self;
+    }
+    return _tableview;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
     self.title = @"我的";
     self.view.backgroundColor = [UIColor whiteColor];
+    [self.view addSubview:self.tableview];
+    // 去掉多余的cell
+    self.tableview.tableFooterView = [UIView new];
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    static NSString *CellIdentifierID = @"cellID";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifierID];
+    if (!cell) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifierID];
+    }
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    if (indexPath.row == 0) {
+        cell.textLabel.text = @"用户注册与登录";
+    }else{
+        cell.textLabel.text = [NSString stringWithFormat:@"这是第%ld行", indexPath.row];
+    }
+    return cell;
+}
+
+#pragma mark - UITableViewDataSource , UITableViewDelegate
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return 20;
+}
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 44;
+}
+//-(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
+//
+//}
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (indexPath.row == 0) {
+        ZHGLoginAndRegisterVC *vc = [[ZHGLoginAndRegisterVC alloc] init];
+        [self.navigationController pushViewController:vc animated:YES];
+    }
 }
 
 /*

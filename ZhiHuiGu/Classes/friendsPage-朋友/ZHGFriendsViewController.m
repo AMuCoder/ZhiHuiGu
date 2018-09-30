@@ -7,6 +7,8 @@
 //
 
 #import "ZHGFriendsViewController.h"
+#import "ZHGClickBtnView.h"
+#import "UIButton+CZHClickBtnBlock.h"
 
 @interface ZHGFriendsViewController ()
 
@@ -18,17 +20,21 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.title = @"朋友";
+    self.edgesForExtendedLayout = UIRectEdgeNone;
     self.view.backgroundColor = [UIColor whiteColor];
+    ZHGClickBtnView *clickBtnView = [[ZHGClickBtnView alloc] initWithFrame:CGRectMake(0, 50, Main_Screen_Width, 200)];
+    [self.view addSubview:clickBtnView];
+    _clickBtnView = clickBtnView;
+    // 直接用自定义视图里面的 button 调用刚才封装的方法
+    
+    [clickBtnView.closeArrow setClickBlock:^(UIButton *button) {
+        self.view.backgroundColor = [UIColor blueColor];
+        CZHLog(@"--------回调成功！");
+        // 需要执行的操作
+//        [self dismissViewControllerAnimated:YES completion:nil];
+    } andEvent:UIControlEventTouchUpInside];
+    
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
