@@ -2,14 +2,14 @@
 //  ZHGFriendsViewController.m
 //  ZhiHuiGu
 //
-//  Created by CYJ on 2018/9/20.
-//  Copyright © 2018年 CYJ. All rights reserved.
+//  Created by 阿木 on 2018/9/20.
+//  Copyright © 2018年 阿木. All rights reserved.
 //
 
 #import "ZHGFriendsViewController.h"
 #import "ZHGClickBtnView.h"
 #import "UIButton+CZHClickBtnBlock.h"
-#import "SwpNetworking.h"
+#import "CzhNetworking.h"
 
 @interface ZHGFriendsViewController ()
 //@property (nonatomic, strong) CZHAFNetWorKingAssistant *afnetWorKingAssistant;
@@ -37,18 +37,21 @@
     
     
     //http://api.map.baidu.com/telematics/v3/weather?location=嘉兴&output=json&ak=5slgyqGDENN7Sy7pw29IUvrZ
-    NSString *url = @"http://api.map.baidu.com/telematics/v3/weather?location";
-    NSDictionary *parameters = @{@"location":@"",
-                              @"output":@"json",
-                              @"ak":@"5slgyqGDENN7Sy7pw29IUvrZ"
+//    NSString *url = @"http://api.map.baidu.com/telematics/v3/weather?location";
+    NSDictionary *parameters = @{
+                                 @"email": @"czh588@126.com",
+                                 @"gender": @"string",
+                                 @"head_img": @"string",
+                                 @"id": @0,
+                                 @"nick": @"amu2018"
                                  };
-//    [NSString stringWithFormat:@"%@/%@",CZH_MainURL,@"/v1/user/register"]
-    [SwpNetworking swpPOST:url parameters:parameters swpNetworkingSuccess:^(NSURLSessionDataTask * _Nonnull task, id  _Nonnull resultObject) {
+    NSString *url = [NSString stringWithFormat:@"%@/%@",CZH_MainURL,@"/v1/user/edit"];
+    [CzhNetworking czhPOST:url parameters:parameters czhNetworkingSuccess:^(NSURLSessionDataTask * _Nonnull task, id  _Nonnull resultObject) {
         NSLog(@"resultObject---------------------------%@", resultObject);
         NSDictionary *dict = resultObject;
         NSLog(@"%@",dict[@"message"]);
         NSLog(@"%@",dict[@"status"]);
-    } swpNetworkingError:^(NSURLSessionDataTask * _Nonnull task, NSError * _Nonnull error, NSString * _Nonnull errorMessage) {
+    } czhNetworkingError:^(NSURLSessionDataTask * _Nonnull task, NSError * _Nonnull error, NSString * _Nonnull errorMessage) {
         NSLog(@"afn***************************%@", errorMessage);
     }];
 }

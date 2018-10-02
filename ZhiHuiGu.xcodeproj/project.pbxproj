@@ -29,9 +29,9 @@
 		250DD0F2215F78F000CD6D3E /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 250DD0E9215F78F000CD6D3E /* AFURLRequestSerialization.m */; };
 		250DD0F3215F78F000CD6D3E /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 250DD0EB215F78F000CD6D3E /* AFNetworkReachabilityManager.m */; };
 		250DD0F4215F78F000CD6D3E /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = 250DD0EC215F78F000CD6D3E /* AFSecurityPolicy.m */; };
-		250DD0FC215F79FF00CD6D3E /* SwpNetworkingVariableType.m in Sources */ = {isa = PBXBuildFile; fileRef = 250DD0F6215F79FF00CD6D3E /* SwpNetworkingVariableType.m */; };
-		250DD0FD215F79FF00CD6D3E /* SwpNetworkingTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 250DD0F7215F79FF00CD6D3E /* SwpNetworkingTools.m */; };
-		250DD0FE215F79FF00CD6D3E /* SwpNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 250DD0FB215F79FF00CD6D3E /* SwpNetworking.m */; };
+		250DD0FC215F79FF00CD6D3E /* CzhNetworkingVariableType.m in Sources */ = {isa = PBXBuildFile; fileRef = 250DD0F6215F79FF00CD6D3E /* CzhNetworkingVariableType.m */; };
+		250DD0FD215F79FF00CD6D3E /* CzhNetworkingTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 250DD0F7215F79FF00CD6D3E /* CzhNetworkingTools.m */; };
+		250DD0FE215F79FF00CD6D3E /* CzhNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 250DD0FB215F79FF00CD6D3E /* CzhNetworking.m */; };
 		2520B6E0215DB79C00956CB7 /* UIButton+CZHClickBtnBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 2520B6DF215DB79C00956CB7 /* UIButton+CZHClickBtnBlock.m */; };
 		2520B6E3215DC8ED00956CB7 /* ZHGClickBtnView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2520B6E2215DC8ED00956CB7 /* ZHGClickBtnView.m */; };
 		2520B6E6215E02F700956CB7 /* ZHGRegisterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2520B6E5215E02F700956CB7 /* ZHGRegisterVC.m */; };
@@ -163,12 +163,12 @@
 		250DD0EC215F78F000CD6D3E /* AFSecurityPolicy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFSecurityPolicy.m; sourceTree = "<group>"; };
 		250DD0ED215F78F000CD6D3E /* AFCompatibilityMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFCompatibilityMacros.h; sourceTree = "<group>"; };
 		250DD0EE215F78F000CD6D3E /* AFHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPSessionManager.h; sourceTree = "<group>"; };
-		250DD0F6215F79FF00CD6D3E /* SwpNetworkingVariableType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwpNetworkingVariableType.m; sourceTree = "<group>"; };
-		250DD0F7215F79FF00CD6D3E /* SwpNetworkingTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwpNetworkingTools.m; sourceTree = "<group>"; };
-		250DD0F8215F79FF00CD6D3E /* SwpNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwpNetworking.h; sourceTree = "<group>"; };
-		250DD0F9215F79FF00CD6D3E /* SwpNetworkingVariableType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwpNetworkingVariableType.h; sourceTree = "<group>"; };
-		250DD0FA215F79FF00CD6D3E /* SwpNetworkingTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwpNetworkingTools.h; sourceTree = "<group>"; };
-		250DD0FB215F79FF00CD6D3E /* SwpNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwpNetworking.m; sourceTree = "<group>"; };
+		250DD0F6215F79FF00CD6D3E /* CzhNetworkingVariableType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CzhNetworkingVariableType.m; sourceTree = "<group>"; };
+		250DD0F7215F79FF00CD6D3E /* CzhNetworkingTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CzhNetworkingTools.m; sourceTree = "<group>"; };
+		250DD0F8215F79FF00CD6D3E /* CzhNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CzhNetworking.h; sourceTree = "<group>"; };
+		250DD0F9215F79FF00CD6D3E /* CzhNetworkingVariableType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CzhNetworkingVariableType.h; sourceTree = "<group>"; };
+		250DD0FA215F79FF00CD6D3E /* CzhNetworkingTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CzhNetworkingTools.h; sourceTree = "<group>"; };
+		250DD0FB215F79FF00CD6D3E /* CzhNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CzhNetworking.m; sourceTree = "<group>"; };
 		2520B6DE215DB79C00956CB7 /* UIButton+CZHClickBtnBlock.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+CZHClickBtnBlock.h"; sourceTree = "<group>"; };
 		2520B6DF215DB79C00956CB7 /* UIButton+CZHClickBtnBlock.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+CZHClickBtnBlock.m"; sourceTree = "<group>"; };
 		2520B6E1215DC8ED00956CB7 /* ZHGClickBtnView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZHGClickBtnView.h; sourceTree = "<group>"; };
@@ -435,17 +435,18 @@
 			path = AFNetworking;
 			sourceTree = "<group>";
 		};
-		250DD0F5215F79FF00CD6D3E /* SwpNetworking */ = {
+		250DD0F5215F79FF00CD6D3E /* CzhNetworking */ = {
 			isa = PBXGroup;
 			children = (
-				250DD0FA215F79FF00CD6D3E /* SwpNetworkingTools.h */,
-				250DD0F7215F79FF00CD6D3E /* SwpNetworkingTools.m */,
-				250DD0F8215F79FF00CD6D3E /* SwpNetworking.h */,
-				250DD0FB215F79FF00CD6D3E /* SwpNetworking.m */,
-				250DD0F9215F79FF00CD6D3E /* SwpNetworkingVariableType.h */,
-				250DD0F6215F79FF00CD6D3E /* SwpNetworkingVariableType.m */,
+				250DD0E0215F78F000CD6D3E /* AFNetworking */,
+				250DD0FA215F79FF00CD6D3E /* CzhNetworkingTools.h */,
+				250DD0F7215F79FF00CD6D3E /* CzhNetworkingTools.m */,
+				250DD0F8215F79FF00CD6D3E /* CzhNetworking.h */,
+				250DD0FB215F79FF00CD6D3E /* CzhNetworking.m */,
+				250DD0F9215F79FF00CD6D3E /* CzhNetworkingVariableType.h */,
+				250DD0F6215F79FF00CD6D3E /* CzhNetworkingVariableType.m */,
 			);
-			path = SwpNetworking;
+			path = CzhNetworking;
 			sourceTree = "<group>";
 		};
 		250DD0FF215F7A7A00CD6D3E /* CZHHttpTool */ = {
@@ -597,9 +598,9 @@
 		25B7B8E02153DAB30053A2A5 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				25B7B8F12153DAB30053A2A5 /* MBProgressHUD */,
 				250DD0FF215F7A7A00CD6D3E /* CZHHttpTool */,
-				250DD0F5215F79FF00CD6D3E /* SwpNetworking */,
-				250DD0E0215F78F000CD6D3E /* AFNetworking */,
+				250DD0F5215F79FF00CD6D3E /* CzhNetworking */,
 				2520B6DC215DB62800956CB7 /* UIButton+CZHClickBtnBlock */,
 				2520B6DB215DB61500956CB7 /* UIView+Extension */,
 				2520B6DA215DB60900956CB7 /* CacheManager */,
@@ -610,7 +611,6 @@
 				2506C1A0215CDAE800530D13 /* TPKeyboardAvoiding */,
 				25B7283B2154B06A00D22E94 /* CZHNSUserDefaultsModel */,
 				25B7B8FD2153DAB30053A2A5 /* tarNav-导航 */,
-				25B7B8F12153DAB30053A2A5 /* MBProgressHUD */,
 				25B7B8E32153DAB30053A2A5 /* Extension */,
 				25B7B92D2153DFC70053A2A5 /* MJRefresh */,
 			);
@@ -1012,14 +1012,14 @@
 				250DD0F4215F78F000CD6D3E /* AFSecurityPolicy.m in Sources */,
 				25B7B9992153E4720053A2A5 /* CZHScrollView.m in Sources */,
 				25B7B92C2153DAB30053A2A5 /* ZHGFriendsViewController.m in Sources */,
-				250DD0FE215F79FF00CD6D3E /* SwpNetworking.m in Sources */,
+				250DD0FE215F79FF00CD6D3E /* CzhNetworking.m in Sources */,
 				25B7B9202153DAB30053A2A5 /* UIView+Extension.m in Sources */,
 				25E7C634216072010053F450 /* ZHGLoginedVC.m in Sources */,
 				250DD0F2215F78F000CD6D3E /* AFURLRequestSerialization.m in Sources */,
 				25B7B92B2153DAB30053A2A5 /* AppDelegate.m in Sources */,
 				25B7B91E2153DAB30053A2A5 /* MBProgressHUD+MJ.m in Sources */,
 				25B7B95E2153DFC70053A2A5 /* MJRefreshConst.m in Sources */,
-				250DD0FD215F79FF00CD6D3E /* SwpNetworkingTools.m in Sources */,
+				250DD0FD215F79FF00CD6D3E /* CzhNetworkingTools.m in Sources */,
 				25B7B9282153DAB30053A2A5 /* ZHGHomeViewController.m in Sources */,
 				25B7B9622153DFC70053A2A5 /* UIView+MJExtension.m in Sources */,
 				25B7B99A2153E4720053A2A5 /* CZHTableView.m in Sources */,
@@ -1082,7 +1082,7 @@
 				2506C192215CB74900530D13 /* ZHGMeUserView.m in Sources */,
 				25B7B91A2153DAB30053A2A5 /* UIViewController+Extend.m in Sources */,
 				25B7B9672153DFC70053A2A5 /* MJRefreshAutoGifFooter.m in Sources */,
-				250DD0FC215F79FF00CD6D3E /* SwpNetworkingVariableType.m in Sources */,
+				250DD0FC215F79FF00CD6D3E /* CzhNetworkingVariableType.m in Sources */,
 				25B7B91D2153DAB30053A2A5 /* MBProgressHUD.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

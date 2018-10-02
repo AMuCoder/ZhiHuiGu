@@ -1,6 +1,6 @@
 //  文件名: CZHAFNetWorKingAssistant.m
-//  创建者: CYJ 时间: 2018/9/30.
-//  Copyright © 2018年 CYJ. All rights reserved.
+//  创建者: 阿木 时间: 2018/9/30.
+//  Copyright © 2018年 阿木. All rights reserved.
 //  AFNetworking单例封装
 
 #import "CZHAFNetWorKingAssistant.h"

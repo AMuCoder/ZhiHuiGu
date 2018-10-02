@@ -2,8 +2,8 @@
 //  ZHGHomeViewController.m
 //  ZhiHuiGu
 //
-//  Created by CYJ on 2018/9/20.
-//  Copyright © 2018年 CYJ. All rights reserved.
+//  Created by 阿木 on 2018/9/20.
+//  Copyright © 2018年 阿木. All rights reserved.
 //
 
 #import "ZHGHomeViewController.h"
@@ -16,7 +16,6 @@
 #import "ZHGHeaderView.h"
 
 @interface ZHGHomeViewController ()<UISearchBarDelegate>
-
 /// 背景的UIScrollView
 @property (nonatomic, strong) CZHScrollView *scrollView;
 /// navigation视图

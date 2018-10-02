@@ -1,91 +1,91 @@
 //
-//  SwpNetworkingTools.m
-//  swp_song
+//  CzhNetworkingTools.m
+//  阿木
 //
-//  Created by swp_song on 16/5/13.
-//  Copyright © 2016年 swp_song. All rights reserved.
+//  Created by 阿木 on 16/5/13.
+//  Copyright © 2016年 阿木. All rights reserved.
 //
 
-#import "SwpNetworkingTools.h"
+#import "CzhNetworkingTools.h"
 
 #import <UIKit/UIKit.h>
 
-@implementation SwpNetworkingTools
+@implementation CzhNetworkingTools
 
 /*!
- *  @author swp_song
+ *  @author 阿木
  *
- *  @brief  swpNetworkingToolsDownloadFilePathDispose:  ( 下载 文件 路径处理 )
+ *  @brief  czhNetworkingToolsDownloadFilePathDispose:  ( 下载 文件 路径处理 )
  *
  *  @param  filePath
  *
  *  @return NSString
  */
-+ (NSString *)swpNetworkingToolsDownloadFilePathDispose:(NSURL *)filePath {
-    return [NSString stringWithFormat:@"%@/%@", [SwpNetworkingTools swpNetworkingToolsGetDocumentsPath], [SwpNetworkingTools swpNetworkingToolsGetDownloadFileName:filePath]];
++ (NSString *)czhNetworkingToolsDownloadFilePathDispose:(NSURL *)filePath {
+    return [NSString stringWithFormat:@"%@/%@", [CzhNetworkingTools czhNetworkingToolsGetDocumentsPath], [CzhNetworkingTools czhNetworkingToolsGetDownloadFileName:filePath]];
 }
 
 /*!
- *  @author swp_song
+ *  @author 阿木
  *
- *  @brief  swpNetworkingToolsGetDownloadFileName:  ( 取出 下载 文件名称 )
+ *  @brief  czhNetworkingToolsGetDownloadFileName:  ( 取出 下载 文件名称 )
  *
  *  @param  filePath
  *
  *  @return NSString
  */
-+ (NSString *)swpNetworkingToolsGetDownloadFileName:(NSURL *)filePath {
++ (NSString *)czhNetworkingToolsGetDownloadFileName:(NSURL *)filePath {
     NSString *filePathString = [NSString stringWithFormat:@"%@", filePath];
     return [filePathString componentsSeparatedByString:@"/"].lastObject;
 }
 
 /*!
- *  @author swp_song
+ *  @author 阿木
  *
- *  @brief  swpNetworkingToolsGetDocumentsPath  ( 取出 documents 文件路径 )
+ *  @brief  czhNetworkingToolsGetDocumentsPath  ( 取出 documents 文件路径 )
  *
  *  @return NSString
  */
-+ (NSString *)swpNetworkingToolsGetDocumentsPath {
++ (NSString *)czhNetworkingToolsGetDocumentsPath {
     NSArray  *paths          = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *documentsPaths = [paths objectAtIndex:0];
     return documentsPaths;
 }
 
 /*!
- *  @author swp_song
+ *  @author 阿木
  *
- *  @brief  swpNetworkingToolsSetNetworkActivityIndicatorVisible:  ( 显示 或 隐藏 网络获取数据时 UINavigationBar 上的图标 <转圈的菊花 > )
+ *  @brief  czhNetworkingToolsSetNetworkActivityIndicatorVisible:  ( 显示 或 隐藏 网络获取数据时 UINavigationBar 上的图标 <转圈的菊花 > )
  *
  *  @param  networkActivityIndicatorVisible
  */
-+ (void)swpNetworkingToolsSetNetworkActivityIndicatorVisible:(BOOL)networkActivityIndicatorVisible {
++ (void)czhNetworkingToolsSetNetworkActivityIndicatorVisible:(BOOL)networkActivityIndicatorVisible {
     [UIApplication sharedApplication].networkActivityIndicatorVisible = networkActivityIndicatorVisible;
 }
 
 /*!
- *  @author swp_song
+ *  @author 阿木
  *
- *  @brief  swpNetworkingToolsGetErrorMessage: ( 获取 错误信息 )
+ *  @brief  czhNetworkingToolsGetErrorMessage: ( 获取 错误信息 )
  *
  *  @param  error
  *
  *  @return NSString
  */
-+ (NSString *)swpNetworkingToolsGetErrorMessage:(NSError *)error {
++ (NSString *)czhNetworkingToolsGetErrorMessage:(NSError *)error {
     return error == nil ? nil : [NSString stringWithFormat:@"错误代码%ld \n 错误信息%@", (long)error.code, error.localizedDescription];
 }
 
 /*!
- *  @author swp_song
+ *  @author 阿木
  *
- *  @brief  swpNetworkingToolsRequestDispose:      ( 返回 网络 结果集 处理 )
+ *  @brief  czhNetworkingToolsRequestDispose:      ( 返回 网络 结果集 处理 )
  *
  *  @param  responseObject
  *
  *  @return NSDictionary
  */
-+ (NSDictionary *)swpNetworkingToolsRequestDispose:(id)responseObject {
++ (NSDictionary *)czhNetworkingToolsRequestDispose:(id)responseObject {
     
     // 转换成 字符串
     NSString *decodeJson = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];

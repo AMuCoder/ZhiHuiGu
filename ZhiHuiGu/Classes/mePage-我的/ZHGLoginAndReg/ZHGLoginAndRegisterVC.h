@@ -2,8 +2,8 @@
 //  ZHGLoginAndRegisterVC.h
 //  ZhiHuiGu
 //
-//  Created by CYJ on 2018/9/27.
-//  Copyright © 2018年 CYJ. All rights reserved.
+//  Created by 阿木 on 2018/9/27.
+//  Copyright © 2018年 阿木. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
