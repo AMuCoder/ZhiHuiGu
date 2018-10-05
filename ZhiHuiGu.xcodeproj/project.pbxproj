@@ -35,6 +35,11 @@
 		2520B6E0215DB79C00956CB7 /* UIButton+CZHClickBtnBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 2520B6DF215DB79C00956CB7 /* UIButton+CZHClickBtnBlock.m */; };
 		2520B6E3215DC8ED00956CB7 /* ZHGClickBtnView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2520B6E2215DC8ED00956CB7 /* ZHGClickBtnView.m */; };
 		2520B6E6215E02F700956CB7 /* ZHGRegisterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2520B6E5215E02F700956CB7 /* ZHGRegisterVC.m */; };
+		252DC83321631B27006BDE9C /* UIView+SDAutoLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 252DC82E21631B27006BDE9C /* UIView+SDAutoLayout.m */; };
+		252DC83421631B27006BDE9C /* UITableView+SDAutoTableViewCellHeight.m in Sources */ = {isa = PBXBuildFile; fileRef = 252DC83121631B27006BDE9C /* UITableView+SDAutoTableViewCellHeight.m */; };
+		252DC83B2167AE09006BDE9C /* ZHGCreateWalletVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 252DC83A2167AE09006BDE9C /* ZHGCreateWalletVC.m */; };
+		252DC83E2167AF54006BDE9C /* CreateWalletPdView.m in Sources */ = {isa = PBXBuildFile; fileRef = 252DC83D2167AF54006BDE9C /* CreateWalletPdView.m */; };
+		252DC8412167BA06006BDE9C /* ZHGCWTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 252DC8402167BA06006BDE9C /* ZHGCWTextField.m */; };
 		2532D511215B4C8100AFA29D /* ZHGFuncHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2532D510215B4C8100AFA29D /* ZHGFuncHeaderView.m */; };
 		2532D518215B552900AFA29D /* HomeFunctionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2532D515215B552900AFA29D /* HomeFunctionCell.xib */; };
 		2532D519215B552900AFA29D /* HomeFunctionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2532D516215B552900AFA29D /* HomeFunctionCell.m */; };
@@ -175,6 +180,17 @@
 		2520B6E2215DC8ED00956CB7 /* ZHGClickBtnView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZHGClickBtnView.m; sourceTree = "<group>"; };
 		2520B6E4215E02F700956CB7 /* ZHGRegisterVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZHGRegisterVC.h; sourceTree = "<group>"; };
 		2520B6E5215E02F700956CB7 /* ZHGRegisterVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZHGRegisterVC.m; sourceTree = "<group>"; };
+		252DC82E21631B27006BDE9C /* UIView+SDAutoLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+SDAutoLayout.m"; sourceTree = "<group>"; };
+		252DC82F21631B27006BDE9C /* UITableView+SDAutoTableViewCellHeight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+SDAutoTableViewCellHeight.h"; sourceTree = "<group>"; };
+		252DC83021631B27006BDE9C /* SDAutoLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDAutoLayout.h; sourceTree = "<group>"; };
+		252DC83121631B27006BDE9C /* UITableView+SDAutoTableViewCellHeight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+SDAutoTableViewCellHeight.m"; sourceTree = "<group>"; };
+		252DC83221631B27006BDE9C /* UIView+SDAutoLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+SDAutoLayout.h"; sourceTree = "<group>"; };
+		252DC8392167AE09006BDE9C /* ZHGCreateWalletVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZHGCreateWalletVC.h; sourceTree = "<group>"; };
+		252DC83A2167AE09006BDE9C /* ZHGCreateWalletVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZHGCreateWalletVC.m; sourceTree = "<group>"; };
+		252DC83C2167AF54006BDE9C /* CreateWalletPdView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CreateWalletPdView.h; sourceTree = "<group>"; };
+		252DC83D2167AF54006BDE9C /* CreateWalletPdView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CreateWalletPdView.m; sourceTree = "<group>"; };
+		252DC83F2167BA06006BDE9C /* ZHGCWTextField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZHGCWTextField.h; sourceTree = "<group>"; };
+		252DC8402167BA06006BDE9C /* ZHGCWTextField.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZHGCWTextField.m; sourceTree = "<group>"; };
 		2532D50F215B4C8100AFA29D /* ZHGFuncHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZHGFuncHeaderView.h; sourceTree = "<group>"; };
 		2532D510215B4C8100AFA29D /* ZHGFuncHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZHGFuncHeaderView.m; sourceTree = "<group>"; };
 		2532D515215B552900AFA29D /* HomeFunctionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeFunctionCell.xib; sourceTree = "<group>"; };
@@ -298,8 +314,8 @@
 		25E7C630216063750053F450 /* CZH_HTTPTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CZH_HTTPTool.m; sourceTree = "<group>"; };
 		25E7C632216072010053F450 /* ZHGLoginedVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZHGLoginedVC.h; sourceTree = "<group>"; };
 		25E7C633216072010053F450 /* ZHGLoginedVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZHGLoginedVC.m; sourceTree = "<group>"; };
-		25E7C63521607AC30053F450 /* ZHGSMSOrPsdBtn.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ZHGSMSOrPsdBtn.h; path = "ZhiHuiGu/Classes/mePage-我的/CZHView/ZHGSMSOrPsdBtn.h"; sourceTree = SOURCE_ROOT; };
-		25E7C63621607AC30053F450 /* ZHGSMSOrPsdBtn.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ZHGSMSOrPsdBtn.m; path = "ZhiHuiGu/Classes/mePage-我的/CZHView/ZHGSMSOrPsdBtn.m"; sourceTree = SOURCE_ROOT; };
+		25E7C63521607AC30053F450 /* ZHGSMSOrPsdBtn.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ZHGSMSOrPsdBtn.h; path = "ZhiHuiGu/Classes/mePage-我的/View/ZHGSMSOrPsdBtn.h"; sourceTree = SOURCE_ROOT; };
+		25E7C63621607AC30053F450 /* ZHGSMSOrPsdBtn.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ZHGSMSOrPsdBtn.m; path = "ZhiHuiGu/Classes/mePage-我的/View/ZHGSMSOrPsdBtn.m"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -332,42 +348,8 @@
 			children = (
 				2506C17D215C9AA500530D13 /* CZHSearchBar.h */,
 				2506C17F215C9AA500530D13 /* CZHSearchBar.m */,
-				2506C180215C9AA500530D13 /* UIImage+Extension.h */,
-				2506C17E215C9AA500530D13 /* UIImage+Extension.m */,
 			);
 			path = SearchBar;
-			sourceTree = "<group>";
-		};
-		2506C18C215CB2CC00530D13 /* CZHView */ = {
-			isa = PBXGroup;
-			children = (
-				25E7C63521607AC30053F450 /* ZHGSMSOrPsdBtn.h */,
-				25E7C63621607AC30053F450 /* ZHGSMSOrPsdBtn.m */,
-				2506C190215CB74900530D13 /* ZHGMeUserView.h */,
-				2506C191215CB74900530D13 /* ZHGMeUserView.m */,
-			);
-			path = CZHView;
-			sourceTree = "<group>";
-		};
-		2506C193215CC65100530D13 /* ZHGLoginAndReg */ = {
-			isa = PBXGroup;
-			children = (
-				2506C19A215CC9A100530D13 /* ZHGLoginTextField.h */,
-				2506C19B215CC9A100530D13 /* ZHGLoginTextField.m */,
-				2506C197215CC6CC00530D13 /* ZHGLoginAndRegisterVC.h */,
-				2506C198215CC6CC00530D13 /* ZHGLoginAndRegisterVC.m */,
-				2506C19D215CD87B00530D13 /* ZHGLoginBtn.h */,
-				2506C19E215CD87B00530D13 /* ZHGLoginBtn.m */,
-				2520B6E4215E02F700956CB7 /* ZHGRegisterVC.h */,
-				2520B6E5215E02F700956CB7 /* ZHGRegisterVC.m */,
-				250DD0C8215F2C9A00CD6D3E /* ZHGpromptLabel.h */,
-				250DD0C9215F2C9A00CD6D3E /* ZHGpromptLabel.m */,
-				250DD0C5215F0FF200CD6D3E /* ZHGForgotPwVC.h */,
-				250DD0C6215F0FF200CD6D3E /* ZHGForgotPwVC.m */,
-				25E7C632216072010053F450 /* ZHGLoginedVC.h */,
-				25E7C633216072010053F450 /* ZHGLoginedVC.m */,
-			);
-			path = ZHGLoginAndReg;
 			sourceTree = "<group>";
 		};
 		2506C1A0215CDAE800530D13 /* TPKeyboardAvoiding */ = {
@@ -396,11 +378,11 @@
 		250DD0CF215F457900CD6D3E /* Config */ = {
 			isa = PBXGroup;
 			children = (
-				250DD0D0215F457900CD6D3E /* SWQRCodeConfig.m */,
-				250DD0D1215F457900CD6D3E /* SWQRCodeManager.m */,
-				250DD0D2215F457900CD6D3E /* SWQRCodeConfig.h */,
 				250DD0D3215F457900CD6D3E /* SWQRCode.h */,
 				250DD0D4215F457900CD6D3E /* SWQRCodeManager.h */,
+				250DD0D1215F457900CD6D3E /* SWQRCodeManager.m */,
+				250DD0D2215F457900CD6D3E /* SWQRCodeConfig.h */,
+				250DD0D0215F457900CD6D3E /* SWQRCodeConfig.m */,
 			);
 			path = Config;
 			sourceTree = "<group>";
@@ -408,8 +390,8 @@
 		250DD0D7215F457900CD6D3E /* View */ = {
 			isa = PBXGroup;
 			children = (
-				250DD0D8215F457900CD6D3E /* SWScannerView.m */,
 				250DD0D9215F457900CD6D3E /* SWScannerView.h */,
+				250DD0D8215F457900CD6D3E /* SWScannerView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -523,6 +505,74 @@
 			path = "UIButton+CZHClickBtnBlock";
 			sourceTree = "<group>";
 		};
+		252DC82D21631B27006BDE9C /* SDAutoLayout */ = {
+			isa = PBXGroup;
+			children = (
+				252DC83021631B27006BDE9C /* SDAutoLayout.h */,
+				252DC83221631B27006BDE9C /* UIView+SDAutoLayout.h */,
+				252DC82E21631B27006BDE9C /* UIView+SDAutoLayout.m */,
+				252DC82F21631B27006BDE9C /* UITableView+SDAutoTableViewCellHeight.h */,
+				252DC83121631B27006BDE9C /* UITableView+SDAutoTableViewCellHeight.m */,
+			);
+			path = SDAutoLayout;
+			sourceTree = "<group>";
+		};
+		252DC83521631BFE006BDE9C /* UIImage+Extension */ = {
+			isa = PBXGroup;
+			children = (
+				2506C180215C9AA500530D13 /* UIImage+Extension.h */,
+				2506C17E215C9AA500530D13 /* UIImage+Extension.m */,
+			);
+			path = "UIImage+Extension";
+			sourceTree = "<group>";
+		};
+		252DC8362167ACAE006BDE9C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		252DC8372167ACBB006BDE9C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2506C19A215CC9A100530D13 /* ZHGLoginTextField.h */,
+				2506C19B215CC9A100530D13 /* ZHGLoginTextField.m */,
+				2506C19D215CD87B00530D13 /* ZHGLoginBtn.h */,
+				2506C19E215CD87B00530D13 /* ZHGLoginBtn.m */,
+				250DD0C8215F2C9A00CD6D3E /* ZHGpromptLabel.h */,
+				250DD0C9215F2C9A00CD6D3E /* ZHGpromptLabel.m */,
+				25E7C63521607AC30053F450 /* ZHGSMSOrPsdBtn.h */,
+				25E7C63621607AC30053F450 /* ZHGSMSOrPsdBtn.m */,
+				2506C190215CB74900530D13 /* ZHGMeUserView.h */,
+				2506C191215CB74900530D13 /* ZHGMeUserView.m */,
+				252DC83F2167BA06006BDE9C /* ZHGCWTextField.h */,
+				252DC8402167BA06006BDE9C /* ZHGCWTextField.m */,
+				252DC83C2167AF54006BDE9C /* CreateWalletPdView.h */,
+				252DC83D2167AF54006BDE9C /* CreateWalletPdView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		252DC8382167ACC5006BDE9C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				25B7B9092153DAB30053A2A5 /* ZHGMeViewController.h */,
+				25B7B9082153DAB30053A2A5 /* ZHGMeViewController.m */,
+				2506C197215CC6CC00530D13 /* ZHGLoginAndRegisterVC.h */,
+				2506C198215CC6CC00530D13 /* ZHGLoginAndRegisterVC.m */,
+				2520B6E4215E02F700956CB7 /* ZHGRegisterVC.h */,
+				2520B6E5215E02F700956CB7 /* ZHGRegisterVC.m */,
+				250DD0C5215F0FF200CD6D3E /* ZHGForgotPwVC.h */,
+				250DD0C6215F0FF200CD6D3E /* ZHGForgotPwVC.m */,
+				25E7C632216072010053F450 /* ZHGLoginedVC.h */,
+				25E7C633216072010053F450 /* ZHGLoginedVC.m */,
+				252DC8392167AE09006BDE9C /* ZHGCreateWalletVC.h */,
+				252DC83A2167AE09006BDE9C /* ZHGCreateWalletVC.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		258714A8215290CE0063ED99 = {
 			isa = PBXGroup;
 			children = (
@@ -598,6 +648,8 @@
 		25B7B8E02153DAB30053A2A5 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				252DC83521631BFE006BDE9C /* UIImage+Extension */,
+				252DC82D21631B27006BDE9C /* SDAutoLayout */,
 				25B7B8F12153DAB30053A2A5 /* MBProgressHUD */,
 				250DD0FF215F7A7A00CD6D3E /* CZHHttpTool */,
 				250DD0F5215F79FF00CD6D3E /* CzhNetworking */,
@@ -678,10 +730,9 @@
 		25B7B9072153DAB30053A2A5 /* mePage-我的 */ = {
 			isa = PBXGroup;
 			children = (
-				2506C193215CC65100530D13 /* ZHGLoginAndReg */,
-				2506C18C215CB2CC00530D13 /* CZHView */,
-				25B7B9092153DAB30053A2A5 /* ZHGMeViewController.h */,
-				25B7B9082153DAB30053A2A5 /* ZHGMeViewController.m */,
+				252DC8382167ACC5006BDE9C /* Controller */,
+				252DC8372167ACBB006BDE9C /* View */,
+				252DC8362167ACAE006BDE9C /* Model */,
 			);
 			path = "mePage-我的";
 			sourceTree = "<group>";
@@ -1008,8 +1059,10 @@
 				25B7B96B2153DFC70053A2A5 /* MJRefreshGifHeader.m in Sources */,
 				25B7B9972153E4720053A2A5 /* HeaderFourView.m in Sources */,
 				25B7B9252153DAB30053A2A5 /* ZHGTabBarController.m in Sources */,
+				252DC8412167BA06006BDE9C /* ZHGCWTextField.m in Sources */,
 				25B7B96C2153DFC70053A2A5 /* MJRefreshFooter.m in Sources */,
 				250DD0F4215F78F000CD6D3E /* AFSecurityPolicy.m in Sources */,
+				252DC83421631B27006BDE9C /* UITableView+SDAutoTableViewCellHeight.m in Sources */,
 				25B7B9992153E4720053A2A5 /* CZHScrollView.m in Sources */,
 				25B7B92C2153DAB30053A2A5 /* ZHGFriendsViewController.m in Sources */,
 				250DD0FE215F79FF00CD6D3E /* CzhNetworking.m in Sources */,
@@ -1021,6 +1074,7 @@
 				25B7B95E2153DFC70053A2A5 /* MJRefreshConst.m in Sources */,
 				250DD0FD215F79FF00CD6D3E /* CzhNetworkingTools.m in Sources */,
 				25B7B9282153DAB30053A2A5 /* ZHGHomeViewController.m in Sources */,
+				252DC83E2167AF54006BDE9C /* CreateWalletPdView.m in Sources */,
 				25B7B9622153DFC70053A2A5 /* UIView+MJExtension.m in Sources */,
 				25B7B99A2153E4720053A2A5 /* CZHTableView.m in Sources */,
 				25B7B9192153DAB30053A2A5 /* UIBarButtonItem+CZHExtension.m in Sources */,
@@ -1051,6 +1105,7 @@
 				250DD0EF215F78F000CD6D3E /* AFURLResponseSerialization.m in Sources */,
 				2506C186215C9AA500530D13 /* UIImage+Extension.m in Sources */,
 				25B7B95D2153DFC70053A2A5 /* UIScrollView+MJRefresh.m in Sources */,
+				252DC83321631B27006BDE9C /* UIView+SDAutoLayout.m in Sources */,
 				250DD0F1215F78F000CD6D3E /* AFURLSessionManager.m in Sources */,
 				25B7B9212153DAB30053A2A5 /* HttpRequestManager.m in Sources */,
 				25B7B9952153E4720053A2A5 /* CZHNavigationView.m in Sources */,
@@ -1074,6 +1129,7 @@
 				25B728412154B06A00D22E94 /* NSUserDefaultsModel.m in Sources */,
 				2506C1A5215CDAE800530D13 /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */,
 				25B7B9242153DAB30053A2A5 /* CZHTabBar.m in Sources */,
+				252DC83B2167AE09006BDE9C /* ZHGCreateWalletVC.m in Sources */,
 				2532D511215B4C8100AFA29D /* ZHGFuncHeaderView.m in Sources */,
 				25B7B9962153E4720053A2A5 /* CZHButton.m in Sources */,
 				2504FD1B215A0FFD00691990 /* ZHGButton.m in Sources */,

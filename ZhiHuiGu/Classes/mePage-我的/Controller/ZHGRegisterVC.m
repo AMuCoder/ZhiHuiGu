@@ -9,6 +9,7 @@
 #import "ZHGRegisterVC.h"
 #import "ZHGLoginTextField.h"
 #import "ZHGLoginBtn.h"
+#import "ZHGCreateWalletVC.h"
 
 @interface ZHGRegisterVC ()
 //滚动视图
@@ -74,6 +75,7 @@
     [checkBox setBackgroundColor:[UIColor orangeColor]];
     [checkBox addTarget:self action:@selector(didClickCheckBox) forControlEvents:UIControlEventTouchUpInside];
     [_contentScrollView addSubview:checkBox];
+    
     //同意”免责声明及风险披露“
     UIButton *accpetBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     accpetBtn.frame = CGRectMake(CGRectGetMaxX(self.checkBox.frame)+ 10, CGRectGetMaxY(self.pdNum.frame) + 25, self.view.frame.size.width - CGRectGetMaxX(self.checkBox.frame) - 20, 20);
@@ -130,6 +132,7 @@
 
 - (void)regBtnClick{
     CZHLog(@"%s",__func__);
+    [self.navigationController pushViewController:[NSClassFromString(@"ZHGCreateWalletVC") new] animated:YES];
 }
 - (void)backLoginBtnClick{
     CZHLog(@"%s",__func__);

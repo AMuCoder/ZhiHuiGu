@@ -66,11 +66,9 @@
 //}
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.row == 0) {
-        ZHGLoginAndRegisterVC *vc = [[ZHGLoginAndRegisterVC alloc] init];
-        [self.navigationController pushViewController:vc animated:YES];
+        [self.navigationController pushViewController:[NSClassFromString(@"ZHGLoginAndRegisterVC") new] animated:YES];
     }else if (indexPath.row == 1){
-        ZHGLoginedVC *vc = [[ZHGLoginedVC alloc] init];
-        [self.navigationController pushViewController:vc animated:YES];
+        [self.navigationController pushViewController:[ZHGLoginedVC new] animated:YES];
     }else if (indexPath.row == 1){
     }
 }

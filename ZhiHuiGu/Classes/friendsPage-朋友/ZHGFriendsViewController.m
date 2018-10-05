@@ -9,7 +9,6 @@
 #import "ZHGFriendsViewController.h"
 #import "ZHGClickBtnView.h"
 #import "UIButton+CZHClickBtnBlock.h"
-#import "CzhNetworking.h"
 
 @interface ZHGFriendsViewController ()
 //@property (nonatomic, strong) CZHAFNetWorKingAssistant *afnetWorKingAssistant;
@@ -23,9 +22,17 @@
     self.title = @"朋友";
     self.edgesForExtendedLayout = UIRectEdgeNone;
     self.view.backgroundColor = [UIColor whiteColor];
-    ZHGClickBtnView *clickBtnView = [[ZHGClickBtnView alloc] initWithFrame:CGRectMake(0, 50, Main_Screen_Width, 200)];
+//    ZHGClickBtnView *clickBtnView = [[ZHGClickBtnView alloc] initWithFrame:CGRectMake(0, 50, Main_Screen_Width, 200)];
+
+     ZHGClickBtnView *clickBtnView = [[ZHGClickBtnView alloc] init];
     [self.view addSubview:clickBtnView];
     _clickBtnView = clickBtnView;
+    _clickBtnView.sd_layout
+    .leftSpaceToView(self.view, 40)
+    .topSpaceToView(self.view, 50)
+    .widthIs(Main_Screen_Width-80)
+    .heightIs(40);
+         /**/
     // 直接用自定义视图里面的 button 调用刚才封装的方法
     
     [clickBtnView.closeArrow setClickBlock:^(UIButton *button) {
