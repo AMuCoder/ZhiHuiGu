@@ -44,25 +44,50 @@
     
     
     //http://api.map.baidu.com/telematics/v3/weather?location=嘉兴&output=json&ak=5slgyqGDENN7Sy7pw29IUvrZ
-//    NSString *url = @"http://api.map.baidu.com/telematics/v3/weather?location";
-    NSDictionary *parameters = @{
-                                 @"email": @"czh588@126.com",
-                                 @"gender": @"string",
-                                 @"head_img": @"string",
-                                 @"id": @0,
-                                 @"nick": @"amu2018"
-                                 };
-    NSString *url = [NSString stringWithFormat:@"%@/%@",CZH_MainURL,@"/v1/user/edit"];
-    [CzhNetworking czhPOST:url parameters:parameters czhNetworkingSuccess:^(NSURLSessionDataTask * _Nonnull task, id  _Nonnull resultObject) {
-        NSLog(@"resultObject---------------------------%@", resultObject);
-        NSDictionary *dict = resultObject;
-        NSLog(@"%@",dict[@"message"]);
-        NSLog(@"%@",dict[@"status"]);
-    } czhNetworkingError:^(NSURLSessionDataTask * _Nonnull task, NSError * _Nonnull error, NSString * _Nonnull errorMessage) {
-        NSLog(@"afn***************************%@", errorMessage);
-    }];
-}
+    //NSString *url = @"http://api.map.baidu.com/telematics/v3/weather?location";
+    
+    NSMutableDictionary *parametersDic = [NSMutableDictionary dictionary];
+    [parametersDic setObject:@"chant0000" forKey:@"nick"];
+    [parametersDic setObject:@"1881613652" forKey:@"tel"];
+    [parametersDic setObject:@"qwe123456" forKey:@"pwd"];
+    [parametersDic setObject:@"443443" forKey:@"verify_code"];
+    NSString *url = [Czh_NetWorkURL returnURL:Interface_For_userRegister];
+//    [CzhNetworking czhPOST:url parameters:parametersDic czhNetworkingSuccess:^(NSURLSessionDataTask * _Nonnull task, id  _Nonnull resultObject) {
+//        NSLog(@"resultObject---------------------------%@", resultObject);
+//    } czhNetworkingError:^(NSURLSessionDataTask * _Nonnull task, NSError * _Nonnull error, NSString * _Nonnull errorMessage) {
+//        NSLog(@"afn***************************%@", errorMessage);
+//    }];
+    
+    [Czh_HttpRequest requestWithMethod:POST WithPath:url WithToken:nil WithParams:parametersDic WithSuccessBlock:^(id data) {
+        CZHLog(@"%@",data);
+    } WithFailurBlock:^(NSString *error) {
+        CZHLog(@"%@",error);
+        [Czh_WarnWindow HUD:[UIApplication sharedApplication].keyWindow andWarnText:error andXoffset:0 andYoffset:Main_Screen_Width/5*2];
+    } WithShowHudToView:self.view];
+    /*
+    {
+        code = 200;
+        data =     {
+            Created = "2018-10-06 04:37:37";
+            Email = "";
+            Gender = "";
+            HeadImg =         {
+                String = "";
+                Valid = 0;
+            };
+            Id = 27;
+            Nick = chant0000;
+            PayPwd = "";
+            Pwd = aaf4236fa13d1bfacf1642951083a5eac688b26776d628c271c55cd98a18ba3d;
+            Tel = 1881613652;
+            Updated = "2018-10-06 04:37:37";
+        };
+        message = success;
+    }
+     */
 
+}
+/*
 //json格式字符串转字典：
 - (NSDictionary *)dictionaryWithJsonString:(NSString *)jsonString {
     if (jsonString == nil) {
@@ -80,4 +105,6 @@
     }
     return dic;
 }
+
+*/
 @end
