@@ -12,12 +12,12 @@
 
 @interface ZHGLoginedVC ()
 //滚动视图
-@property(nonatomic,weak) TPKeyboardAvoidingScrollView * contentScrollView;
-@property(nonatomic,weak) UIImageView *iconImageView;
-@property(nonatomic,weak) ZHGpromptLabel *userNameLabel;
-@property(nonatomic,weak) ZHGLoginTextField *smsorpsdtextField;
-@property(nonatomic,weak) ZHGLoginBtn *loginBtn;
-@property(nonatomic,weak) ZHGSMSOrPsdBtn *smsorpsdBtn;
+@property(nonatomic,strong) TPKeyboardAvoidingScrollView * contentScrollView;
+@property(nonatomic,strong) UIImageView *iconImageView;
+@property(nonatomic,strong) ZHGpromptLabel *userNameLabel;
+@property(nonatomic,strong) ZHGLoginTextField *smsorpsdtextField;
+@property(nonatomic,strong) ZHGLoginBtn *loginBtn;
+@property(nonatomic,strong) ZHGSMSOrPsdBtn *smsorpsdBtn;
 @property(nonatomic,assign) int count;
 @end
 
@@ -27,6 +27,7 @@
     [super viewDidLoad];
     self.title = @"注册 - 登录";
     self.view.backgroundColor = [UIColor whiteColor];
+    self.edgesForExtendedLayout = UIRectEdgeNone;
     [self setupView];
 }
 -(void)setupView{
@@ -135,7 +136,7 @@
     }else{
         [timer invalidate];
         self.smsorpsdtextField.rBtn.enabled = YES;
-        [self.smsorpsdtextField.rBtn setTitle:@"获取验证码" forState:UIControlStateNormal];
+        [self.smsorpsdtextField.rBtn setTitle:@"重新发送" forState:UIControlStateNormal];
     }
 }
 

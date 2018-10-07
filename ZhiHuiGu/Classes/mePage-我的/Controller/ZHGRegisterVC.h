@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+//#import "Czh_BaseViewController.h"
 @interface ZHGRegisterVC : UIViewController
 
 @end

@@ -6,6 +6,7 @@
 #import "Czh_SingleObject.h"
 
 @implementation Czh_SingleObject
+
 //1.定义static的类型变量
 static Czh_SingleObject *instance;
 //2.单例对象创建
@@ -21,7 +22,7 @@ static Czh_SingleObject *instance;
 //3.重写alloc对应方法，防止用户通过alloc方法构建多个对象
 +(instancetype)allocWithZone:(struct _NSZone *)zone{
     if (instance == nil) {
-        instance = [[super allocWithZone:zone]init];
+        instance = [[super allocWithZone:zone] init];
     }
     return instance;
 }

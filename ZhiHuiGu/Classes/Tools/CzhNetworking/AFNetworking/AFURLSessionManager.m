@@ -1134,11 +1134,15 @@ didCompleteWithError:(NSError *)error
 - (void)URLSession:(NSURLSession *)session
               task:(NSURLSessionTask *)task
 didFinishCollectingMetrics:(NSURLSessionTaskMetrics *)metrics
-{
+API_AVAILABLE(ios(10.0)){
     AFURLSessionManagerTaskDelegate *delegate = [self delegateForTask:task];
     // Metrics may fire after URLSession:task:didCompleteWithError: is called, delegate may be nil
     if (delegate) {
-        [delegate URLSession:session task:task didFinishCollectingMetrics:metrics];
+        if (@available(iOS 10.0, *)) {
+            [delegate URLSession:session task:task didFinishCollectingMetrics:metrics];
+        } else {
+            // Fallback on earlier versions
+        }
     }
 
     if (self.taskDidFinishCollectingMetrics) {

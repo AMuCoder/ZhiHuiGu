@@ -464,7 +464,6 @@ static NSNumberFormatter *numberFormatter_;
     } else if ([self isKindOfClass:[NSData class]]) {
         return [[NSString alloc] initWithData:(NSData *)self encoding:NSUTF8StringEncoding];
     }
-    
     return [[NSString alloc] initWithData:[self mj_JSONData] encoding:NSUTF8StringEncoding];
 }
 @end

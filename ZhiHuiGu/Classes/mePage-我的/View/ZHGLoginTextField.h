@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface ZHGLoginTextField : UITextField
+
 @property(nonatomic,strong) UIButton *rBtn;
 
 - (instancetype)initWithFrame:(CGRect)frame placeHolder:(NSString *)placeHolder boolLeftView:(BOOL)flag rightTitle:(NSString *)title;

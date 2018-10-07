@@ -14,6 +14,7 @@
 #import "SWQRCode.h"
 #import "CZHButton.h"
 #import "ZHGHeaderView.h"
+#import "Czh_UIView.h"
 
 @interface ZHGHomeViewController ()<UISearchBarDelegate>
 /// 背景的UIScrollView
@@ -30,9 +31,10 @@
     [super viewDidLoad];
     self.title = @"首页";
     self.view.backgroundColor = [UIColor whiteColor];
+    self.edgesForExtendedLayout = UIRectEdgeNone;
     [self setupNavBar];
     [self headerFourViewBtnClick];
-    
+    [self setupSearchBarView];
 /**
  4按钮点击回调事件
  @return #import "UIButton+CZHClickBtnBlock.h"
@@ -111,7 +113,7 @@
     [self.navigationController.navigationBar setBackgroundImage:nil forBarPosition:UIBarPositionAny barMetrics:UIBarMetricsDefault];
     [self.navigationController.navigationBar setShadowImage:[UIImage new]];
     UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithCustomView:self.navigationView];
-    self.navigationItem.leftBarButtonItem = item;
+//    self.navigationItem.leftBarButtonItem = item;
     
     __weak __typeof(self)weakSelf = self;
     self.scrollView.contentOffsetAction = ^(CGFloat contentOffsetY) {
@@ -124,6 +126,7 @@
             weakSelf.searchBarView.hidden = NO;
         }
     };
+    
 }
 #pragma mark - 右边导航栏按钮点击事件
 /**
@@ -140,20 +143,29 @@
 }
 #pragma mark - 导航栏搜索框
 -(void)setupSearchBarView{
-    CGRect mainViewBounds = self.navigationController.view.bounds;
-    _searchBarView = [[UISearchBar alloc] initWithFrame:CGRectMake(40, 20, CGRectGetWidth(mainViewBounds)-120, 40)];
-    _searchBarView.placeholder = @"点击搜索";
-    _searchBarView.delegate = self;
-    _searchBarView.showsCancelButton = NO;
-    _searchBarView.searchBarStyle = UISearchBarStyleMinimal;
-    _searchBarView.tintColor = [UIColor whiteColor];
-    _searchBarView.barStyle = UIBarStyleBlack;
+//    CGRect mainViewBounds = self.navigationController.view.bounds;
+//    _searchBarView = [[UISearchBar alloc] initWithFrame:CGRectMake(40, 20, CGRectGetWidth(mainViewBounds)-120, 40)];
+//    _searchBarView.placeholder = @"点击搜索";
+//    _searchBarView.delegate = self;
+//    _searchBarView.showsCancelButton = NO;
+//    _searchBarView.searchBarStyle = UISearchBarStyleMinimal;
+//    _searchBarView.tintColor = [UIColor whiteColor];
+//    _searchBarView.barStyle = UIBarStyleBlack;
+//
+//    UITextField *textfield = [_searchBarView valueForKey:@"_searchField"];
+//    [textfield setValue:[UIColor whiteColor] forKeyPath:@"_placeholderLabel.textColor"];
+//    [textfield setValue:[UIFont boldSystemFontOfSize:15]forKeyPath:@"_placeholderLabel.font"];
+//    [self.navigationController.view addSubview: _searchBarView];
     
-    UITextField *textfield = [_searchBarView valueForKey:@"_searchField"];
-    [textfield setValue:[UIColor whiteColor] forKeyPath:@"_placeholderLabel.textColor"];
-    [textfield setValue:[UIFont boldSystemFontOfSize:15]forKeyPath:@"_placeholderLabel.font"];
-    [self.navigationController.view addSubview: _searchBarView];
-    
+    UIView *titleView = [[Czh_UIView alloc] init];
+    titleView.CZH_x = 7;
+    titleView.CZH_y = 7;
+    titleView.CZH_width = self.view.CZH_width - 90;
+    titleView.CZH_height = 30;
+    UISearchBar *searchBar = [[UISearchBar alloc] initWithFrame:titleView.bounds];
+    [titleView addSubview:searchBar];
+    titleView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
+    self.navigationItem.titleView = titleView;
 }
 
 #pragma mark - Get方法scrollView/navigationView

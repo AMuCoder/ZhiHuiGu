@@ -4,12 +4,17 @@
 //  用途：
 
 #import <Foundation/Foundation.h>
-@class UserInfoModel,User;
+#import "Czh_SetInfoModel.h"
+#import "UserInfoModel.h"
+#import "User.h"
 
 @interface Czh_SingleObject : NSObject
 
 @property(strong,nonatomic)UserInfoModel *userInfoModel;
-@property(nonatomic,strong) User *user;
+@property(nonatomic,strong)User *user;
+@property(strong,nonatomic)Czh_SetInfoModel *setInfoModel;
+
+@property(strong,nonatomic)NSString *loginSelectStr;//0手机登陆 1用户名登录
 
 +(id)getInstance;
 +(void)attempDealloc;

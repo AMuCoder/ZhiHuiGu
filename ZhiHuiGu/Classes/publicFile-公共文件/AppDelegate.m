@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 #import "ZHGTabBarController.h"
+#import "Czh_AccountTool.h"
+#import "ZHGLoginAndRegisterVC.h"
 
 @interface AppDelegate ()
 
@@ -20,8 +22,18 @@
     //创建窗口
     self.window = [[UIWindow alloc] init];
     self.window.frame = [UIScreen mainScreen].bounds;
-    //设置窗口的根控制器
-    self.window.rootViewController = [[ZHGTabBarController alloc] init];
+    
+    // 先判断有无存储账号信息
+    if ([Czh_AccountTool getUserName] == nil) {
+        // 之前没有登录成功
+        //设置窗口的根控制器
+        self.window.rootViewController = [[ZHGLoginAndRegisterVC alloc] init];
+    } else {
+        // 之前登录成功
+        //设置窗口的根控制器
+        self.window.rootViewController = [[ZHGTabBarController alloc] init];
+    }
+//    self.window.rootViewController = [[ZHGTabBarController alloc] init];
     //显示窗口
     [self.window makeKeyAndVisible];
     return YES;

@@ -40,6 +40,10 @@
 		252DC83B2167AE09006BDE9C /* ZHGCreateWalletVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 252DC83A2167AE09006BDE9C /* ZHGCreateWalletVC.m */; };
 		252DC83E2167AF54006BDE9C /* CreateWalletPdView.m in Sources */ = {isa = PBXBuildFile; fileRef = 252DC83D2167AF54006BDE9C /* CreateWalletPdView.m */; };
 		252DC8412167BA06006BDE9C /* ZHGCWTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 252DC8402167BA06006BDE9C /* ZHGCWTextField.m */; };
+		252E3FFA2168DF5D0041DA4F /* Czh_AccountTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 252E3FF92168DF5D0041DA4F /* Czh_AccountTool.m */; };
+		252E40032168FFC00041DA4F /* RTDeviceHardware.m in Sources */ = {isa = PBXBuildFile; fileRef = 252E40012168FFBF0041DA4F /* RTDeviceHardware.m */; };
+		252E4006216901050041DA4F /* RTNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 252E4005216901040041DA4F /* RTNavigationBar.m */; };
+		252E400C21690D7C0041DA4F /* Czh_UIView.m in Sources */ = {isa = PBXBuildFile; fileRef = 252E400B21690D7C0041DA4F /* Czh_UIView.m */; };
 		2532D511215B4C8100AFA29D /* ZHGFuncHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2532D510215B4C8100AFA29D /* ZHGFuncHeaderView.m */; };
 		2532D518215B552900AFA29D /* HomeFunctionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2532D515215B552900AFA29D /* HomeFunctionCell.xib */; };
 		2532D519215B552900AFA29D /* HomeFunctionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2532D516215B552900AFA29D /* HomeFunctionCell.m */; };
@@ -47,6 +51,7 @@
 		256E3424215B770B00BD681F /* ZHGHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 256E3423215B770B00BD681F /* ZHGHeaderView.m */; };
 		258714CE215290CE0063ED99 /* ZhiHuiGuTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 258714CD215290CE0063ED99 /* ZhiHuiGuTests.m */; };
 		258714D9215290CF0063ED99 /* ZhiHuiGuUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 258714D8215290CF0063ED99 /* ZhiHuiGuUITests.m */; };
+		25B6ABE32168B5760022EB17 /* Czh_SetInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 25B6ABE22168B5760022EB17 /* Czh_SetInfoModel.m */; };
 		25B728402154B06A00D22E94 /* LCUserDefaultsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 25B7283C2154B06A00D22E94 /* LCUserDefaultsModel.m */; };
 		25B728412154B06A00D22E94 /* NSUserDefaultsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 25B7283E2154B06A00D22E94 /* NSUserDefaultsModel.m */; };
 		25B7B9162153DAB30053A2A5 /* NSString+MD5Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 25B7B8E12153DAB30053A2A5 /* NSString+MD5Addition.m */; };
@@ -210,6 +215,14 @@
 		252DC83D2167AF54006BDE9C /* CreateWalletPdView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CreateWalletPdView.m; sourceTree = "<group>"; };
 		252DC83F2167BA06006BDE9C /* ZHGCWTextField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZHGCWTextField.h; sourceTree = "<group>"; };
 		252DC8402167BA06006BDE9C /* ZHGCWTextField.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZHGCWTextField.m; sourceTree = "<group>"; };
+		252E3FF82168DF5D0041DA4F /* Czh_AccountTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Czh_AccountTool.h; sourceTree = "<group>"; };
+		252E3FF92168DF5D0041DA4F /* Czh_AccountTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Czh_AccountTool.m; sourceTree = "<group>"; };
+		252E40012168FFBF0041DA4F /* RTDeviceHardware.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTDeviceHardware.m; sourceTree = "<group>"; };
+		252E40022168FFBF0041DA4F /* RTDeviceHardware.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTDeviceHardware.h; sourceTree = "<group>"; };
+		252E4004216901040041DA4F /* RTNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTNavigationBar.h; sourceTree = "<group>"; };
+		252E4005216901040041DA4F /* RTNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTNavigationBar.m; sourceTree = "<group>"; };
+		252E400A21690D7C0041DA4F /* Czh_UIView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Czh_UIView.h; sourceTree = "<group>"; };
+		252E400B21690D7C0041DA4F /* Czh_UIView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Czh_UIView.m; sourceTree = "<group>"; };
 		2532D50F215B4C8100AFA29D /* ZHGFuncHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZHGFuncHeaderView.h; sourceTree = "<group>"; };
 		2532D510215B4C8100AFA29D /* ZHGFuncHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZHGFuncHeaderView.m; sourceTree = "<group>"; };
 		2532D515215B552900AFA29D /* HomeFunctionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeFunctionCell.xib; sourceTree = "<group>"; };
@@ -227,6 +240,8 @@
 		258714D4215290CF0063ED99 /* ZhiHuiGuUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZhiHuiGuUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		258714D8215290CF0063ED99 /* ZhiHuiGuUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZhiHuiGuUITests.m; sourceTree = "<group>"; };
 		258714DA215290CF0063ED99 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		25B6ABE12168B5760022EB17 /* Czh_SetInfoModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Czh_SetInfoModel.h; sourceTree = "<group>"; };
+		25B6ABE22168B5760022EB17 /* Czh_SetInfoModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Czh_SetInfoModel.m; sourceTree = "<group>"; };
 		25B7283C2154B06A00D22E94 /* LCUserDefaultsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCUserDefaultsModel.m; sourceTree = "<group>"; };
 		25B7283D2154B06A00D22E94 /* NSUserDefaultsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSUserDefaultsModel.h; sourceTree = "<group>"; };
 		25B7283E2154B06A00D22E94 /* NSUserDefaultsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSUserDefaultsModel.m; sourceTree = "<group>"; };
@@ -774,6 +789,10 @@
 		25B7B8FD2153DAB30053A2A5 /* NavigationBar-导航 */ = {
 			isa = PBXGroup;
 			children = (
+				252E4004216901040041DA4F /* RTNavigationBar.h */,
+				252E4005216901040041DA4F /* RTNavigationBar.m */,
+				252E40022168FFBF0041DA4F /* RTDeviceHardware.h */,
+				252E40012168FFBF0041DA4F /* RTDeviceHardware.m */,
 				25B7B9002153DAB30053A2A5 /* ZHGTabBarController.h */,
 				25B7B9032153DAB30053A2A5 /* ZHGTabBarController.m */,
 				25B7B9022153DAB30053A2A5 /* CZHNavigationController.h */,
@@ -959,6 +978,8 @@
 				2532D510215B4C8100AFA29D /* ZHGFuncHeaderView.m */,
 				256E3422215B770B00BD681F /* ZHGHeaderView.h */,
 				256E3423215B770B00BD681F /* ZHGHeaderView.m */,
+				252E400A21690D7C0041DA4F /* Czh_UIView.h */,
+				252E400B21690D7C0041DA4F /* Czh_UIView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1069,6 +1090,10 @@
 				25DD4D2621684A950076DC77 /* UserInfoTool.m */,
 				25DD4D32216851060076DC77 /* Czh_SingleObject.h */,
 				25DD4D33216851060076DC77 /* Czh_SingleObject.m */,
+				25B6ABE12168B5760022EB17 /* Czh_SetInfoModel.h */,
+				25B6ABE22168B5760022EB17 /* Czh_SetInfoModel.m */,
+				252E3FF82168DF5D0041DA4F /* Czh_AccountTool.h */,
+				252E3FF92168DF5D0041DA4F /* Czh_AccountTool.m */,
 			);
 			path = UserInfo;
 			sourceTree = "<group>";
@@ -1076,27 +1101,27 @@
 		25DD4D02216849A60076DC77 /* MJExtension */ = {
 			isa = PBXGroup;
 			children = (
-				25DD4D03216849A60076DC77 /* MJPropertyKey.h */,
-				25DD4D04216849A60076DC77 /* NSObject+MJClass.h */,
-				25DD4D05216849A60076DC77 /* NSString+MJExtension.h */,
-				25DD4D06216849A60076DC77 /* MJPropertyType.m */,
-				25DD4D07216849A60076DC77 /* NSObject+MJProperty.h */,
-				25DD4D08216849A60076DC77 /* MJExtensionConst.h */,
-				25DD4D09216849A60076DC77 /* NSObject+MJKeyValue.m */,
-				25DD4D0A216849A60076DC77 /* MJProperty.m */,
-				25DD4D0B216849A60076DC77 /* MJFoundation.h */,
-				25DD4D0C216849A60076DC77 /* NSObject+MJCoding.m */,
 				25DD4D0D216849A60076DC77 /* MJExtension.h */,
-				25DD4D0E216849A60076DC77 /* MJExtensionConst.m */,
-				25DD4D0F216849A60076DC77 /* NSObject+MJProperty.m */,
 				25DD4D10216849A60076DC77 /* MJPropertyType.h */,
-				25DD4D11216849A60076DC77 /* NSObject+MJClass.m */,
-				25DD4D12216849A60076DC77 /* NSString+MJExtension.m */,
+				25DD4D06216849A60076DC77 /* MJPropertyType.m */,
+				25DD4D08216849A60076DC77 /* MJExtensionConst.h */,
+				25DD4D0E216849A60076DC77 /* MJExtensionConst.m */,
+				25DD4D0B216849A60076DC77 /* MJFoundation.h */,
+				25DD4D18216849A60076DC77 /* MJFoundation.m */,
+				25DD4D07216849A60076DC77 /* NSObject+MJProperty.h */,
+				25DD4D0F216849A60076DC77 /* NSObject+MJProperty.m */,
+				25DD4D03216849A60076DC77 /* MJPropertyKey.h */,
 				25DD4D13216849A60076DC77 /* MJPropertyKey.m */,
 				25DD4D14216849A60076DC77 /* MJProperty.h */,
+				25DD4D0A216849A60076DC77 /* MJProperty.m */,
+				25DD4D04216849A60076DC77 /* NSObject+MJClass.h */,
+				25DD4D11216849A60076DC77 /* NSObject+MJClass.m */,
+				25DD4D05216849A60076DC77 /* NSString+MJExtension.h */,
+				25DD4D12216849A60076DC77 /* NSString+MJExtension.m */,
 				25DD4D15216849A60076DC77 /* NSObject+MJKeyValue.h */,
+				25DD4D09216849A60076DC77 /* NSObject+MJKeyValue.m */,
 				25DD4D16216849A60076DC77 /* NSObject+MJCoding.h */,
-				25DD4D18216849A60076DC77 /* MJFoundation.m */,
+				25DD4D0C216849A60076DC77 /* NSObject+MJCoding.m */,
 			);
 			path = MJExtension;
 			sourceTree = "<group>";
@@ -1278,6 +1303,7 @@
 				25B7B9992153E4720053A2A5 /* CZHScrollView.m in Sources */,
 				25DD4D2F21684C1B0076DC77 /* KeychainItemWrapper.m in Sources */,
 				25B7B92C2153DAB30053A2A5 /* ZHGFriendsViewController.m in Sources */,
+				252E40032168FFC00041DA4F /* RTDeviceHardware.m in Sources */,
 				250DD0FE215F79FF00CD6D3E /* CzhNetworking.m in Sources */,
 				25B7B9202153DAB30053A2A5 /* UIView+Extension.m in Sources */,
 				25E7C634216072010053F450 /* ZHGLoginedVC.m in Sources */,
@@ -1311,6 +1337,7 @@
 				25DD4D42216859190076DC77 /* Czh_HttpRequest.m in Sources */,
 				250DD0C7215F0FF200CD6D3E /* ZHGForgotPwVC.m in Sources */,
 				25B7B9632153DFC70053A2A5 /* MJRefreshBackGifFooter.m in Sources */,
+				25B6ABE32168B5760022EB17 /* Czh_SetInfoModel.m in Sources */,
 				25B728402154B06A00D22E94 /* LCUserDefaultsModel.m in Sources */,
 				25B7B9602153DFC70053A2A5 /* UIScrollView+MJExtension.m in Sources */,
 				250DD0CA215F2C9A00CD6D3E /* ZHGpromptLabel.m in Sources */,
@@ -1333,9 +1360,11 @@
 				25B7B9212153DAB30053A2A5 /* HttpRequestManager.m in Sources */,
 				25B7B9952153E4720053A2A5 /* CZHNavigationView.m in Sources */,
 				25E7C62B216058F00053F450 /* CZHAFNetWorKingAssistant.m in Sources */,
+				252E3FFA2168DF5D0041DA4F /* Czh_AccountTool.m in Sources */,
 				25B7B91C2153DAB30053A2A5 /* CacheManager.m in Sources */,
 				2506C1A6215CDAE800530D13 /* TPKeyboardAvoidingScrollView.m in Sources */,
 				25B7B9982153E4720053A2A5 /* UIView+Frame.m in Sources */,
+				252E400C21690D7C0041DA4F /* Czh_UIView.m in Sources */,
 				25DD4D21216849A70076DC77 /* MJPropertyKey.m in Sources */,
 				2520B6E0215DB79C00956CB7 /* UIButton+CZHClickBtnBlock.m in Sources */,
 				25B7B9642153DFC70053A2A5 /* MJRefreshBackStateFooter.m in Sources */,
@@ -1360,6 +1389,7 @@
 				25DD4D1C216849A70076DC77 /* NSObject+MJCoding.m in Sources */,
 				25B7B9962153E4720053A2A5 /* CZHButton.m in Sources */,
 				25DD4D1D216849A70076DC77 /* MJExtensionConst.m in Sources */,
+				252E4006216901050041DA4F /* RTNavigationBar.m in Sources */,
 				2504FD1B215A0FFD00691990 /* ZHGButton.m in Sources */,
 				25B7B9272153DAB30053A2A5 /* ZHGMeViewController.m in Sources */,
 				2532D519215B552900AFA29D /* HomeFunctionCell.m in Sources */,

@@ -10,6 +10,7 @@
 #import "ZHGMeUserView.h"
 #import "ZHGLoginAndRegisterVC.h"
 #import "ZHGLoginedVC.h"
+#import "UserInfoModel.h"
 
 @interface ZHGMeViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -32,6 +33,7 @@
     [super viewDidLoad];
     self.title = @"我的";
     self.view.backgroundColor = [UIColor whiteColor];
+    self.edgesForExtendedLayout = UIRectEdgeNone;
     [self.view addSubview:self.tableview];
     // 去掉多余的cell
     self.tableview.tableFooterView = [UIView new];

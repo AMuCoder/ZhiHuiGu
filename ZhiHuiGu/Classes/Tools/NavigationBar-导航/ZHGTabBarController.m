@@ -14,6 +14,7 @@
 #import "ZHGFriendsViewController.h"
 #import "ZHGMeViewController.h"
 #import "CZHTabBar.h"
+#import "RTDeviceHardware.h"
 
 @interface ZHGTabBarController ()
 
@@ -80,5 +81,12 @@
     [nav.navigationBar setBackgroundImage:[UIImage imageNamed:@"navigationbarBackgroundWhite"] forBarMetrics:UIBarMetricsDefault];
     [self addChildViewController:nav];
 }
-
+- (void)viewDidLayoutSubviews {
+    [super viewDidLayoutSubviews];
+    //TODO: modify tabbar's y value.
+    if ([RTDeviceHardware iPhoneXDevice]) {
+        CGFloat deltaTabBarY = Main_Screen_Height - CGRectGetHeight(self.tabBar.frame);
+        self.tabBar.frame = (CGRect){0, deltaTabBarY, self.tabBar.bounds.size};
+    }
+}
 @end

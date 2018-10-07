@@ -13,6 +13,7 @@
 #import "ZHGRegisterVC.h"
 #import "ZHGForgotPwVC.h"
 #import "ZHGSMSOrPsdBtn.h"
+#import "Czh_RegularVerification.h"
 
 @interface ZHGLoginAndRegisterVC ()
 {
@@ -39,6 +40,7 @@
     [super viewDidLoad];
     self.title = @"注册 - 登录";
     self.view.backgroundColor = [UIColor whiteColor];
+    self.edgesForExtendedLayout = UIRectEdgeNone;
     [self setupView];
 }
 
@@ -52,7 +54,7 @@
      标题
      */
     UILabel *appName = [[UILabel alloc] initWithFrame:CGRectMake(20, Main_Screen_Height/5, Main_Screen_Width - 40, 40)];
-    appName.text = @"智慧谷电子钱包";
+    appName.text = @"智慧谷";
     appName.textColor = [UIColor blackColor];
     appName.textAlignment = NSTextAlignmentCenter;
     appName.font = [UIFont systemFontOfSize:30];
@@ -90,13 +92,14 @@
     _button = button;
     
     ZHGSMSOrPsdBtn *regisBtn = [[ZHGSMSOrPsdBtn alloc] initWithFrame:CGRectMake(Main_Screen_Width/2, CGRectGetMaxY(self.self.loginBtn.frame) + 10, Main_Screen_Width/2 - 20, 40) title:@"新用户注册"];
-    [regisBtn addTarget:self action:@selector(regBtnClick:) forControlEvents:UIControlEventTouchUpInside];
+    [regisBtn addTarget:self action:@selector(regBtnClick) forControlEvents:UIControlEventTouchUpInside];
     regisBtn.contentHorizontalAlignment = UIControlContentHorizontalAlignmentRight;
     [self.contentScrollView addSubview:regisBtn];
     _regisBtn = regisBtn;
     
 }
 - (void)loginBtnClick{
+    
     CZHLog(@"点击了登录按钮----");
 }
 //  button普通状态下的背景色
@@ -128,11 +131,15 @@
         } andEvent:UIControlEventTouchUpInside];
     }
 }
-- (void)regBtnClick:(UIButton *)sender{
+
+
+- (void)regBtnClick{
     CZHLog(@"点击了注册按钮----");
     ZHGRegisterVC *vc = [[ZHGRegisterVC alloc] init];
-    [self.navigationController pushViewController:vc animated:true];
+//    [self.navigationController pushViewController:vc animated:YES];
+    [self presentViewController:vc animated:YES completion:nil];
 }
+
 -(UIButton *)addBtnWithFrame:(CGRect)frame title:(NSString *)title action:(SEL)action{
     UIButton *button = [[UIButton alloc] initWithFrame:frame];
     [button setTitle:title forState:UIControlStateNormal];
@@ -142,19 +149,22 @@
     [button addTarget:self action:action forControlEvents:UIControlEventTouchUpInside];
     return button;
 }
--(void)sendCode
-{
-    
-    NSString *msg = nil;
-    if ([_nametextField.text isEqualToString:@""]||(_nametextField.text==NULL)) {
-        msg =@"手机号码不能为空";
+
+
+-(void)sendCode{
+    CZHLog(@"点击了获取验证码按钮----");
+    if (self.nametextField.text.length==0) {
+        //通过第三方创建菊花//提示框
+        [Czh_WarnWindow HUD:self.view andWarnText:@"请输入手机号码" andXoffset:0 andYoffset:Main_Screen_Width/5*2];
+    }else{
+        //正则判断手机号码
+        if ([Czh_RegularVerification isMobileNumber:self.nametextField.text]) {
+            //验证码请求
+            [self performSelector:@selector(countClick) withObject:nil];
+        }else{
+            [Czh_WarnWindow HUD:self.view andWarnText:@"请输入正确手机号码" andXoffset:0 andYoffset:Main_Screen_Width/5*2];
+        }
     }
-    if (msg.length !=0) {
-        UIAlertView *alert=[[UIAlertView alloc]initWithTitle:@"提示" message:msg delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil,nil];
-        [alert show];
-        return;
-    }
-    [self performSelector:@selector(countClick) withObject:nil];
 }
 -(void)countClick
 {
