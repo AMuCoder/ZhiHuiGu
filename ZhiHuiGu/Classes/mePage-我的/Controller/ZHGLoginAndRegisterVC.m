@@ -14,10 +14,12 @@
 #import "ZHGForgotPwVC.h"
 #import "ZHGSMSOrPsdBtn.h"
 #import "Czh_RegularVerification.h"
+#import "ZHGTabBarController.h"
 
 @interface ZHGLoginAndRegisterVC ()
 {
     NSInteger _count;
+    NSInteger _countN;//判断密码还是验证码
 }
 @property (nonatomic, strong) UILabel *appName;
 //滚动视图
@@ -32,6 +34,7 @@
 @property (nonatomic, strong) ZHGSMSOrPsdBtn *button;
 
 @property (nonatomic, strong) ZHGSMSOrPsdBtn *regisBtn;
+
 @end
 
 @implementation ZHGLoginAndRegisterVC
@@ -42,6 +45,7 @@
     self.view.backgroundColor = [UIColor whiteColor];
     self.edgesForExtendedLayout = UIRectEdgeNone;
     [self setupView];
+    _countN = 0;
 }
 
 -(void)setupView{
@@ -53,7 +57,7 @@
     /**
      标题
      */
-    UILabel *appName = [[UILabel alloc] initWithFrame:CGRectMake(20, Main_Screen_Height/5, Main_Screen_Width - 40, 40)];
+    UILabel *appName = [[UILabel alloc] initWithFrame:CGRectMake(20, 50, Main_Screen_Width - 40, 40)];
     appName.text = @"智慧谷";
     appName.textColor = [UIColor blackColor];
     appName.textAlignment = NSTextAlignmentCenter;
@@ -98,15 +102,77 @@
     _regisBtn = regisBtn;
     
 }
+#pragma mark -- 点击了登录按钮
 - (void)loginBtnClick{
-    
+    // 点击登录按钮后，关闭键盘
+    [self.view endEditing:YES];
     CZHLog(@"点击了登录按钮----");
+    CZHLog(@"_countN = %ld",(long)_countN);
+    if (self.nametextField.text.length==0 || self.passwtextField.text.length==0) {
+//    if (self.nametextField.text.length==0) {
+        //通过第三方创建菊花//提示框
+        [Czh_WarnWindow HUD:self.view andWarnText:@"请输入账号信息" andXoffset:0 andYoffset:Main_Screen_Width/5*3];
+    }else{
+        //正则判断手机号码
+        if ([Czh_RegularVerification isMobileNumber:self.nametextField.text]) {
+            //验证码请求
+            [self performSelector:@selector(LoginBtnClickNetWork) withObject:nil];
+        }else{
+            [Czh_WarnWindow HUD:self.view andWarnText:@"请输入正确手机号码" andXoffset:0 andYoffset:Main_Screen_Width/5*3];
+        }
+    }
 }
-//  button普通状态下的背景色
+
+#pragma mark -- 点击了登录按钮后的网络请求
+-(void)LoginBtnClickNetWork{
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    NSString *countNstring = [NSString stringWithFormat:@"%ld",(long)_countN];
+    NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    NSString *url = [Czh_NetWorkURL returnURL:Interface_For_userLogin];
+    if ([countNstring isEqualToString:@"0"]) {
+        params[@"tel"] = self.nametextField.text;//手机号码
+        params[@"pwd"]  = self.passwtextField.text;//密码
+        params[@"type"] = countNstring;//0-密码，1-短信验证码
+    }else{
+        params[@"tel"] = self.nametextField.text;//手机号码
+        params[@"verify_code"]  = self.passwtextField.text;//验证码
+        params[@"type"] = countNstring;//0-密码，1-短信验证码
+    }
+    [Czh_HttpRequest requestWithMethod:POST WithPath:url WithToken:nil WithParams:params WithSuccessBlock:^(id data) {
+        
+        if ([[NSString stringWithFormat:@"%@",data[@"code"]] isEqualToString:@"200"]) {
+            //用户名
+            [userDefaults setObject:data[@"data"][@"user"][@"Nick"]  forKey:kUserNameKey];
+            //密码
+            [userDefaults setObject:data[@"data"][@"user"][@"Pwd"]  forKey:kUserPwdKey];
+            //用户ID
+            [userDefaults setObject:data[@"data"][@"user"][@"Id"]  forKey:kUserIDKey];
+            //注册时间
+            [userDefaults setObject:data[@"data"][@"user"][@"Created"]  forKey:kUserCreatedKey];
+            //更新时间
+            [userDefaults setObject:data[@"data"][@"user"][@"Updated"]  forKey:kUserUpdatedKey];
+            //手机号码
+            [userDefaults setObject:data[@"data"][@"user"][@"Tel"]  forKey:kUserTelKey];
+            [userDefaults synchronize];
+            //注册成功--提示框
+            [Czh_WarnWindow HUD:self.view andWarnText:@"登录成功" andXoffset:0 andYoffset:Main_Screen_Width/5*3];
+            //设置窗口的根控制器
+            [self presentViewController:[ZHGTabBarController new] animated:YES completion:nil];
+        }else{
+            [Czh_WarnWindow HUD:self.view andWarnText:@"登录失败,请重新登录" andXoffset:0 andYoffset:Main_Screen_Width/5*3];
+        }
+        CZHLog(@"验证码请求时成功返回的数据--------(((%@)))",data);
+    } WithFailurBlock:^(NSString *error) {
+        CZHLog(@"验证码请求时失败返回的数据--------%@",error);
+    } WithShowHudToView:self.view];
+}
+#pragma mark -- 普通状态下的背景色
 - (void)buttonBackGroundNormal:(UIButton *)sender
 {
     __weak __typeof(self)weakSelf = self;
     if ([sender.titleLabel.text isEqualToString:@"短信验证码登录"]) {
+        
+        _countN = 1;
         [self.passwtextField removeFromSuperview];
         [_button setTitle:@"账户密码登录" forState:UIControlStateNormal];
         CZHLog(@"处理什么？");
@@ -118,6 +184,7 @@
         } andEvent:UIControlEventTouchUpInside];
     }
     else{
+        _countN = 0;
         [_button setTitle:@"短信验证码登录" forState:UIControlStateNormal];
         CZHLog(@"又处理什么？");
         [self.passwtextField removeFromSuperview];
@@ -130,6 +197,7 @@
             // 需要执行的操作
         } andEvent:UIControlEventTouchUpInside];
     }
+    CZHLog(@"_countN = %ld",(long)_countN);
 }
 
 

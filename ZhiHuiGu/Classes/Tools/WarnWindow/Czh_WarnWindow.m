@@ -16,7 +16,7 @@
     HUD.yOffset = yOffset;
     HUD.xOffset = xOffset;
     [HUD showAnimated:YES whileExecutingBlock:^{
-        sleep(1);
+        sleep(1.5);
     } completionBlock:^{
         
         [HUD removeFromSuperview];
@@ -33,7 +33,7 @@
     HUD.yOffset = Main_Screen_Width/5*2;
     HUD.xOffset = 0;
     [HUD showAnimated:YES whileExecutingBlock:^{
-        sleep(1);
+        sleep(1.5);
     } completionBlock:^{
         
         [HUD removeFromSuperview];

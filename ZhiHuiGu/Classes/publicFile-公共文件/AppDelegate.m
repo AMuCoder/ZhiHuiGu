@@ -12,7 +12,7 @@
 #import "ZHGLoginAndRegisterVC.h"
 
 @interface AppDelegate ()
-
+@property (nonatomic, strong) ZHGTabBarController *tabBarController;
 @end
 
 @implementation AppDelegate

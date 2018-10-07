@@ -46,14 +46,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor whiteColor];
-    self.navigationController.navigationBar.translucent = NO;
-    [self.navigationController setNavigationBarHidden:YES];
     [self setupView];
     [self setNav];
 }
 #pragma mark -- 添加导航栏
 -(void)setNav{
+    self.view.backgroundColor = [UIColor whiteColor];
+    self.navigationController.navigationBar.translucent = NO;
+    [self.navigationController setNavigationBarHidden:YES];
     UINavigationBar *nav = [RTNavigationBar defaultBar];
     nav.barTintColor = [UIColor whiteColor];
     UINavigationItem *navigationItem = [[UINavigationItem alloc] initWithTitle:@"注册"];
@@ -109,14 +109,12 @@
     self.checkBox = checkBox;
 //    [checkBox setImage:[UIImage imageNamed:@"ic_unselected"] forState:UIControlStateNormal];
 //    [checkBox setImage:[UIImage imageNamed:@"ic_selected"] forState:UIControlStateSelected];
-//    [checkBox setBackgroundColor:[UIColor orangeColor]];
     [checkBox addTarget:self action:@selector(didClickCheckBox) forControlEvents:UIControlEventTouchUpInside];
     [_contentScrollView addSubview:checkBox];
     
     //同意”免责声明及风险披露“
     UIButton *accpetBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     accpetBtn.frame = CGRectMake(CGRectGetMaxX(self.checkBox.frame)+ 10, CGRectGetMaxY(self.pdNum.frame) + 25, self.view.frame.size.width - CGRectGetMaxX(self.checkBox.frame) - 20, 20);
-//    accpetBtn.backgroundColor = [UIColor greenColor];
     NSMutableAttributedString *str = [[NSMutableAttributedString alloc]initWithString:@"同意”免责声明及风险披露“"];
     NSRange allRange = {0,[str length]};
     NSDictionary *attrs = [NSDictionary dictionary];
@@ -168,6 +166,8 @@
 }
 
 - (void)regBtnClick{
+    // 点击登录按钮后，关闭键盘
+    [self.view endEditing:YES];
     if (self.nametextField.text.length==0 || _phoneNum.text.length==0 || _pdNum.text.length==0 || _yzNum.text.length==0) {
         //通过第三方创建菊花//提示框
         [Czh_WarnWindow HUD:self.view andWarnText:@"请输入完整注册信息" andXoffset:0 andYoffset:Main_Screen_Width/5*3];

@@ -126,6 +126,7 @@
 		25E7C631216063750053F450 /* CZH_HTTPTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 25E7C630216063750053F450 /* CZH_HTTPTool.m */; };
 		25E7C634216072010053F450 /* ZHGLoginedVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 25E7C633216072010053F450 /* ZHGLoginedVC.m */; };
 		25E7C63721607AC30053F450 /* ZHGSMSOrPsdBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = 25E7C63621607AC30053F450 /* ZHGSMSOrPsdBtn.m */; };
+		25FAFB362169FC51001116AC /* Czh_RememberParticalVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 25FAFB352169FC51001116AC /* Czh_RememberParticalVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -389,6 +390,8 @@
 		25E7C633216072010053F450 /* ZHGLoginedVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZHGLoginedVC.m; sourceTree = "<group>"; };
 		25E7C63521607AC30053F450 /* ZHGSMSOrPsdBtn.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ZHGSMSOrPsdBtn.h; path = "ZhiHuiGu/Classes/mePage-我的/View/ZHGSMSOrPsdBtn.h"; sourceTree = SOURCE_ROOT; };
 		25E7C63621607AC30053F450 /* ZHGSMSOrPsdBtn.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ZHGSMSOrPsdBtn.m; path = "ZhiHuiGu/Classes/mePage-我的/View/ZHGSMSOrPsdBtn.m"; sourceTree = SOURCE_ROOT; };
+		25FAFB342169FC51001116AC /* Czh_RememberParticalVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Czh_RememberParticalVC.h; sourceTree = "<group>"; };
+		25FAFB352169FC51001116AC /* Czh_RememberParticalVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Czh_RememberParticalVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -646,6 +649,8 @@
 				25E7C633216072010053F450 /* ZHGLoginedVC.m */,
 				252DC8392167AE09006BDE9C /* ZHGCreateWalletVC.h */,
 				252DC83A2167AE09006BDE9C /* ZHGCreateWalletVC.m */,
+				25FAFB342169FC51001116AC /* Czh_RememberParticalVC.h */,
+				25FAFB352169FC51001116AC /* Czh_RememberParticalVC.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1350,6 +1355,7 @@
 				25B7B9222153DAB30053A2A5 /* ZHGMarketViewController.m in Sources */,
 				25B7B9652153DFC70053A2A5 /* MJRefreshBackNormalFooter.m in Sources */,
 				250DD0F0215F78F000CD6D3E /* AFHTTPSessionManager.m in Sources */,
+				25FAFB362169FC51001116AC /* Czh_RememberParticalVC.m in Sources */,
 				25DD4D4521685BF30076DC77 /* Czh_NetWorkURL.m in Sources */,
 				250DD0EF215F78F000CD6D3E /* AFURLResponseSerialization.m in Sources */,
 				2506C186215C9AA500530D13 /* UIImage+Extension.m in Sources */,

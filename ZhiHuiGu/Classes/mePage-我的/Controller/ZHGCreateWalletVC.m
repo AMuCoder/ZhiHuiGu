@@ -6,6 +6,8 @@
 #import "ZHGCreateWalletVC.h"
 #import "CreateWalletPdView.h"
 #import "ZHGLoginBtn.h"
+#import "RTNavigationBar.h"
+#import "ZHGTabBarController.h"
 
 @interface ZHGCreateWalletVC ()
 @property(nonatomic,strong) TPKeyboardAvoidingScrollView * contentScrollView;
@@ -19,10 +21,36 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"创建钱包";
-    self.view.backgroundColor = [UIColor whiteColor];
     [self setupView];
+    [self setNav];
 }
+#pragma mark -- 添加导航栏
+-(void)setNav{
+    self.view.backgroundColor = [UIColor whiteColor];
+    self.navigationController.navigationBar.translucent = NO;
+    [self.navigationController setNavigationBarHidden:YES];
+    UINavigationBar *nav = [RTNavigationBar defaultBar];
+    nav.barTintColor = [UIColor whiteColor];
+    UINavigationItem *navigationItem = [[UINavigationItem alloc] initWithTitle:@"创建钱包"];
+    UIButton* left = [UIButton buttonWithType:UIButtonTypeCustom];
+    [left setFrame:CGRectMake(0, 0, 40, 40)];
+    [left setImage:[[UIImage imageNamed:@"common_btn_back"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] forState:UIControlStateNormal];
+    [left setImageEdgeInsets:UIEdgeInsetsMake(0, /*0*/-23, 0, 0)];
+    [left addTarget:self action:@selector(onBack) forControlEvents:UIControlEventTouchUpInside];
+    UIBarButtonItem *leftBtn = [[UIBarButtonItem alloc] initWithCustomView:left];
+    [navigationItem setLeftBarButtonItem:leftBtn animated:NO];
+    [nav pushNavigationItem:navigationItem animated:NO];
+    [self.view addSubview:nav];
+    UIBarButtonItem *rightBarItem = [[UIBarButtonItem alloc] initWithTitle:@"跳过" style:UIBarButtonItemStylePlain target:self action:@selector(onClickedrightBarbtn)];
+    [navigationItem setRightBarButtonItem:rightBarItem animated:NO];
+}
+-(void)onBack{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+-(void)onClickedrightBarbtn{
+    [self presentViewController:[ZHGTabBarController new] animated:YES completion:nil];
+}
+
 
 -(void)setupView{
     /**
@@ -34,11 +62,21 @@
     contentScrollView.showsVerticalScrollIndicator = NO;
     [self.view addSubview:contentScrollView];
     _contentScrollView = contentScrollView;
-
+    /**
+     ios 11判断
+     */
+    CGFloat kheight;
+    if (@available(iOS 11.0, *)) {
+        kheight = 98.f;
+    }else{
+        kheight = 10.f;
+    }
+    
+    
     /**
      提示密码位数和类型
      */
-    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(10,10, Main_Screen_Width - 20, 30)];
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(10,kheight, Main_Screen_Width - 20, 30)];
     label.text = @"交易密码由字母和数字组成，至少八位";
     label.font = [UIFont systemFontOfSize:14.0f];
     label.textAlignment = NSTextAlignmentCenter;
@@ -48,7 +86,7 @@
     /**
      首次输入密码
      */
-    CreateWalletPdView *cwPdView0 = [[CreateWalletPdView alloc] initWithFrame:CGRectMake(10, 50, self.view.frame.size.width - 20, 44) labelText:@"交易密码 :  " placeHolder:@"请输入交易密码"];
+    CreateWalletPdView *cwPdView0 = [[CreateWalletPdView alloc] initWithFrame:CGRectMake(10, CGRectGetMaxY(label.frame) + 40, self.view.frame.size.width - 20, 44) labelText:@"交易密码 :  " placeHolder:@"请输入交易密码"];
     [self.contentScrollView addSubview:cwPdView0];
     _cwPdView0 = cwPdView0;
     

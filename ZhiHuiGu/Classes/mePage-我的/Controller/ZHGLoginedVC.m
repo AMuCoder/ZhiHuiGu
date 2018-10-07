@@ -9,8 +9,13 @@
 #import "ZHGLoginBtn.h"
 #import "ZHGSMSOrPsdBtn.h"
 #import "ZHGForgotPwVC.h"
+#import "ZHGRegisterVC.h"
+#import "ZHGCreateWalletVC.h"
 
 @interface ZHGLoginedVC ()
+{
+    NSInteger _COUNTN;
+}
 //滚动视图
 @property(nonatomic,strong) TPKeyboardAvoidingScrollView * contentScrollView;
 @property(nonatomic,strong) UIImageView *iconImageView;
@@ -25,10 +30,37 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    _COUNTN = 0;
     self.title = @"注册 - 登录";
     self.view.backgroundColor = [UIColor whiteColor];
     self.edgesForExtendedLayout = UIRectEdgeNone;
     [self setupView];
+    [self addRightBtn];
+}
+-(void)addRightBtn{
+    UIBarButtonItem *rightBarItem = [[UIBarButtonItem alloc] initWithTitle:@"更多" style:UIBarButtonItemStylePlain target:self action:@selector(onClickedrightBarbtn)];
+    self.navigationItem.rightBarButtonItem = rightBarItem;
+}
+-(void)onClickedrightBarbtn{
+    CZHLog(@"-----点击了导航栏右边按钮%s",__func__);
+    
+    UIAlertController *alertvc = [UIAlertController alertControllerWithTitle:nil message:nil preferredStyle:UIAlertControllerStyleActionSheet];
+    UIAlertAction *cancle = [UIAlertAction actionWithTitle:@"取 消" style:UIAlertActionStyleCancel handler:^(UIAlertAction *_Nonnull action) {
+        CZHLog(@"--------取 消！");
+    }];
+    UIAlertAction *replaceAcount = [UIAlertAction actionWithTitle:@"切换账户" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+        CZHLog(@"--------切换账户！");
+        [self presentViewController:[ZHGCreateWalletVC new] animated:YES completion:nil];
+    }];
+    UIAlertAction *registerAcount = [UIAlertAction actionWithTitle:@"注册新用户" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+        CZHLog(@"--------注册新用户！");
+        [self presentViewController:[ZHGRegisterVC new] animated:YES completion:nil];
+    }];
+    [alertvc addAction:cancle];
+    [alertvc addAction:replaceAcount];
+    [alertvc addAction:registerAcount];
+    [cancle setValue:[UIColor redColor] forKey:@"titleTextColor"];
+    [self presentViewController:alertvc animated:YES completion:nil];
 }
 -(void)setupView{
     TPKeyboardAvoidingScrollView * contentScrollView = [[TPKeyboardAvoidingScrollView alloc] initWithFrame:CGRectMake(0, 0, Main_Screen_Width, Main_Screen_Height)];
@@ -82,26 +114,38 @@
     } andEvent:UIControlEventTouchUpInside];
 }
 -(void)loginBtnClick{
+    
+    if (self.smsorpsdtextField.text.length==0) {
+        if (_COUNTN == 0) {
+            [Czh_WarnWindow HUD:self.view andWarnText:@"请输入密码" andXoffset:0 andYoffset:Main_Screen_Width/5*2];
+        }else{
+            [Czh_WarnWindow HUD:self.view andWarnText:@"请输入验证码" andXoffset:0 andYoffset:Main_Screen_Width/5*2];
+        }
+    }else{
+        //处理数据
+    }
     CZHLog(@"已登录界面登录按钮点击-------回调成功！");
 }
 
 //用户密码 -- 手机验证码切换按钮 -- Click
 - (void)smsorpsdBtnClick:(UIButton *)sender
 {
+
     __weak __typeof(self)weakSelf = self;
     if ([sender.titleLabel.text isEqualToString:@"短信验证码登录"]) {
+        _COUNTN = 1;
         [self.smsorpsdtextField removeFromSuperview];
         [self.smsorpsdBtn setTitle:@"账户密码登录" forState:UIControlStateNormal];
         CZHLog(@"处理什么？");
         self.smsorpsdtextField = [[ZHGLoginTextField alloc] initWithFrame:CGRectMake(20, CGRectGetMaxY(self.userNameLabel.frame) + 30, Main_Screen_Width - 40, 44) placeHolder:@"请输入验证码" boolLeftView:YES rightTitle:@"获取验证码"];
         [self.contentScrollView addSubview:self.smsorpsdtextField];
-        
-        // 需要执行的操作
+#pragma mark -- 按钮回调
         [self.smsorpsdtextField.rBtn setClickBlock:^(UIButton *button) {
             [weakSelf sendCode];
         } andEvent:UIControlEventTouchUpInside];
     }
     else{
+        _COUNTN = 0;
         [self.smsorpsdBtn setTitle:@"短信验证码登录" forState:UIControlStateNormal];
         CZHLog(@"又处理什么？");
         [self.smsorpsdtextField removeFromSuperview];
@@ -114,13 +158,13 @@
             // 需要执行的操作
         } andEvent:UIControlEventTouchUpInside];
     }
+    CZHLog(@"_COUNTN-------%ld",_COUNTN);
 }
 
--(void)sendCode
-{
-    //这里进行判断
+-(void)sendCode{
     [self performSelector:@selector(countClick) withObject:nil];
 }
+
 -(void)countClick
 {
     self.smsorpsdtextField.rBtn.enabled =NO;
@@ -128,6 +172,7 @@
     [self.smsorpsdtextField.rBtn setTitle:@"等待 60 秒" forState:UIControlStateDisabled];
     [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(timerFired:) userInfo:nil repeats:YES];
 }
+
 -(void)timerFired:(NSTimer *)timer
 {
     if (_count !=1) {

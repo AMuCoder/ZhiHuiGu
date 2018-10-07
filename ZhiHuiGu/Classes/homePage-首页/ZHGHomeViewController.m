@@ -22,7 +22,9 @@
 /// navigation视图
 @property (nonatomic, strong) CZHNavigationView *navigationView;
 /// 搜索框
-@property (nonatomic, strong) UISearchBar *searchBarView;
+@property(nonatomic,strong) UISearchBar *searchBar;
+@property(nonatomic,strong) UIView *titleView;
+
 @end
 
 @implementation ZHGHomeViewController
@@ -32,6 +34,7 @@
     self.title = @"首页";
     self.view.backgroundColor = [UIColor whiteColor];
     self.edgesForExtendedLayout = UIRectEdgeNone;
+
     [self setupNavBar];
     [self headerFourViewBtnClick];
     [self setupSearchBarView];
@@ -99,11 +102,21 @@
     
     [self.scrollView.headerView.headfourView.phoneBtn setClickBlock:^(UIButton *button) {
         CZHLog(@"scrollView.headerView.headfourView.phoneBtn--------回调成功！");
+        NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+        NSString *userName = [userDefaults objectForKey:kUserNameKey];
+        NSString *passWord = [userDefaults objectForKey:kUserPwdKey];
+        CZHLog(@"---------%@---------%@",userName,passWord);
+        NSDictionary *dictionary = [userDefaults dictionaryRepresentation];
+        for(NSString* key in [dictionary allKeys]){
+            [userDefaults removeObjectForKey:key];
+            [userDefaults synchronize];
+        }
     } andEvent:UIControlEventTouchUpInside];
 }
 #pragma mark - 导航栏右边双按钮
 - (void)setupNavBar
 {
+    //右边导航栏两个按钮
     self.navigationItem.rightBarButtonItems = @[
                                                 [UIBarButtonItem itemWithImage:@"mine-setting-icon" highImage:@"mine-setting-icon-click" target:self action:@selector(setting)],
                                                 [UIBarButtonItem itemWithImage:@"mine-moon-icon" highImage:@"mine-moon-icon-click" target:self action:@selector(moon)]
@@ -112,18 +125,27 @@
     self.navigationController.navigationBar.translucent = NO;
     [self.navigationController.navigationBar setBackgroundImage:nil forBarPosition:UIBarPositionAny barMetrics:UIBarMetricsDefault];
     [self.navigationController.navigationBar setShadowImage:[UIImage new]];
+    
     UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithCustomView:self.navigationView];
 //    self.navigationItem.leftBarButtonItem = item;
     
     __weak __typeof(self)weakSelf = self;
     self.scrollView.contentOffsetAction = ^(CGFloat contentOffsetY) {
-        weakSelf.navigationView.hidden = contentOffsetY < 50;
-        weakSelf.searchBarView.hidden = contentOffsetY > 50;
+        [weakSelf.view endEditing:YES];
+        if (contentOffsetY > 50) {
+            weakSelf.navigationItem.leftBarButtonItem = item;
+            weakSelf.navigationView.hidden = contentOffsetY < 50;
+            weakSelf.navigationItem.titleView = nil;
+            weakSelf.title = nil;
+        }else{
+            weakSelf.navigationItem.leftBarButtonItem = nil;
+            weakSelf.navigationItem.titleView = weakSelf.titleView;
+            weakSelf.title = @"首页";
+        }
         if (contentOffsetY > 100) {
             weakSelf.navigationView.alpha = 1;
         } else if (contentOffsetY > 50) {
             weakSelf.navigationView.alpha = 1 - (100 - contentOffsetY) / 50.f;
-            weakSelf.searchBarView.hidden = NO;
         }
     };
     
@@ -143,29 +165,24 @@
 }
 #pragma mark - 导航栏搜索框
 -(void)setupSearchBarView{
-//    CGRect mainViewBounds = self.navigationController.view.bounds;
-//    _searchBarView = [[UISearchBar alloc] initWithFrame:CGRectMake(40, 20, CGRectGetWidth(mainViewBounds)-120, 40)];
-//    _searchBarView.placeholder = @"点击搜索";
-//    _searchBarView.delegate = self;
-//    _searchBarView.showsCancelButton = NO;
-//    _searchBarView.searchBarStyle = UISearchBarStyleMinimal;
-//    _searchBarView.tintColor = [UIColor whiteColor];
-//    _searchBarView.barStyle = UIBarStyleBlack;
-//
-//    UITextField *textfield = [_searchBarView valueForKey:@"_searchField"];
-//    [textfield setValue:[UIColor whiteColor] forKeyPath:@"_placeholderLabel.textColor"];
-//    [textfield setValue:[UIFont boldSystemFontOfSize:15]forKeyPath:@"_placeholderLabel.font"];
-//    [self.navigationController.view addSubview: _searchBarView];
-    
+    /**
+     iOS11之后导航栏搜索框进行重新设置，否则搜索框上移动
+     */
     UIView *titleView = [[Czh_UIView alloc] init];
     titleView.CZH_x = 7;
     titleView.CZH_y = 7;
     titleView.CZH_width = self.view.CZH_width - 90;
     titleView.CZH_height = 30;
     UISearchBar *searchBar = [[UISearchBar alloc] initWithFrame:titleView.bounds];
+    searchBar.placeholder = @"点击搜索";
+    searchBar.delegate = self;
+    searchBar.searchBarStyle = UISearchBarStyleMinimal;
+    searchBar.tintColor = [UIColor whiteColor];
     [titleView addSubview:searchBar];
     titleView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
     self.navigationItem.titleView = titleView;
+    _searchBar = searchBar;
+    _titleView = titleView;
 }
 
 #pragma mark - Get方法scrollView/navigationView

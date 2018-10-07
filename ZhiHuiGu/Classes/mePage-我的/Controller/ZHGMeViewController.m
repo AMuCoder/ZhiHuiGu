@@ -11,6 +11,7 @@
 #import "ZHGLoginAndRegisterVC.h"
 #import "ZHGLoginedVC.h"
 #import "UserInfoModel.h"
+#import "Czh_RememberParticalVC.h"
 
 @interface ZHGMeViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -50,6 +51,8 @@
         cell.textLabel.text = @"用户注册与登录";
     }else if (indexPath.row == 1){
         cell.textLabel.text = @"登录";
+    }else if (indexPath.row == 2){
+        cell.textLabel.text = @"助记词";
     }else{
         cell.textLabel.text = [NSString stringWithFormat:@"这是第%ld行", indexPath.row];
     }
@@ -71,7 +74,8 @@
         [self.navigationController pushViewController:[NSClassFromString(@"ZHGLoginAndRegisterVC") new] animated:YES];
     }else if (indexPath.row == 1){
         [self.navigationController pushViewController:[ZHGLoginedVC new] animated:YES];
-    }else if (indexPath.row == 1){
+    }else if (indexPath.row == 2){
+        [self presentViewController:[Czh_RememberParticalVC new] animated:YES completion:nil];
     }
 }
 
