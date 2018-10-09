@@ -7,6 +7,7 @@
 
 @implementation Czh_HttpRequest
 
+
 + (void)requestWithMethod:(HTTPMethod)method
                  WithPath:(NSString *)path
                 WithToken:(NSString *)token
@@ -19,7 +20,16 @@
     if (view) {
         hub = [MBProgressHUD showHUDAddedTo:view animated:YES];
     }
-    NSString *tokerStr=[NSString stringWithFormat:@"%@",token];
+//    NSString *tokerStr=[NSString stringWithFormat:@"%@",token];
+    //("Authorization", "Bearer " + token)
+    NSString *tokerStr;
+    NSString *bearerStr = @"Bearer ";
+    NSString *tokenStr = [NSString stringWithFormat:@"%@",token];
+    if (!token) {
+        tokerStr=[NSString stringWithFormat:@"%@",token];
+    }else{
+        tokerStr = [bearerStr stringByAppendingString: tokenStr];
+    }
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     manager.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"application/json"];
     manager.responseSerializer = [AFHTTPResponseSerializer serializer];

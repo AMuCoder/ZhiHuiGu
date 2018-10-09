@@ -7,6 +7,6 @@
 
 @interface CreateWalletPdView : UIView
 @property(nonatomic,strong) UILabel *label;
-@property(nonatomic,strong) ZHGCWTextField *textField;
+@property(nonatomic,strong) Czh_CWTextField *textField;
 - (instancetype)initWithFrame:(CGRect)frame labelText:(NSString *)text  placeHolder:(NSString *)placeHolder;
 @end

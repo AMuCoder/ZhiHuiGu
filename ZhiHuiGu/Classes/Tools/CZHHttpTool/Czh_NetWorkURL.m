@@ -17,6 +17,14 @@
             url=[NSString stringWithFormat:@"%@/v1/user/edit",CZH_MainURL];
             CZHLog(@"用户信息编辑保存%@",url);
         }break;
+        case Interface_For_RetrieveLoginPassword:{
+            url=[NSString stringWithFormat:@"%@/v1/user/find-pwd",CZH_MainURL];
+            CZHLog(@"找回登陆密码%@",url);
+        }break;
+        case Interface_For_GET_AccessUserDigitalWalletAssets:{
+            url=[NSString stringWithFormat:@"%@/v1/user/get-wallets",CZH_MainURL];
+            CZHLog(@"获取用户数字钱包的资产情况%@",url);
+        }break;
         case Interface_For_userLogin:{
             url=[NSString stringWithFormat:@"%@/v1/user/login",CZH_MainURL];
             CZHLog(@"用户登陆%@",url);
@@ -36,6 +44,11 @@
         case Interface_For_refreshToken:{
             url=[NSString stringWithFormat:@"%@/v1/user/token",CZH_MainURL];
             CZHLog(@"刷新token%@",url);
+        }break;
+            //
+        case Interface_For_SendVerificationCode:{
+            url=[NSString stringWithFormat:@"%@/v1/user/sms",CZH_MainURL];
+            CZHLog(@"验证码%@",url);
         }break;
             
 #pragma mark 智慧谷 -- Wallet
@@ -60,6 +73,12 @@
             url=[NSString stringWithFormat:@"%@/v1/wallet/settings",CZH_MainURL];
             CZHLog(@"数字钱包设定%@",url);
         }break;
+#pragma mark 智慧谷 -- asset
+        case Interface_For_AcquisitionSystemAssets:{
+            url=[NSString stringWithFormat:@"%@/v1/asset/top",CZH_MainURL];
+            CZHLog(@"获取系统资产%@",url);
+        }break;
+            
             
 #pragma mark 之前项目（先不删）
             /*

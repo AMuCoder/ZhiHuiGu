@@ -20,7 +20,7 @@
         
         
         
-        ZHGCWTextField *textField = [[ZHGCWTextField alloc]init];
+        Czh_CWTextField *textField = [[Czh_CWTextField alloc]init];
         textField.backgroundColor = [UIColor clearColor];
         textField.secureTextEntry = YES;
         textField.textAlignment = NSTextAlignmentLeft;

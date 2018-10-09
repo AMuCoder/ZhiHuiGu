@@ -12,18 +12,25 @@ typedef  enum
     
 #pragma mark 智慧谷 -- User
     Interface_For_editAndSaveUserInformation,//用户信息编辑保存
+    Interface_For_RetrieveLoginPassword,//找回登陆密码
+    Interface_For_GET_AccessUserDigitalWalletAssets,//获取用户数字钱包的资产情况
     Interface_For_userLogin,//用户登陆
-    Interface_For_userRegister,//用户注册用户更改支付密码
-    Interface_For_editSavePaypwd,//用户更改支付密码//用户更改登陆密码
+    Interface_For_userRegister,//用户注册
+    Interface_For_editSavePaypwd,//用户更改支付密码
     Interface_For_editSavePwd,//用户更改登陆密码
     Interface_For_refreshToken,//刷新token
-    
+    Interface_For_SendVerificationCode,//验证码
 #pragma mark 智慧谷 -- Wallet
     Interface_For_activeUserWalletAddress,//激活用户钱包地址
     Interface_For_createKeypair,//创建数字密钥匙对, 助记词
     Interface_For_getMnemonic,//获取助记词
     Interface_For_walletPay,//支付- asset code 要相同
     Interface_For_settingsWallet,//数字钱包设定
+#pragma mark 智慧谷 -- asset
+    Interface_For_AcquisitionSystemAssets,//获取系统资产
+    
+    
+    
     
 #pragma mark 之前项目（先不删）
 //    Interface_For_SecurityCode,//获取验证码

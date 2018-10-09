@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "TPKeyboardAvoidingScrollView.h"
-@class ZHGHeaderView,CZHTableView;
+@class Czh_HeaderView,CZHTableView;
 
 typedef void(^CZHScrollViewContentOffsetAction)(CGFloat contentOffsetY);
 
@@ -16,7 +16,7 @@ typedef void(^CZHScrollViewContentOffsetAction)(CGFloat contentOffsetY);
 /// 列表
 @property (nonatomic, strong) CZHTableView *tableView;
 
-@property (nonatomic, strong) ZHGHeaderView *headerView;
+@property (nonatomic, strong) Czh_HeaderView *headerView;
 /// 偏移事件
 @property (nonatomic, copy) CZHScrollViewContentOffsetAction contentOffsetAction;
 

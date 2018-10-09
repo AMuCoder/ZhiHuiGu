@@ -11,8 +11,8 @@
 #import "CZHTableView.h"
 #import "MJRefresh.h"
 #import "UIView+Frame.h"
-#import "ZHGFuncHeaderView.h"
-#import "ZHGHeaderView.h"
+#import "Czh_FuncHeaderView.h"
+#import "Czh_HeaderView.h"
 #import "TPKeyboardAvoidingScrollView.h"
 #import "CZHButton.h"
 
@@ -106,9 +106,9 @@
     
     return _tableView;
 }
--(ZHGHeaderView *)headerView{
+-(Czh_HeaderView *)headerView{
     if (!_headerView) {
-        _headerView = [[ZHGHeaderView alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.width, headerViewH)];
+        _headerView = [[Czh_HeaderView alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.width, headerViewH)];
         [self addSubview:_headerView];
     }
     return _headerView;

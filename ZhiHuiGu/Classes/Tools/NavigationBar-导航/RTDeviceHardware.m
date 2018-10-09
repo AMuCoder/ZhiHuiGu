@@ -33,6 +33,18 @@
         //iPhone X Portrait size: 1125px x 2436px
     ([platform isEqualToString:@"Simulator"] && ([UIScreen mainScreen].bounds.size.height == 812))) {
         return YES;
+    }else if ([platform isEqualToString:@"iPhone XR"] ||
+              //iPhone XR Portrait size: 828px × 1792px
+              ([platform isEqualToString:@"Simulator"] && ([UIScreen mainScreen].bounds.size.height == 812))){
+        return YES;
+    }else if ([platform isEqualToString:@"iPhone XS"] ||
+              //iPhone XS Portrait size: 1125px × 2436px
+              ([platform isEqualToString:@"Simulator"] && ([UIScreen mainScreen].bounds.size.height == 812))){
+        return YES;
+    }else if ([platform isEqualToString:@"iPhone XS Max"] ||
+              //iPhone XS Max Portrait size: 1242px × 2688px
+              ([platform isEqualToString:@"Simulator"] && ([UIScreen mainScreen].bounds.size.height == 812))){
+        return YES;
     }
     return NO;
 }
@@ -58,6 +70,9 @@
     if ([@[@"iPhone10,1", @"iPhone10,4"] containsObject:platform])    return @"iPhone 8";
     if ([@[@"iPhone10,2", @"iPhone10,5"] containsObject:platform])    return @"iPhone 8 Plus";
     if ([@[@"iPhone10,3", @"iPhone10,6"] containsObject:platform])    return @"iPhone X";
+    if ([@[@"iPhone11,8"] containsObject:platform])    return @"iPhone XR";
+    if ([@[@"iPhone11.2"] containsObject:platform])    return @"iPhone XS";
+    if ([@[@"iPhone11,4", @"iPhone11,6"] containsObject:platform])    return @"iPhone XS Max";
     if ([platform isEqualToString:@"iPod1,1"])      return @"iPod Touch 1G";
     if ([platform isEqualToString:@"iPod2,1"])      return @"iPod Touch 2G";
     if ([platform isEqualToString:@"iPod3,1"])      return @"iPod Touch 3G";

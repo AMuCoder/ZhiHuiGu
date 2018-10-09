@@ -4,6 +4,7 @@
 //  用途：
 
 #import <UIKit/UIKit.h>
+#import "Czh_BSViewController.h"
 
 @interface Czh_RememberParticalVC : UIViewController
 

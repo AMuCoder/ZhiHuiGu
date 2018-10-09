@@ -7,12 +7,12 @@
 //
 
 #import "AppDelegate.h"
-#import "ZHGTabBarController.h"
+#import "Czh_TabBarController.h"
 #import "Czh_AccountTool.h"
-#import "ZHGLoginAndRegisterVC.h"
+#import "Czh_LoginAndRegisterVC.h"
 
 @interface AppDelegate ()
-@property (nonatomic, strong) ZHGTabBarController *tabBarController;
+@property (nonatomic, strong) Czh_TabBarController *tabBarController;
 @end
 
 @implementation AppDelegate
@@ -22,18 +22,19 @@
     //创建窗口
     self.window = [[UIWindow alloc] init];
     self.window.frame = [UIScreen mainScreen].bounds;
+    BOOL defaults = [[NSUserDefaults standardUserDefaults] boolForKey:kUserisLogin];
     
     // 先判断有无存储账号信息
-    if ([Czh_AccountTool getUserName] == nil) {
+    if (!defaults) {
         // 之前没有登录成功
         //设置窗口的根控制器
-        self.window.rootViewController = [[ZHGLoginAndRegisterVC alloc] init];
+        self.window.rootViewController = [[Czh_LoginAndRegisterVC alloc] init];
     } else {
         // 之前登录成功
         //设置窗口的根控制器
-        self.window.rootViewController = [[ZHGTabBarController alloc] init];
+        self.window.rootViewController = [[Czh_TabBarController alloc] init];
     }
-//    self.window.rootViewController = [[ZHGTabBarController alloc] init];
+//    self.window.rootViewController = [[Czh_TabBarController alloc] init];
     //显示窗口
     [self.window makeKeyAndVisible];
     return YES;
