@@ -10,7 +10,6 @@
 		2502928A216AF0CE00A9127A /* Czh_BackupMnemonicVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 25029289216AF0CE00A9127A /* Czh_BackupMnemonicVC.m */; };
 		2504FD1B215A0FFD00691990 /* Czh_Button.m in Sources */ = {isa = PBXBuildFile; fileRef = 2504FD1A215A0FFD00691990 /* Czh_Button.m */; };
 		2506C186215C9AA500530D13 /* UIImage+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 2506C17E215C9AA500530D13 /* UIImage+Extension.m */; };
-		2506C187215C9AA500530D13 /* CZHSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 2506C17F215C9AA500530D13 /* CZHSearchBar.m */; };
 		2506C192215CB74900530D13 /* Czh_MeUserView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2506C191215CB74900530D13 /* Czh_MeUserView.m */; };
 		2506C199215CC6CC00530D13 /* Czh_LoginAndRegisterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2506C198215CC6CC00530D13 /* Czh_LoginAndRegisterVC.m */; };
 		2506C19C215CC9A100530D13 /* Czh_LoginTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 2506C19B215CC9A100530D13 /* Czh_LoginTextField.m */; };
@@ -19,11 +18,6 @@
 		2506C1A6215CDAE800530D13 /* TPKeyboardAvoidingScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2506C1A3215CDAE800530D13 /* TPKeyboardAvoidingScrollView.m */; };
 		250DD0C7215F0FF200CD6D3E /* Czh_ForgotPwVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 250DD0C6215F0FF200CD6D3E /* Czh_ForgotPwVC.m */; };
 		250DD0CA215F2C9A00CD6D3E /* Czh_promptLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 250DD0C9215F2C9A00CD6D3E /* Czh_promptLabel.m */; };
-		250DD0DB215F457900CD6D3E /* SWQRCodeConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 250DD0D0215F457900CD6D3E /* SWQRCodeConfig.m */; };
-		250DD0DC215F457900CD6D3E /* SWQRCodeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 250DD0D1215F457900CD6D3E /* SWQRCodeManager.m */; };
-		250DD0DD215F457900CD6D3E /* SWQRCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 250DD0D5215F457900CD6D3E /* SWQRCodeViewController.m */; };
-		250DD0DE215F457900CD6D3E /* SWQRCode.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 250DD0D6215F457900CD6D3E /* SWQRCode.bundle */; };
-		250DD0DF215F457900CD6D3E /* SWScannerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 250DD0D8215F457900CD6D3E /* SWScannerView.m */; };
 		250DD0EF215F78F000CD6D3E /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 250DD0E5215F78F000CD6D3E /* AFURLResponseSerialization.m */; };
 		250DD0F0215F78F000CD6D3E /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 250DD0E6215F78F000CD6D3E /* AFHTTPSessionManager.m */; };
 		250DD0F1215F78F000CD6D3E /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 250DD0E8215F78F000CD6D3E /* AFURLSessionManager.m */; };
@@ -33,9 +27,14 @@
 		250DD0FC215F79FF00CD6D3E /* CzhNetworkingVariableType.m in Sources */ = {isa = PBXBuildFile; fileRef = 250DD0F6215F79FF00CD6D3E /* CzhNetworkingVariableType.m */; };
 		250DD0FD215F79FF00CD6D3E /* CzhNetworkingTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 250DD0F7215F79FF00CD6D3E /* CzhNetworkingTools.m */; };
 		250DD0FE215F79FF00CD6D3E /* CzhNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 250DD0FB215F79FF00CD6D3E /* CzhNetworking.m */; };
+		251A7E8F216F4A1200918C6C /* Czh_collectionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 251A7E8E216F4A1200918C6C /* Czh_collectionVC.m */; };
+		251A7E92216F4A5600918C6C /* Czh_collectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 251A7E91216F4A5600918C6C /* Czh_collectionView.m */; };
 		2520B6E0215DB79C00956CB7 /* UIButton+CZHClickBtnBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 2520B6DF215DB79C00956CB7 /* UIButton+CZHClickBtnBlock.m */; };
 		2520B6E3215DC8ED00956CB7 /* Czh_ClickBtnView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2520B6E2215DC8ED00956CB7 /* Czh_ClickBtnView.m */; };
 		2520B6E6215E02F700956CB7 /* Czh_RegisterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2520B6E5215E02F700956CB7 /* Czh_RegisterVC.m */; };
+		2521CD24216D94F500E3D149 /* Czh_ImportWalletVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2521CD23216D94F500E3D149 /* Czh_ImportWalletVC.m */; };
+		2521CD27216DDF0800E3D149 /* NSArray+Czh_JSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 2521CD26216DDF0800E3D149 /* NSArray+Czh_JSON.m */; };
+		2521CD2D216DF2B900E3D149 /* NSData+AES128.m in Sources */ = {isa = PBXBuildFile; fileRef = 2521CD2B216DF2B900E3D149 /* NSData+AES128.m */; };
 		25295F8F216C3B5D00E07221 /* Czh_UserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 25295F8E216C3B5D00E07221 /* Czh_UserInfo.m */; };
 		25295F95216C444B00E07221 /* Czh_UserInfoContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 25295F94216C444B00E07221 /* Czh_UserInfoContext.m */; };
 		25295F98216C455300E07221 /* Czh_Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 25295F97216C455300E07221 /* Czh_Utilities.m */; };
@@ -52,6 +51,18 @@
 		2532D518215B552900AFA29D /* HomeFunctionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2532D515215B552900AFA29D /* HomeFunctionCell.xib */; };
 		2532D519215B552900AFA29D /* HomeFunctionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2532D516215B552900AFA29D /* HomeFunctionCell.m */; };
 		2532D51C215B558800AFA29D /* CategoryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2532D51B215B558800AFA29D /* CategoryModel.m */; };
+		2533D8D7216CF78F000292D0 /* Czh_RememberParticalView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2533D8D6216CF78F000292D0 /* Czh_RememberParticalView.m */; };
+		2538E468216FA648000A30BC /* PXAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2538E466216FA647000A30BC /* PXAlertView.m */; };
+		25404795216E4C6A007637A3 /* CZHAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 25404793216E4C6A007637A3 /* CZHAlertView.m */; };
+		2553F0CD217040A500A92098 /* YXCustomAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2553F0CB217040A400A92098 /* YXCustomAlertView.m */; };
+		2553F0D021704A4E00A92098 /* AssetsTypeAlter.m in Sources */ = {isa = PBXBuildFile; fileRef = 2553F0CF21704A4E00A92098 /* AssetsTypeAlter.m */; };
+		2553F0D3217051BE00A92098 /* AssetsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2553F0D2217051BE00A92098 /* AssetsTableViewCell.m */; };
+		2553F0D92170643A00A92098 /* Czh_SMSOrPsdBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = 2553F0D72170643A00A92098 /* Czh_SMSOrPsdBtn.m */; };
+		2553F0E72170735B00A92098 /* SWQRCodeConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 2553F0DC2170735A00A92098 /* SWQRCodeConfig.m */; };
+		2553F0E82170735B00A92098 /* SWQRCodeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2553F0DD2170735A00A92098 /* SWQRCodeManager.m */; };
+		2553F0E92170735B00A92098 /* SWQRCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2553F0E12170735A00A92098 /* SWQRCodeViewController.m */; };
+		2553F0EA2170735B00A92098 /* SWQRCode.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2553F0E22170735A00A92098 /* SWQRCode.bundle */; };
+		2553F0EB2170735B00A92098 /* SWScannerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2553F0E42170735A00A92098 /* SWScannerView.m */; };
 		255EF937216B300100FBB4CF /* Czh_BSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 255EF936216B300100FBB4CF /* Czh_BSViewController.m */; };
 		256E3424215B770B00BD681F /* Czh_HeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 256E3423215B770B00BD681F /* Czh_HeaderView.m */; };
 		258714CE215290CE0063ED99 /* ZhiHuiGuTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 258714CD215290CE0063ED99 /* ZhiHuiGuTests.m */; };
@@ -130,7 +141,6 @@
 		25E7C62B216058F00053F450 /* CZHAFNetWorKingAssistant.m in Sources */ = {isa = PBXBuildFile; fileRef = 25E7C62A216058F00053F450 /* CZHAFNetWorKingAssistant.m */; };
 		25E7C631216063750053F450 /* CZH_HTTPTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 25E7C630216063750053F450 /* CZH_HTTPTool.m */; };
 		25E7C634216072010053F450 /* Czh_LoginedVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 25E7C633216072010053F450 /* Czh_LoginedVC.m */; };
-		25E7C63721607AC30053F450 /* Czh_SMSOrPsdBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = 25E7C63621607AC30053F450 /* Czh_SMSOrPsdBtn.m */; };
 		25ED23AC216A51EC001429CB /* UILabel+Czh_UILabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 25ED23AB216A51EC001429CB /* UILabel+Czh_UILabel.m */; };
 		25ED23AF216A5996001429CB /* Czh_UILabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 25ED23AE216A5996001429CB /* Czh_UILabel.m */; };
 		25FAFB362169FC51001116AC /* Czh_RememberParticalVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 25FAFB352169FC51001116AC /* Czh_RememberParticalVC.m */; };
@@ -158,9 +168,7 @@
 		25029289216AF0CE00A9127A /* Czh_BackupMnemonicVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Czh_BackupMnemonicVC.m; sourceTree = "<group>"; };
 		2504FD19215A0FFD00691990 /* Czh_Button.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Czh_Button.h; sourceTree = "<group>"; };
 		2504FD1A215A0FFD00691990 /* Czh_Button.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Czh_Button.m; sourceTree = "<group>"; };
-		2506C17D215C9AA500530D13 /* CZHSearchBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CZHSearchBar.h; sourceTree = "<group>"; };
 		2506C17E215C9AA500530D13 /* UIImage+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Extension.m"; sourceTree = "<group>"; };
-		2506C17F215C9AA500530D13 /* CZHSearchBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CZHSearchBar.m; sourceTree = "<group>"; };
 		2506C180215C9AA500530D13 /* UIImage+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Extension.h"; sourceTree = "<group>"; };
 		2506C190215CB74900530D13 /* Czh_MeUserView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Czh_MeUserView.h; sourceTree = "<group>"; };
 		2506C191215CB74900530D13 /* Czh_MeUserView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Czh_MeUserView.m; sourceTree = "<group>"; };
@@ -178,16 +186,6 @@
 		250DD0C6215F0FF200CD6D3E /* Czh_ForgotPwVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Czh_ForgotPwVC.m; sourceTree = "<group>"; };
 		250DD0C8215F2C9A00CD6D3E /* Czh_promptLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Czh_promptLabel.h; sourceTree = "<group>"; };
 		250DD0C9215F2C9A00CD6D3E /* Czh_promptLabel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Czh_promptLabel.m; sourceTree = "<group>"; };
-		250DD0D0215F457900CD6D3E /* SWQRCodeConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWQRCodeConfig.m; sourceTree = "<group>"; };
-		250DD0D1215F457900CD6D3E /* SWQRCodeManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWQRCodeManager.m; sourceTree = "<group>"; };
-		250DD0D2215F457900CD6D3E /* SWQRCodeConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWQRCodeConfig.h; sourceTree = "<group>"; };
-		250DD0D3215F457900CD6D3E /* SWQRCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWQRCode.h; sourceTree = "<group>"; };
-		250DD0D4215F457900CD6D3E /* SWQRCodeManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWQRCodeManager.h; sourceTree = "<group>"; };
-		250DD0D5215F457900CD6D3E /* SWQRCodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWQRCodeViewController.m; sourceTree = "<group>"; };
-		250DD0D6215F457900CD6D3E /* SWQRCode.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SWQRCode.bundle; sourceTree = "<group>"; };
-		250DD0D8215F457900CD6D3E /* SWScannerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWScannerView.m; sourceTree = "<group>"; };
-		250DD0D9215F457900CD6D3E /* SWScannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWScannerView.h; sourceTree = "<group>"; };
-		250DD0DA215F457900CD6D3E /* SWQRCodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWQRCodeViewController.h; sourceTree = "<group>"; };
 		250DD0E1215F78F000CD6D3E /* AFSecurityPolicy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFSecurityPolicy.h; sourceTree = "<group>"; };
 		250DD0E2215F78F000CD6D3E /* AFNetworkReachabilityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkReachabilityManager.h; sourceTree = "<group>"; };
 		250DD0E3215F78F000CD6D3E /* AFURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLSessionManager.h; sourceTree = "<group>"; };
@@ -208,12 +206,22 @@
 		250DD0F9215F79FF00CD6D3E /* CzhNetworkingVariableType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CzhNetworkingVariableType.h; sourceTree = "<group>"; };
 		250DD0FA215F79FF00CD6D3E /* CzhNetworkingTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CzhNetworkingTools.h; sourceTree = "<group>"; };
 		250DD0FB215F79FF00CD6D3E /* CzhNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CzhNetworking.m; sourceTree = "<group>"; };
+		251A7E8D216F4A1200918C6C /* Czh_collectionVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Czh_collectionVC.h; sourceTree = "<group>"; };
+		251A7E8E216F4A1200918C6C /* Czh_collectionVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Czh_collectionVC.m; sourceTree = "<group>"; };
+		251A7E90216F4A5600918C6C /* Czh_collectionView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Czh_collectionView.h; sourceTree = "<group>"; };
+		251A7E91216F4A5600918C6C /* Czh_collectionView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Czh_collectionView.m; sourceTree = "<group>"; };
 		2520B6DE215DB79C00956CB7 /* UIButton+CZHClickBtnBlock.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+CZHClickBtnBlock.h"; sourceTree = "<group>"; };
 		2520B6DF215DB79C00956CB7 /* UIButton+CZHClickBtnBlock.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+CZHClickBtnBlock.m"; sourceTree = "<group>"; };
 		2520B6E1215DC8ED00956CB7 /* Czh_ClickBtnView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Czh_ClickBtnView.h; sourceTree = "<group>"; };
 		2520B6E2215DC8ED00956CB7 /* Czh_ClickBtnView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Czh_ClickBtnView.m; sourceTree = "<group>"; };
 		2520B6E4215E02F700956CB7 /* Czh_RegisterVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Czh_RegisterVC.h; sourceTree = "<group>"; };
 		2520B6E5215E02F700956CB7 /* Czh_RegisterVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Czh_RegisterVC.m; sourceTree = "<group>"; };
+		2521CD22216D94F500E3D149 /* Czh_ImportWalletVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Czh_ImportWalletVC.h; sourceTree = "<group>"; };
+		2521CD23216D94F500E3D149 /* Czh_ImportWalletVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Czh_ImportWalletVC.m; sourceTree = "<group>"; };
+		2521CD25216DDF0800E3D149 /* NSArray+Czh_JSON.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSArray+Czh_JSON.h"; sourceTree = "<group>"; };
+		2521CD26216DDF0800E3D149 /* NSArray+Czh_JSON.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Czh_JSON.m"; sourceTree = "<group>"; };
+		2521CD2B216DF2B900E3D149 /* NSData+AES128.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+AES128.m"; sourceTree = "<group>"; };
+		2521CD2C216DF2B900E3D149 /* NSData+AES128.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+AES128.h"; sourceTree = "<group>"; };
 		25295F8D216C3B5D00E07221 /* Czh_UserInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Czh_UserInfo.h; sourceTree = "<group>"; };
 		25295F8E216C3B5D00E07221 /* Czh_UserInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Czh_UserInfo.m; sourceTree = "<group>"; };
 		25295F93216C444B00E07221 /* Czh_UserInfoContext.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Czh_UserInfoContext.h; sourceTree = "<group>"; };
@@ -246,6 +254,30 @@
 		2532D517215B552900AFA29D /* HomeFunctionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeFunctionCell.h; sourceTree = "<group>"; };
 		2532D51A215B558800AFA29D /* CategoryModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CategoryModel.h; sourceTree = "<group>"; };
 		2532D51B215B558800AFA29D /* CategoryModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CategoryModel.m; sourceTree = "<group>"; };
+		2533D8D5216CF78F000292D0 /* Czh_RememberParticalView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Czh_RememberParticalView.h; sourceTree = "<group>"; };
+		2533D8D6216CF78F000292D0 /* Czh_RememberParticalView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Czh_RememberParticalView.m; sourceTree = "<group>"; };
+		2538E466216FA647000A30BC /* PXAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXAlertView.m; sourceTree = "<group>"; };
+		2538E467216FA647000A30BC /* PXAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXAlertView.h; sourceTree = "<group>"; };
+		25404793216E4C6A007637A3 /* CZHAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CZHAlertView.m; sourceTree = "<group>"; };
+		25404794216E4C6A007637A3 /* CZHAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CZHAlertView.h; sourceTree = "<group>"; };
+		2553F0CB217040A400A92098 /* YXCustomAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXCustomAlertView.m; sourceTree = "<group>"; };
+		2553F0CC217040A400A92098 /* YXCustomAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXCustomAlertView.h; sourceTree = "<group>"; };
+		2553F0CE21704A4E00A92098 /* AssetsTypeAlter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AssetsTypeAlter.h; sourceTree = "<group>"; };
+		2553F0CF21704A4E00A92098 /* AssetsTypeAlter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AssetsTypeAlter.m; sourceTree = "<group>"; };
+		2553F0D1217051BE00A92098 /* AssetsTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AssetsTableViewCell.h; sourceTree = "<group>"; };
+		2553F0D2217051BE00A92098 /* AssetsTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AssetsTableViewCell.m; sourceTree = "<group>"; };
+		2553F0D72170643A00A92098 /* Czh_SMSOrPsdBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Czh_SMSOrPsdBtn.m; sourceTree = "<group>"; };
+		2553F0D82170643A00A92098 /* Czh_SMSOrPsdBtn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Czh_SMSOrPsdBtn.h; sourceTree = "<group>"; };
+		2553F0DC2170735A00A92098 /* SWQRCodeConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWQRCodeConfig.m; sourceTree = "<group>"; };
+		2553F0DD2170735A00A92098 /* SWQRCodeManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWQRCodeManager.m; sourceTree = "<group>"; };
+		2553F0DE2170735A00A92098 /* SWQRCodeConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWQRCodeConfig.h; sourceTree = "<group>"; };
+		2553F0DF2170735A00A92098 /* SWQRCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWQRCode.h; sourceTree = "<group>"; };
+		2553F0E02170735A00A92098 /* SWQRCodeManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWQRCodeManager.h; sourceTree = "<group>"; };
+		2553F0E12170735A00A92098 /* SWQRCodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWQRCodeViewController.m; sourceTree = "<group>"; };
+		2553F0E22170735A00A92098 /* SWQRCode.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SWQRCode.bundle; sourceTree = "<group>"; };
+		2553F0E42170735A00A92098 /* SWScannerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWScannerView.m; sourceTree = "<group>"; };
+		2553F0E52170735A00A92098 /* SWScannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWScannerView.h; sourceTree = "<group>"; };
+		2553F0E62170735A00A92098 /* SWQRCodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWQRCodeViewController.h; sourceTree = "<group>"; };
 		255EF935216B300100FBB4CF /* Czh_BSViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Czh_BSViewController.h; sourceTree = "<group>"; };
 		255EF936216B300100FBB4CF /* Czh_BSViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Czh_BSViewController.m; sourceTree = "<group>"; };
 		256E3422215B770B00BD681F /* Czh_HeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Czh_HeaderView.h; sourceTree = "<group>"; };
@@ -405,8 +437,6 @@
 		25E7C630216063750053F450 /* CZH_HTTPTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CZH_HTTPTool.m; sourceTree = "<group>"; };
 		25E7C632216072010053F450 /* Czh_LoginedVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Czh_LoginedVC.h; sourceTree = "<group>"; };
 		25E7C633216072010053F450 /* Czh_LoginedVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Czh_LoginedVC.m; sourceTree = "<group>"; };
-		25E7C63521607AC30053F450 /* Czh_SMSOrPsdBtn.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Czh_SMSOrPsdBtn.h; path = "ZhiHuiGu/Classes/mePage-我的/View/Czh_SMSOrPsdBtn.h"; sourceTree = SOURCE_ROOT; };
-		25E7C63621607AC30053F450 /* Czh_SMSOrPsdBtn.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = Czh_SMSOrPsdBtn.m; path = "ZhiHuiGu/Classes/mePage-我的/View/Czh_SMSOrPsdBtn.m"; sourceTree = SOURCE_ROOT; };
 		25ED23AA216A51EC001429CB /* UILabel+Czh_UILabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UILabel+Czh_UILabel.h"; sourceTree = "<group>"; };
 		25ED23AB216A51EC001429CB /* UILabel+Czh_UILabel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UILabel+Czh_UILabel.m"; sourceTree = "<group>"; };
 		25ED23AD216A5996001429CB /* Czh_UILabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Czh_UILabel.h; sourceTree = "<group>"; };
@@ -440,15 +470,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2506C17C215C9AA500530D13 /* SearchBar */ = {
-			isa = PBXGroup;
-			children = (
-				2506C17D215C9AA500530D13 /* CZHSearchBar.h */,
-				2506C17F215C9AA500530D13 /* CZHSearchBar.m */,
-			);
-			path = SearchBar;
-			sourceTree = "<group>";
-		};
 		2506C1A0215CDAE800530D13 /* TPKeyboardAvoiding */ = {
 			isa = PBXGroup;
 			children = (
@@ -458,39 +479,6 @@
 				2506C1A4215CDAE800530D13 /* UIScrollView+TPKeyboardAvoidingAdditions.h */,
 			);
 			path = TPKeyboardAvoiding;
-			sourceTree = "<group>";
-		};
-		250DD0CE215F457900CD6D3E /* SWQRCode */ = {
-			isa = PBXGroup;
-			children = (
-				250DD0CF215F457900CD6D3E /* Config */,
-				250DD0D5215F457900CD6D3E /* SWQRCodeViewController.m */,
-				250DD0D6215F457900CD6D3E /* SWQRCode.bundle */,
-				250DD0D7215F457900CD6D3E /* View */,
-				250DD0DA215F457900CD6D3E /* SWQRCodeViewController.h */,
-			);
-			path = SWQRCode;
-			sourceTree = "<group>";
-		};
-		250DD0CF215F457900CD6D3E /* Config */ = {
-			isa = PBXGroup;
-			children = (
-				250DD0D3215F457900CD6D3E /* SWQRCode.h */,
-				250DD0D4215F457900CD6D3E /* SWQRCodeManager.h */,
-				250DD0D1215F457900CD6D3E /* SWQRCodeManager.m */,
-				250DD0D2215F457900CD6D3E /* SWQRCodeConfig.h */,
-				250DD0D0215F457900CD6D3E /* SWQRCodeConfig.m */,
-			);
-			path = Config;
-			sourceTree = "<group>";
-		};
-		250DD0D7215F457900CD6D3E /* View */ = {
-			isa = PBXGroup;
-			children = (
-				250DD0D9215F457900CD6D3E /* SWScannerView.h */,
-				250DD0D8215F457900CD6D3E /* SWScannerView.m */,
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		250DD0E0215F78F000CD6D3E /* AFNetworking */ = {
@@ -517,7 +505,6 @@
 		250DD0F5215F79FF00CD6D3E /* CzhNetworking */ = {
 			isa = PBXGroup;
 			children = (
-				250DD0E0215F78F000CD6D3E /* AFNetworking */,
 				250DD0FA215F79FF00CD6D3E /* CzhNetworkingTools.h */,
 				250DD0F7215F79FF00CD6D3E /* CzhNetworkingTools.m */,
 				250DD0F8215F79FF00CD6D3E /* CzhNetworking.h */,
@@ -643,6 +630,10 @@
 		252DC8362167ACAE006BDE9C /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				2521CD2C216DF2B900E3D149 /* NSData+AES128.h */,
+				2521CD2B216DF2B900E3D149 /* NSData+AES128.m */,
+				2521CD25216DDF0800E3D149 /* NSArray+Czh_JSON.h */,
+				2521CD26216DDF0800E3D149 /* NSArray+Czh_JSON.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -650,20 +641,22 @@
 		252DC8372167ACBB006BDE9C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				2553F0D82170643A00A92098 /* Czh_SMSOrPsdBtn.h */,
+				2553F0D72170643A00A92098 /* Czh_SMSOrPsdBtn.m */,
 				2506C19A215CC9A100530D13 /* Czh_LoginTextField.h */,
 				2506C19B215CC9A100530D13 /* Czh_LoginTextField.m */,
 				2506C19D215CD87B00530D13 /* Czh_LoginBtn.h */,
 				2506C19E215CD87B00530D13 /* Czh_LoginBtn.m */,
 				250DD0C8215F2C9A00CD6D3E /* Czh_promptLabel.h */,
 				250DD0C9215F2C9A00CD6D3E /* Czh_promptLabel.m */,
-				25E7C63521607AC30053F450 /* Czh_SMSOrPsdBtn.h */,
-				25E7C63621607AC30053F450 /* Czh_SMSOrPsdBtn.m */,
 				2506C190215CB74900530D13 /* Czh_MeUserView.h */,
 				2506C191215CB74900530D13 /* Czh_MeUserView.m */,
 				252DC83F2167BA06006BDE9C /* Czh_CWTextField.h */,
 				252DC8402167BA06006BDE9C /* Czh_CWTextField.m */,
 				252DC83C2167AF54006BDE9C /* CreateWalletPdView.h */,
 				252DC83D2167AF54006BDE9C /* CreateWalletPdView.m */,
+				2533D8D5216CF78F000292D0 /* Czh_RememberParticalView.h */,
+				2533D8D6216CF78F000292D0 /* Czh_RememberParticalView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -687,10 +680,44 @@
 				25FAFB352169FC51001116AC /* Czh_RememberParticalVC.m */,
 				25029288216AF0CE00A9127A /* Czh_BackupMnemonicVC.h */,
 				25029289216AF0CE00A9127A /* Czh_BackupMnemonicVC.m */,
-				255EF935216B300100FBB4CF /* Czh_BSViewController.h */,
-				255EF936216B300100FBB4CF /* Czh_BSViewController.m */,
+				2521CD22216D94F500E3D149 /* Czh_ImportWalletVC.h */,
+				2521CD23216D94F500E3D149 /* Czh_ImportWalletVC.m */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		2553F0DA2170735A00A92098 /* SWQRCode */ = {
+			isa = PBXGroup;
+			children = (
+				2553F0DB2170735A00A92098 /* Config */,
+				2553F0E12170735A00A92098 /* SWQRCodeViewController.m */,
+				2553F0E22170735A00A92098 /* SWQRCode.bundle */,
+				2553F0E32170735A00A92098 /* View */,
+				2553F0E62170735A00A92098 /* SWQRCodeViewController.h */,
+			);
+			name = SWQRCode;
+			path = "../../../../../../Downloads/2018-10-12/SWQRCode_Objc-master 2/SWQRCode";
+			sourceTree = "<group>";
+		};
+		2553F0DB2170735A00A92098 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				2553F0DC2170735A00A92098 /* SWQRCodeConfig.m */,
+				2553F0DD2170735A00A92098 /* SWQRCodeManager.m */,
+				2553F0DE2170735A00A92098 /* SWQRCodeConfig.h */,
+				2553F0DF2170735A00A92098 /* SWQRCode.h */,
+				2553F0E02170735A00A92098 /* SWQRCodeManager.h */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		2553F0E32170735A00A92098 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2553F0E42170735A00A92098 /* SWScannerView.m */,
+				2553F0E52170735A00A92098 /* SWScannerView.h */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		258714A8215290CE0063ED99 = {
@@ -759,7 +786,6 @@
 				25B7B8FA2153DAB30053A2A5 /* MarketPage-市场 */,
 				25B7B9042153DAB30053A2A5 /* ShoppingsMall-商城 */,
 				25B7B9132153DAB30053A2A5 /* FriendsPage-朋友 */,
-				25B7B9072153DAB30053A2A5 /* MePage-我的 */,
 				25B7B90D2153DAB30053A2A5 /* PublicFile-公共文件 */,
 				25B7B8E02153DAB30053A2A5 /* Tools */,
 			);
@@ -769,6 +795,7 @@
 		25B7B8E02153DAB30053A2A5 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				250DD0E0215F78F000CD6D3E /* AFNetworking */,
 				25DD4D3C216856CB0076DC77 /* RegularVerification */,
 				25DD4D35216854FB0076DC77 /* WarnWindow */,
 				25DD4D2821684C1A0076DC77 /* KeychainItemWrapper */,
@@ -832,6 +859,8 @@
 		25B7B8FD2153DAB30053A2A5 /* NavigationBar-导航 */ = {
 			isa = PBXGroup;
 			children = (
+				255EF935216B300100FBB4CF /* Czh_BSViewController.h */,
+				255EF936216B300100FBB4CF /* Czh_BSViewController.m */,
 				252E4004216901040041DA4F /* RTNavigationBar.h */,
 				252E4005216901040041DA4F /* RTNavigationBar.m */,
 				252E40022168FFBF0041DA4F /* RTDeviceHardware.h */,
@@ -870,13 +899,15 @@
 		25B7B90A2153DAB30053A2A5 /* HomePage-首页 */ = {
 			isa = PBXGroup;
 			children = (
-				250DD0CE215F457900CD6D3E /* SWQRCode */,
+				2553F0DA2170735A00A92098 /* SWQRCode */,
+				25B7B9072153DAB30053A2A5 /* MePage-我的 */,
 				25B7B98D2153E4720053A2A5 /* Category */,
-				2506C17C215C9AA500530D13 /* SearchBar */,
 				25B7B9862153E4720053A2A5 /* View */,
 				25B7B9902153E4720053A2A5 /* ScrollView */,
 				25B7B90B2153DAB30053A2A5 /* Czh_HomeViewController.h */,
 				25B7B90C2153DAB30053A2A5 /* Czh_HomeViewController.m */,
+				251A7E8D216F4A1200918C6C /* Czh_collectionVC.h */,
+				251A7E8E216F4A1200918C6C /* Czh_collectionVC.m */,
 			);
 			path = "HomePage-首页";
 			sourceTree = "<group>";
@@ -1024,6 +1055,16 @@
 				256E3423215B770B00BD681F /* Czh_HeaderView.m */,
 				252E400A21690D7C0041DA4F /* Czh_UIView.h */,
 				252E400B21690D7C0041DA4F /* Czh_UIView.m */,
+				251A7E90216F4A5600918C6C /* Czh_collectionView.h */,
+				251A7E91216F4A5600918C6C /* Czh_collectionView.m */,
+				2538E467216FA647000A30BC /* PXAlertView.h */,
+				2538E466216FA647000A30BC /* PXAlertView.m */,
+				2553F0CC217040A400A92098 /* YXCustomAlertView.h */,
+				2553F0CB217040A400A92098 /* YXCustomAlertView.m */,
+				2553F0CE21704A4E00A92098 /* AssetsTypeAlter.h */,
+				2553F0CF21704A4E00A92098 /* AssetsTypeAlter.m */,
+				2553F0D1217051BE00A92098 /* AssetsTableViewCell.h */,
+				2553F0D2217051BE00A92098 /* AssetsTableViewCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1183,6 +1224,8 @@
 		25DD4D35216854FB0076DC77 /* WarnWindow */ = {
 			isa = PBXGroup;
 			children = (
+				25404794216E4C6A007637A3 /* CZHAlertView.h */,
+				25404793216E4C6A007637A3 /* CZHAlertView.m */,
 				25DD4D362168553F0076DC77 /* Czh_WarnWindow.h */,
 				25DD4D372168553F0076DC77 /* Czh_WarnWindow.m */,
 			);
@@ -1313,7 +1356,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				250DD0DE215F457900CD6D3E /* SWQRCode.bundle in Resources */,
+				2553F0EA2170735B00A92098 /* SWQRCode.bundle in Resources */,
 				2532D518215B552900AFA29D /* HomeFunctionCell.xib in Resources */,
 				25B7B9292153DAB30053A2A5 /* Assets.xcassets in Resources */,
 				25B7B91F2153DAB30053A2A5 /* MBProgressHUD.bundle in Resources */,
@@ -1346,9 +1389,12 @@
 				256E3424215B770B00BD681F /* Czh_HeaderView.m in Sources */,
 				25B7B9232153DAB30053A2A5 /* CZHNavigationController.m in Sources */,
 				25B7B9662153DFC70053A2A5 /* MJRefreshAutoStateFooter.m in Sources */,
+				2553F0D92170643A00A92098 /* Czh_SMSOrPsdBtn.m in Sources */,
+				2521CD27216DDF0800E3D149 /* NSArray+Czh_JSON.m in Sources */,
 				25B7B96B2153DFC70053A2A5 /* MJRefreshGifHeader.m in Sources */,
 				25DD4D3F216856D70076DC77 /* Czh_RegularVerification.m in Sources */,
 				25B7B9972153E4720053A2A5 /* HeaderFourView.m in Sources */,
+				2553F0D021704A4E00A92098 /* AssetsTypeAlter.m in Sources */,
 				25B7B9252153DAB30053A2A5 /* Czh_TabBarController.m in Sources */,
 				252DC8412167BA06006BDE9C /* Czh_CWTextField.m in Sources */,
 				25B7B96C2153DFC70053A2A5 /* MJRefreshFooter.m in Sources */,
@@ -1356,10 +1402,13 @@
 				25DD4D20216849A70076DC77 /* NSString+MJExtension.m in Sources */,
 				252DC83421631B27006BDE9C /* UITableView+SDAutoTableViewCellHeight.m in Sources */,
 				25DD4D2721684A950076DC77 /* UserInfoTool.m in Sources */,
+				25404795216E4C6A007637A3 /* CZHAlertView.m in Sources */,
+				2553F0D3217051BE00A92098 /* AssetsTableViewCell.m in Sources */,
 				25B7B9992153E4720053A2A5 /* CZHScrollView.m in Sources */,
 				25DD4D2F21684C1B0076DC77 /* KeychainItemWrapper.m in Sources */,
 				25B7B92C2153DAB30053A2A5 /* Czh_FriendsViewController.m in Sources */,
 				252E40032168FFC00041DA4F /* RTDeviceHardware.m in Sources */,
+				2553F0EB2170735B00A92098 /* SWScannerView.m in Sources */,
 				250DD0FE215F79FF00CD6D3E /* CzhNetworking.m in Sources */,
 				25B7B9202153DAB30053A2A5 /* UIView+Extension.m in Sources */,
 				25E7C634216072010053F450 /* Czh_LoginedVC.m in Sources */,
@@ -1384,14 +1433,14 @@
 				25B7B9192153DAB30053A2A5 /* UIBarButtonItem+CZHExtension.m in Sources */,
 				2532D51C215B558800AFA29D /* CategoryModel.m in Sources */,
 				25B7B96E2153DFC70053A2A5 /* MJRefreshBackFooter.m in Sources */,
-				250DD0DF215F457900CD6D3E /* SWScannerView.m in Sources */,
+				2553F0E82170735B00A92098 /* SWQRCodeManager.m in Sources */,
 				2502928A216AF0CE00A9127A /* Czh_BackupMnemonicVC.m in Sources */,
 				25295F8F216C3B5D00E07221 /* Czh_UserInfo.m in Sources */,
 				25B7B9172153DAB30053A2A5 /* NSDate+CZHExtension.m in Sources */,
+				251A7E8F216F4A1200918C6C /* Czh_collectionVC.m in Sources */,
 				25B7B96D2153DFC70053A2A5 /* MJRefreshHeader.m in Sources */,
 				2506C199215CC6CC00530D13 /* Czh_LoginAndRegisterVC.m in Sources */,
 				25B7B9682153DFC70053A2A5 /* MJRefreshAutoNormalFooter.m in Sources */,
-				250DD0DD215F457900CD6D3E /* SWQRCodeViewController.m in Sources */,
 				25B7B92A2153DAB30053A2A5 /* main.m in Sources */,
 				25B7B96A2153DFC70053A2A5 /* MJRefreshStateHeader.m in Sources */,
 				25DD4D42216859190076DC77 /* Czh_HttpRequest.m in Sources */,
@@ -1401,10 +1450,9 @@
 				25B6ABE32168B5760022EB17 /* Czh_SetInfoModel.m in Sources */,
 				25B728402154B06A00D22E94 /* LCUserDefaultsModel.m in Sources */,
 				25B7B9602153DFC70053A2A5 /* UIScrollView+MJExtension.m in Sources */,
+				2553F0E72170735B00A92098 /* SWQRCodeConfig.m in Sources */,
 				250DD0CA215F2C9A00CD6D3E /* Czh_promptLabel.m in Sources */,
 				25B7B96F2153DFC70053A2A5 /* MJRefreshAutoFooter.m in Sources */,
-				250DD0DC215F457900CD6D3E /* SWQRCodeManager.m in Sources */,
-				25E7C63721607AC30053F450 /* Czh_SMSOrPsdBtn.m in Sources */,
 				25B7B9612153DFC70053A2A5 /* NSBundle+MJRefresh.m in Sources */,
 				250DD0F3215F78F000CD6D3E /* AFNetworkReachabilityManager.m in Sources */,
 				25B7B9692153DFC70053A2A5 /* MJRefreshNormalHeader.m in Sources */,
@@ -1414,36 +1462,41 @@
 				25FAFB362169FC51001116AC /* Czh_RememberParticalVC.m in Sources */,
 				25DD4D4521685BF30076DC77 /* Czh_NetWorkURL.m in Sources */,
 				250DD0EF215F78F000CD6D3E /* AFURLResponseSerialization.m in Sources */,
+				2553F0E92170735B00A92098 /* SWQRCodeViewController.m in Sources */,
 				2506C186215C9AA500530D13 /* UIImage+Extension.m in Sources */,
 				25B7B95D2153DFC70053A2A5 /* UIScrollView+MJRefresh.m in Sources */,
 				25DD4D1F216849A70076DC77 /* NSObject+MJClass.m in Sources */,
 				252DC83321631B27006BDE9C /* UIView+SDAutoLayout.m in Sources */,
+				2533D8D7216CF78F000292D0 /* Czh_RememberParticalView.m in Sources */,
 				250DD0F1215F78F000CD6D3E /* AFURLSessionManager.m in Sources */,
 				25B7B9212153DAB30053A2A5 /* HttpRequestManager.m in Sources */,
 				25B7B9952153E4720053A2A5 /* CZHNavigationView.m in Sources */,
 				25E7C62B216058F00053F450 /* CZHAFNetWorKingAssistant.m in Sources */,
 				252E3FFA2168DF5D0041DA4F /* Czh_AccountTool.m in Sources */,
+				251A7E92216F4A5600918C6C /* Czh_collectionView.m in Sources */,
 				25B7B91C2153DAB30053A2A5 /* CacheManager.m in Sources */,
 				2506C1A6215CDAE800530D13 /* TPKeyboardAvoidingScrollView.m in Sources */,
 				25B7B9982153E4720053A2A5 /* UIView+Frame.m in Sources */,
 				252E400C21690D7C0041DA4F /* Czh_UIView.m in Sources */,
+				2521CD24216D94F500E3D149 /* Czh_ImportWalletVC.m in Sources */,
+				2538E468216FA648000A30BC /* PXAlertView.m in Sources */,
 				25DD4D21216849A70076DC77 /* MJPropertyKey.m in Sources */,
 				2520B6E0215DB79C00956CB7 /* UIButton+CZHClickBtnBlock.m in Sources */,
 				25B7B9642153DFC70053A2A5 /* MJRefreshBackStateFooter.m in Sources */,
 				25E7C631216063750053F450 /* CZH_HTTPTool.m in Sources */,
-				250DD0DB215F457900CD6D3E /* SWQRCodeConfig.m in Sources */,
 				2506C19C215CC9A100530D13 /* Czh_LoginTextField.m in Sources */,
+				2521CD2D216DF2B900E3D149 /* NSData+AES128.m in Sources */,
 				25B7B91B2153DAB30053A2A5 /* NSObject+Log.m in Sources */,
 				25B7B9702153DFC70053A2A5 /* MJRefreshComponent.m in Sources */,
 				2506C19F215CD87B00530D13 /* Czh_LoginBtn.m in Sources */,
 				25B7B9182153DAB30053A2A5 /* UIView+CZHExtension.m in Sources */,
-				2506C187215C9AA500530D13 /* CZHSearchBar.m in Sources */,
 				2520B6E6215E02F700956CB7 /* Czh_RegisterVC.m in Sources */,
 				2520B6E3215DC8ED00956CB7 /* Czh_ClickBtnView.m in Sources */,
 				25B7B9162153DAB30053A2A5 /* NSString+MD5Addition.m in Sources */,
 				25B728412154B06A00D22E94 /* NSUserDefaultsModel.m in Sources */,
 				25DD4D1E216849A70076DC77 /* NSObject+MJProperty.m in Sources */,
 				25DD4CFE216847C00076DC77 /* UserInfoModel.m in Sources */,
+				2553F0CD217040A500A92098 /* YXCustomAlertView.m in Sources */,
 				2506C1A5215CDAE800530D13 /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */,
 				25B7B9242153DAB30053A2A5 /* CZHTabBar.m in Sources */,
 				252DC83B2167AE09006BDE9C /* Czh_CreateWalletVC.m in Sources */,
@@ -1615,8 +1668,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = N33J78A7TA;
 				GCC_PREFIX_HEADER = "/Users/cyj/Desktop/项目备份/ZhiHuiGu/ZhiHuiGu/Classes/publicFile-公共文件/PrefixHeader.pch";
 				INFOPLIST_FILE = ZhiHuiGu/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -1635,8 +1689,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = N33J78A7TA;
 				GCC_PREFIX_HEADER = "/Users/cyj/Desktop/项目备份/ZhiHuiGu/ZhiHuiGu/Classes/publicFile-公共文件/PrefixHeader.pch";
 				INFOPLIST_FILE = ZhiHuiGu/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;

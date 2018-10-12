@@ -62,7 +62,7 @@
         CZHLog(@"%@",data);
     } WithFailurBlock:^(NSString *error) {
         CZHLog(@"%@",error);
-        [Czh_WarnWindow HUD:[UIApplication sharedApplication].keyWindow andWarnText:error andXoffset:0 andYoffset:Main_Screen_Width/5*2];
+        [Czh_WarnWindow HUD:[UIApplication sharedApplication].keyWindow andWarnText:error andXoffset:0 andYoffset:Main_Screen_Width/2];
     } WithShowHudToView:self.view];
     /*
     {

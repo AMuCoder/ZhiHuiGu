@@ -32,12 +32,6 @@ typedef struct CzhDownloadProgress CzhDownloadProgress;
  *
  *  @brief  CzhDownloadProgress ( 快速初始化 表示下载进度的结构体 )
  *
- *  @param  czhFractionCompleted
- *
- *  @param  czhTotalUnitCount
- *
- *  @param  czhCompletedUnitCount
- *
  *  @return CzhDownloadProgress
  */
 CzhDownloadProgress CzhDownloadProgressMake(double czhFractionCompleted, czh_int64_t czhTotalUnitCount, czh_int64_t czhCompletedUnitCount);

@@ -30,17 +30,17 @@
             }
             case CZHButtonTypePay: {
                 [self setImage:[UIImage imageNamed:@"payment"] forState:UIControlStateNormal];
-                [self setTitle:@"付钱" forState:UIControlStateNormal];
+                [self setTitle:@"收款" forState:UIControlStateNormal];
                 break;
             }
             case CZHButtonTypeCollect: {
                 [self setImage:[UIImage imageNamed:@"collect"] forState:UIControlStateNormal];
-                [self setTitle:@"收钱" forState:UIControlStateNormal];
+                [self setTitle:@"充值" forState:UIControlStateNormal];
                 break;
             }
             case CZHButtonTypePhone: {
                 [self setImage:[UIImage imageNamed:@"phone"] forState:UIControlStateNormal];
-                [self setTitle:@"手机" forState:UIControlStateNormal];
+                [self setTitle:@"转账" forState:UIControlStateNormal];
                 break;
             }
             default:

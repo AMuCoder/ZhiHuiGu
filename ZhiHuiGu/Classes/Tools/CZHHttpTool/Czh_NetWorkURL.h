@@ -19,13 +19,20 @@ typedef  enum
     Interface_For_editSavePaypwd,//用户更改支付密码
     Interface_For_editSavePwd,//用户更改登陆密码
     Interface_For_refreshToken,//刷新token
-    Interface_For_SendVerificationCode,//验证码
+    Interface_For_SendVerificationCode,//验证码 （1-注册，2-登陆，3-修改密码）
+    Interface_For_AddFriendURL,//添加好友
+    Interface_For_ApplyKycURL,//提交申请KYC实名认证信息
+    Interface_For_GetUserInfoURL,//获取用户信息
+    Interface_For_GetUserKYCURL,//获取用户KYC认证信息
+    Interface_For_RemoveUserURL,//删除用户
 #pragma mark 智慧谷 -- Wallet
     Interface_For_activeUserWalletAddress,//激活用户钱包地址
     Interface_For_createKeypair,//创建数字密钥匙对, 助记词
     Interface_For_getMnemonic,//获取助记词
-    Interface_For_walletPay,//支付- asset code 要相同
+    Interface_For_walletPay,//支付 asset code 要相同
     Interface_For_settingsWallet,//数字钱包设定
+    Interface_For_closeAseetUrl,//取消信任资产
+    Interface_For_trustAseetUrl,//信任资产
 #pragma mark 智慧谷 -- asset
     Interface_For_AcquisitionSystemAssets,//获取系统资产
     

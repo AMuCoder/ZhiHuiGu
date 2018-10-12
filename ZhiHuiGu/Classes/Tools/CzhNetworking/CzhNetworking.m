@@ -9,7 +9,7 @@
 #import "CzhNetworking.h"
 
 /*! ---------------------- Tool       ---------------------- !*/
-#import "CzhNetworkingTools.h"          // 工具
+#import "CzhNetworkingTools.h"
 /*! ---------------------- Tool       ---------------------- !*/
 
 @interface CzhNetworking ()

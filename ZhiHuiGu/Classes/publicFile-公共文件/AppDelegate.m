@@ -10,6 +10,10 @@
 #import "Czh_TabBarController.h"
 #import "Czh_AccountTool.h"
 #import "Czh_LoginAndRegisterVC.h"
+#import "NSArray+Czh_JSON.h"
+#import "Czh_CreateWalletVC.h"
+#import "Czh_ImportWalletVC.h"
+#import "Czh_RememberParticalVC.h"
 
 @interface AppDelegate ()
 @property (nonatomic, strong) Czh_TabBarController *tabBarController;
@@ -22,19 +26,25 @@
     //创建窗口
     self.window = [[UIWindow alloc] init];
     self.window.frame = [UIScreen mainScreen].bounds;
-    BOOL defaults = [[NSUserDefaults standardUserDefaults] boolForKey:kUserisLogin];
     
+    BOOL isLogin = [[NSUserDefaults standardUserDefaults] boolForKey:kUserisLogin];
+    NSString *mnemonicStr = [[NSUserDefaults standardUserDefaults] objectForKey:kUserMnemonicKey];
+    NSString *payPdStr = [[NSUserDefaults standardUserDefaults] objectForKey:kUserPayPwdKey];
+    NSString *IDStr = [[NSUserDefaults standardUserDefaults] objectForKey:kUserIDKey];
+    CZHLog(@"助记词--------:%@\n支付密码--------:%@------:%@",mnemonicStr,payPdStr,IDStr);
     // 先判断有无存储账号信息
-    if (!defaults) {
+    if (!isLogin) {
         // 之前没有登录成功
-        //设置窗口的根控制器
         self.window.rootViewController = [[Czh_LoginAndRegisterVC alloc] init];
-    } else {
-        // 之前登录成功
-        //设置窗口的根控制器
-        self.window.rootViewController = [[Czh_TabBarController alloc] init];
+    } else {// 登录成功,但是换了设备
+        // 没有支付密码，进去支付密码设置
+        if (!(payPdStr && mnemonicStr)) {
+            self.window.rootViewController = [[Czh_ImportWalletVC alloc] init];
+        // 有支付密码，没有助记词
+        }else{
+            self.window.rootViewController = [[Czh_TabBarController alloc] init];
+        }
     }
-//    self.window.rootViewController = [[Czh_TabBarController alloc] init];
     //显示窗口
     [self.window makeKeyAndVisible];
     return YES;

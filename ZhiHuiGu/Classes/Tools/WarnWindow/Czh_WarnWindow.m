@@ -30,7 +30,7 @@
     HUD.detailsLabelText = str;
     HUD.mode = MBProgressHUDModeCustomView;
     //修改提示框偏移位置
-    HUD.yOffset = Main_Screen_Width/5*2;
+    HUD.yOffset = Main_Screen_Width/2;
     HUD.xOffset = 0;
     [HUD showAnimated:YES whileExecutingBlock:^{
         sleep(1.5);

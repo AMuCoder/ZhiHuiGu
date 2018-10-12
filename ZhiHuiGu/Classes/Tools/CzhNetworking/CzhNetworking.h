@@ -111,7 +111,7 @@ NS_ASSUME_NONNULL_BEGIN
  *
  *  @brief  czhNetworkingReachabilityStatusChangeBlock: ( 验证 网路 环境 )
  *
- *  @param  czhNetworkingStatus
+
  */
 + (void)czhNetworkingReachabilityStatusChangeBlock:(void(^)(CzhNetworkingReachabilityStatus czhResultStatus))czhResultStatus;
 

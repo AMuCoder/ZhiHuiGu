@@ -50,7 +50,26 @@
             url=[NSString stringWithFormat:@"%@/v1/user/sms",CZH_MainURL];
             CZHLog(@"验证码%@",url);
         }break;
-            
+        case Interface_For_AddFriendURL:{
+            url=[NSString stringWithFormat:@"%@/v1/user/add-friend",CZH_MainURL];
+            CZHLog(@"添加好友%@",url);
+        }break;
+        case Interface_For_ApplyKycURL:{
+            url=[NSString stringWithFormat:@"%@/v1/user/apply-kyc",CZH_MainURL];
+            CZHLog(@"提交申请KYC实名认证信息%@",url);
+        }break;
+        case Interface_For_GetUserInfoURL:{
+            url=[NSString stringWithFormat:@"%@/v1/user/get",CZH_MainURL];
+            CZHLog(@"获取用户信息%@",url);
+        }break;
+        case Interface_For_GetUserKYCURL:{
+            url=[NSString stringWithFormat:@"%@/v1/user/kyc",CZH_MainURL];
+            CZHLog(@"获取用户KYC认证信息%@",url);
+        }break;
+        case Interface_For_RemoveUserURL:{
+            url=[NSString stringWithFormat:@"%@/v1/user/remove",CZH_MainURL];
+            CZHLog(@"删除用户%@",url);
+        }break;
 #pragma mark 智慧谷 -- Wallet
             
         case Interface_For_activeUserWalletAddress:{
@@ -72,6 +91,14 @@
         case Interface_For_settingsWallet:{
             url=[NSString stringWithFormat:@"%@/v1/wallet/settings",CZH_MainURL];
             CZHLog(@"数字钱包设定%@",url);
+        }break;
+        case Interface_For_closeAseetUrl:{
+            url=[NSString stringWithFormat:@"%@/v1/wallet/close-asset",CZH_MainURL];
+            CZHLog(@"取消信任资产%@",url);
+        }break;
+        case Interface_For_trustAseetUrl:{
+            url=[NSString stringWithFormat:@"%@/v1/wallet/trust-asset",CZH_MainURL];
+            CZHLog(@"信任资产%@",url);
         }break;
 #pragma mark 智慧谷 -- asset
         case Interface_For_AcquisitionSystemAssets:{
