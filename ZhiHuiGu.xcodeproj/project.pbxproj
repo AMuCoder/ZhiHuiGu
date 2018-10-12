@@ -58,11 +58,11 @@
 		2553F0D021704A4E00A92098 /* AssetsTypeAlter.m in Sources */ = {isa = PBXBuildFile; fileRef = 2553F0CF21704A4E00A92098 /* AssetsTypeAlter.m */; };
 		2553F0D3217051BE00A92098 /* AssetsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2553F0D2217051BE00A92098 /* AssetsTableViewCell.m */; };
 		2553F0D92170643A00A92098 /* Czh_SMSOrPsdBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = 2553F0D72170643A00A92098 /* Czh_SMSOrPsdBtn.m */; };
-		2553F0E72170735B00A92098 /* SWQRCodeConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 2553F0DC2170735A00A92098 /* SWQRCodeConfig.m */; };
-		2553F0E82170735B00A92098 /* SWQRCodeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2553F0DD2170735A00A92098 /* SWQRCodeManager.m */; };
-		2553F0E92170735B00A92098 /* SWQRCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2553F0E12170735A00A92098 /* SWQRCodeViewController.m */; };
-		2553F0EA2170735B00A92098 /* SWQRCode.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2553F0E22170735A00A92098 /* SWQRCode.bundle */; };
-		2553F0EB2170735B00A92098 /* SWScannerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2553F0E42170735A00A92098 /* SWScannerView.m */; };
+		2553F0F92170769D00A92098 /* SWQRCodeConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 2553F0EE2170769D00A92098 /* SWQRCodeConfig.m */; };
+		2553F0FA2170769D00A92098 /* SWQRCodeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2553F0EF2170769D00A92098 /* SWQRCodeManager.m */; };
+		2553F0FB2170769D00A92098 /* SWQRCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2553F0F32170769D00A92098 /* SWQRCodeViewController.m */; };
+		2553F0FC2170769D00A92098 /* SWQRCode.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2553F0F42170769D00A92098 /* SWQRCode.bundle */; };
+		2553F0FD2170769D00A92098 /* SWScannerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2553F0F62170769D00A92098 /* SWScannerView.m */; };
 		255EF937216B300100FBB4CF /* Czh_BSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 255EF936216B300100FBB4CF /* Czh_BSViewController.m */; };
 		256E3424215B770B00BD681F /* Czh_HeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 256E3423215B770B00BD681F /* Czh_HeaderView.m */; };
 		258714CE215290CE0063ED99 /* ZhiHuiGuTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 258714CD215290CE0063ED99 /* ZhiHuiGuTests.m */; };
@@ -262,22 +262,22 @@
 		25404794216E4C6A007637A3 /* CZHAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CZHAlertView.h; sourceTree = "<group>"; };
 		2553F0CB217040A400A92098 /* YXCustomAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXCustomAlertView.m; sourceTree = "<group>"; };
 		2553F0CC217040A400A92098 /* YXCustomAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXCustomAlertView.h; sourceTree = "<group>"; };
-		2553F0CE21704A4E00A92098 /* AssetsTypeAlter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AssetsTypeAlter.h; sourceTree = "<group>"; };
 		2553F0CF21704A4E00A92098 /* AssetsTypeAlter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AssetsTypeAlter.m; sourceTree = "<group>"; };
-		2553F0D1217051BE00A92098 /* AssetsTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AssetsTableViewCell.h; sourceTree = "<group>"; };
 		2553F0D2217051BE00A92098 /* AssetsTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AssetsTableViewCell.m; sourceTree = "<group>"; };
 		2553F0D72170643A00A92098 /* Czh_SMSOrPsdBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Czh_SMSOrPsdBtn.m; sourceTree = "<group>"; };
 		2553F0D82170643A00A92098 /* Czh_SMSOrPsdBtn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Czh_SMSOrPsdBtn.h; sourceTree = "<group>"; };
-		2553F0DC2170735A00A92098 /* SWQRCodeConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWQRCodeConfig.m; sourceTree = "<group>"; };
-		2553F0DD2170735A00A92098 /* SWQRCodeManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWQRCodeManager.m; sourceTree = "<group>"; };
-		2553F0DE2170735A00A92098 /* SWQRCodeConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWQRCodeConfig.h; sourceTree = "<group>"; };
-		2553F0DF2170735A00A92098 /* SWQRCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWQRCode.h; sourceTree = "<group>"; };
-		2553F0E02170735A00A92098 /* SWQRCodeManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWQRCodeManager.h; sourceTree = "<group>"; };
-		2553F0E12170735A00A92098 /* SWQRCodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWQRCodeViewController.m; sourceTree = "<group>"; };
-		2553F0E22170735A00A92098 /* SWQRCode.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SWQRCode.bundle; sourceTree = "<group>"; };
-		2553F0E42170735A00A92098 /* SWScannerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWScannerView.m; sourceTree = "<group>"; };
-		2553F0E52170735A00A92098 /* SWScannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWScannerView.h; sourceTree = "<group>"; };
-		2553F0E62170735A00A92098 /* SWQRCodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWQRCodeViewController.h; sourceTree = "<group>"; };
+		2553F0EE2170769D00A92098 /* SWQRCodeConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWQRCodeConfig.m; sourceTree = "<group>"; };
+		2553F0EF2170769D00A92098 /* SWQRCodeManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWQRCodeManager.m; sourceTree = "<group>"; };
+		2553F0F02170769D00A92098 /* SWQRCodeConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWQRCodeConfig.h; sourceTree = "<group>"; };
+		2553F0F12170769D00A92098 /* SWQRCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWQRCode.h; sourceTree = "<group>"; };
+		2553F0F22170769D00A92098 /* SWQRCodeManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWQRCodeManager.h; sourceTree = "<group>"; };
+		2553F0F32170769D00A92098 /* SWQRCodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWQRCodeViewController.m; sourceTree = "<group>"; };
+		2553F0F42170769D00A92098 /* SWQRCode.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SWQRCode.bundle; sourceTree = "<group>"; };
+		2553F0F62170769D00A92098 /* SWScannerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWScannerView.m; sourceTree = "<group>"; };
+		2553F0F72170769D00A92098 /* SWScannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWScannerView.h; sourceTree = "<group>"; };
+		2553F0F82170769D00A92098 /* SWQRCodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWQRCodeViewController.h; sourceTree = "<group>"; };
+		2553F1002170778100A92098 /* AssetsTypeAlter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AssetsTypeAlter.h; sourceTree = "<group>"; };
+		2553F1012170778100A92098 /* AssetsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AssetsTableViewCell.h; sourceTree = "<group>"; };
 		255EF935216B300100FBB4CF /* Czh_BSViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Czh_BSViewController.h; sourceTree = "<group>"; };
 		255EF936216B300100FBB4CF /* Czh_BSViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Czh_BSViewController.m; sourceTree = "<group>"; };
 		256E3422215B770B00BD681F /* Czh_HeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Czh_HeaderView.h; sourceTree = "<group>"; };
@@ -686,36 +686,35 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		2553F0DA2170735A00A92098 /* SWQRCode */ = {
+		2553F0EC2170769D00A92098 /* SWQRCode */ = {
 			isa = PBXGroup;
 			children = (
-				2553F0DB2170735A00A92098 /* Config */,
-				2553F0E12170735A00A92098 /* SWQRCodeViewController.m */,
-				2553F0E22170735A00A92098 /* SWQRCode.bundle */,
-				2553F0E32170735A00A92098 /* View */,
-				2553F0E62170735A00A92098 /* SWQRCodeViewController.h */,
+				2553F0ED2170769D00A92098 /* Config */,
+				2553F0F32170769D00A92098 /* SWQRCodeViewController.m */,
+				2553F0F42170769D00A92098 /* SWQRCode.bundle */,
+				2553F0F52170769D00A92098 /* View */,
+				2553F0F82170769D00A92098 /* SWQRCodeViewController.h */,
 			);
-			name = SWQRCode;
-			path = "../../../../../../Downloads/2018-10-12/SWQRCode_Objc-master 2/SWQRCode";
+			path = SWQRCode;
 			sourceTree = "<group>";
 		};
-		2553F0DB2170735A00A92098 /* Config */ = {
+		2553F0ED2170769D00A92098 /* Config */ = {
 			isa = PBXGroup;
 			children = (
-				2553F0DC2170735A00A92098 /* SWQRCodeConfig.m */,
-				2553F0DD2170735A00A92098 /* SWQRCodeManager.m */,
-				2553F0DE2170735A00A92098 /* SWQRCodeConfig.h */,
-				2553F0DF2170735A00A92098 /* SWQRCode.h */,
-				2553F0E02170735A00A92098 /* SWQRCodeManager.h */,
+				2553F0EE2170769D00A92098 /* SWQRCodeConfig.m */,
+				2553F0EF2170769D00A92098 /* SWQRCodeManager.m */,
+				2553F0F02170769D00A92098 /* SWQRCodeConfig.h */,
+				2553F0F12170769D00A92098 /* SWQRCode.h */,
+				2553F0F22170769D00A92098 /* SWQRCodeManager.h */,
 			);
 			path = Config;
 			sourceTree = "<group>";
 		};
-		2553F0E32170735A00A92098 /* View */ = {
+		2553F0F52170769D00A92098 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				2553F0E42170735A00A92098 /* SWScannerView.m */,
-				2553F0E52170735A00A92098 /* SWScannerView.h */,
+				2553F0F62170769D00A92098 /* SWScannerView.m */,
+				2553F0F72170769D00A92098 /* SWScannerView.h */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -899,7 +898,7 @@
 		25B7B90A2153DAB30053A2A5 /* HomePage-首页 */ = {
 			isa = PBXGroup;
 			children = (
-				2553F0DA2170735A00A92098 /* SWQRCode */,
+				2553F0EC2170769D00A92098 /* SWQRCode */,
 				25B7B9072153DAB30053A2A5 /* MePage-我的 */,
 				25B7B98D2153E4720053A2A5 /* Category */,
 				25B7B9862153E4720053A2A5 /* View */,
@@ -1061,9 +1060,9 @@
 				2538E466216FA647000A30BC /* PXAlertView.m */,
 				2553F0CC217040A400A92098 /* YXCustomAlertView.h */,
 				2553F0CB217040A400A92098 /* YXCustomAlertView.m */,
-				2553F0CE21704A4E00A92098 /* AssetsTypeAlter.h */,
 				2553F0CF21704A4E00A92098 /* AssetsTypeAlter.m */,
-				2553F0D1217051BE00A92098 /* AssetsTableViewCell.h */,
+				2553F1012170778100A92098 /* AssetsTableViewCell.h */,
+				2553F1002170778100A92098 /* AssetsTypeAlter.h */,
 				2553F0D2217051BE00A92098 /* AssetsTableViewCell.m */,
 			);
 			path = View;
@@ -1356,7 +1355,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2553F0EA2170735B00A92098 /* SWQRCode.bundle in Resources */,
+				2553F0FC2170769D00A92098 /* SWQRCode.bundle in Resources */,
 				2532D518215B552900AFA29D /* HomeFunctionCell.xib in Resources */,
 				25B7B9292153DAB30053A2A5 /* Assets.xcassets in Resources */,
 				25B7B91F2153DAB30053A2A5 /* MBProgressHUD.bundle in Resources */,
@@ -1408,7 +1407,7 @@
 				25DD4D2F21684C1B0076DC77 /* KeychainItemWrapper.m in Sources */,
 				25B7B92C2153DAB30053A2A5 /* Czh_FriendsViewController.m in Sources */,
 				252E40032168FFC00041DA4F /* RTDeviceHardware.m in Sources */,
-				2553F0EB2170735B00A92098 /* SWScannerView.m in Sources */,
+				2553F0FD2170769D00A92098 /* SWScannerView.m in Sources */,
 				250DD0FE215F79FF00CD6D3E /* CzhNetworking.m in Sources */,
 				25B7B9202153DAB30053A2A5 /* UIView+Extension.m in Sources */,
 				25E7C634216072010053F450 /* Czh_LoginedVC.m in Sources */,
@@ -1433,7 +1432,7 @@
 				25B7B9192153DAB30053A2A5 /* UIBarButtonItem+CZHExtension.m in Sources */,
 				2532D51C215B558800AFA29D /* CategoryModel.m in Sources */,
 				25B7B96E2153DFC70053A2A5 /* MJRefreshBackFooter.m in Sources */,
-				2553F0E82170735B00A92098 /* SWQRCodeManager.m in Sources */,
+				2553F0FA2170769D00A92098 /* SWQRCodeManager.m in Sources */,
 				2502928A216AF0CE00A9127A /* Czh_BackupMnemonicVC.m in Sources */,
 				25295F8F216C3B5D00E07221 /* Czh_UserInfo.m in Sources */,
 				25B7B9172153DAB30053A2A5 /* NSDate+CZHExtension.m in Sources */,
@@ -1450,7 +1449,7 @@
 				25B6ABE32168B5760022EB17 /* Czh_SetInfoModel.m in Sources */,
 				25B728402154B06A00D22E94 /* LCUserDefaultsModel.m in Sources */,
 				25B7B9602153DFC70053A2A5 /* UIScrollView+MJExtension.m in Sources */,
-				2553F0E72170735B00A92098 /* SWQRCodeConfig.m in Sources */,
+				2553F0F92170769D00A92098 /* SWQRCodeConfig.m in Sources */,
 				250DD0CA215F2C9A00CD6D3E /* Czh_promptLabel.m in Sources */,
 				25B7B96F2153DFC70053A2A5 /* MJRefreshAutoFooter.m in Sources */,
 				25B7B9612153DFC70053A2A5 /* NSBundle+MJRefresh.m in Sources */,
@@ -1462,7 +1461,7 @@
 				25FAFB362169FC51001116AC /* Czh_RememberParticalVC.m in Sources */,
 				25DD4D4521685BF30076DC77 /* Czh_NetWorkURL.m in Sources */,
 				250DD0EF215F78F000CD6D3E /* AFURLResponseSerialization.m in Sources */,
-				2553F0E92170735B00A92098 /* SWQRCodeViewController.m in Sources */,
+				2553F0FB2170769D00A92098 /* SWQRCodeViewController.m in Sources */,
 				2506C186215C9AA500530D13 /* UIImage+Extension.m in Sources */,
 				25B7B95D2153DFC70053A2A5 /* UIScrollView+MJRefresh.m in Sources */,
 				25DD4D1F216849A70076DC77 /* NSObject+MJClass.m in Sources */,
