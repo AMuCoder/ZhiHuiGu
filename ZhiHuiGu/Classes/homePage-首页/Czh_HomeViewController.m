@@ -41,7 +41,7 @@
     self.edgesForExtendedLayout = UIRectEdgeNone;
     [self setupNavBar];
     [self headerFourViewBtnClick];
-    [self setupSearchBarView];
+//    [self setupSearchBarView];
     [self headerViewClick];
 }
 - (void)viewWillAppear:(BOOL)animated{//去除导航栏下方的横线
@@ -72,7 +72,7 @@
         [weakSelf.navigationController pushViewController:qrcodeVC animated:YES];
     } andEvent:UIControlEventTouchUpInside];
     
-    [self.scrollView.headerView.headfourView.scanBtn setClickBlock:^(UIButton *button) {
+    [self.scrollView.headerView.scanBtn setClickBlock:^(UIButton *button) {
         SWQRCodeConfig *config = [[SWQRCodeConfig alloc]init];
         config.scannerType = SWScannerTypeBoth;
         SWQRCodeViewController *qrcodeVC = [[SWQRCodeViewController alloc]init];
@@ -92,7 +92,7 @@
         }];
     } andEvent:UIControlEventTouchUpInside];
     
-    [self.scrollView.headerView.headfourView.paymentBtn setClickBlock:^(UIButton *button) {
+    [self.scrollView.headerView.paymentBtn setClickBlock:^(UIButton *button) {
         [PXAlertView showAlertWithWalletNameTitle:@"WEC" WalletAddressTitle:@"qwerqwer....qwerqwer" WalletCurrencyTitle:@"请转入 XXX WEC" HeadImage:@"QWE" QrcodeImage:@"QWE" cancelTitle:@"更换资产" otherTitle:@"设置金额" completion:^(BOOL cancelled) {
             //
             if (cancelled) {
@@ -109,7 +109,7 @@
     [self.navigationView.collectBtn setClickBlock:^(UIButton *button) {
         CZHLog(@"navigationView.collectBtn--------回调成功！");
     } andEvent:UIControlEventTouchUpInside];
-    [self.scrollView.headerView.headfourView.collectBtn setClickBlock:^(UIButton *button) {
+    [self.scrollView.headerView.collectBtn setClickBlock:^(UIButton *button) {
         CZHLog(@"scrollView.headerView.headfourView.collectBtn--------回调成功！");
     } andEvent:UIControlEventTouchUpInside];
     
@@ -120,7 +120,7 @@
         CZHLog(@"navigationView.phoneBtn--------回调成功！");
     } andEvent:UIControlEventTouchUpInside];
     
-    [self.scrollView.headerView.headfourView.phoneBtn setClickBlock:^(UIButton *button) {
+    [self.scrollView.headerView.phoneBtn setClickBlock:^(UIButton *button) {
         CZHLog(@"scrollView.headerView.headfourView.phoneBtn--------回调成功！");
         NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
         NSString *userName = [userDefaults objectForKey:kUserNameKey];
@@ -273,6 +273,10 @@
     }
     return _scrollView;
 }
+//点击上下滚动视图
+-(void)topNewsInfoClicked:(id)sender{
+    NSLog(@"点击上下滚动视图");
+}
 -(CZHNavigationView *)navigationView {
     if (!_navigationView) {
         _navigationView = [[CZHNavigationView alloc] initWithFrame:CGRectMake(0, 0, 160.f, 40.f)];
@@ -283,4 +287,6 @@
 
 -(void)headerFourViewBtnClick{
 }
+
+
 @end

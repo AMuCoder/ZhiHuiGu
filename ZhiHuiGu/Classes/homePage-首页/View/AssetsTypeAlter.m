@@ -5,7 +5,7 @@
 
 #import "AssetsTypeAlter.h"
 #import "AssetsTableViewCell.h"
-
+static NSString *ID = @"AssetsTableViewCell";
 @implementation AssetsTypeAlter
 {
     UIView *view;
@@ -16,6 +16,7 @@
     self = [super initWithFrame:frame];
     if (self) {
         self.backgroundColor = [UIColor clearColor];
+        self.layer.cornerRadius = 5;
         //半透明view
         view = [[UIView alloc] initWithFrame:self.bounds];
         view.backgroundColor = AlterRGBColor(0, 0, 0);
@@ -35,10 +36,12 @@
         //头部信息
         UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, Main_Screen_Width, kSize(40))];
         UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(10, 10, Main_Screen_Width -20, kSize(20))];
+        headerView.backgroundColor = CZHRGBColor(0, 169, 97);
         label.text = @"选择资产类型";
         label.textAlignment = NSTextAlignmentCenter;
         [headerView addSubview:label];
         [bgView addSubview:headerView];
+        
         //kbottomHeight为了适配iphonex，不让按钮显示在x底部圆弧范围内
         [bgView addSubview:self.tableview];
         self.tableview.sd_layout.leftSpaceToView(bgView, 0).rightSpaceToView(bgView, 0).topSpaceToView(headerView, 0).bottomSpaceToView(bgView, 0);
@@ -49,30 +52,23 @@
 -(void)hideView
 {
     [self tap];
-    [UIView animateWithDuration:0.25 animations:^
-     {
+    [UIView animateWithDuration:0.25 animations:^{
          self->bgView.centerY = self->bgView.centerY+CGRectGetHeight(self->bgView.frame);
-         
      } completion:^(BOOL fin){
          [self removeFromSuperview];
-         
      }];
-    
 }
-//
+
 -(void)showView
 {
     self.alpha = 1;
-    [UIView animateWithDuration:0.25 animations:^
-     {
+    [UIView animateWithDuration:0.25 animations:^{
          self->bgView.centerY = self->bgView.centerY-CGRectGetHeight(self->bgView.frame);
-         
      } completion:^(BOOL fin){}];
 }
-- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch
-{
+- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch{
     NSLog(@"%@",[gestureRecognizer class]);
-    if ([NSStringFromClass([gestureRecognizer class]) isEqualToString:@"UITapGestureRecognizer"]) {
+    if ([NSStringFromClass([gestureRecognizer class]) isEqualToString:@"UITapGestureRecognizer"]){
         // 输出点击的view的类名
         NSLog(@"ismain:   %@", NSStringFromClass([touch.view class]));
         //判断当前点击手势是什么情况下发生的-编辑状态就失去焦点
@@ -95,11 +91,8 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return 70;
 }
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    static NSString *ID = @"AssetsTableViewCell";
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     AssetsTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
-    
     if (!cell) {
         cell = [[AssetsTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:ID];
     }
@@ -107,7 +100,17 @@
     tableView.rowHeight = 70;
     return cell;
 }
-
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(nonnull NSIndexPath *)indexPath{
+    NSString *str = [NSString stringWithFormat:@"这是第%ld行", (long)indexPath.row];
+    AssetsTableViewCell *cell = [[AssetsTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:ID];
+    NSString *cellInfoCurrencyLabelText = cell.currencyLabel.text;
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    [userDefaults setObject:cellInfoCurrencyLabelText  forKey:KcellAssetsCurrencyTypeText];
+    [userDefaults synchronize];
+    CZHLog(@"%@-------%@",str,cellInfoCurrencyLabelText);
+    [self hideView];
+    
+}
 -(UITableView *)tableview
 {
     if (!_tableview) {

@@ -8,43 +8,147 @@
 
 #ifndef _1_______PrefixHeader_pch
 #define _1_______PrefixHeader_pch
-//头文件
+//----------------------头文件--------------------------
+#pragma mark -- Category
+#import "NSData+AES128.h"
 #import "NSDate+CZHExtension.h"
 #import "UIView+CZHExtension.h"
-#import "UIBarButtonItem+CZHExtension.h"
-#import "TPKeyboardAvoidingScrollView.h"
-#import "UIButton+CZHClickBtnBlock.h"
-#import "ZHGpromptLabel.h"
 #import "UIView+Extension.h"
-#import "CZHAFNetWorKingAssistant.h"
-#import "CZH_HTTPTool.h"
 #import "UIView+SDAutoLayout.h"
+#import "UIBarButtonItem+CZHExtension.h"
+#import "UIButton+CZHClickBtnBlock.h"
 #import "UIView+Frame.h"
+#import "TPKeyboardAvoidingScrollView.h"
+#import "Czh_promptLabel.h"
+#import "CZH_HTTPTool.h"
 #import "CzhNetworking.h"
-#import "ZHGCWTextField.h"
-
-//主请求路径
-//#define CZH_MainURL @"http://api.budejie.com/api/api_open.php"
+#import "Czh_CWTextField.h"
+#import "MBProgressHUD.h"
+#import "Czh_WarnWindow.h"
+#import "Czh_NetWorkURL.h"
+#import "Czh_HttpRequest.h"
+#import "MJExtension.h"
+#import "Czh_AccountTool.h"
+#import "CZHAlertView.h"
+//----------------------头文件--------------------------
+/**/
+//----------------------主请求路径--------------------------
 #define CZH_MainURL @"http://119.23.206.144:8000"
-
-//打印专用
+//----------------------主请求路径--------------------------
+/**/
+//----------------------打印专用--------------------------
 #ifdef DEBUG
 #define CZHLog(...) NSLog(__VA_ARGS__)
 #else
 #define CZHLog(...)
 #endif
 #define CZHLogFunc CZHLog(@"%s", __func__)
-
-//定义颜色
+//----------------------打印专用--------------------------
+/**/
+//----------------------定义颜色--------------------------
 #define CZHRGBColor(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
+#define AlterRGBColor(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:0.4]
 #define MAIN_COLOR CZHRGBColor(23, 49, 109)
-#define CZHGlobolBg CZHRGBColor(223,223,223)
-
-//设备物理尺寸
-#define Myuser                  [NSUserDefaults standardUserDefaults]
+#define CCzh_lobolBg CZHRGBColor(223,223,223)
+//----------------------定义颜色--------------------------
+/**/
+/**/
+//----------------------设备物理尺寸--------------------------
 #define Main_Screen_Height      [[UIScreen mainScreen] bounds].size.height
 #define Main_Screen_Width       [[UIScreen mainScreen] bounds].size.width
-
+#define kSize(a)        ceil((a)*([UIScreen mainScreen].bounds.size.width/375.0))
+//----------------------设备物理尺寸--------------------------
+/**/
+#define IsEmptyStr(string) [string isKindOfClass:[NSNull class]]? YES : NO
+#define TabbarHeight            ([[UIApplication sharedApplication] statusBarFrame].size.height>20?83:49) // 适配iPhone x 底栏高度
+//_tabBarView.frame = CGRectMake(0, CurrentScreenHeight - TabbarHeight, CurrentScreenWidth, TabbarHeight);
 //高度设定
 #define KFAppHeight 230
+
+
+
+//处理循环引用问题(处理当前类对象)
+#define WS(weakSelf)  __weak __typeof(&*self)weakSelf = self;
+//----------------------沙盒--------------------------
+//沙盒目录文件
+//账号
+#define Myuser [NSUserDefaults standardUserDefaults]
+//账号信息（数组）
+#define kUserAccountKey @"Account"
+#define kUserIDKey @"id"//用户ID
+#define kUserCreatedKey @"created"//注册时间
+#define kUserUpdatedKey @"updated"//更新时间
+#define kUserNameKey @"nick"//用户名
+#define kUserTelKey @"tel"//手机号码
+#define kUserPwdKey @"pwd"//密码
+#define kUserHeadImgKey @"head_img"//头像Image
+#define kUserEmailKey @"email"//邮箱
+#define kUserGenderKey @"gender"//男生女生
+#define kUserPayPwdKey @"paypwd"//支付密码
+#define kUserTokenKey @"token"//token值
+#define kUserMnemonicKey @"mnemonic"//助记词
+#define kUserAddressKey @"address"//token值
+#define kUserSeedKey @"seed"//token值
+#define kUserisLogin @"isLogin"
+#define kUserKeypairsArr @"keypairsArr"//JSON前
+#define kUserKeypairsArrToJson @"keypairsArrToJson"//JSON后 - AES加密前
+#define kUserKeypairsArrToJsonAES128 @"keypairsArrToJsonAES128"//AES加密后
+#define kUserSeedAES128 @"SeedAES128"//AES加密后
+#define kUserMnemonicAES128 @"MnemonicAES128"//AES加密后
+#define KcellAssetsCurrencyTypeText @"cellInfoCurrencyLabelText"//选择资产类型
+//----------------------沙盒--------------------------
+
+//判断是真机还是模拟器
+#if TARGET_OS_IPHONE
+//iPhone Device
+#endif
+#if TARGET_IPHONE_SIMULATOR
+//iPhone Simulator
+#endif
+
+//----------------------图片相关----------------------------
+//读取本地图片
+#define LOADIMAGE(file,ext) [UIImage imageWithContentsOfFile:[[NSBundle mainBundle]pathForResource:file ofType:ext]]
+//定义UIImage对象
+#define IMAGE(A) [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:A ofType:nil]]
+//定义UIImage对象
+#define ImageNamed(_pointer) [UIImage imageNamed:_pointer]
+//可拉伸的图片
+#define ResizableImage(name,top,left,bottom,right) [[UIImage imageNamed:name] resizableImageWithCapInsets:UIEdgeInsetsMake(top,left,bottom,right)]
+#define ResizableImageWithMode(name,top,left,bottom,right,mode) [[UIImage imageNamed:name] resizableImageWithCapInsets:UIEdgeInsetsMake(top,left,bottom,right) resizingMode:mode]//建议使用前两种宏定义,性能高于后者
+//----------------------图片相关----------------------------
+/**/
+//----------------------颜色相关---------------------------
+// rgb颜色转换（16进制->10进制）
+#define UIColorFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
+// 获取RGB颜色
+#define RGBA(r,g,b,a) [UIColor colorWithRed:r/255.0f green:g/255.0f blue:b/255.0f alpha:a]
+#define RGB(r,g,b) RGBA(r,g,b,1.0f)
+//背景色
+#define BACKGROUND_COLOR [UIColor colorWithRed:242.0/255.0 green:236.0/255.0 blue:231.0/255.0 alpha:1.0]
+//清除背景色
+#define CLEARCOLOR [UIColor clearColor]
+//----------------------颜色相关--------------------------
+/**/
+//----------------------其他----------------------------
+//方正黑体简体字体定义
+#define FONT(F) [UIFont fontWithName:@"FZHTJW--GB1-0" size:F]//file
+//读取文件的文本内容,默认编码为UTF-8
+#define FileString(name,ext)  [[NSString alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:(name) ofType:(ext)] encoding:NSUTF8StringEncoding error:nil]
+#define FileDictionary(name,ext)  [[NSDictionary alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:(name) ofType:(ext)]]
+#define FileArray(name,ext)  [[NSArray alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:(name) ofType:(ext)]]
+//G－C－D
+#define BACK(block) dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), block)
+#define MAIN(block) dispatch_async(dispatch_get_main_queue(),block)
+//Alert
+#define ALERT(msg) [[[UIAlertView alloc] initWithTitle:nil message:msg delegate:nil cancelButtonTitle:@"ok" otherButtonTitles:nil] show]
+//由角度获取弧度 有弧度获取角度
+#define degreesToRadian(x) (M_PI * (x) / 180.0)
+#define radianToDegrees(radian) (radian*180.0)/(M_PI)
+//----------------------其他-------------------------------
+#define iOS10 ([[UIDevice currentDevice].systemVersion intValue]>=10?YES:NO)
+
+
+
+
 #endif

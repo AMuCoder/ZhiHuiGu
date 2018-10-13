@@ -43,28 +43,6 @@
         [phoneBtn setImage:[UIImage imageNamed:@"phone"] forState:UIControlStateNormal];
         [self addSubview:phoneBtn];
         _phoneBtn = phoneBtn;
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-//        CGFloat x = 0;
-//        CGFloat screenWidth = Main_Screen_Width;
-//        for (int index = 0; index < 4; index++) {
-//            CZHButton *button = [[CZHButton alloc] initWithFrame:CGRectMake(x, 10, self.frame.size.width / 4, self.frame.size.width / 4) type:index];
-//
-//            [self addSubview:button];
-//
-//            x = x + screenWidth / 4;
-//        }
     }
     
     return self;

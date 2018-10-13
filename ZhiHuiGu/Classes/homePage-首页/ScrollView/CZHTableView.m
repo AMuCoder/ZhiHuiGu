@@ -52,11 +52,14 @@ static NSString *tableViewCell = @"UITableViewCell";
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:tableViewCell];
     }
     
-    cell.textLabel.text = [NSString stringWithFormat:@"这是第%ld行", indexPath.row];
+    cell.textLabel.text = [NSString stringWithFormat:@"这是第%ld行", (long)indexPath.row];
     
     return cell;
 }
-
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    NSString *str = [NSString stringWithFormat:@"这是第%ld行", (long)indexPath.row];
+    CZHLog(@"%@",str);
+}
 #pragma mark - UITableViewDelegate
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return kRowHeight;

@@ -53,6 +53,7 @@
 		2532D51C215B558800AFA29D /* CategoryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2532D51B215B558800AFA29D /* CategoryModel.m */; };
 		2533D8D7216CF78F000292D0 /* Czh_RememberParticalView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2533D8D6216CF78F000292D0 /* Czh_RememberParticalView.m */; };
 		2538E468216FA648000A30BC /* PXAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2538E466216FA647000A30BC /* PXAlertView.m */; };
+		253AECC42171B4E900AF7696 /* Czh_AssetChangesView.m in Sources */ = {isa = PBXBuildFile; fileRef = 253AECC32171B4E900AF7696 /* Czh_AssetChangesView.m */; };
 		25404795216E4C6A007637A3 /* CZHAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 25404793216E4C6A007637A3 /* CZHAlertView.m */; };
 		2553F0CD217040A500A92098 /* YXCustomAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2553F0CB217040A400A92098 /* YXCustomAlertView.m */; };
 		2553F0D021704A4E00A92098 /* AssetsTypeAlter.m in Sources */ = {isa = PBXBuildFile; fileRef = 2553F0CF21704A4E00A92098 /* AssetsTypeAlter.m */; };
@@ -63,6 +64,12 @@
 		2553F0FB2170769D00A92098 /* SWQRCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2553F0F32170769D00A92098 /* SWQRCodeViewController.m */; };
 		2553F0FC2170769D00A92098 /* SWQRCode.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2553F0F42170769D00A92098 /* SWQRCode.bundle */; };
 		2553F0FD2170769D00A92098 /* SWScannerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2553F0F62170769D00A92098 /* SWScannerView.m */; };
+		2553F10421708C7D00A92098 /* Czh_mineAssetsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2553F10321708C7D00A92098 /* Czh_mineAssetsView.m */; };
+		2553F1072170917D00A92098 /* Czh_mineAssetsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2553F1062170917D00A92098 /* Czh_mineAssetsTableViewCell.m */; };
+		2553F10A2170945300A92098 /* mineAssetsTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2553F1092170945300A92098 /* mineAssetsTableView.m */; };
+		2553F10D2170A13E00A92098 /* AssetChangesView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2553F10C2170A13E00A92098 /* AssetChangesView.m */; };
+		2553F1112170AA8100A92098 /* CCCycleScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2553F1102170AA8100A92098 /* CCCycleScrollView.m */; };
+		2553F1132170AFA100A92098 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2553F1122170AFA100A92098 /* Assets.xcassets */; };
 		255EF937216B300100FBB4CF /* Czh_BSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 255EF936216B300100FBB4CF /* Czh_BSViewController.m */; };
 		256E3424215B770B00BD681F /* Czh_HeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 256E3423215B770B00BD681F /* Czh_HeaderView.m */; };
 		258714CE215290CE0063ED99 /* ZhiHuiGuTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 258714CD215290CE0063ED99 /* ZhiHuiGuTests.m */; };
@@ -89,7 +96,6 @@
 		25B7B9262153DAB30053A2A5 /* Czh_ShoppingMallViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25B7B9062153DAB30053A2A5 /* Czh_ShoppingMallViewController.m */; };
 		25B7B9272153DAB30053A2A5 /* Czh_MeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25B7B9082153DAB30053A2A5 /* Czh_MeViewController.m */; };
 		25B7B9282153DAB30053A2A5 /* Czh_HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25B7B90C2153DAB30053A2A5 /* Czh_HomeViewController.m */; };
-		25B7B9292153DAB30053A2A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 25B7B90F2153DAB30053A2A5 /* Assets.xcassets */; };
 		25B7B92A2153DAB30053A2A5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 25B7B9102153DAB30053A2A5 /* main.m */; };
 		25B7B92B2153DAB30053A2A5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 25B7B9112153DAB30053A2A5 /* AppDelegate.m */; };
 		25B7B92C2153DAB30053A2A5 /* Czh_FriendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25B7B9142153DAB30053A2A5 /* Czh_FriendsViewController.m */; };
@@ -258,6 +264,8 @@
 		2533D8D6216CF78F000292D0 /* Czh_RememberParticalView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Czh_RememberParticalView.m; sourceTree = "<group>"; };
 		2538E466216FA647000A30BC /* PXAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXAlertView.m; sourceTree = "<group>"; };
 		2538E467216FA647000A30BC /* PXAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXAlertView.h; sourceTree = "<group>"; };
+		253AECC22171B4E900AF7696 /* Czh_AssetChangesView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Czh_AssetChangesView.h; path = "ZhiHuiGu/Classes/homePage-首页/ScrollView/Czh_AssetChangesView.h"; sourceTree = SOURCE_ROOT; };
+		253AECC32171B4E900AF7696 /* Czh_AssetChangesView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = Czh_AssetChangesView.m; path = "ZhiHuiGu/Classes/homePage-首页/ScrollView/Czh_AssetChangesView.m"; sourceTree = SOURCE_ROOT; };
 		25404793216E4C6A007637A3 /* CZHAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CZHAlertView.m; sourceTree = "<group>"; };
 		25404794216E4C6A007637A3 /* CZHAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CZHAlertView.h; sourceTree = "<group>"; };
 		2553F0CB217040A400A92098 /* YXCustomAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXCustomAlertView.m; sourceTree = "<group>"; };
@@ -278,6 +286,17 @@
 		2553F0F82170769D00A92098 /* SWQRCodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWQRCodeViewController.h; sourceTree = "<group>"; };
 		2553F1002170778100A92098 /* AssetsTypeAlter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AssetsTypeAlter.h; sourceTree = "<group>"; };
 		2553F1012170778100A92098 /* AssetsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AssetsTableViewCell.h; sourceTree = "<group>"; };
+		2553F10221708C7D00A92098 /* Czh_mineAssetsView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Czh_mineAssetsView.h; path = "ZhiHuiGu/Classes/homePage-首页/ScrollView/Czh_mineAssetsView.h"; sourceTree = SOURCE_ROOT; };
+		2553F10321708C7D00A92098 /* Czh_mineAssetsView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = Czh_mineAssetsView.m; path = "ZhiHuiGu/Classes/homePage-首页/ScrollView/Czh_mineAssetsView.m"; sourceTree = SOURCE_ROOT; };
+		2553F1052170917D00A92098 /* Czh_mineAssetsTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Czh_mineAssetsTableViewCell.h; sourceTree = "<group>"; };
+		2553F1062170917D00A92098 /* Czh_mineAssetsTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Czh_mineAssetsTableViewCell.m; sourceTree = "<group>"; };
+		2553F1082170945300A92098 /* mineAssetsTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = mineAssetsTableView.h; sourceTree = "<group>"; };
+		2553F1092170945300A92098 /* mineAssetsTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = mineAssetsTableView.m; sourceTree = "<group>"; };
+		2553F10B2170A13E00A92098 /* AssetChangesView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AssetChangesView.h; sourceTree = "<group>"; };
+		2553F10C2170A13E00A92098 /* AssetChangesView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AssetChangesView.m; sourceTree = "<group>"; };
+		2553F10F2170AA8100A92098 /* CCCycleScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCCycleScrollView.h; sourceTree = "<group>"; };
+		2553F1102170AA8100A92098 /* CCCycleScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCCycleScrollView.m; sourceTree = "<group>"; };
+		2553F1122170AFA100A92098 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		255EF935216B300100FBB4CF /* Czh_BSViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Czh_BSViewController.h; sourceTree = "<group>"; };
 		255EF936216B300100FBB4CF /* Czh_BSViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Czh_BSViewController.m; sourceTree = "<group>"; };
 		256E3422215B770B00BD681F /* Czh_HeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Czh_HeaderView.h; sourceTree = "<group>"; };
@@ -334,7 +353,6 @@
 		25B7B90B2153DAB30053A2A5 /* Czh_HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Czh_HomeViewController.h; sourceTree = "<group>"; };
 		25B7B90C2153DAB30053A2A5 /* Czh_HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Czh_HomeViewController.m; sourceTree = "<group>"; };
 		25B7B90E2153DAB30053A2A5 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		25B7B90F2153DAB30053A2A5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		25B7B9102153DAB30053A2A5 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		25B7B9112153DAB30053A2A5 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		25B7B9122153DAB30053A2A5 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
@@ -719,6 +737,15 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		2553F10E2170AA8100A92098 /* CCCycleScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				2553F10F2170AA8100A92098 /* CCCycleScrollView.h */,
+				2553F1102170AA8100A92098 /* CCCycleScrollView.m */,
+			);
+			path = CCCycleScrollView;
+			sourceTree = "<group>";
+		};
 		258714A8215290CE0063ED99 = {
 			isa = PBXGroup;
 			children = (
@@ -744,6 +771,7 @@
 			children = (
 				25B7B8DF2153DAB30053A2A5 /* Classes */,
 				258714C2215290CE0063ED99 /* Info.plist */,
+				2553F1122170AFA100A92098 /* Assets.xcassets */,
 			);
 			path = ZhiHuiGu;
 			sourceTree = "<group>";
@@ -918,7 +946,6 @@
 				25B7B9112153DAB30053A2A5 /* AppDelegate.m */,
 				25B7B9102153DAB30053A2A5 /* main.m */,
 				25B7B9122153DAB30053A2A5 /* PrefixHeader.pch */,
-				25B7B90F2153DAB30053A2A5 /* Assets.xcassets */,
 			);
 			path = "PublicFile-公共文件";
 			sourceTree = "<group>";
@@ -1060,9 +1087,9 @@
 				2538E466216FA647000A30BC /* PXAlertView.m */,
 				2553F0CC217040A400A92098 /* YXCustomAlertView.h */,
 				2553F0CB217040A400A92098 /* YXCustomAlertView.m */,
+				2553F1002170778100A92098 /* AssetsTypeAlter.h */,
 				2553F0CF21704A4E00A92098 /* AssetsTypeAlter.m */,
 				2553F1012170778100A92098 /* AssetsTableViewCell.h */,
-				2553F1002170778100A92098 /* AssetsTypeAlter.h */,
 				2553F0D2217051BE00A92098 /* AssetsTableViewCell.m */,
 			);
 			path = View;
@@ -1080,12 +1107,23 @@
 		25B7B9902153E4720053A2A5 /* ScrollView */ = {
 			isa = PBXGroup;
 			children = (
+				2553F10E2170AA8100A92098 /* CCCycleScrollView */,
 				25B7B9892153E4720053A2A5 /* CZHNavigationView.h */,
 				25B7B98A2153E4720053A2A5 /* CZHNavigationView.m */,
 				25B7B9912153E4720053A2A5 /* CZHTableView.h */,
 				25B7B9932153E4720053A2A5 /* CZHTableView.m */,
 				25B7B9942153E4720053A2A5 /* CZHScrollView.h */,
 				25B7B9922153E4720053A2A5 /* CZHScrollView.m */,
+				2553F10221708C7D00A92098 /* Czh_mineAssetsView.h */,
+				2553F10321708C7D00A92098 /* Czh_mineAssetsView.m */,
+				2553F1082170945300A92098 /* mineAssetsTableView.h */,
+				2553F1092170945300A92098 /* mineAssetsTableView.m */,
+				2553F1052170917D00A92098 /* Czh_mineAssetsTableViewCell.h */,
+				2553F1062170917D00A92098 /* Czh_mineAssetsTableViewCell.m */,
+				253AECC22171B4E900AF7696 /* Czh_AssetChangesView.h */,
+				253AECC32171B4E900AF7696 /* Czh_AssetChangesView.m */,
+				2553F10B2170A13E00A92098 /* AssetChangesView.h */,
+				2553F10C2170A13E00A92098 /* AssetChangesView.m */,
 			);
 			path = ScrollView;
 			sourceTree = "<group>";
@@ -1357,9 +1395,9 @@
 			files = (
 				2553F0FC2170769D00A92098 /* SWQRCode.bundle in Resources */,
 				2532D518215B552900AFA29D /* HomeFunctionCell.xib in Resources */,
-				25B7B9292153DAB30053A2A5 /* Assets.xcassets in Resources */,
 				25B7B91F2153DAB30053A2A5 /* MBProgressHUD.bundle in Resources */,
 				25B7B95F2153DFC70053A2A5 /* MJRefresh.bundle in Resources */,
+				2553F1132170AFA100A92098 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1401,12 +1439,15 @@
 				25DD4D20216849A70076DC77 /* NSString+MJExtension.m in Sources */,
 				252DC83421631B27006BDE9C /* UITableView+SDAutoTableViewCellHeight.m in Sources */,
 				25DD4D2721684A950076DC77 /* UserInfoTool.m in Sources */,
+				2553F10D2170A13E00A92098 /* AssetChangesView.m in Sources */,
 				25404795216E4C6A007637A3 /* CZHAlertView.m in Sources */,
 				2553F0D3217051BE00A92098 /* AssetsTableViewCell.m in Sources */,
+				2553F1112170AA8100A92098 /* CCCycleScrollView.m in Sources */,
 				25B7B9992153E4720053A2A5 /* CZHScrollView.m in Sources */,
 				25DD4D2F21684C1B0076DC77 /* KeychainItemWrapper.m in Sources */,
 				25B7B92C2153DAB30053A2A5 /* Czh_FriendsViewController.m in Sources */,
 				252E40032168FFC00041DA4F /* RTDeviceHardware.m in Sources */,
+				253AECC42171B4E900AF7696 /* Czh_AssetChangesView.m in Sources */,
 				2553F0FD2170769D00A92098 /* SWScannerView.m in Sources */,
 				250DD0FE215F79FF00CD6D3E /* CzhNetworking.m in Sources */,
 				25B7B9202153DAB30053A2A5 /* UIView+Extension.m in Sources */,
@@ -1452,6 +1493,7 @@
 				2553F0F92170769D00A92098 /* SWQRCodeConfig.m in Sources */,
 				250DD0CA215F2C9A00CD6D3E /* Czh_promptLabel.m in Sources */,
 				25B7B96F2153DFC70053A2A5 /* MJRefreshAutoFooter.m in Sources */,
+				2553F10A2170945300A92098 /* mineAssetsTableView.m in Sources */,
 				25B7B9612153DFC70053A2A5 /* NSBundle+MJRefresh.m in Sources */,
 				250DD0F3215F78F000CD6D3E /* AFNetworkReachabilityManager.m in Sources */,
 				25B7B9692153DFC70053A2A5 /* MJRefreshNormalHeader.m in Sources */,
@@ -1489,11 +1531,13 @@
 				25B7B9702153DFC70053A2A5 /* MJRefreshComponent.m in Sources */,
 				2506C19F215CD87B00530D13 /* Czh_LoginBtn.m in Sources */,
 				25B7B9182153DAB30053A2A5 /* UIView+CZHExtension.m in Sources */,
+				2553F10421708C7D00A92098 /* Czh_mineAssetsView.m in Sources */,
 				2520B6E6215E02F700956CB7 /* Czh_RegisterVC.m in Sources */,
 				2520B6E3215DC8ED00956CB7 /* Czh_ClickBtnView.m in Sources */,
 				25B7B9162153DAB30053A2A5 /* NSString+MD5Addition.m in Sources */,
 				25B728412154B06A00D22E94 /* NSUserDefaultsModel.m in Sources */,
 				25DD4D1E216849A70076DC77 /* NSObject+MJProperty.m in Sources */,
+				2553F1072170917D00A92098 /* Czh_mineAssetsTableViewCell.m in Sources */,
 				25DD4CFE216847C00076DC77 /* UserInfoModel.m in Sources */,
 				2553F0CD217040A500A92098 /* YXCustomAlertView.m in Sources */,
 				2506C1A5215CDAE800530D13 /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */,

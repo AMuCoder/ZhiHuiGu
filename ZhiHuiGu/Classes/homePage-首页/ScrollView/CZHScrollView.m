@@ -13,31 +13,44 @@
 #import "UIView+Frame.h"
 #import "Czh_FuncHeaderView.h"
 #import "Czh_HeaderView.h"
-#import "TPKeyboardAvoidingScrollView.h"
 #import "CZHButton.h"
+#import "Czh_mineAssetsView.h"
+#import "CCCycleScrollView.h"
+#import "Czh_AssetChangesView.h"
 
 #define kHeaderHeight 100.f
+#define letHeadViewY self.frame.size.width/4 + 10
 #define headerViewH kHeaderHeight+KFAppHeight
 
-@interface CZHScrollView() <UIScrollViewDelegate>
+@interface CZHScrollView() <UIScrollViewDelegate,CCCycleScrollViewClickActionDeleage,CAAnimationDelegate>
+
 @end
 
 @implementation CZHScrollView
+
 
 -(instancetype)initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
         self.delegate = self;
         [self headerView];
-        // 设定tableView的行数
+        //设定tableView的行数
         self.tableView.rowNumber = 20;
-        // 设定自身的偏移量，tableViewCell的高度是50
-        self.contentSize = CGSizeMake(0, headerViewH + self.tableView.rowNumber * 50.f + 64.f);
+        //我的资产
+        [self mineAssetsView];
+        //数据上下滚动图
+        [self assetOfChangesView];
+        [self addSubview:_assetOfChangesView];
+        //轮播图--广告
+        [self cyclePlayView];
+        [self addSubview:_cyclePlayView];
+        // 设定自身的偏移量
+        self.contentSize = CGSizeMake(0, CGRectGetMaxY(_cyclePlayView.frame) + 64.f);
         
-        __weak __typeof(self)weakSelf = self;
+//        __weak __typeof(self)weakSelf = self;
         // 下拉刷新
-        self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
-            [weakSelf loadMoreData];
-        }];
+//        self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+//            [weakSelf loadMoreData];
+//        }];
     }
     
     return self;
@@ -72,7 +85,7 @@
         // 当偏移量小于0时，头部视图的Y值跟随偏移量上移
         self.headerView.CZH_y = contentOffsetY;
         // tableView的Y值也是保持不变
-        self.tableView.CZH_y = contentOffsetY + kHeaderHeight + KFAppHeight;
+        self.tableView.CZH_y = contentOffsetY + kHeaderHeight;
         NSLog(@"contentOffsetY***<=0***:%f",contentOffsetY);
         // 当tableView没有刷新时，tableView的contentOffset发生改变
         if (![self.tableView.mj_header isRefreshing]) {
@@ -83,7 +96,7 @@
         self.headerView.CZH_y = contentOffsetY/2;
         NSLog(@"contentOffsetY---->0:%f,%f",contentOffsetY,self.headerView.CZH_y);
     }
-    self.headerView.headfourView.contentOffsetY = contentOffsetY;
+    self.headerView.contentOffsetY = contentOffsetY;
     NSLog(@"contentOffsetY-:%f",contentOffsetY);
 }
 
@@ -95,25 +108,49 @@
 }
 
 #pragma mark - Get方法
--(CZHTableView *)tableView {
-    if (!_tableView) {
-        _tableView = [[CZHTableView alloc] initWithFrame:CGRectMake(0, kHeaderHeight + KFAppHeight, self.CZH_width, self.CZH_height) style:UITableViewStylePlain];
-        // 禁止tableView滑动
-        _tableView.scrollEnabled = YES;
-        
-        [self addSubview:_tableView];
-    }
-    
-    return _tableView;
-}
--(Czh_HeaderView *)headerView{
+//-(CZHTableView *)tableView {
+//    if (!_tableView) {
+//        _tableView = [[CZHTableView alloc] initWithFrame:CGRectMake(0, kHeaderHeight, self.CZH_width, self.CZH_height) style:UITableViewStylePlain];
+//        // 禁止tableView滑动
+//        _tableView.scrollEnabled = YES;
+//        [self addSubview:_tableView];
+//    }
+//
+//    return _tableView;
+//}
+-(HeaderFourView *)headerView{
     if (!_headerView) {
-        _headerView = [[Czh_HeaderView alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.width, headerViewH)];
+        _headerView = [[HeaderFourView alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.width, self.frame.size.width/4 + 10)];
         [self addSubview:_headerView];
     }
     return _headerView;
     
 }
-
+-(Czh_mineAssetsView *)mineAssetsView{
+    if (!_mineAssetsView) {
+        _mineAssetsView = [[Czh_mineAssetsView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(_headerView.frame), self.CZH_width, 270)];
+        [self addSubview:_mineAssetsView];
+    }
+    return _mineAssetsView;
+}
+-(Czh_AssetChangesView *)assetOfChangesView{
+    if (!_assetOfChangesView) {
+        _assetOfChangesView = [[Czh_AssetChangesView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(_mineAssetsView.frame), self.CZH_width, 90)];
+        [_assetOfChangesView setViewWithUpDownArray:@[@1, @2, @3, @4]];
+    }
+    return _assetOfChangesView;
+}
+-(CCCycleScrollView *)cyclePlayView{
+    NSMutableArray *imagesArr = [NSMutableArray array];
+    for (NSInteger i = 1; i <= 6; ++i) {
+        UIImage *image = [UIImage imageNamed:[NSString stringWithFormat:@"cycle_image%ld",(long)i]];
+        [imagesArr addObject:image];
+    }
+    if (!_cyclePlayView) {
+        _cyclePlayView = [[CCCycleScrollView alloc]initWithImages:imagesArr withFrame:CGRectMake(0, CGRectGetMaxY(_assetOfChangesView.frame), self.CZH_width, self.frame.size.height/4)];
+        _cyclePlayView.pageControl.hidden = YES;
+    }
+    return _cyclePlayView;
+}
 
 @end
