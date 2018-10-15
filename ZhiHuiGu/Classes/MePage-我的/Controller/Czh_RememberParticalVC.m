@@ -39,7 +39,7 @@
     UINavigationItem *navigationItem = [[UINavigationItem alloc] initWithTitle:@"抄写助记词"];
     UIButton* left = [UIButton buttonWithType:UIButtonTypeCustom];
     [left setFrame:CGRectMake(0, 0, 40, 40)];
-    [left setImage:[[UIImage imageNamed:@"common_btn_back"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] forState:UIControlStateNormal];
+    [left setImage:[[UIImage imageNamed:@"navigationButtonReturn"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] forState:UIControlStateNormal];
     [left setImageEdgeInsets:UIEdgeInsetsMake(0, /*0*/-23, 0, 0)];
     [left addTarget:self action:@selector(onBack) forControlEvents:UIControlEventTouchUpInside];
     UIBarButtonItem *leftBtn = [[UIBarButtonItem alloc] initWithCustomView:left];
@@ -64,14 +64,12 @@
 }
 
 -(void)setupView{
-    /**
-     ios 11判断
-     */
+    /**ios 11判断*/
     CGFloat kheight;
     if (@available(iOS 11.0, *)) {
         kheight = 120.f;
     }else{
-        kheight = 64;
+        kheight = 84;
     }
 
 #pragma mark
@@ -121,26 +119,4 @@
     CZHLog(@"%s",__func__);
     [self presentViewController:[Czh_BackupMnemonicVC new] animated:NO completion:nil];
 }
-
-
 @end
-//#pragma mark --  mnemonic加密结果
-//-(void)generateMnemonicHTTP{
-//    NSMutableDictionary *parametersDic = [NSMutableDictionary dictionary];
-//    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-//    NSString *url = [Czh_NetWorkURL returnURL:Interface_For_getMnemonic];
-//
-//    [Czh_HttpRequest requestWithMethod:GET WithPath:url WithToken:nil WithParams:parametersDic WithSuccessBlock:^(id data) {
-//        CZHLog(@"验证码请求时的数据--------generateMnemonicHTTP:%@",data);
-//        [userDefaults setObject:data[@"data"]  forKey:kUserMnemonicKey];
-//#pragma mark mnemonic加密结果
-//        NSString *mnemonicStr = data[@"data"];
-//        NSString *payPdKeyStr = [userDefaults objectForKey:kUserPayPwdKey];
-//        NSData *mnemonicCodeData = [mnemonicStr dataUsingEncoding:NSUTF8StringEncoding];
-//        NSData *mnemonicEncodeData = [mnemonicCodeData AES128EncryptWithKey:payPdKeyStr];
-//        CZHLog(@"mnemonic加密结果------%@",mnemonicEncodeData);
-//        [userDefaults setObject:mnemonicEncodeData  forKey:kUserMnemonicAES128];
-//    } WithFailurBlock:^(NSString *error) {
-//        CZHLog(@"验证码请求时失败返回的数据--------generateMnemonicHTTP:%@",error);
-//    } WithShowHudToView:self.view];
-//}

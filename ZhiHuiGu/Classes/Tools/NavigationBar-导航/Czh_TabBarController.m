@@ -9,7 +9,7 @@
 #import "Czh_TabBarController.h"
 #import "CZHNavigationController.h"
 #import "Czh_HomeViewController.h"
-#import "Czh_MarketViewController.h"
+#import "ViewController.h"
 #import "Czh_ShoppingMallViewController.h"
 #import "Czh_FriendsViewController.h"
 #import "Czh_MeViewController.h"
@@ -40,7 +40,7 @@
     
     [self setupChildVc:[[Czh_HomeViewController alloc]init] title:@"首页" image:@"tabBar_essence_icon" selectedImage:@"tabBar_essence_click_icon"];
     
-    [self setupChildVc:[[Czh_MarketViewController alloc]init] title:@"市场" image:@"tabBar_new_icon" selectedImage:@"tabBar_new_click_icon"];
+    [self setupChildVc:[[ViewController alloc]init] title:@"市场" image:@"tabBar_new_icon" selectedImage:@"tabBar_new_click_icon"];
     
     [self setupChildVc:[[Czh_ShoppingMallViewController alloc]init] title:@"商城" image:@"tabBar_new_icon" selectedImage:@"tabBar_new_click_icon"];
     

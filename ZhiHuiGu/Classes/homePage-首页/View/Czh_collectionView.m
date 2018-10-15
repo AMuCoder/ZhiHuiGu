@@ -8,95 +8,82 @@
 @implementation Czh_collectionView
 
 - (instancetype)initWithFrame:(CGRect)frame
+              WalletNameTitle:(NSString *)nameTitle
+           WalletAddressTitle:(NSString *)addressTitle
+          WalletCurrencyTitle:(NSString *)currencyTitle
+                    HeadImage:(NSString *)qrcodeImage
+                  QrcodeImage:(NSString *)headImage
 {
     self = [super initWithFrame:frame];
     if (self) {
         
 #pragma mark --
-        UIView *nameWalletView = [[UIView alloc] init];
-        nameWalletView.backgroundColor = [UIColor lightGrayColor];
-        nameWalletView.layer.cornerRadius = 5;
+        _nameWalletView = [[UIView alloc] initWithFrame:CGRectMake(0, 25, self.CZH_width, 83)];
+        _nameWalletView.backgroundColor = [UIColor lightGrayColor];
+        _nameWalletView.layer.cornerRadius = 5;
+        [self addSubview:_nameWalletView];
         
-        UILabel *nameWalletLabel = [[UILabel alloc] init];
-        nameWalletLabel.text = @"WEC";
-        nameWalletLabel.textAlignment = NSTextAlignmentCenter;
-        [nameWalletView addSubview:nameWalletLabel];
-        nameWalletView.backgroundColor = [UIColor blueColor];
-        _nameWalletLabel = nameWalletLabel;
+        _nameWalletLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 30, self.CZH_width, 20)];
+        _nameWalletLabel.text = nameTitle;
+        _nameWalletLabel.numberOfLines = 0;
+        _nameWalletLabel.textColor = [UIColor blackColor];
+        _nameWalletLabel.font = [UIFont boldSystemFontOfSize:15];
+        _nameWalletLabel.textAlignment = NSTextAlignmentCenter;
+        [_nameWalletView addSubview:_nameWalletLabel];
         
-        UILabel *adressWalletLabel = [[UILabel alloc] init];
-        adressWalletLabel.text = @"qqqqqqqqq......qqqqqqqqqq";
-        adressWalletLabel.textAlignment = NSTextAlignmentCenter;
-        adressWalletLabel.backgroundColor = [UIColor blueColor];
-        [nameWalletView addSubview:adressWalletLabel];
-        _adressWalletLabel = adressWalletLabel;
-        
-        [self addSubview:nameWalletView];
-        _nameWalletView = nameWalletView;
+        _adressWalletLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 55, self.CZH_width, 20)];
+        _adressWalletLabel.text = addressTitle;
+        _adressWalletLabel.numberOfLines = 0;
+        _adressWalletLabel.font = [UIFont boldSystemFontOfSize:15];
+        _adressWalletLabel.textColor = [UIColor blackColor];
+        _adressWalletLabel.textAlignment = NSTextAlignmentCenter;
+        //_adressWalletLabel.backgroundColor = [UIColor blueColor];
+        [_nameWalletView addSubview:_adressWalletLabel];
 #pragma mark --
-        UIView *QrcodeView = [[UIView alloc] init];
-        QrcodeView.backgroundColor = [UIColor whiteColor];
+        _QrcodeView = [[UIView alloc] initWithFrame:CGRectMake(0, 105, self.CZH_width, 220)];
+        _QrcodeView.backgroundColor = [UIColor whiteColor];
+        [self addSubview:_QrcodeView];
         
-        UILabel *currencyLabel = [[UILabel alloc] init];
-        currencyLabel.text = @"请转入 XXX WEC";
-        currencyLabel.textAlignment = NSTextAlignmentCenter;
+        _currencyLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 5, self.CZH_width, 20)];
+        _currencyLabel.text = currencyTitle;
+        _currencyLabel.numberOfLines = 0;
+        _currencyLabel.textAlignment = NSTextAlignmentCenter;
+        _currencyLabel.font = [UIFont boldSystemFontOfSize:15];
+        _currencyLabel.textColor = [UIColor blackColor];
+        [_QrcodeView addSubview:_currencyLabel];
         
-        currencyLabel.backgroundColor = [UIColor blueColor];
-        [QrcodeView addSubview:currencyLabel];
-        _currencyLabel = currencyLabel;
+        _QrcodeImageView = [[UIImageView alloc] initWithFrame:CGRectMake(self.CZH_width/2 - 80, 30, 160, 160)];
+        _QrcodeImageView.image = [UIImage imageNamed:qrcodeImage];
+        _QrcodeImageView.backgroundColor = [UIColor grayColor];
+        [_QrcodeView addSubview:_QrcodeImageView];
         
-        UIImageView *QrcodeImageView = [[UIImageView alloc] init];
-        QrcodeImageView.backgroundColor = [UIColor orangeColor];
-        [QrcodeView addSubview:QrcodeImageView];
-        _QrcodeImageView = QrcodeImageView;
+        _label = [[UILabel alloc] initWithFrame:CGRectMake(0, 200, self.CZH_width, 20)];
+        _label.text = @"无需添加好友，扫二维码向我付款";
+        _label.textAlignment = NSTextAlignmentCenter;
+        _label.font = [UIFont boldSystemFontOfSize:14];
+        _label.textColor = [UIColor blackColor];
+        [_QrcodeView addSubview:_label];
         
-        UILabel *label = [[UILabel alloc] init];
-        label.text = @"无需添加好友，扫二维码向我付款";
-        label.textAlignment = NSTextAlignmentCenter;
+        _headImage = [[UIImageView alloc] initWithFrame:CGRectMake(self.CZH_width/2 - 25, 0, 50, 50)];
+        _headImage.image = [UIImage imageNamed:headImage];
+        _headImage.backgroundColor = [UIColor orangeColor];
+        _headImage.layer.masksToBounds = YES;
+        _headImage.layer.cornerRadius = 25;
+        [self addSubview:_headImage];
         
-        label.backgroundColor = [UIColor blueColor];
-        [QrcodeView addSubview:label];
-        _label = label;
+        _replacementBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        _replacementBtn.frame = CGRectMake(0, 330, self.CZH_width/2, 40);
+        [_replacementBtn setTitle:@"更换资产" forState:UIControlStateNormal];
+        [_replacementBtn setBackgroundColor:[UIColor blueColor]];
+        [self addSubview:_replacementBtn];
         
-        UIButton *replacementBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-        [replacementBtn setTitle:@"更换资产" forState:UIControlStateNormal];
-        [replacementBtn setBackgroundColor:[UIColor blueColor]];
-//        [replacementBtn setBackgroundImage:[UIColor blueColor] forState:UIControlStateNormal];
-        [QrcodeView addSubview:replacementBtn];
-        
-        UIButton *setCountBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-        [setCountBtn setTitle:@"设置金额" forState:UIControlStateNormal];
-//        [setCountBtn setBackgroundImage:[UIColor redColor] forState:UIControlStateNormal];
-        [setCountBtn setBackgroundColor:[UIColor redColor]];
-        [QrcodeView addSubview:setCountBtn];
-        
-        [self addSubview:QrcodeView];
-        _QrcodeView = QrcodeView;
-        
-        UIImageView *headImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"placeholder.png"]];
-        headImage.backgroundColor = [UIColor orangeColor];
-        headImage.layer.masksToBounds = YES;
-        headImage.layer.cornerRadius = 25;
-        [self addSubview:headImage];
-        _headImage = headImage;
+        _setCountBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        _setCountBtn.frame = CGRectMake(self.CZH_width/2, 330, self.CZH_width/2, 40);
+        [_setCountBtn setTitle:@"设置金额" forState:UIControlStateNormal];
+        [_setCountBtn setBackgroundColor:[UIColor redColor]];
+        [self addSubview:_setCountBtn];
     }
     return self;
-}
-
-- (void)layoutSubviews{
-    [super layoutSubviews];
-    self.headImage.frame = CGRectMake(self.CZH_width/2 - 25, 0, 50, 50);
-    //0
-    self.nameWalletView.frame = CGRectMake(0, 25, self.CZH_width, 80);
-    self.nameWalletLabel.frame = CGRectMake(10, 30, self.CZH_width-20, 20);
-    self.adressWalletLabel.frame = CGRectMake(10, CGRectGetMaxY(self.nameWalletLabel.frame)+5, self.CZH_width-20, 20);
-    //1
-    self.QrcodeView.frame = CGRectMake(0, CGRectGetMaxY(self.nameWalletView.frame), self.CZH_width, self.CZH_height - 105);
-    self.currencyLabel.frame = CGRectMake(10, 5, self.CZH_width-20, 20);
-    self.QrcodeImageView.frame = CGRectMake(self.CZH_width/2 - 80, CGRectGetMaxY(self.currencyLabel.frame)+ 5, 160, 160);
-    self.label.frame = CGRectMake(10, CGRectGetMaxY(self.QrcodeImageView.frame)+ 5, self.CZH_width-20, 20);
-    self.replacementBtn.frame = CGRectMake(0, CGRectGetMaxY(self.label.frame)+ 5, self.CZH_width/2, 40);
-    self.setCountBtn.frame = CGRectMake(self.CZH_width/2, CGRectGetMaxY(self.label.frame)+ 5, self.CZH_width/2, 40);
 }
 
 

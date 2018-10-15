@@ -39,12 +39,12 @@
         [self mineAssetsView];
         //数据上下滚动图
         [self assetOfChangesView];
-        [self addSubview:_assetOfChangesView];
+        
         //轮播图--广告
         [self cyclePlayView];
         [self addSubview:_cyclePlayView];
         // 设定自身的偏移量
-        self.contentSize = CGSizeMake(0, CGRectGetMaxY(_cyclePlayView.frame) + 64.f);
+        self.contentSize = CGSizeMake(0, CGRectGetMaxY(_cyclePlayView.frame) + self.CZH_width/4 + 64.f);
         
 //        __weak __typeof(self)weakSelf = self;
         // 下拉刷新
@@ -118,13 +118,21 @@
 //
 //    return _tableView;
 //}
+
+-(Czh_AssetChangesView *)assetOfChangesView{
+    if (!_assetOfChangesView) {
+        _assetOfChangesView = [[Czh_AssetChangesView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(_mineAssetsView.frame), self.CZH_width, 90)];
+        [self addSubview:_assetOfChangesView];
+        [_assetOfChangesView setViewWithUpDownArray:@[@1, @2, @3, @4]];
+    }
+    return _assetOfChangesView;
+}
 -(HeaderFourView *)headerView{
     if (!_headerView) {
         _headerView = [[HeaderFourView alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.width, self.frame.size.width/4 + 10)];
         [self addSubview:_headerView];
     }
     return _headerView;
-    
 }
 -(Czh_mineAssetsView *)mineAssetsView{
     if (!_mineAssetsView) {
@@ -132,13 +140,6 @@
         [self addSubview:_mineAssetsView];
     }
     return _mineAssetsView;
-}
--(Czh_AssetChangesView *)assetOfChangesView{
-    if (!_assetOfChangesView) {
-        _assetOfChangesView = [[Czh_AssetChangesView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(_mineAssetsView.frame), self.CZH_width, 90)];
-        [_assetOfChangesView setViewWithUpDownArray:@[@1, @2, @3, @4]];
-    }
-    return _assetOfChangesView;
 }
 -(CCCycleScrollView *)cyclePlayView{
     NSMutableArray *imagesArr = [NSMutableArray array];

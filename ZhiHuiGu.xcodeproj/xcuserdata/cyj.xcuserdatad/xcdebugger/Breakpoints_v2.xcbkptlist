@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ZhiHuiGu/Classes/MePage-&#x6211;&#x7684;/View/CreateWalletPdView.m"
-            timestampString = "560947710.811781"
+            timestampString = "561117563.125018"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "48"
-            endingLineNumber = "48"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
             landmarkName = "-layoutSubviews"
             landmarkType = "7">
          </BreakpointContent>
@@ -109,56 +109,8 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "ZhiHuiGu/Classes/MePage-&#x6211;&#x7684;/Controller/Czh_RegisterVC.m"
-            timestampString = "560947710.812292"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "279"
-            endingLineNumber = "279"
-            landmarkName = "-countClick"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[Czh_RegisterVC countClick]"
-                  moduleName = "ZhiHuiGu"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/cyj/Desktop/%E9%A1%B9%E7%9B%AE%E5%A4%87%E4%BB%BD/ZhiHuiGu/ZhiHuiGu/Classes/MePage-%E6%88%91%E7%9A%84/Controller/Czh_RegisterVC.m"
-                  timestampString = "560683068.2281801"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "291"
-                  endingLineNumber = "291"
-                  offsetFromSymbolStart = "674">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__28-[Czh_RegisterVC countClick]_block_invoke"
-                  moduleName = "ZhiHuiGu"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/cyj/Desktop/%E9%A1%B9%E7%9B%AE%E5%A4%87%E4%BB%BD/ZhiHuiGu/ZhiHuiGu/Classes/MePage-%E6%88%91%E7%9A%84/Controller/Czh_RegisterVC.m"
-                  timestampString = "560683068.233501"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "292"
-                  endingLineNumber = "292"
-                  offsetFromSymbolStart = "51">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "ZhiHuiGu/Classes/MePage-&#x6211;&#x7684;/Controller/Czh_LoginAndRegisterVC.m"
-            timestampString = "560947710.812535"
+            timestampString = "561139745.2510051"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "150"
@@ -174,7 +126,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ZhiHuiGu/Classes/MePage-&#x6211;&#x7684;/Controller/Czh_LoginAndRegisterVC.m"
-            timestampString = "560947710.8127511"
+            timestampString = "561139745.251093"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "274"
@@ -190,7 +142,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ZhiHuiGu/Classes/PublicFile-&#x516c;&#x5171;&#x6587;&#x4ef6;/AppDelegate.m"
-            timestampString = "561017810.361477"
+            timestampString = "561295637.163762"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "38"
@@ -206,7 +158,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ZhiHuiGu/Classes/MePage-&#x6211;&#x7684;/Controller/Czh_ForgotPwVC.m"
-            timestampString = "560947710.813521"
+            timestampString = "561139745.251214"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "156"
@@ -222,7 +174,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ZhiHuiGu/Classes/MePage-&#x6211;&#x7684;/Controller/Czh_LoginAndRegisterVC.m"
-            timestampString = "560947710.813749"
+            timestampString = "561139745.251302"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "267"
@@ -238,7 +190,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ZhiHuiGu/Classes/PublicFile-&#x516c;&#x5171;&#x6587;&#x4ef6;/AppDelegate.m"
-            timestampString = "561017810.361907"
+            timestampString = "561295637.1639251"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "42"
@@ -270,7 +222,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ZhiHuiGu/Classes/PublicFile-&#x516c;&#x5171;&#x6587;&#x4ef6;/AppDelegate.m"
-            timestampString = "561017810.362184"
+            timestampString = "561295637.164034"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "45"
@@ -280,65 +232,81 @@
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         BreakpointExtensionID = "Xcode.Breakpoint.ExceptionBreakpoint">
          <BreakpointContent
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "ZhiHuiGu/Classes/MePage-&#x6211;&#x7684;/Controller/Czh_CreateWalletVC.m"
-            timestampString = "560965693.012983"
+            scope = "0"
+            stopOnStyle = "0">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.ExceptionBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            scope = "0"
+            stopOnStyle = "0">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.ExceptionBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            scope = "0"
+            stopOnStyle = "0">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ZhiHuiGu/Classes/MarketPage-&#x5e02;&#x573a;/View/Czh_MarketTableViewCell.m"
+            timestampString = "561295637.164098"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "157"
-            endingLineNumber = "157"
-            landmarkName = "-setupHttp"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
+            landmarkName = "-initWithStyle:reuseIdentifier:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "ZhiHuiGu/Classes/MePage-&#x6211;&#x7684;/Controller/Czh_CreateWalletVC.m"
-            timestampString = "560965693.013429"
+            filePath = "ZhiHuiGu/Classes/MarketPage-&#x5e02;&#x573a;/View/Czh_MarketTableViewCell.m"
+            timestampString = "561295637.164165"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "160"
-            endingLineNumber = "160"
-            landmarkName = "-setupHttp"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
+            landmarkName = "-initWithStyle:reuseIdentifier:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.ExceptionBreakpoint">
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            scope = "0"
-            stopOnStyle = "0">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.ExceptionBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            scope = "0"
-            stopOnStyle = "0">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.ExceptionBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            scope = "0"
-            stopOnStyle = "0">
+            filePath = "ZhiHuiGu/Classes/MarketPage-&#x5e02;&#x573a;/View/Czh_MarketTableViewCell.m"
+            timestampString = "561295637.164229"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "-initWithStyle:reuseIdentifier:"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

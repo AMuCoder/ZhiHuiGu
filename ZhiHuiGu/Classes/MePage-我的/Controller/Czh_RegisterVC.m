@@ -71,7 +71,7 @@
     UINavigationItem *navigationItem = [[UINavigationItem alloc] initWithTitle:@"注册"];
     UIButton* left = [UIButton buttonWithType:UIButtonTypeCustom];
     [left setFrame:CGRectMake(0, 0, 40, 40)];
-    [left setImage:[[UIImage imageNamed:@"common_btn_back"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] forState:UIControlStateNormal];
+    [left setImage:[[UIImage imageNamed:@"navigationButtonReturn"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] forState:UIControlStateNormal];
     [left setImageEdgeInsets:UIEdgeInsetsMake(0, /*0*/-23, 0, 0)];
     [left addTarget:self action:@selector(onBack) forControlEvents:UIControlEventTouchUpInside];
     UIBarButtonItem* leftBtn = [[UIBarButtonItem alloc] initWithCustomView:left];
@@ -91,7 +91,7 @@
     if (@available(iOS 11.0, *)) {
         kheight = 120.f;
     }else{
-        kheight = 64;
+        kheight = 84;
     }
     Czh_LoginTextField *nametextField = [[Czh_LoginTextField alloc] initWithFrame:CGRectMake(20,kheight, Main_Screen_Width - 40, 44) placeHolder:@"请输入用户名" boolLeftView:NO rightTitle:nil];
     [self.contentScrollView addSubview:nametextField];
@@ -117,7 +117,6 @@
     
     //阅读协议//同意”免责声明及风险披露“
     UIButton *accpetBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    accpetBtn.titleLabel.textAlignment = NSTextAlignmentCenter;
     accpetBtn.titleLabel.font = [UIFont systemFontOfSize:15];
     accpetBtn.frame = CGRectMake(25, CGRectGetMaxY(self.pdNum.frame) + 25, self.view.frame.size.width - CGRectGetMaxX(self.checkBox.frame) - 50, 20);
     NSMutableAttributedString *str = [[NSMutableAttributedString alloc]initWithString:@"点击注册,即表示同意”免责声明及风险披露“"];
@@ -131,6 +130,7 @@
     [accpetBtn setAttributedTitle:str forState:UIControlStateNormal];
     [accpetBtn sizeToFit];
     [accpetBtn addTarget:self action:@selector(accpetBtnClick) forControlEvents:UIControlEventTouchUpInside];
+    accpetBtn.contentHorizontalAlignment = UIControlContentHorizontalAlignmentCenter;
     [_contentScrollView addSubview:accpetBtn];
     
     //注册按钮
@@ -177,11 +177,13 @@
         [Czh_WarnWindow HUD:self.view andWarnText:@"请输入完整注册信息" andXoffset:0 andYoffset:Main_Screen_Width/5*3];
     }else{
         //正则判断手机号码
-        if ([Czh_RegularVerification isMobileNumber:self.phoneNum.text]) {
+        if (![Czh_RegularVerification isMobileNumber:self.phoneNum.text]) {
             //验证码请求
-            [self performSelector:@selector(regBtnClickNetWork) withObject:nil];
-        }else{
             [Czh_WarnWindow HUD:self.view andWarnText:@"请输入正确手机号码" andXoffset:0 andYoffset:Main_Screen_Width/5*3];
+        }else if(![_yzNum.text isEqualToString:_codeStr]){
+            [Czh_WarnWindow HUD:self.view andWarnText:@"验证码错误" andXoffset:0 andYoffset:Main_Screen_Width/5*3];
+        }else{
+            [self performSelector:@selector(regBtnClickNetWork) withObject:nil];
         }
     }
 }
@@ -200,33 +202,20 @@
     [Czh_HttpRequest requestWithMethod:POST WithPath:url WithToken:nil WithParams:parametersDic WithSuccessBlock:^(id data) {
         CZHLog(@"点击注册按钮返回的数据--------------------\n data:%@",data);
         if ([[NSString stringWithFormat:@"%@",data[@"code"]] isEqualToString:@"200"]) {
-            NSArray *keypairsArr = [NSArray array];
-            //获取keypairs
-            keypairsArr = data[@"data"][@"keypairs"];
-            //keypairs数组装JSON字符串
-            //NSString *keypairsArrToJSNStr = [keypairsArr toReadableJSONString];
-            NSString *keypairsArrToJSNStr = [self arrayToJsonString:keypairsArr];
-            //单独获取address和seed
-            NSDictionary *keypairsDict = [NSDictionary dictionary];
-            keypairsDict = keypairsArr.firstObject;
-            CZHLog(@"--------------------\n keypairsArrToJSNStr:%@",keypairsArrToJSNStr);
+            
             NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-            [userDefaults setObject:data[@"data"][@"user"][@"nick"]  forKey:kUserNameKey];
-            [userDefaults setObject:data[@"data"][@"user"][@"pwd"]  forKey:kUserPwdKey];
-            [userDefaults setObject:data[@"data"][@"user"][@"id"]  forKey:kUserIDKey];
-            [userDefaults setObject:data[@"data"][@"user"][@"created"]  forKey:kUserCreatedKey];
-            [userDefaults setObject:data[@"data"][@"user"][@"updated"]  forKey:kUserUpdatedKey];
-            [userDefaults setObject:data[@"data"][@"user"][@"tel"]  forKey:kUserTelKey];
-            [userDefaults setObject:data[@"data"][@"token"]  forKey:kUserTokenKey];
-            [userDefaults setObject:data[@"data"][@"mnemonic"]  forKey:kUserMnemonicKey];
-            [userDefaults setObject:keypairsDict[@"address"]  forKey:kUserAddressKey];
-            [userDefaults setObject:keypairsDict[@"seed"]  forKey:kUserSeedKey];
             [userDefaults setBool:YES forKey:kUserisLogin];//登陆成功
-            [userDefaults setObject:keypairsArr forKey:kUserKeypairsArr];
-            [userDefaults setObject:keypairsArrToJSNStr forKey:kUserKeypairsArrToJson];
+            [userDefaults setObject:data[@"data"][@"token"]  forKey:kUserTokenKey];//token
+            [userDefaults setObject:data[@"data"][@"user"][@"nick"]  forKey:kUserNameKey];//用户名
+            [userDefaults setObject:self.pdNum.text  forKey:kUserPwdKey];//用户密码
+            [userDefaults setObject:data[@"data"][@"user"][@"id"]  forKey:kUserIDKey];//54
+            [userDefaults setObject:data[@"data"][@"user"][@"created"]  forKey:kUserCreatedKey];//时间
+            [userDefaults setObject:data[@"data"][@"user"][@"updated"]  forKey:kUserUpdatedKey];//时间
+            [userDefaults setObject:data[@"data"][@"user"][@"tel"]  forKey:kUserTelKey];//手机号码
+            [userDefaults setObject:data[@"data"][@"user"][@"head_img"][@"String"]  forKey:kUserHeadImgKey];//头像
+            [userDefaults setObject:data[@"data"][@"user"][@"authorized"]  forKey:KUserauthorizedKey];//实名认证
+            [userDefaults setBool:data[@"data"][@"user"][@"has_pay_pwd"]  forKey:KUserhas_pay_pwdKey];//是否有支付密码
             [userDefaults synchronize];
-            
-            
             //注册成功--提示框
             [Czh_WarnWindow HUD:self.view andWarnText:@"注册成功" andXoffset:0 andYoffset:Main_Screen_Width/5*3];
             [self presentViewController:[Czh_CreateWalletVC new] animated:YES completion:nil];
@@ -292,7 +281,7 @@
         CZHLog(@"验证码请求时成功返回的数据--------%@",data);
         [Czh_WarnWindow HUD:self.view andWarnText:@"已发送短信到您的手机" andXoffset:0 andYoffset:Main_Screen_Width/2];
         self.codeStr = data[@"data"];
-        self.yzNum.text = self.codeStr;
+//        self.yzNum.text = self.codeStr;
     } WithFailurBlock:^(NSString *error) {
         CZHLog(@"验证码请求时失败返回的数据--------%@",error);
     } WithShowHudToView:self.view];

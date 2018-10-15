@@ -13,7 +13,6 @@
     if (self) {
         UILabel *label = [[UILabel alloc] init];
         label.text = text;
-//        label.backgroundColor = [UIColor grayColor];
         label.font = [UIFont systemFontOfSize:17.0f];
         [self addSubview:label];
         _label = label;

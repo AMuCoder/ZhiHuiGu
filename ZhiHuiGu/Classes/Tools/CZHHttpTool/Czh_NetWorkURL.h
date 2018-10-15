@@ -35,6 +35,7 @@ typedef  enum
     Interface_For_trustAseetUrl,//信任资产
 #pragma mark 智慧谷 -- asset
     Interface_For_AcquisitionSystemAssets,//获取系统资产
+    Interface_For_GeneratetheWallet,//生成钱包
     
     
     

@@ -29,24 +29,24 @@
 }
 
 -(void)setupView{
-    
-    _mnemonicStr = [Czh_AccountTool getUserMnemonic];
-    _payPdStr    = [Czh_AccountTool getUserPayPWd];
-    /**
-     ios 11判断
-     */
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    NSString *userPayPwdStr = [userDefaults objectForKey:kUserPayPwdKey];
+    NSString *usermnemonicStr = [userDefaults objectForKey:kUserMnemonicKey];
+    _mnemonicStr = usermnemonicStr;
+    _payPdStr    = userPayPwdStr;
+    /**ios 11判断*/
     CGFloat kheight;
     if (@available(iOS 11.0, *)) {
         kheight = 120.f;
     }else{
-        kheight = 64;
+        kheight = 84;
     }
     
-#pragma mark
+#pragma mark -- 请输入记助词
     UILabel *label = [[Czh_UILabel alloc] initWithFrame:CGRectMake(10, kheight, Main_Screen_Width - 20, 44) labelTextColor:[UIColor blackColor] sizeFloat:20.f textAlignment:NSTextAlignmentCenter];
     label.text = @"请输入记助词";
     [self.view addSubview:label];
-#pragma mark
+#pragma mark -- 助记词输入框
     UITextView *textview = [[UITextView alloc]initWithFrame:CGRectMake(20,CGRectGetMaxY(label.frame) + 10,self.view.CZH_width - 40,150)];
     textview.backgroundColor=[UIColor lightGrayColor];//背景色
     textview.scrollEnabled=NO;//当文字超过视图的边框时是否允许滑动，默认为“YES”
@@ -54,6 +54,7 @@
     textview.delegate=self;//设置代理方法的实现类
     textview.font=[UIFont fontWithName:@"Arial"size:15.0];//设置字体名字和字体大小;
     textview.returnKeyType=UIReturnKeyDefault;//return键的类型
+    textview.layer.cornerRadius = 5;
     textview.keyboardType=UIKeyboardTypeDefault;//键盘类型
     textview.textAlignment=NSTextAlignmentLeft;//文本显示的位置默认为居左
     textview.dataDetectorTypes=UIDataDetectorTypeAll;//显示数据类型的连接模式（如电话号码、网址、地址等）
@@ -61,22 +62,21 @@
 //    textview.text=@"UITextView详解";//设置显示的文本内容
     [self.view addSubview:textview];
     _textview = textview;
- #pragma mark
+ #pragma mark -- 输入交易密码
     CreateWalletPdView *paypdView = [[CreateWalletPdView alloc] initWithFrame:CGRectMake(10, CGRectGetMaxY(textview.frame) + 10, self.view.frame.size.width - 20, 44) labelText:@"交易密码 :  " placeHolder:@"请输入交易密码"];
     [self.view addSubview:paypdView];
     _paypdView = paypdView;
     
-#pragma mark
+#pragma mark -- 导入助记词按钮
     Czh_LoginBtn *ZJCImportBtn = [[Czh_LoginBtn alloc] initWithFrame:CGRectMake(20,Main_Screen_Height - 84, Main_Screen_Width - 40, 44)];
     [ZJCImportBtn setTitle:@"导入助记词" forState:UIControlStateNormal];
     ZJCImportBtn.backgroundColor = MAIN_COLOR;
     [self.view addSubview:ZJCImportBtn];
     _ZJCImportBtn = ZJCImportBtn;
     [self.ZJCImportBtn addTarget:self action:@selector(ZJCImportBtnClick) forControlEvents:UIControlEventTouchUpInside];
-#pragma mark
+#pragma mark -- 同意”免责声明及风险披露“
     //同意”免责声明及风险披露“
     UIButton *accpetBtn = [[UIButton alloc] initWithFrame:CGRectMake(20, CGRectGetMinY(self.ZJCImportBtn.frame) - 30, self.view.CZH_width -50, 20)];
-    accpetBtn.titleLabel.textAlignment = NSTextAlignmentCenter;
     accpetBtn.titleLabel.font = [UIFont systemFontOfSize:13];
     NSMutableAttributedString *str = [[NSMutableAttributedString alloc]initWithString:@"点击开始导入表示您同意《服务及隐私条款》"];
     NSRange allRange = {11,[str length]-11};
@@ -90,14 +90,13 @@
     [accpetBtn addTarget:self action:@selector(accpetBtnClick) forControlEvents:UIControlEventTouchUpInside];
     accpetBtn.contentHorizontalAlignment = UIControlContentHorizontalAlignmentCenter;
     [self.view addSubview:accpetBtn];
-#pragma mark
+#pragma mark -- 什么是助记词？
     UIButton *mnemonicBtn = [[UIButton alloc] initWithFrame:CGRectMake(20, CGRectGetMaxY(self.ZJCImportBtn.frame) + 10, self.view.CZH_width - 40, 20)];
     [mnemonicBtn setTitle:@"什么是助记词？" forState:UIControlStateNormal];
     [mnemonicBtn setTitleColor:[UIColor orangeColor]forState:UIControlStateNormal];
     mnemonicBtn.titleLabel.font = [UIFont systemFontOfSize:13.f];
     [mnemonicBtn addTarget:self action:@selector(mnemonicBtnClick) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:mnemonicBtn];
-    
 }
 -(void)accpetBtnClick{
     CZHLog(@"%s",__func__);
@@ -108,8 +107,13 @@
     if (self.paypdView.textField.text.length == 0) {
          [Czh_WarnWindow HUD:self.view andWarnText:@"支付密码不能为空！" andXoffset:0 andYoffset:Main_Screen_Width/5*3];
     }else if(self.textview.text.length == 0){
+        [Czh_WarnWindow HUD:self.view andWarnText:@"助记词输入不能为空！" andXoffset:0 andYoffset:Main_Screen_Width/5*3];
+    }else if(![self.textview.text isEqualToString:_mnemonicStr]){
         [Czh_WarnWindow HUD:self.view andWarnText:@"助记词输入错误！" andXoffset:0 andYoffset:Main_Screen_Width/5*3];
+    }else if(![self.paypdView.textField.text isEqualToString:_payPdStr]){
+        [Czh_WarnWindow HUD:self.view andWarnText:@"支付密码输入错误！" andXoffset:0 andYoffset:Main_Screen_Width/5*3];
     }else{
+        [Czh_WarnWindow HUD:self.view andWarnText:@"导入助记词成功" andXoffset:0 andYoffset:Main_Screen_Width/2];
         [self presentViewController:[Czh_TabBarController new] animated:YES completion:nil];
     }
     CZHLog(@"%s",__func__);
@@ -163,7 +167,7 @@
     UINavigationItem *navigationItem = [[UINavigationItem alloc] initWithTitle:@"导入钱包"];
     UIButton* left = [UIButton buttonWithType:UIButtonTypeCustom];
     [left setFrame:CGRectMake(0, 0, 40, 40)];
-    [left setImage:[[UIImage imageNamed:@"common_btn_back"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] forState:UIControlStateNormal];
+    [left setImage:[[UIImage imageNamed:@"navigationButtonReturn"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] forState:UIControlStateNormal];
     [left setImageEdgeInsets:UIEdgeInsetsMake(0, /*0*/-23, 0, 0)];
     [left addTarget:self action:@selector(onBack) forControlEvents:UIControlEventTouchUpInside];
     UIBarButtonItem *leftBtn = [[UIBarButtonItem alloc] initWithCustomView:left];

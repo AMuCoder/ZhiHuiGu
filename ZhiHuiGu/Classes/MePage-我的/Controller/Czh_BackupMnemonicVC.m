@@ -61,7 +61,7 @@
     UINavigationItem *navigationItem = [[UINavigationItem alloc] initWithTitle:@"备份助记词"];
     UIButton* left = [UIButton buttonWithType:UIButtonTypeCustom];
     [left setFrame:CGRectMake(0, 0, 40, 40)];
-    [left setImage:[[UIImage imageNamed:@"common_btn_back"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] forState:UIControlStateNormal];
+    [left setImage:[[UIImage imageNamed:@"navigationButtonReturn"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] forState:UIControlStateNormal];
     [left setImageEdgeInsets:UIEdgeInsetsMake(0, /*0*/-23, 0, 0)];
     [left addTarget:self action:@selector(onBack) forControlEvents:UIControlEventTouchUpInside];
     UIBarButtonItem *leftBtn = [[UIBarButtonItem alloc] initWithCustomView:left];
@@ -81,7 +81,7 @@
     if (@available(iOS 11.0, *)) {
         kheight = 120.f;
     }else{
-        kheight = 64;
+        kheight = 84;
     }
     
 #pragma mark

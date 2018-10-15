@@ -22,12 +22,12 @@ static NSString *notice_index;
 {
     self.backgroundColor = [UIColor whiteColor];
     self.assetChangesView = [[AssetChangesView alloc] initWithFrame:CGRectMake(0, 0, self.CZH_width, 90)];
-    self.btn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, self.CZH_width, 90)];
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(topNewsInfoClicked:)];
     _assetChangesView.userInteractionEnabled = YES;
     [_assetChangesView addGestureRecognizer:tap];
     [self addSubview:self.assetChangesView];
-    [self addSubview:self.btn];
+    _btn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, self.CZH_width, 90)];
+    [self addSubview:_btn];
 }
 //点击上下滚动视图
 -(void)topNewsInfoClicked:(id)sender{

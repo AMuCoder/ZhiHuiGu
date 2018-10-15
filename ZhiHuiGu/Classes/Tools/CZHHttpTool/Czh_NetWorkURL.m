@@ -38,7 +38,7 @@
             CZHLog(@"用户更改支付密码%@",url);
         }break;
         case Interface_For_editSavePwd:{
-            url=[NSString stringWithFormat:@"%@/v1/user/save-pwd",CZH_MainURL];
+            url=[NSString stringWithFormat:@"%@/v1/user/save-paypwd",CZH_MainURL];
             CZHLog(@"用户更改登陆密码%@",url);
         }break;
         case Interface_For_refreshToken:{
@@ -104,6 +104,10 @@
         case Interface_For_AcquisitionSystemAssets:{
             url=[NSString stringWithFormat:@"%@/v1/asset/top",CZH_MainURL];
             CZHLog(@"获取系统资产%@",url);
+        }break;
+        case Interface_For_GeneratetheWallet:{
+            url=[NSString stringWithFormat:@"%@/v1/wallet/create",CZH_MainURL];
+            CZHLog(@"生成钱包%@",url);
         }break;
             
             

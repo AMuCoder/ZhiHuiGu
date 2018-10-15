@@ -19,8 +19,13 @@
 #import "PXAlertView.h"
 #import "YXCustomAlertView.h"
 #import "AssetsTypeAlter.h"
+#import "Czh_collectionVC.h"
+#import "Czh_TopUpVC.h"
+#import "Czh_AssetChangesView.h"
+#import "Czh_TransferVC.h"
 
-@interface Czh_HomeViewController ()<UISearchBarDelegate,YXCustomAlertViewDelegate>
+
+@interface Czh_HomeViewController ()<UISearchBarDelegate>
 /// 背景的UIScrollView
 @property (nonatomic, strong) CZHScrollView *scrollView;
 /// navigation视图
@@ -41,7 +46,7 @@
     self.edgesForExtendedLayout = UIRectEdgeNone;
     [self setupNavBar];
     [self headerFourViewBtnClick];
-//    [self setupSearchBarView];
+    //[self setupSearchBarView];
     [self headerViewClick];
 }
 - (void)viewWillAppear:(BOOL)animated{//去除导航栏下方的横线
@@ -82,35 +87,21 @@
     
     /**收款*/
     [self.navigationView.paymentBtn setClickBlock:^(UIButton *button) {
-        [PXAlertView showAlertWithWalletNameTitle:@"WEC" WalletAddressTitle:@"qwerqwer....qwerqwer" WalletCurrencyTitle:@"请转入 XXX WEC" HeadImage:@"QWE" QrcodeImage:@"QWE" cancelTitle:@"更换资产" otherTitle:@"设置金额" completion:^(BOOL cancelled) {
-            //
-            if (cancelled) {
-                [weakSelf AssetsAlter];
-            } else {//设置金额
-                [weakSelf EnterAmountNumClick];
-            }
-        }];
+        [weakSelf.navigationController pushViewController:[Czh_collectionVC new] animated:YES];
     } andEvent:UIControlEventTouchUpInside];
     
     [self.scrollView.headerView.paymentBtn setClickBlock:^(UIButton *button) {
-        [PXAlertView showAlertWithWalletNameTitle:@"WEC" WalletAddressTitle:@"qwerqwer....qwerqwer" WalletCurrencyTitle:@"请转入 XXX WEC" HeadImage:@"QWE" QrcodeImage:@"QWE" cancelTitle:@"更换资产" otherTitle:@"设置金额" completion:^(BOOL cancelled) {
-            //
-            if (cancelled) {
-                [weakSelf AssetsAlter];
-            } else {
-                [weakSelf EnterAmountNumClick];
-            }
-        }];
+        [weakSelf.navigationController pushViewController:[Czh_collectionVC new] animated:YES];
     } andEvent:UIControlEventTouchUpInside];
     
     /**
-     上下按钮
+     支付
      */
     [self.navigationView.collectBtn setClickBlock:^(UIButton *button) {
-        CZHLog(@"navigationView.collectBtn--------回调成功！");
+        [weakSelf.navigationController pushViewController:[Czh_TopUpVC new] animated:YES];
     } andEvent:UIControlEventTouchUpInside];
     [self.scrollView.headerView.collectBtn setClickBlock:^(UIButton *button) {
-        CZHLog(@"scrollView.headerView.headfourView.collectBtn--------回调成功！");
+        [weakSelf.navigationController pushViewController:[Czh_TopUpVC new] animated:YES];
     } andEvent:UIControlEventTouchUpInside];
     
     /**
@@ -118,14 +109,9 @@
      */
     [self.navigationView.phoneBtn setClickBlock:^(UIButton *button) {
         CZHLog(@"navigationView.phoneBtn--------回调成功！");
-    } andEvent:UIControlEventTouchUpInside];
-    
-    [self.scrollView.headerView.phoneBtn setClickBlock:^(UIButton *button) {
-        CZHLog(@"scrollView.headerView.headfourView.phoneBtn--------回调成功！");
         NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
         NSString *userName = [userDefaults objectForKey:kUserNameKey];
         NSString *passWord = [userDefaults objectForKey:kUserPwdKey];
-//        NSString *token = [userDefaults objectForKey:kUserPwdKey];
         CZHLog(@"---------%@---------%@",userName,passWord);
         NSDictionary *dictionary = [userDefaults dictionaryRepresentation];
         for(NSString* key in [dictionary allKeys]){
@@ -133,61 +119,15 @@
             [userDefaults synchronize];
         }
     } andEvent:UIControlEventTouchUpInside];
-}
-#pragma mark -- 选择资产类型弹窗
-- (void)AssetsAlter{
-    AssetsTypeAlter *_alert = [[AssetsTypeAlter alloc] initWithFrame:CGRectMake(0, 0, Main_Screen_Width, Main_Screen_Height) andHeight:kSize (380)];
-    _alert.alpha = 0;
-    [[UIApplication sharedApplication].keyWindow addSubview:_alert];
-    [_alert showView];
-}
-#pragma mark -- 设置金额弹窗
-- (void)EnterAmountNumClick{
-    CGFloat dilX = 25;
-    CGFloat dilH = 150;
-    YXCustomAlertView *alertV = [[YXCustomAlertView alloc] initAlertViewWithFrame:CGRectMake(dilX, 0, 280, dilH) andSuperView:self.navigationController.view];
-    alertV.center = CGPointMake(Main_Screen_Width/2, Main_Screen_Height/2-30);
-    alertV.delegate = self;
-    alertV.titleStr = @"收款金额";
-    CGFloat loginX = 20;
-    UITextField *loginPwdField = [[UITextField alloc] initWithFrame:CGRectMake(loginX, 55, alertV.frame.size.width - 2 * loginX, 32)];
-    loginPwdField.layer.borderColor = [[UIColor colorWithWhite:0.9 alpha:1] CGColor];
-    UIView *leftView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 8, 32)];
-    loginPwdField.leftViewMode = UITextFieldViewModeAlways;
-    loginPwdField.leftView = leftView;
-    loginPwdField.placeholder = @"请输入收款金额";
-    loginPwdField.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
-    loginPwdField.layer.borderWidth = 1;
-    loginPwdField.layer.cornerRadius = 4;
-    [alertV addSubview:loginPwdField];
     
-}
-#pragma mark - YXCustomAlertViewDelegate
-- (void) customAlertView:(YXCustomAlertView *) customAlertView clickedButtonAtIndex:(NSInteger)buttonIndex
-{
-    if (buttonIndex==0) {
-        [customAlertView dissMiss];
-        customAlertView = nil;
-#pragma mark -- 设置金额弹窗的取消按键
-        [PXAlertView showAlertWithWalletNameTitle:@"WEC" WalletAddressTitle:@"qwerqwer....qwerqwer" WalletCurrencyTitle:@"请转入 XXX WEC" HeadImage:@"QWE" QrcodeImage:@"QWE" cancelTitle:@"更换资产" otherTitle:@"设置金额" completion:^(BOOL cancelled) {
-            if (cancelled) {
-                NSLog(@"Cancel (Blue) button pressed");
-            } else {
-                [self EnterAmountNumClick];
-            }
-        }];
-    }else{
-        NSLog(@"确认");
-    }
-}
-- (void)EnterAmountClick{
-    [PXAlertView showAlertWithTitle:@"请输入金额" EnterAmountTextFieldText:@"23444" EnterAmountTextFieldHolder:@"请输入收款金额" cancelTitle:@"取消" otherTitle:@"确定" completion:^(BOOL cancelled) {
-        if (cancelled) {
-            [self AssetsAlter];
-        } else {
-            [self EnterAmountNumClick];
-        }
-    }];
+    [self.scrollView.headerView.phoneBtn setClickBlock:^(UIButton *button) {
+        
+        [weakSelf.navigationController pushViewController:[Czh_TransferVC new] animated:YES];
+    } andEvent:UIControlEventTouchUpInside];
+    
+    [self.scrollView.assetOfChangesView.btn setClickBlock:^(UIButton *button) {
+        CZHLog(@"----------------------");
+    } andEvent:UIControlEventTouchUpInside];
 }
 #pragma mark - 导航栏右边双按钮
 - (void)setupNavBar

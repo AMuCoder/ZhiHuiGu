@@ -52,5 +52,35 @@
     }
     return self;
 }
-
+- (instancetype)initWithFrame:(CGRect)frame PlaceHolder:(NSString *)placeHolder LeftViewImage:(NSString *)leftViewImageName{
+    if (self = [super initWithFrame:frame]) {
+        self.placeholder = placeHolder;
+        self.keyboardType = UIKeyboardTypeDecimalPad;
+        self.borderStyle = UITextBorderStyleNone;
+        self.backgroundColor = [UIColor whiteColor];
+        self.textAlignment = NSTextAlignmentLeft;
+        //键盘外观
+        self.keyboardAppearance=UIKeyboardAppearanceDefault;
+        //输入框中是否有个叉号，在什么时候显示，用于一次性删除输入框中的内容
+        self.clearButtonMode = UITextFieldViewModeAlways;
+        //设置字体颜色
+        self.textColor = [UIColor blackColor];
+        self.layer.borderColor= [UIColor grayColor].CGColor;
+        self.layer.borderWidth= 0.5f;
+        //设置边框样式，只有设置了才会显示边框样式
+        self.borderStyle = UITextBorderStyleRoundedRect;
+        self.layer.cornerRadius = 8;
+        self.clearButtonMode = UITextFieldViewModeAlways;
+        self.font = [UIFont systemFontOfSize:16];
+        
+        //
+        UIImageView *leftView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 30, 30)];
+        leftView.backgroundColor = [UIColor lightGrayColor];
+        leftView.contentMode = UIViewContentModeCenter;
+        leftView.image = [UIImage imageNamed:leftViewImageName];
+        self.leftView = leftView;
+        self.leftViewMode = UITextFieldViewModeAlways;
+    }
+    return self;
+}
 @end

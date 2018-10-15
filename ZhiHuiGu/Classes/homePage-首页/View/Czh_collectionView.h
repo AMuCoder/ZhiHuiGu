@@ -19,4 +19,10 @@
 @property(nonatomic,strong) UIButton *setCountBtn;
 @property(nonatomic,strong) UILabel *label;
 
+- (instancetype)initWithFrame:(CGRect)frame
+              WalletNameTitle:(NSString *)nameTitle
+           WalletAddressTitle:(NSString *)addressTitle
+          WalletCurrencyTitle:(NSString *)currencyTitle
+                    HeadImage:(NSString *)qrcodeImage
+                  QrcodeImage:(NSString *)headImage;
 @end

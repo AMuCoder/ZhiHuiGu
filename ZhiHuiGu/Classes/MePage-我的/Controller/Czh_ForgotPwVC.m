@@ -49,7 +49,7 @@
     if (@available(iOS 11.0, *)) {
         kheight = 120.f;
     }else{
-        kheight = 64;
+        kheight = 84;
     }
     //手机号
     Czh_LoginTextField *phonetextField = [[Czh_LoginTextField alloc] initWithFrame:CGRectMake(20,kheight, Main_Screen_Width - 40, 44) placeHolder:@"请输入手机号码" boolLeftView:NO rightTitle:nil];
@@ -197,7 +197,7 @@
     UINavigationItem *navigationItem = [[UINavigationItem alloc] initWithTitle:@"找回密码"];
     UIButton* left = [UIButton buttonWithType:UIButtonTypeCustom];
     [left setFrame:CGRectMake(0, 0, 40, 40)];
-    [left setImage:[[UIImage imageNamed:@"common_btn_back"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] forState:UIControlStateNormal];
+    [left setImage:[[UIImage imageNamed:@"navigationButtonReturn"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] forState:UIControlStateNormal];
     [left setImageEdgeInsets:UIEdgeInsetsMake(0, /*0*/-23, 0, 0)];
     [left addTarget:self action:@selector(onBack) forControlEvents:UIControlEventTouchUpInside];
     UIBarButtonItem *leftBtn = [[UIBarButtonItem alloc] initWithCustomView:left];

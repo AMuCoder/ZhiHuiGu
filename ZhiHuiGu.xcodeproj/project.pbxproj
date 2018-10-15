@@ -54,6 +54,7 @@
 		2533D8D7216CF78F000292D0 /* Czh_RememberParticalView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2533D8D6216CF78F000292D0 /* Czh_RememberParticalView.m */; };
 		2538E468216FA648000A30BC /* PXAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2538E466216FA647000A30BC /* PXAlertView.m */; };
 		253AECC42171B4E900AF7696 /* Czh_AssetChangesView.m in Sources */ = {isa = PBXBuildFile; fileRef = 253AECC32171B4E900AF7696 /* Czh_AssetChangesView.m */; };
+		253AECC72171E11F00AF7696 /* Czh_TopUpVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 253AECC62171E11F00AF7696 /* Czh_TopUpVC.m */; };
 		25404795216E4C6A007637A3 /* CZHAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 25404793216E4C6A007637A3 /* CZHAlertView.m */; };
 		2553F0CD217040A500A92098 /* YXCustomAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2553F0CB217040A400A92098 /* YXCustomAlertView.m */; };
 		2553F0D021704A4E00A92098 /* AssetsTypeAlter.m in Sources */ = {isa = PBXBuildFile; fileRef = 2553F0CF21704A4E00A92098 /* AssetsTypeAlter.m */; };
@@ -74,6 +75,16 @@
 		256E3424215B770B00BD681F /* Czh_HeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 256E3423215B770B00BD681F /* Czh_HeaderView.m */; };
 		258714CE215290CE0063ED99 /* ZhiHuiGuTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 258714CD215290CE0063ED99 /* ZhiHuiGuTests.m */; };
 		258714D9215290CF0063ED99 /* ZhiHuiGuUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 258714D8215290CF0063ED99 /* ZhiHuiGuUITests.m */; };
+		259AD7B521742A3C00D3DE37 /* ListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 259AD7B021742A3A00D3DE37 /* ListVC.m */; };
+		259AD7B621742A3C00D3DE37 /* XLBasePageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 259AD7B121742A3A00D3DE37 /* XLBasePageController.m */; };
+		259AD7B721742A3C00D3DE37 /* DetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 259AD7B221742A3A00D3DE37 /* DetailVC.m */; };
+		259AD7BA21742C9000D3DE37 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 259AD7B821742C8F00D3DE37 /* ViewController.m */; };
+		259AD7BD217436EA00D3DE37 /* Czh_MarketTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 259AD7BC217436EA00D3DE37 /* Czh_MarketTableViewCell.m */; };
+		259AD7C021743CE100D3DE37 /* Czh_MarketView.m in Sources */ = {isa = PBXBuildFile; fileRef = 259AD7BF21743CE100D3DE37 /* Czh_MarketView.m */; };
+		259AD7C42174477000D3DE37 /* Czh_MarketModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 259AD7C32174477000D3DE37 /* Czh_MarketModel.m */; };
+		259AD7C72174671200D3DE37 /* Czh_TransferVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 259AD7C62174671200D3DE37 /* Czh_TransferVC.m */; };
+		259AD7CA2174809400D3DE37 /* Czh_UnderlineTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 259AD7C92174809400D3DE37 /* Czh_UnderlineTextField.m */; };
+		259AD7CD2174A05200D3DE37 /* Czh_CreateMineWalletVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 259AD7CC2174A05200D3DE37 /* Czh_CreateMineWalletVC.m */; };
 		25B6ABE32168B5760022EB17 /* Czh_SetInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 25B6ABE22168B5760022EB17 /* Czh_SetInfoModel.m */; };
 		25B728402154B06A00D22E94 /* LCUserDefaultsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 25B7283C2154B06A00D22E94 /* LCUserDefaultsModel.m */; };
 		25B728412154B06A00D22E94 /* NSUserDefaultsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 25B7283E2154B06A00D22E94 /* NSUserDefaultsModel.m */; };
@@ -89,7 +100,6 @@
 		25B7B91F2153DAB30053A2A5 /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 25B7B8F62153DAB30053A2A5 /* MBProgressHUD.bundle */; };
 		25B7B9202153DAB30053A2A5 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 25B7B8F72153DAB30053A2A5 /* UIView+Extension.m */; };
 		25B7B9212153DAB30053A2A5 /* HttpRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 25B7B8F92153DAB30053A2A5 /* HttpRequestManager.m */; };
-		25B7B9222153DAB30053A2A5 /* Czh_MarketViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25B7B8FC2153DAB30053A2A5 /* Czh_MarketViewController.m */; };
 		25B7B9232153DAB30053A2A5 /* CZHNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25B7B8FE2153DAB30053A2A5 /* CZHNavigationController.m */; };
 		25B7B9242153DAB30053A2A5 /* CZHTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 25B7B9012153DAB30053A2A5 /* CZHTabBar.m */; };
 		25B7B9252153DAB30053A2A5 /* Czh_TabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25B7B9032153DAB30053A2A5 /* Czh_TabBarController.m */; };
@@ -266,6 +276,8 @@
 		2538E467216FA647000A30BC /* PXAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXAlertView.h; sourceTree = "<group>"; };
 		253AECC22171B4E900AF7696 /* Czh_AssetChangesView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Czh_AssetChangesView.h; path = "ZhiHuiGu/Classes/homePage-首页/ScrollView/Czh_AssetChangesView.h"; sourceTree = SOURCE_ROOT; };
 		253AECC32171B4E900AF7696 /* Czh_AssetChangesView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = Czh_AssetChangesView.m; path = "ZhiHuiGu/Classes/homePage-首页/ScrollView/Czh_AssetChangesView.m"; sourceTree = SOURCE_ROOT; };
+		253AECC52171E11F00AF7696 /* Czh_TopUpVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Czh_TopUpVC.h; path = "ZhiHuiGu/Classes/homePage-首页/Czh_TopUpVC.h"; sourceTree = SOURCE_ROOT; };
+		253AECC62171E11F00AF7696 /* Czh_TopUpVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = Czh_TopUpVC.m; path = "ZhiHuiGu/Classes/homePage-首页/Czh_TopUpVC.m"; sourceTree = SOURCE_ROOT; };
 		25404793216E4C6A007637A3 /* CZHAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CZHAlertView.m; sourceTree = "<group>"; };
 		25404794216E4C6A007637A3 /* CZHAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CZHAlertView.h; sourceTree = "<group>"; };
 		2553F0CB217040A400A92098 /* YXCustomAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXCustomAlertView.m; sourceTree = "<group>"; };
@@ -309,6 +321,26 @@
 		258714D4215290CF0063ED99 /* ZhiHuiGuUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZhiHuiGuUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		258714D8215290CF0063ED99 /* ZhiHuiGuUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZhiHuiGuUITests.m; sourceTree = "<group>"; };
 		258714DA215290CF0063ED99 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		259AD7AF21742A3A00D3DE37 /* XLBasePageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLBasePageController.h; sourceTree = "<group>"; };
+		259AD7B021742A3A00D3DE37 /* ListVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListVC.m; sourceTree = "<group>"; };
+		259AD7B121742A3A00D3DE37 /* XLBasePageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLBasePageController.m; sourceTree = "<group>"; };
+		259AD7B221742A3A00D3DE37 /* DetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailVC.m; sourceTree = "<group>"; };
+		259AD7B321742A3B00D3DE37 /* DetailVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailVC.h; sourceTree = "<group>"; };
+		259AD7B421742A3B00D3DE37 /* ListVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListVC.h; sourceTree = "<group>"; };
+		259AD7B821742C8F00D3DE37 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		259AD7B921742C8F00D3DE37 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		259AD7BB217436EA00D3DE37 /* Czh_MarketTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Czh_MarketTableViewCell.h; sourceTree = "<group>"; };
+		259AD7BC217436EA00D3DE37 /* Czh_MarketTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Czh_MarketTableViewCell.m; sourceTree = "<group>"; };
+		259AD7BE21743CE100D3DE37 /* Czh_MarketView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Czh_MarketView.h; sourceTree = "<group>"; };
+		259AD7BF21743CE100D3DE37 /* Czh_MarketView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Czh_MarketView.m; sourceTree = "<group>"; };
+		259AD7C22174477000D3DE37 /* Czh_MarketModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Czh_MarketModel.h; sourceTree = "<group>"; };
+		259AD7C32174477000D3DE37 /* Czh_MarketModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Czh_MarketModel.m; sourceTree = "<group>"; };
+		259AD7C52174671200D3DE37 /* Czh_TransferVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Czh_TransferVC.h; path = "ZhiHuiGu/Classes/HomePage-首页/Czh_TransferVC.h"; sourceTree = SOURCE_ROOT; };
+		259AD7C62174671200D3DE37 /* Czh_TransferVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = Czh_TransferVC.m; path = "ZhiHuiGu/Classes/HomePage-首页/Czh_TransferVC.m"; sourceTree = SOURCE_ROOT; };
+		259AD7C82174809400D3DE37 /* Czh_UnderlineTextField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Czh_UnderlineTextField.h; path = "ZhiHuiGu/Classes/homePage-首页/View/Czh_UnderlineTextField.h"; sourceTree = SOURCE_ROOT; };
+		259AD7C92174809400D3DE37 /* Czh_UnderlineTextField.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = Czh_UnderlineTextField.m; path = "ZhiHuiGu/Classes/homePage-首页/View/Czh_UnderlineTextField.m"; sourceTree = SOURCE_ROOT; };
+		259AD7CB2174A05200D3DE37 /* Czh_CreateMineWalletVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Czh_CreateMineWalletVC.h; sourceTree = "<group>"; };
+		259AD7CC2174A05200D3DE37 /* Czh_CreateMineWalletVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Czh_CreateMineWalletVC.m; sourceTree = "<group>"; };
 		25B6ABE12168B5760022EB17 /* Czh_SetInfoModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Czh_SetInfoModel.h; sourceTree = "<group>"; };
 		25B6ABE22168B5760022EB17 /* Czh_SetInfoModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Czh_SetInfoModel.m; sourceTree = "<group>"; };
 		25B7283C2154B06A00D22E94 /* LCUserDefaultsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCUserDefaultsModel.m; sourceTree = "<group>"; };
@@ -338,8 +370,6 @@
 		25B7B8F72153DAB30053A2A5 /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
 		25B7B8F82153DAB30053A2A5 /* NSObject+Log.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Log.h"; sourceTree = "<group>"; };
 		25B7B8F92153DAB30053A2A5 /* HttpRequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpRequestManager.m; sourceTree = "<group>"; };
-		25B7B8FB2153DAB30053A2A5 /* Czh_MarketViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Czh_MarketViewController.h; sourceTree = "<group>"; };
-		25B7B8FC2153DAB30053A2A5 /* Czh_MarketViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Czh_MarketViewController.m; sourceTree = "<group>"; };
 		25B7B8FE2153DAB30053A2A5 /* CZHNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CZHNavigationController.m; sourceTree = "<group>"; };
 		25B7B8FF2153DAB30053A2A5 /* CZHTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CZHTabBar.h; sourceTree = "<group>"; };
 		25B7B9002153DAB30053A2A5 /* Czh_TabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Czh_TabBarController.h; sourceTree = "<group>"; };
@@ -694,6 +724,8 @@
 				25E7C633216072010053F450 /* Czh_LoginedVC.m */,
 				252DC8392167AE09006BDE9C /* Czh_CreateWalletVC.h */,
 				252DC83A2167AE09006BDE9C /* Czh_CreateWalletVC.m */,
+				259AD7CB2174A05200D3DE37 /* Czh_CreateMineWalletVC.h */,
+				259AD7CC2174A05200D3DE37 /* Czh_CreateMineWalletVC.m */,
 				25FAFB342169FC51001116AC /* Czh_RememberParticalVC.h */,
 				25FAFB352169FC51001116AC /* Czh_RememberParticalVC.m */,
 				25029288216AF0CE00A9127A /* Czh_BackupMnemonicVC.h */,
@@ -794,6 +826,15 @@
 			path = ZhiHuiGuUITests;
 			sourceTree = "<group>";
 		};
+		259AD7C12174473800D3DE37 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				259AD7C22174477000D3DE37 /* Czh_MarketModel.h */,
+				259AD7C32174477000D3DE37 /* Czh_MarketModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		25B7283B2154B06A00D22E94 /* CZHNSUserDefaultsModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -808,6 +849,7 @@
 		25B7B8DF2153DAB30053A2A5 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				25B7B9072153DAB30053A2A5 /* MePage-我的 */,
 				25DD4CFB216847820076DC77 /* UserInfo */,
 				25B7B90A2153DAB30053A2A5 /* HomePage-首页 */,
 				25B7B8FA2153DAB30053A2A5 /* MarketPage-市场 */,
@@ -876,9 +918,9 @@
 		25B7B8FA2153DAB30053A2A5 /* MarketPage-市场 */ = {
 			isa = PBXGroup;
 			children = (
+				259AD7C12174473800D3DE37 /* Model */,
 				25DD4CFA216845220076DC77 /* Controller */,
 				25DD4CF9216845190076DC77 /* View */,
-				25DD4CF7216845090076DC77 /* Model */,
 			);
 			path = "MarketPage-市场";
 			sourceTree = "<group>";
@@ -927,7 +969,6 @@
 			isa = PBXGroup;
 			children = (
 				2553F0EC2170769D00A92098 /* SWQRCode */,
-				25B7B9072153DAB30053A2A5 /* MePage-我的 */,
 				25B7B98D2153E4720053A2A5 /* Category */,
 				25B7B9862153E4720053A2A5 /* View */,
 				25B7B9902153E4720053A2A5 /* ScrollView */,
@@ -935,6 +976,10 @@
 				25B7B90C2153DAB30053A2A5 /* Czh_HomeViewController.m */,
 				251A7E8D216F4A1200918C6C /* Czh_collectionVC.h */,
 				251A7E8E216F4A1200918C6C /* Czh_collectionVC.m */,
+				253AECC52171E11F00AF7696 /* Czh_TopUpVC.h */,
+				253AECC62171E11F00AF7696 /* Czh_TopUpVC.m */,
+				259AD7C52174671200D3DE37 /* Czh_TransferVC.h */,
+				259AD7C62174671200D3DE37 /* Czh_TransferVC.m */,
 			);
 			path = "HomePage-首页";
 			sourceTree = "<group>";
@@ -1091,6 +1136,8 @@
 				2553F0CF21704A4E00A92098 /* AssetsTypeAlter.m */,
 				2553F1012170778100A92098 /* AssetsTableViewCell.h */,
 				2553F0D2217051BE00A92098 /* AssetsTableViewCell.m */,
+				259AD7C82174809400D3DE37 /* Czh_UnderlineTextField.h */,
+				259AD7C92174809400D3DE37 /* Czh_UnderlineTextField.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1176,18 +1223,15 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		25DD4CF7216845090076DC77 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
 		25DD4CF9216845190076DC77 /* View */ = {
 			isa = PBXGroup;
 			children = (
 				2504FD19215A0FFD00691990 /* Czh_Button.h */,
 				2504FD1A215A0FFD00691990 /* Czh_Button.m */,
+				259AD7BB217436EA00D3DE37 /* Czh_MarketTableViewCell.h */,
+				259AD7BC217436EA00D3DE37 /* Czh_MarketTableViewCell.m */,
+				259AD7BE21743CE100D3DE37 /* Czh_MarketView.h */,
+				259AD7BF21743CE100D3DE37 /* Czh_MarketView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1195,8 +1239,14 @@
 		25DD4CFA216845220076DC77 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				25B7B8FB2153DAB30053A2A5 /* Czh_MarketViewController.h */,
-				25B7B8FC2153DAB30053A2A5 /* Czh_MarketViewController.m */,
+				259AD7B921742C8F00D3DE37 /* ViewController.h */,
+				259AD7B821742C8F00D3DE37 /* ViewController.m */,
+				259AD7B321742A3B00D3DE37 /* DetailVC.h */,
+				259AD7B221742A3A00D3DE37 /* DetailVC.m */,
+				259AD7B421742A3B00D3DE37 /* ListVC.h */,
+				259AD7B021742A3A00D3DE37 /* ListVC.m */,
+				259AD7AF21742A3A00D3DE37 /* XLBasePageController.h */,
+				259AD7B121742A3A00D3DE37 /* XLBasePageController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1483,6 +1533,7 @@
 				25B7B9682153DFC70053A2A5 /* MJRefreshAutoNormalFooter.m in Sources */,
 				25B7B92A2153DAB30053A2A5 /* main.m in Sources */,
 				25B7B96A2153DFC70053A2A5 /* MJRefreshStateHeader.m in Sources */,
+				259AD7C72174671200D3DE37 /* Czh_TransferVC.m in Sources */,
 				25DD4D42216859190076DC77 /* Czh_HttpRequest.m in Sources */,
 				250DD0C7215F0FF200CD6D3E /* Czh_ForgotPwVC.m in Sources */,
 				25B7B9632153DFC70053A2A5 /* MJRefreshBackGifFooter.m in Sources */,
@@ -1491,14 +1542,15 @@
 				25B728402154B06A00D22E94 /* LCUserDefaultsModel.m in Sources */,
 				25B7B9602153DFC70053A2A5 /* UIScrollView+MJExtension.m in Sources */,
 				2553F0F92170769D00A92098 /* SWQRCodeConfig.m in Sources */,
+				259AD7BD217436EA00D3DE37 /* Czh_MarketTableViewCell.m in Sources */,
 				250DD0CA215F2C9A00CD6D3E /* Czh_promptLabel.m in Sources */,
 				25B7B96F2153DFC70053A2A5 /* MJRefreshAutoFooter.m in Sources */,
 				2553F10A2170945300A92098 /* mineAssetsTableView.m in Sources */,
 				25B7B9612153DFC70053A2A5 /* NSBundle+MJRefresh.m in Sources */,
 				250DD0F3215F78F000CD6D3E /* AFNetworkReachabilityManager.m in Sources */,
 				25B7B9692153DFC70053A2A5 /* MJRefreshNormalHeader.m in Sources */,
-				25B7B9222153DAB30053A2A5 /* Czh_MarketViewController.m in Sources */,
 				25B7B9652153DFC70053A2A5 /* MJRefreshBackNormalFooter.m in Sources */,
+				259AD7CA2174809400D3DE37 /* Czh_UnderlineTextField.m in Sources */,
 				250DD0F0215F78F000CD6D3E /* AFHTTPSessionManager.m in Sources */,
 				25FAFB362169FC51001116AC /* Czh_RememberParticalVC.m in Sources */,
 				25DD4D4521685BF30076DC77 /* Czh_NetWorkURL.m in Sources */,
@@ -1518,10 +1570,14 @@
 				25B7B91C2153DAB30053A2A5 /* CacheManager.m in Sources */,
 				2506C1A6215CDAE800530D13 /* TPKeyboardAvoidingScrollView.m in Sources */,
 				25B7B9982153E4720053A2A5 /* UIView+Frame.m in Sources */,
+				259AD7B621742A3C00D3DE37 /* XLBasePageController.m in Sources */,
 				252E400C21690D7C0041DA4F /* Czh_UIView.m in Sources */,
 				2521CD24216D94F500E3D149 /* Czh_ImportWalletVC.m in Sources */,
 				2538E468216FA648000A30BC /* PXAlertView.m in Sources */,
+				259AD7CD2174A05200D3DE37 /* Czh_CreateMineWalletVC.m in Sources */,
 				25DD4D21216849A70076DC77 /* MJPropertyKey.m in Sources */,
+				259AD7B721742A3C00D3DE37 /* DetailVC.m in Sources */,
+				259AD7C021743CE100D3DE37 /* Czh_MarketView.m in Sources */,
 				2520B6E0215DB79C00956CB7 /* UIButton+CZHClickBtnBlock.m in Sources */,
 				25B7B9642153DFC70053A2A5 /* MJRefreshBackStateFooter.m in Sources */,
 				25E7C631216063750053F450 /* CZH_HTTPTool.m in Sources */,
@@ -1530,9 +1586,11 @@
 				25B7B91B2153DAB30053A2A5 /* NSObject+Log.m in Sources */,
 				25B7B9702153DFC70053A2A5 /* MJRefreshComponent.m in Sources */,
 				2506C19F215CD87B00530D13 /* Czh_LoginBtn.m in Sources */,
+				259AD7B521742A3C00D3DE37 /* ListVC.m in Sources */,
 				25B7B9182153DAB30053A2A5 /* UIView+CZHExtension.m in Sources */,
 				2553F10421708C7D00A92098 /* Czh_mineAssetsView.m in Sources */,
 				2520B6E6215E02F700956CB7 /* Czh_RegisterVC.m in Sources */,
+				259AD7C42174477000D3DE37 /* Czh_MarketModel.m in Sources */,
 				2520B6E3215DC8ED00956CB7 /* Czh_ClickBtnView.m in Sources */,
 				25B7B9162153DAB30053A2A5 /* NSString+MD5Addition.m in Sources */,
 				25B728412154B06A00D22E94 /* NSUserDefaultsModel.m in Sources */,
@@ -1543,10 +1601,12 @@
 				2506C1A5215CDAE800530D13 /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */,
 				25B7B9242153DAB30053A2A5 /* CZHTabBar.m in Sources */,
 				252DC83B2167AE09006BDE9C /* Czh_CreateWalletVC.m in Sources */,
+				253AECC72171E11F00AF7696 /* Czh_TopUpVC.m in Sources */,
 				2532D511215B4C8100AFA29D /* Czh_FuncHeaderView.m in Sources */,
 				25295F98216C455300E07221 /* Czh_Utilities.m in Sources */,
 				25295F95216C444B00E07221 /* Czh_UserInfoContext.m in Sources */,
 				25DD4D1C216849A70076DC77 /* NSObject+MJCoding.m in Sources */,
+				259AD7BA21742C9000D3DE37 /* ViewController.m in Sources */,
 				25B7B9962153E4720053A2A5 /* CZHButton.m in Sources */,
 				25DD4D1D216849A70076DC77 /* MJExtensionConst.m in Sources */,
 				252E4006216901050041DA4F /* RTNavigationBar.m in Sources */,

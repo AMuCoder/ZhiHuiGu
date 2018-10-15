@@ -11,6 +11,7 @@
 #import "Czh_RememberParticalVC.h"
 #import "NSArray+Czh_JSON.h"
 #import "NSData+AES128.h"
+#import "Czh_CreateMineWalletVC.h"
 
 @interface Czh_CreateWalletVC ()
 @property(nonatomic,strong) TPKeyboardAvoidingScrollView * contentScrollView;
@@ -46,7 +47,7 @@
     UINavigationItem *navigationItem = [[UINavigationItem alloc] initWithTitle:@"创建钱包"];
     UIButton* left = [UIButton buttonWithType:UIButtonTypeCustom];
     [left setFrame:CGRectMake(0, 0, 40, 40)];
-    [left setImage:[[UIImage imageNamed:@"common_btn_back"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] forState:UIControlStateNormal];
+    [left setImage:[[UIImage imageNamed:@"navigationButtonReturn"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] forState:UIControlStateNormal];
     [left setImageEdgeInsets:UIEdgeInsetsMake(0, /*0*/-23, 0, 0)];
     [left addTarget:self action:@selector(onBack) forControlEvents:UIControlEventTouchUpInside];
     UIBarButtonItem *leftBtn = [[UIBarButtonItem alloc] initWithCustomView:left];
@@ -59,9 +60,9 @@
 -(void)onBack{
     [self dismissViewControllerAnimated:YES completion:nil];
 }
--(void)onClickedrightBarbtn{
-    [self presentViewController:[Czh_TabBarController new] animated:YES completion:nil];
-}
+//-(void)onClickedrightBarbtn{
+//    [self presentViewController:[Czh_TabBarController new] animated:YES completion:nil];
+//}
 
 
 -(void)setupView{
@@ -81,7 +82,7 @@
     if (@available(iOS 11.0, *)) {
         kheight = 120.f;
     }else{
-        kheight = 64;
+        kheight = 84;
     }
     
     
@@ -137,27 +138,19 @@
     /*pay_pwd（string） user_id（string）*/
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     NSString *useridStr = [userDefaults stringForKey:kUserIDKey];
-//    NSString *useridStr = [Czh_AccountTool getUserID];
     
-    NSMutableDictionary *parametersDic = [NSMutableDictionary dictionary];
+    NSMutableDictionary *parametersDic = [NSMutableDictionary dictionary];//Interface_For_GeneratetheWallet
     [parametersDic setObject:self.cwPdView0.textField.text forKey:@"pay_pwd"];
     [parametersDic setObject:useridStr forKey:@"user_id"];
     NSString *url = [Czh_NetWorkURL returnURL:Interface_For_editSavePaypwd];
     [Czh_HttpRequest requestWithMethod:POST WithPath:url WithToken:nil WithParams:parametersDic WithSuccessBlock:^(id data) {
         CZHLog(@"验证码请求时的数据--------%@",data);
         if ([[NSString stringWithFormat:@"%@",data[@"code"]] isEqualToString:@"200"]) {
-            [userDefaults setObject:self.cwPdView0.textField.text  forKey:kUserPayPwdKey];
-            NSString *keypairsArrToJsonStr = [userDefaults objectForKey:kUserKeypairsArrToJson];
-            CZHLog(@"keypairsArrToJsonStr------\n%@",keypairsArrToJsonStr);
-            //如果有keypairs数组的话进入此方法
-            if (keypairsArrToJsonStr) {
-                [self keypairsArrToJsonStrData];
-            }else{
-//                [self generateMnemonicHTTP];
-                CZHLog(@"\n暂时还没有keypairsArrToJsonStr数据\n暂时还没有keypairsArrToJsonStr数据\n暂时还没有keypairsArrToJsonStr数据\n");
-            }
+            [userDefaults setBool:true  forKey:KUserhas_pay_pwdKey];//是否有支付密码
+            [userDefaults setObject:self.cwPdView0.textField.text forKey:kUserPayPwdKey];//是否有支付密码
+            [userDefaults synchronize];
             [Czh_WarnWindow HUD:self.view andWarnText:@"密码设置成功" andXoffset:0 andYoffset:Main_Screen_Width/5*3];
-            [self presentViewController:[Czh_RememberParticalVC new] animated:YES completion:nil];
+            [self presentViewController:[Czh_CreateMineWalletVC new] animated:YES completion:nil];
         }
         else{
             [Czh_WarnWindow HUD:self.view andWarnText:@"设置失败,请重新设置" andXoffset:0 andYoffset:Main_Screen_Width/5*3];
@@ -168,43 +161,6 @@
     } WithShowHudToView:self.view];
 }
 
-#pragma mark -- keypairs加密结果
-- (void)keypairsArrToJsonStrData {
-#pragma mark keypairs加密结果
-    
-    //16位密匙（支付密码）
-    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-    NSString *keypairsArrToJsonStr = [userDefaults objectForKey:kUserKeypairsArrToJson];
-    NSString *payPdKeyStr = [userDefaults objectForKey:kUserPayPwdKey];
-    NSData *keypairsCodeData = [keypairsArrToJsonStr dataUsingEncoding:NSUTF8StringEncoding];
-    NSData *keypairsEncodeData = [keypairsCodeData AES128EncryptWithKey:payPdKeyStr];
-    CZHLog(@"keypairs加密结果------%@",keypairsEncodeData);
-    [userDefaults setObject:keypairsEncodeData  forKey:kUserKeypairsArrToJsonAES128];
-#pragma mark seed加密结果
-    NSString *seedStr = [userDefaults objectForKey:kUserSeedKey];
-    NSData *seedCodeData = [seedStr dataUsingEncoding:NSUTF8StringEncoding];
-    NSData *seedEncodeData = [seedCodeData AES128EncryptWithKey:payPdKeyStr];
-    CZHLog(@"seed加密结果------%@",seedEncodeData);
-    [userDefaults setObject:seedEncodeData  forKey:kUserSeedAES128];
-#pragma mark mnemonic加密结果
-    NSString *mnemonicStr = [userDefaults objectForKey:kUserMnemonicKey];
-    NSData *mnemonicCodeData = [mnemonicStr dataUsingEncoding:NSUTF8StringEncoding];
-    NSData *mnemonicEncodeData = [mnemonicCodeData AES128EncryptWithKey:payPdKeyStr];
-    CZHLog(@"seed加密结果------%@",mnemonicEncodeData);
-    [userDefaults setObject:mnemonicEncodeData  forKey:kUserMnemonicAES128];
-    //#pragma mark 解密结果
-    //NSData *decodeData = [encodeData AES128DecryptWithKey:payPdKeyStr];
-    //NSData *decodeStr = [[NSString alloc] initWithData:decodeData encoding:NSUTF8StringEncoding];
-    //CZHLog(@"解密结果------%@",decodeStr);
-}
-
-#pragma mark -数组转换成json串
-- (NSString *)arrayToJsonString:(NSArray *)array{
-    NSError *error = nil;
-    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:array options:NSJSONWritingPrettyPrinted error:&error];
-    
-    return [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];;
-}
 -(void)showAlterViewError{
     [CZHAlertView showAlertWithTitle:@"输入的密码不一致"
                              message:nil

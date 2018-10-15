@@ -15,12 +15,11 @@ typedef void(^CZHScrollViewContentOffsetAction)(CGFloat contentOffsetY);
 @interface CZHScrollView : TPKeyboardAvoidingScrollView
 /// 列表
 @property (nonatomic, strong) CZHTableView *tableView;
-
-@property (nonatomic, strong) HeaderFourView *headerView;
 /// 偏移事件
 @property (nonatomic, copy)   CZHScrollViewContentOffsetAction contentOffsetAction;
 //资产
 @property (nonatomic, strong) Czh_mineAssetsView *mineAssetsView;
 @property (nonatomic, strong) CCCycleScrollView *cyclePlayView;
 @property (nonatomic, strong) Czh_AssetChangesView *assetOfChangesView;
+@property (nonatomic, strong) HeaderFourView *headerView;
 @end
