@@ -12,10 +12,6 @@
 #import "Czh_LoginBtn.h"
 #import "Czh_CreateWalletVC.h"
 #import "Czh_RegularVerification.h"
-#import "Czh_SingleObject.h"
-#import "UserInfoModel.h"
-#import "UserInfoTool.h"
-#import "User.h"
 #import "RTNavigationBar.h"
 #import "NSArray+Czh_JSON.h"
 

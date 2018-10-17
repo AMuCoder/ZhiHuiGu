@@ -10,21 +10,30 @@
 #import "Czh_MeUserView.h"
 #import "Czh_LoginAndRegisterVC.h"
 #import "Czh_LoginedVC.h"
-#import "UserInfoModel.h"
 #import "Czh_RememberParticalVC.h"
 #import "Czh_ImportWalletVC.h"
+#import "Czh_UserInfoView.h"
+#import "Czh_OrderView.h"
+#import "Czh_WoWalletVC.h"
+#import "Czh_AccountManagementVC.h"
+#import "Czh_UserAgreementVC.h"
+#import "Czh_HelpCenterVC.h"
+#import "Czh_AboutUsVC.h"
 
 @interface Czh_MeViewController ()<UITableViewDelegate,UITableViewDataSource>
 
 @property (nonatomic , strong) UITableView *tableview;
 @property (nonatomic , strong) Czh_MeUserView *userView;
+@property(nonatomic,strong) Czh_UserInfoView *userInfoView;
+@property(nonatomic,strong) Czh_OrderView *orderView;
+
 @end
 
 @implementation Czh_MeViewController
 
 - (UITableView *)tableview {
     if (_tableview == nil) {
-        _tableview = [[UITableView alloc] initWithFrame:self.view.frame];
+        _tableview = [[UITableView alloc] initWithFrame:CGRectMake(0, 90, self.view.CZH_width, self.view.CZH_height-90-(100+(self.view.CZH_width-60)/5))];
         _tableview.delegate = self;
         _tableview.dataSource = self;
     }
@@ -37,51 +46,62 @@
     self.view.backgroundColor = [UIColor whiteColor];
     self.edgesForExtendedLayout = UIRectEdgeNone;
     [self.view addSubview:self.tableview];
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    NSString *userName = [userDefaults objectForKey:kUserNameKey];
     // 去掉多余的cell
     self.tableview.tableFooterView = [UIView new];
+    Czh_UserInfoView *userInfoView = [[Czh_UserInfoView alloc] initWithFrame:CGRectMake(0, 0, self.view.CZH_width, 90) IconImage:@"xxx" userName:userName Zongzichan:@"1000" ZichanStyle:@"CNY" WECNum:@"1000" MessageBtnImage:@"xxx" MessageBtnHightImage:@"xxx" NextBtnImage:@"xxx" NextBtnHightImage:@"xxx"];
+    [self.view addSubview:userInfoView];
+    _userInfoView = userInfoView;
+    
+    Czh_OrderView *orderView = [[Czh_OrderView alloc] initWithFrame:CGRectMake(0, 0, self.view.CZH_width, 80+(self.view.CZH_width-60)/5) PaymentBtn:@" " SendBtn:@" " GoodsBtn:@" " EvaluateBtn:@" " RefundBtn:@" "];
+    _orderView = orderView;
 }
-
+-(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
+    return _orderView;
+}
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+    return 100+(self.view.CZH_width-60)/5;
+}
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     static NSString *CellIdentifierID = @"cellID";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifierID];
     if (!cell) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifierID];
     }
-    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator; //显示最右边的箭头
     if (indexPath.row == 0) {
-        cell.textLabel.text = @"用户注册与登录";
+        cell.textLabel.text = @"我的钱包";
     }else if (indexPath.row == 1){
-        cell.textLabel.text = @"登录";
+        cell.textLabel.text = @"账户安全与设置";
     }else if (indexPath.row == 2){
-        cell.textLabel.text = @"助记词";
+        cell.textLabel.text = @"用户协议";
     }else if (indexPath.row == 3){
-        cell.textLabel.text = @"导入助记词";
-    }else{
-        cell.textLabel.text = [NSString stringWithFormat:@"这是第%ld行", indexPath.row];
+        cell.textLabel.text = @"帮助中心";
+    }else if (indexPath.row == 4){
+        cell.textLabel.text = @"关于我们";
     }
     return cell;
 }
 
 #pragma mark - UITableViewDataSource , UITableViewDelegate
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 20;
+    return 5;
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 100.f;
+    return 50;
 }
-//-(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
-//
-//}
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.row == 0) {
-        [self.navigationController pushViewController:[NSClassFromString(@"Czh_LoginAndRegisterVC") new] animated:YES];
+        [self.navigationController pushViewController:[NSClassFromString(@"Czh_WoWalletVC") new] animated:YES];
     }else if (indexPath.row == 1){
-        [self.navigationController pushViewController:[Czh_LoginedVC new] animated:YES];
+        [self.navigationController pushViewController:[Czh_AccountManagementVC new] animated:YES];
     }else if (indexPath.row == 2){
-        Czh_RememberParticalVC *vc = [[Czh_RememberParticalVC alloc] init];
-        [self presentViewController:vc animated:NO completion:nil];
+        [self.navigationController pushViewController:[Czh_UserAgreementVC new] animated:YES];
     }else if (indexPath.row == 3){
-        [self presentViewController:[Czh_ImportWalletVC new] animated:nil completion:nil];
+        [self.navigationController pushViewController:[Czh_HelpCenterVC new] animated:YES];
+    }else if (indexPath.row == 4){
+        [self.navigationController pushViewController:[Czh_AboutUsVC new] animated:YES];
     }
 }
 

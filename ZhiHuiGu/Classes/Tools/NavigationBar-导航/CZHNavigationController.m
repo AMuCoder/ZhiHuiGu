@@ -17,7 +17,7 @@
     // 当导航栏用在NavigationController中, appearance设置才会生效
     //    UINavigationBar *bar = [UINavigationBar appearanceWhenContainedIn:[self class], nil];
     UINavigationBar *bar = [UINavigationBar appearance];
-    [bar setBackgroundImage:[UIImage imageNamed:@"navigationbarBackgroundWhite"] forBarMetrics:UIBarMetricsDefault];
+    [bar setBackgroundImage:[UIImage imageNamed:@"navbackground"] forBarMetrics:UIBarMetricsDefault];
 }
 /**
  * 可以在这个方法中拦截所有push进来的控制器
