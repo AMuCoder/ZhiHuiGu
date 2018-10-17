@@ -25,6 +25,8 @@ typedef  enum
     Interface_For_GetUserInfoURL,//获取用户信息
     Interface_For_GetUserKYCURL,//获取用户KYC认证信息
     Interface_For_RemoveUserURL,//删除用户
+    Interface_For_ChangeUserPwdURL,//用户更改登陆密码/v1/user/change-pwd
+    Interface_For_ChangeUserTelURL,///v1/user/change-tel 用户更改手机号码
 #pragma mark 智慧谷 -- Wallet
     Interface_For_activeUserWalletAddress,//激活用户钱包地址
     Interface_For_createKeypair,//创建数字密钥匙对, 助记词

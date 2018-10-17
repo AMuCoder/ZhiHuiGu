@@ -13,11 +13,9 @@
     if (self) {
         UILabel *label = [[UILabel alloc] init];
         label.text = text;
-        label.font = [UIFont systemFontOfSize:17.0f];
+        label.font = [UIFont systemFontOfSize:14.0f];
         [self addSubview:label];
         _label = label;
-        
-        
         
         Czh_CWTextField *textField = [[Czh_CWTextField alloc]init];
         textField.backgroundColor = [UIColor clearColor];
@@ -27,6 +25,7 @@
         textField.clearButtonMode = UITextFieldViewModeAlways;
         //设置字体颜色
         textField.textColor = [UIColor blackColor];
+        textField.font = [UIFont systemFontOfSize:14];
         textField.placeholder = placeHolder;
         [self addSubview:textField];
         _textField = textField;

@@ -19,6 +19,7 @@
 #import "Czh_UserAgreementVC.h"
 #import "Czh_HelpCenterVC.h"
 #import "Czh_AboutUsVC.h"
+#import "Czh_PersonInfoVC.h"
 
 @interface Czh_MeViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -53,10 +54,12 @@
     Czh_UserInfoView *userInfoView = [[Czh_UserInfoView alloc] initWithFrame:CGRectMake(0, 0, self.view.CZH_width, 90) IconImage:@"xxx" userName:userName Zongzichan:@"1000" ZichanStyle:@"CNY" WECNum:@"1000" MessageBtnImage:@"xxx" MessageBtnHightImage:@"xxx" NextBtnImage:@"xxx" NextBtnHightImage:@"xxx"];
     [self.view addSubview:userInfoView];
     _userInfoView = userInfoView;
+    [_userInfoView.iconImage addTarget:self action:@selector(personInfoClick) forControlEvents:UIControlEventTouchUpInside];
     
     Czh_OrderView *orderView = [[Czh_OrderView alloc] initWithFrame:CGRectMake(0, 0, self.view.CZH_width, 80+(self.view.CZH_width-60)/5) PaymentBtn:@" " SendBtn:@" " GoodsBtn:@" " EvaluateBtn:@" " RefundBtn:@" "];
     _orderView = orderView;
 }
+
 -(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
     return _orderView;
 }
@@ -104,6 +107,8 @@
         [self.navigationController pushViewController:[Czh_AboutUsVC new] animated:YES];
     }
 }
-
+-(void)personInfoClick{
+    [self.navigationController pushViewController:[Czh_PersonInfoVC new] animated:YES];
+}
 
 @end

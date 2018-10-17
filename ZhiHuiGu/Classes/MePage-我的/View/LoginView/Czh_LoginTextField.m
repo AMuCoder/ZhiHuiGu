@@ -34,17 +34,11 @@
         self.leftViewMode = UITextFieldViewModeAlways;
         
         if (flag) {
-//            UIView *rView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.width/2-self.frame.size.width/4, self.frame.size.height)];
-//            rView.layer.cornerRadius = 8;
-//            rView.backgroundColor = [UIColor whiteColor];
-            
             UIButton *rBtn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.width/2-self.frame.size.width/5, self.frame.size.height)];
             [rBtn setTitle:title forState:UIControlStateNormal];
             [rBtn setTitleColor:[UIColor orangeColor] forState:UIControlStateNormal];
             rBtn.titleLabel.font = [UIFont systemFontOfSize: 16.0f];
             rBtn.contentHorizontalAlignment=UIControlContentHorizontalAlignmentCenter;
-//            rBtn.backgroundColor = [UIColor orangeColor];
-//            [rView addSubview:rBtn];
             _rBtn = rBtn;
             self.rightView = _rBtn;
             self.rightViewMode = UITextFieldViewModeAlways;
@@ -83,4 +77,6 @@
     }
     return self;
 }
+
+
 @end

@@ -14,4 +14,5 @@
 
 - (instancetype)initWithFrame:(CGRect)frame placeHolder:(NSString *)placeHolder boolLeftView:(BOOL)flag rightTitle:(NSString *)title;
 - (instancetype)initWithFrame:(CGRect)frame PlaceHolder:(NSString *)placeHolder LeftViewImage:(NSString *)leftViewImageName;
+
 @end

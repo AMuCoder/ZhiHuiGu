@@ -139,6 +139,10 @@
 		25B7B99A2153E4720053A2A5 /* CZHTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 25B7B9932153E4720053A2A5 /* CZHTableView.m */; };
 		25C0616A2176C55A001468CA /* Czh_RechargePsdVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 25C061692176C55A001468CA /* Czh_RechargePsdVC.m */; };
 		25C0616D2176C762001468CA /* Czh_RechargeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 25C0616C2176C762001468CA /* Czh_RechargeCell.m */; };
+		25C061712176CE62001468CA /* Czh_RechargeField.m in Sources */ = {isa = PBXBuildFile; fileRef = 25C061702176CE62001468CA /* Czh_RechargeField.m */; };
+		25C061742176DFCF001468CA /* Czh_RechargePayPwdVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 25C061732176DFCF001468CA /* Czh_RechargePayPwdVC.m */; };
+		25C0618021771082001468CA /* Czh_RechargeTelVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 25C0617F21771082001468CA /* Czh_RechargeTelVC.m */; };
+		25C0618321773C94001468CA /* Czh_PersonInfoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 25C0618221773C94001468CA /* Czh_PersonInfoVC.m */; };
 		25DD4D19216849A70076DC77 /* MJPropertyType.m in Sources */ = {isa = PBXBuildFile; fileRef = 25DD4D06216849A60076DC77 /* MJPropertyType.m */; };
 		25DD4D1A216849A70076DC77 /* NSObject+MJKeyValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 25DD4D09216849A60076DC77 /* NSObject+MJKeyValue.m */; };
 		25DD4D1B216849A70076DC77 /* MJProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 25DD4D0A216849A60076DC77 /* MJProperty.m */; };
@@ -449,6 +453,14 @@
 		25C061692176C55A001468CA /* Czh_RechargePsdVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Czh_RechargePsdVC.m; sourceTree = "<group>"; };
 		25C0616B2176C762001468CA /* Czh_RechargeCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Czh_RechargeCell.h; sourceTree = "<group>"; };
 		25C0616C2176C762001468CA /* Czh_RechargeCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Czh_RechargeCell.m; sourceTree = "<group>"; };
+		25C0616F2176CE62001468CA /* Czh_RechargeField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Czh_RechargeField.h; sourceTree = "<group>"; };
+		25C061702176CE62001468CA /* Czh_RechargeField.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Czh_RechargeField.m; sourceTree = "<group>"; };
+		25C061722176DFCF001468CA /* Czh_RechargePayPwdVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Czh_RechargePayPwdVC.h; sourceTree = "<group>"; };
+		25C061732176DFCF001468CA /* Czh_RechargePayPwdVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Czh_RechargePayPwdVC.m; sourceTree = "<group>"; };
+		25C0617E21771082001468CA /* Czh_RechargeTelVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Czh_RechargeTelVC.h; sourceTree = "<group>"; };
+		25C0617F21771082001468CA /* Czh_RechargeTelVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Czh_RechargeTelVC.m; sourceTree = "<group>"; };
+		25C0618121773C94001468CA /* Czh_PersonInfoVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Czh_PersonInfoVC.h; sourceTree = "<group>"; };
+		25C0618221773C94001468CA /* Czh_PersonInfoVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Czh_PersonInfoVC.m; sourceTree = "<group>"; };
 		25DD4D03216849A60076DC77 /* MJPropertyKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJPropertyKey.h; sourceTree = "<group>"; };
 		25DD4D04216849A60076DC77 /* NSObject+MJClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+MJClass.h"; sourceTree = "<group>"; };
 		25DD4D05216849A60076DC77 /* NSString+MJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MJExtension.h"; sourceTree = "<group>"; };
@@ -716,6 +728,12 @@
 				25558FC921760C620031CBCE /* Czh_AboutUsVC.m */,
 				25C061682176C55A001468CA /* Czh_RechargePsdVC.h */,
 				25C061692176C55A001468CA /* Czh_RechargePsdVC.m */,
+				25C061722176DFCF001468CA /* Czh_RechargePayPwdVC.h */,
+				25C061732176DFCF001468CA /* Czh_RechargePayPwdVC.m */,
+				25C0617E21771082001468CA /* Czh_RechargeTelVC.h */,
+				25C0617F21771082001468CA /* Czh_RechargeTelVC.m */,
+				25C0618121773C94001468CA /* Czh_PersonInfoVC.h */,
+				25C0618221773C94001468CA /* Czh_PersonInfoVC.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -849,6 +867,8 @@
 				25558FBD2175EE810031CBCE /* Czh_OrderView.m */,
 				25C0616B2176C762001468CA /* Czh_RechargeCell.h */,
 				25C0616C2176C762001468CA /* Czh_RechargeCell.m */,
+				25C0616F2176CE62001468CA /* Czh_RechargeField.h */,
+				25C061702176CE62001468CA /* Czh_RechargeField.m */,
 			);
 			path = MineView;
 			sourceTree = "<group>";
@@ -1594,6 +1614,7 @@
 				25B7B92A2153DAB30053A2A5 /* main.m in Sources */,
 				25558FBE2175EE810031CBCE /* Czh_OrderView.m in Sources */,
 				25B7B96A2153DFC70053A2A5 /* MJRefreshStateHeader.m in Sources */,
+				25C061742176DFCF001468CA /* Czh_RechargePayPwdVC.m in Sources */,
 				259AD7C72174671200D3DE37 /* Czh_TransferVC.m in Sources */,
 				25DD4D42216859190076DC77 /* Czh_HttpRequest.m in Sources */,
 				25558FCA21760C630031CBCE /* Czh_AboutUsVC.m in Sources */,
@@ -1612,6 +1633,7 @@
 				25558FA221757EE20031CBCE /* Czh_WoWalletVC.m in Sources */,
 				25B7B9692153DFC70053A2A5 /* MJRefreshNormalHeader.m in Sources */,
 				25B7B9652153DFC70053A2A5 /* MJRefreshBackNormalFooter.m in Sources */,
+				25C0618321773C94001468CA /* Czh_PersonInfoVC.m in Sources */,
 				259AD7CA2174809400D3DE37 /* Czh_UnderlineTextField.m in Sources */,
 				250DD0F0215F78F000CD6D3E /* AFHTTPSessionManager.m in Sources */,
 				25FAFB362169FC51001116AC /* Czh_RememberParticalVC.m in Sources */,
@@ -1649,12 +1671,14 @@
 				25B7B91B2153DAB30053A2A5 /* NSObject+Log.m in Sources */,
 				25B7B9702153DFC70053A2A5 /* MJRefreshComponent.m in Sources */,
 				2506C19F215CD87B00530D13 /* Czh_LoginBtn.m in Sources */,
+				25C061712176CE62001468CA /* Czh_RechargeField.m in Sources */,
 				259AD7B521742A3C00D3DE37 /* ListVC.m in Sources */,
 				25B7B9182153DAB30053A2A5 /* UIView+CZHExtension.m in Sources */,
 				2520B6E6215E02F700956CB7 /* Czh_RegisterVC.m in Sources */,
 				259AD7C42174477000D3DE37 /* Czh_MarketModel.m in Sources */,
 				2520B6E3215DC8ED00956CB7 /* Czh_ClickBtnView.m in Sources */,
 				25B7B9162153DAB30053A2A5 /* NSString+MD5Addition.m in Sources */,
+				25C0618021771082001468CA /* Czh_RechargeTelVC.m in Sources */,
 				25B728412154B06A00D22E94 /* NSUserDefaultsModel.m in Sources */,
 				25DD4D1E216849A70076DC77 /* NSObject+MJProperty.m in Sources */,
 				2553F1072170917D00A92098 /* Czh_mineAssetsTableViewCell.m in Sources */,

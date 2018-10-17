@@ -70,6 +70,15 @@
             url=[NSString stringWithFormat:@"%@/v1/user/remove",CZH_MainURL];
             CZHLog(@"删除用户%@",url);
         }break;
+        case Interface_For_ChangeUserPwdURL:{
+            url=[NSString stringWithFormat:@"%@/v1/user/change-pwd",CZH_MainURL];
+            CZHLog(@"用户更改登陆密码%@",url);
+        }break;
+        case Interface_For_ChangeUserTelURL:{
+            url=[NSString stringWithFormat:@"%@/v1/user/change-tel",CZH_MainURL];
+            CZHLog(@"用户更改手机号码%@",url);
+        }break;
+            
 #pragma mark 智慧谷 -- Wallet
             
         case Interface_For_activeUserWalletAddress:{
