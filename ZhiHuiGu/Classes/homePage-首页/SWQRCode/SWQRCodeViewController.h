@@ -7,8 +7,8 @@
 //
 
 #import "SWQRCode.h"
-
-@interface SWQRCodeViewController : UIViewController
+#import "BBGestureBaseController.h"
+@interface SWQRCodeViewController : BBGestureBaseController
 
 @property (nonatomic, strong) SWQRCodeConfig *codeConfig;
 

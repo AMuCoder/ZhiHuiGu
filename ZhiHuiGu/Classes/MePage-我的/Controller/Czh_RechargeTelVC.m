@@ -22,12 +22,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
     self.title = @"修改手机号";
-    self.edgesForExtendedLayout = UIRectEdgeNone;
-    self.view.backgroundColor = [UIColor whiteColor];
+    [self addSubViews];
 }
-- (void)addSubViews_{
+- (void)addSubViews{
     /**旧手机验证码*/
     Czh_RechargeField *oldtel = [[Czh_RechargeField alloc] initWithFrame:CGRectMake(10, 0, self.view.CZH_width-20, 50) placeHolder:@"请输入验证码" boolRView:YES LeftViewTitle:@"原手机验证码:  " rightTitle:@"获取验证码"];
     [self.view addSubview:oldtel];

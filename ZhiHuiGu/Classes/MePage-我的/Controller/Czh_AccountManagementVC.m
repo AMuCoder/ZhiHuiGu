@@ -26,12 +26,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"账号管理";
-    self.edgesForExtendedLayout = UIRectEdgeNone;
-    self.view.backgroundColor = [UIColor whiteColor];
+    
+    
     [self.view addSubview:self.tableView];
 }
 
-
+-(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
+    return nil;
+}
 #pragma mark - UITableViewDataSource , UITableViewDelegate
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
     return 2;

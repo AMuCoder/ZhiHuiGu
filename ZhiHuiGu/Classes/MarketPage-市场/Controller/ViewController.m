@@ -31,7 +31,7 @@
     [super viewDidLoad];
     
     self.view.backgroundColor = [UIColor colorWithWhite:0.2 alpha:0.2];
-    self.view.backgroundColor = [UIColor whiteColor];
+    
     
     //_titleArray = @[@"全部",@"推荐",@"热点",@"附近",@"订阅",@"问答",@"社会",@"体育",@"财经"];
     _titleArray = @[@"交易所",@"市场行情"];

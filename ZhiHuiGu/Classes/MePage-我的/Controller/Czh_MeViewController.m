@@ -44,8 +44,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"我的";
-    self.view.backgroundColor = [UIColor whiteColor];
-    self.edgesForExtendedLayout = UIRectEdgeNone;
+    
+    
     [self.view addSubview:self.tableview];
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     NSString *userName = [userDefaults objectForKey:kUserNameKey];

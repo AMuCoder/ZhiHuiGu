@@ -47,15 +47,18 @@
         self.clearButtonMode = UITextFieldViewModeAlways;
         self.font = [UIFont systemFontOfSize:15];
         //CGRectMake(0, 0,15, 0)离上下左右的距离
+        
         _label = [[UILabel alloc] init];
         _label.contentMode = UIViewContentModeCenter;
         _label.text = leftViewtitle;
-        _label.font = [UIFont systemFontOfSize:15.0f];
+        _label.font = [UIFont systemFontOfSize:15];
         // 根据字体得到label的内容的尺寸
-        CGSize labelsize = [self.label.text sizeWithAttributes:[NSDictionary dictionaryWithObjectsAndKeys:self.label.font,NSFontAttributeName,nil]];
+        CGSize labelsize = [_label.text sizeWithAttributes:[NSDictionary dictionaryWithObjectsAndKeys:_label.font,NSFontAttributeName,nil]];
         // label的内容的宽度
         CGFloat label_ContentWidth = labelsize.width;
+        _sizeLenght = labelsize.width + 10 ;
         _label.frame = CGRectMake(0, 0, label_ContentWidth, self.CZH_height);
+        
         self.leftView = _label;
         self.leftViewMode = UITextFieldViewModeAlways;
         
@@ -84,6 +87,5 @@
         labelContentWidth = 150.0;
     }
     self.leftLabel.frame = CGRectMake(0, 0, labelContentWidth, self.CZH_height);
-    
 }
 @end

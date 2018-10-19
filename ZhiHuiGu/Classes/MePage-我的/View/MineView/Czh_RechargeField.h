@@ -13,6 +13,8 @@
 /**左边文字*/
 @property(nonatomic,strong) UILabel *leftLabel;
 
+@property(nonatomic,assign) CGFloat sizeLenght;
+
 - (instancetype)initWithFrame:(CGRect)frame LeftLabel:(NSString *)leftLabel Placeholder:(NSString *)placetext;
 
 - (instancetype)initWithFrame:(CGRect)frame placeHolder:(NSString *)placeHolder boolRView:(BOOL)flag  LeftViewTitle:(NSString *)leftViewtitle rightTitle:(NSString *)title;

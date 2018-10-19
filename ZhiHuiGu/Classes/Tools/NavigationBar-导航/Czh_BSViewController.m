@@ -16,7 +16,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     //ViewController的背景颜色，如果整个App页面背景颜色比较统一，建议在这里设置
-    self.view.backgroundColor = [UIColor whiteColor];
+    
     //设置导航栏
     [self setupNavigationItem];
     self.navigationController.navigationBar.translucent = NO;

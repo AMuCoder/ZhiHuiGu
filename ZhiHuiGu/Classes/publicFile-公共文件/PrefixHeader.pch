@@ -10,6 +10,7 @@
 #define _1_______PrefixHeader_pch
 //----------------------头文件--------------------------
 #pragma mark -- Category
+#import "BBGestureBaseController.h"
 #import "NSData+AES128.h"
 #import "NSDate+CZHExtension.h"
 #import "UIView+CZHExtension.h"
@@ -96,6 +97,8 @@
 #define kUserSeedAES128 @"SeedAES128"//AES加密后
 #define kUserMnemonicAES128 @"MnemonicAES128"//AES加密后
 #define KcellAssetsCurrencyTypeText @"cellInfoCurrencyLabelText"//选择资产类型
+#define KUserhas_pay_pwdKey @"has_pay_pwd"//是否有支付密码
+#define KUserauthorizedKey @"authorized"//实名认证
 //----------------------沙盒--------------------------
 
 //判断是真机还是模拟器

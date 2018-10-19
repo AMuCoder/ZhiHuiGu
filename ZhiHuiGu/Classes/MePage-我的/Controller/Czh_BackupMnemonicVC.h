@@ -4,7 +4,7 @@
 //  用途：备份助记词
 
 #import <UIKit/UIKit.h>
-
-@interface Czh_BackupMnemonicVC : UIViewController
+#import "BBGestureBaseController.h"
+@interface Czh_BackupMnemonicVC : BBGestureBaseController
 
 @end

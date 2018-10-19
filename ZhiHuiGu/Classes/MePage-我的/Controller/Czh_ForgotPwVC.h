@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface Czh_ForgotPwVC : UIViewController
+#import "BBGestureBaseController.h"
+@interface Czh_ForgotPwVC : BBGestureBaseController
 
 @end

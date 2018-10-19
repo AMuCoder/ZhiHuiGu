@@ -4,7 +4,7 @@
 //  用途：
 
 #import <UIKit/UIKit.h>
-
-@interface Czh_RechargePayPwdVC : UIViewController
+#import "BBGestureBaseController.h"
+@interface Czh_RechargePayPwdVC : BBGestureBaseController
 
 @end

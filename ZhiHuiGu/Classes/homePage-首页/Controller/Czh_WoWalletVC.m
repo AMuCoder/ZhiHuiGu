@@ -20,16 +20,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"我的钱包";
-//    [self.navigationController.navigationBar setTitleTextAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:18], NSForegroundColorAttributeName:[UIColor whiteColor]}];
-    self.edgesForExtendedLayout = UIRectEdgeNone;
-    self.view.backgroundColor = [UIColor whiteColor];
+    
     [self setScrollView];
 }
 - (void)setScrollView{
     /**
      控制前添加ScrollView（非必备）
      */
-    self.edgesForExtendedLayout = UIRectEdgeNone;
+    
     TPKeyboardAvoidingScrollView * contentScrollView = [[TPKeyboardAvoidingScrollView alloc] initWithFrame:CGRectMake(0, 0, Main_Screen_Width, Main_Screen_Height)];
     contentScrollView.bounces = NO;
     contentScrollView.showsVerticalScrollIndicator = NO;

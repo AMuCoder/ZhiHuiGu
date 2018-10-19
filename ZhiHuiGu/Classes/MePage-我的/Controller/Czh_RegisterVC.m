@@ -59,7 +59,7 @@
 }
 #pragma mark -- 添加导航栏
 -(void)setNav{
-    self.view.backgroundColor = [UIColor whiteColor];
+    
     self.navigationController.navigationBar.translucent = NO;
     [self.navigationController setNavigationBarHidden:YES];
     UINavigationBar *nav = [RTNavigationBar defaultBar];

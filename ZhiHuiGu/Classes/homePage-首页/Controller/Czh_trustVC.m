@@ -19,8 +19,8 @@
 //    self.navigationItem.title = @"我的信任";
     self.title = @"我的信任";
 //    [self.navigationController.navigationBar setTitleTextAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:18], NSForegroundColorAttributeName:[UIColor whiteColor]}];
-    self.edgesForExtendedLayout = UIRectEdgeNone;
-    self.view.backgroundColor = [UIColor whiteColor];
+    
+    
     
     [self.view addSubview:self.tableView];
 }

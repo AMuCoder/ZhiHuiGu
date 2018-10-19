@@ -7,8 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface DetailVC : UIViewController
+#import "BBGestureBaseController.h"
+@interface DetailVC : BBGestureBaseController
 
 @property (nonatomic,assign) NSInteger index;
 @property (nonatomic,copy) NSString *titleStr;

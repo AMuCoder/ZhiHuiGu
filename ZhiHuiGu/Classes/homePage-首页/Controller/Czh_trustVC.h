@@ -4,7 +4,7 @@
 //  用途：信任资产，按钮选择器
 
 #import <UIKit/UIKit.h>
-
-@interface Czh_trustVC : UIViewController
+#import "BBGestureBaseController.h"
+@interface Czh_trustVC : BBGestureBaseController
 
 @end

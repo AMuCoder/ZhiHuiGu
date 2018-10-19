@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BBGestureBaseController.h"
 @class Czh_ClickBtnView;
 NS_ASSUME_NONNULL_BEGIN
 
-@interface Czh_FriendsViewController : UIViewController
+@interface Czh_FriendsViewController : BBGestureBaseController
 @property (nonatomic, strong) Czh_ClickBtnView *clickBtnView;
 @end
 

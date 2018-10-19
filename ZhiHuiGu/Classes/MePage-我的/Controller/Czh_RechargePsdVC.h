@@ -5,6 +5,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface Czh_RechargePsdVC : UIViewController
+@interface Czh_RechargePsdVC : BBGestureBaseController
 
 @end

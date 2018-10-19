@@ -45,8 +45,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"注册 - 登录";
-    self.view.backgroundColor = [UIColor whiteColor];
-    self.edgesForExtendedLayout = UIRectEdgeNone;
+    
+    
     [self setupView];
     _countN = 0;
 }

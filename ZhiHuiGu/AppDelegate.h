@@ -6,16 +6,13 @@
 //  Copyright © 2018年 阿木. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
 #import <CoreData/CoreData.h>
-
+#import <UIKit/UIKit.h>
+#import "BBGestureBaseController.h"
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
+@property (nonatomic, strong) BBGestureBaseView *gestureBaseView;
 @property (strong, nonatomic) UIWindow *window;
-
-@property (readonly, strong) NSPersistentContainer *persistentContainer;
-
-- (void)saveContext;
-
++ (AppDelegate* )shareAppDelegate;
 @end
 

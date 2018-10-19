@@ -19,8 +19,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"充值";
-    self.edgesForExtendedLayout = UIRectEdgeNone;
-    self.view.backgroundColor = [UIColor whiteColor];
+    
+    
     [self setSubViewsWithWechatPayBtnStr:@"xxx" ZhifubaoPayBtnStr:@"xxx" ZhifuHolder:@"请输入金额" LeftViewImageStr:@"xxx"];
 }
 

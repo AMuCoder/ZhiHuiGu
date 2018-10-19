@@ -7,10 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "BBGestureBaseController.h"
 NS_ASSUME_NONNULL_BEGIN
 
-@interface Czh_ShoppingMallViewController : UIViewController
+@interface Czh_ShoppingMallViewController : BBGestureBaseController
 
 @end
 

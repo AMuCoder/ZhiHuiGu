@@ -35,6 +35,11 @@
 		2521CD24216D94F500E3D149 /* Czh_ImportWalletVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2521CD23216D94F500E3D149 /* Czh_ImportWalletVC.m */; };
 		2521CD27216DDF0800E3D149 /* NSArray+Czh_JSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 2521CD26216DDF0800E3D149 /* NSArray+Czh_JSON.m */; };
 		2521CD2D216DF2B900E3D149 /* NSData+AES128.m in Sources */ = {isa = PBXBuildFile; fileRef = 2521CD2B216DF2B900E3D149 /* NSData+AES128.m */; };
+		25245DA521781D65004B4BEB /* Czh_KYCCertificationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 25245DA421781D65004B4BEB /* Czh_KYCCertificationVC.m */; };
+		25245DA8217826F2004B4BEB /* Czh_SelectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 25245DA7217826F2004B4BEB /* Czh_SelectionView.m */; };
+		25245DAB2178277A004B4BEB /* ZDAcountTypeBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = 25245DAA2178277A004B4BEB /* ZDAcountTypeBtn.m */; };
+		25245DAF21782973004B4BEB /* UIButton+Layout.m in Sources */ = {isa = PBXBuildFile; fileRef = 25245DAD21782972004B4BEB /* UIButton+Layout.m */; };
+		25245DB221782DBE004B4BEB /* Czh_TypeBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = 25245DB121782DBE004B4BEB /* Czh_TypeBtn.m */; };
 		252DC83321631B27006BDE9C /* UIView+SDAutoLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 252DC82E21631B27006BDE9C /* UIView+SDAutoLayout.m */; };
 		252DC83421631B27006BDE9C /* UITableView+SDAutoTableViewCellHeight.m in Sources */ = {isa = PBXBuildFile; fileRef = 252DC83121631B27006BDE9C /* UITableView+SDAutoTableViewCellHeight.m */; };
 		252DC83B2167AE09006BDE9C /* Czh_CreateWalletVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 252DC83A2167AE09006BDE9C /* Czh_CreateWalletVC.m */; };
@@ -88,6 +93,11 @@
 		259AD7C72174671200D3DE37 /* Czh_TransferVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 259AD7C62174671200D3DE37 /* Czh_TransferVC.m */; };
 		259AD7CA2174809400D3DE37 /* Czh_UnderlineTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 259AD7C92174809400D3DE37 /* Czh_UnderlineTextField.m */; };
 		259AD7CD2174A05200D3DE37 /* Czh_CreateMineWalletVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 259AD7CC2174A05200D3DE37 /* Czh_CreateMineWalletVC.m */; };
+		259F4C1F2178853F0010A00F /* Czh_IconCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 259F4C1E2178853F0010A00F /* Czh_IconCell.m */; };
+		259F4C22217889E10010A00F /* Czh_NameCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 259F4C21217889E10010A00F /* Czh_NameCell.m */; };
+		259F4C25217898D50010A00F /* Czh_KYCCertVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 259F4C24217898D50010A00F /* Czh_KYCCertVC.m */; };
+		259F4C2821789F590010A00F /* Czh_maleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 259F4C2721789F590010A00F /* Czh_maleCell.m */; };
+		259F4C2B2178AA180010A00F /* Czh_ZYbtn.m in Sources */ = {isa = PBXBuildFile; fileRef = 259F4C2A2178AA180010A00F /* Czh_ZYbtn.m */; };
 		25B728402154B06A00D22E94 /* LCUserDefaultsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 25B7283C2154B06A00D22E94 /* LCUserDefaultsModel.m */; };
 		25B728412154B06A00D22E94 /* NSUserDefaultsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 25B7283E2154B06A00D22E94 /* NSUserDefaultsModel.m */; };
 		25B7B9162153DAB30053A2A5 /* NSString+MD5Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 25B7B8E12153DAB30053A2A5 /* NSString+MD5Addition.m */; };
@@ -107,7 +117,6 @@
 		25B7B9252153DAB30053A2A5 /* Czh_TabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25B7B9032153DAB30053A2A5 /* Czh_TabBarController.m */; };
 		25B7B9262153DAB30053A2A5 /* Czh_ShoppingMallViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25B7B9062153DAB30053A2A5 /* Czh_ShoppingMallViewController.m */; };
 		25B7B9272153DAB30053A2A5 /* Czh_MeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25B7B9082153DAB30053A2A5 /* Czh_MeViewController.m */; };
-		25B7B9282153DAB30053A2A5 /* Czh_HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25B7B90C2153DAB30053A2A5 /* Czh_HomeViewController.m */; };
 		25B7B92A2153DAB30053A2A5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 25B7B9102153DAB30053A2A5 /* main.m */; };
 		25B7B92B2153DAB30053A2A5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 25B7B9112153DAB30053A2A5 /* AppDelegate.m */; };
 		25B7B92C2153DAB30053A2A5 /* Czh_FriendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25B7B9142153DAB30053A2A5 /* Czh_FriendsViewController.m */; };
@@ -161,6 +170,9 @@
 		25E7C62B216058F00053F450 /* CZHAFNetWorKingAssistant.m in Sources */ = {isa = PBXBuildFile; fileRef = 25E7C62A216058F00053F450 /* CZHAFNetWorKingAssistant.m */; };
 		25E7C631216063750053F450 /* CZH_HTTPTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 25E7C630216063750053F450 /* CZH_HTTPTool.m */; };
 		25E7C634216072010053F450 /* Czh_LoginedVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 25E7C633216072010053F450 /* Czh_LoginedVC.m */; };
+		25E80737217796D9004D06D1 /* Czh_HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25E80735217796D8004D06D1 /* Czh_HomeViewController.m */; };
+		25E8073D217799FA004D06D1 /* BBGestureBackConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 25E80739217799FA004D06D1 /* BBGestureBackConst.m */; };
+		25E8073E217799FA004D06D1 /* BBGestureBaseController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25E8073B217799FA004D06D1 /* BBGestureBaseController.m */; };
 		25ED23AC216A51EC001429CB /* UILabel+Czh_UILabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 25ED23AB216A51EC001429CB /* UILabel+Czh_UILabel.m */; };
 		25ED23AF216A5996001429CB /* Czh_UILabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 25ED23AE216A5996001429CB /* Czh_UILabel.m */; };
 		25FAFB362169FC51001116AC /* Czh_RememberParticalVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 25FAFB352169FC51001116AC /* Czh_RememberParticalVC.m */; };
@@ -242,6 +254,16 @@
 		2521CD26216DDF0800E3D149 /* NSArray+Czh_JSON.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Czh_JSON.m"; sourceTree = "<group>"; };
 		2521CD2B216DF2B900E3D149 /* NSData+AES128.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+AES128.m"; sourceTree = "<group>"; };
 		2521CD2C216DF2B900E3D149 /* NSData+AES128.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+AES128.h"; sourceTree = "<group>"; };
+		25245DA321781D65004B4BEB /* Czh_KYCCertificationVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Czh_KYCCertificationVC.h; sourceTree = "<group>"; };
+		25245DA421781D65004B4BEB /* Czh_KYCCertificationVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Czh_KYCCertificationVC.m; sourceTree = "<group>"; };
+		25245DA6217826F2004B4BEB /* Czh_SelectionView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Czh_SelectionView.h; sourceTree = "<group>"; };
+		25245DA7217826F2004B4BEB /* Czh_SelectionView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Czh_SelectionView.m; sourceTree = "<group>"; };
+		25245DA921782779004B4BEB /* ZDAcountTypeBtn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZDAcountTypeBtn.h; sourceTree = "<group>"; };
+		25245DAA2178277A004B4BEB /* ZDAcountTypeBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZDAcountTypeBtn.m; sourceTree = "<group>"; };
+		25245DAD21782972004B4BEB /* UIButton+Layout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Layout.m"; sourceTree = "<group>"; };
+		25245DAE21782972004B4BEB /* UIButton+Layout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Layout.h"; sourceTree = "<group>"; };
+		25245DB021782DBE004B4BEB /* Czh_TypeBtn.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Czh_TypeBtn.h; sourceTree = "<group>"; };
+		25245DB121782DBE004B4BEB /* Czh_TypeBtn.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Czh_TypeBtn.m; sourceTree = "<group>"; };
 		252DC82E21631B27006BDE9C /* UIView+SDAutoLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+SDAutoLayout.m"; sourceTree = "<group>"; };
 		252DC82F21631B27006BDE9C /* UITableView+SDAutoTableViewCellHeight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+SDAutoTableViewCellHeight.h"; sourceTree = "<group>"; };
 		252DC83021631B27006BDE9C /* SDAutoLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDAutoLayout.h; sourceTree = "<group>"; };
@@ -352,6 +374,16 @@
 		259AD7C92174809400D3DE37 /* Czh_UnderlineTextField.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = Czh_UnderlineTextField.m; path = "ZhiHuiGu/Classes/HomePage-首页/View/TextField/Czh_UnderlineTextField.m"; sourceTree = SOURCE_ROOT; };
 		259AD7CB2174A05200D3DE37 /* Czh_CreateMineWalletVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Czh_CreateMineWalletVC.h; sourceTree = "<group>"; };
 		259AD7CC2174A05200D3DE37 /* Czh_CreateMineWalletVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Czh_CreateMineWalletVC.m; sourceTree = "<group>"; };
+		259F4C1D2178853F0010A00F /* Czh_IconCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Czh_IconCell.h; sourceTree = "<group>"; };
+		259F4C1E2178853F0010A00F /* Czh_IconCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Czh_IconCell.m; sourceTree = "<group>"; };
+		259F4C20217889E10010A00F /* Czh_NameCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Czh_NameCell.h; sourceTree = "<group>"; };
+		259F4C21217889E10010A00F /* Czh_NameCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Czh_NameCell.m; sourceTree = "<group>"; };
+		259F4C23217898D50010A00F /* Czh_KYCCertVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Czh_KYCCertVC.h; sourceTree = "<group>"; };
+		259F4C24217898D50010A00F /* Czh_KYCCertVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Czh_KYCCertVC.m; sourceTree = "<group>"; };
+		259F4C2621789F590010A00F /* Czh_maleCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Czh_maleCell.h; sourceTree = "<group>"; };
+		259F4C2721789F590010A00F /* Czh_maleCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Czh_maleCell.m; sourceTree = "<group>"; };
+		259F4C292178AA180010A00F /* Czh_ZYbtn.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Czh_ZYbtn.h; sourceTree = "<group>"; };
+		259F4C2A2178AA180010A00F /* Czh_ZYbtn.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Czh_ZYbtn.m; sourceTree = "<group>"; };
 		25B7283C2154B06A00D22E94 /* LCUserDefaultsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCUserDefaultsModel.m; sourceTree = "<group>"; };
 		25B7283D2154B06A00D22E94 /* NSUserDefaultsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSUserDefaultsModel.h; sourceTree = "<group>"; };
 		25B7283E2154B06A00D22E94 /* NSUserDefaultsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSUserDefaultsModel.m; sourceTree = "<group>"; };
@@ -389,8 +421,6 @@
 		25B7B9062153DAB30053A2A5 /* Czh_ShoppingMallViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Czh_ShoppingMallViewController.m; sourceTree = "<group>"; };
 		25B7B9082153DAB30053A2A5 /* Czh_MeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Czh_MeViewController.m; sourceTree = "<group>"; };
 		25B7B9092153DAB30053A2A5 /* Czh_MeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Czh_MeViewController.h; sourceTree = "<group>"; };
-		25B7B90B2153DAB30053A2A5 /* Czh_HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Czh_HomeViewController.h; sourceTree = "<group>"; };
-		25B7B90C2153DAB30053A2A5 /* Czh_HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Czh_HomeViewController.m; sourceTree = "<group>"; };
 		25B7B90E2153DAB30053A2A5 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		25B7B9102153DAB30053A2A5 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		25B7B9112153DAB30053A2A5 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -498,6 +528,12 @@
 		25E7C630216063750053F450 /* CZH_HTTPTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CZH_HTTPTool.m; sourceTree = "<group>"; };
 		25E7C632216072010053F450 /* Czh_LoginedVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Czh_LoginedVC.h; sourceTree = "<group>"; };
 		25E7C633216072010053F450 /* Czh_LoginedVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Czh_LoginedVC.m; sourceTree = "<group>"; };
+		25E80735217796D8004D06D1 /* Czh_HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Czh_HomeViewController.m; sourceTree = "<group>"; };
+		25E80736217796D9004D06D1 /* Czh_HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Czh_HomeViewController.h; sourceTree = "<group>"; };
+		25E80739217799FA004D06D1 /* BBGestureBackConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBGestureBackConst.m; sourceTree = "<group>"; };
+		25E8073A217799FA004D06D1 /* BBGestureBaseController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBGestureBaseController.h; sourceTree = "<group>"; };
+		25E8073B217799FA004D06D1 /* BBGestureBaseController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBGestureBaseController.m; sourceTree = "<group>"; };
+		25E8073C217799FA004D06D1 /* BBGestureBackConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBGestureBackConst.h; sourceTree = "<group>"; };
 		25ED23AA216A51EC001429CB /* UILabel+Czh_UILabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UILabel+Czh_UILabel.h"; sourceTree = "<group>"; };
 		25ED23AB216A51EC001429CB /* UILabel+Czh_UILabel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UILabel+Czh_UILabel.m"; sourceTree = "<group>"; };
 		25ED23AD216A5996001429CB /* Czh_UILabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Czh_UILabel.h; sourceTree = "<group>"; };
@@ -654,6 +690,15 @@
 			path = "UIButton+CZHClickBtnBlock";
 			sourceTree = "<group>";
 		};
+		25245DAC21782972004B4BEB /* UIButton+Layout(多种自定义按钮) */ = {
+			isa = PBXGroup;
+			children = (
+				25245DAD21782972004B4BEB /* UIButton+Layout.m */,
+				25245DAE21782972004B4BEB /* UIButton+Layout.h */,
+			);
+			path = "UIButton+Layout(多种自定义按钮)";
+			sourceTree = "<group>";
+		};
 		252DC82D21631B27006BDE9C /* SDAutoLayout */ = {
 			isa = PBXGroup;
 			children = (
@@ -689,6 +734,8 @@
 		252DC8372167ACBB006BDE9C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				259F4C1C217884FD0010A00F /* Cell */,
+				25245DAC21782972004B4BEB /* UIButton+Layout(多种自定义按钮) */,
 				25C0616E2176C76C001468CA /* LoginView */,
 				25558FBB2175CE320031CBCE /* MineView */,
 			);
@@ -734,6 +781,10 @@
 				25C0617F21771082001468CA /* Czh_RechargeTelVC.m */,
 				25C0618121773C94001468CA /* Czh_PersonInfoVC.h */,
 				25C0618221773C94001468CA /* Czh_PersonInfoVC.m */,
+				25245DA321781D65004B4BEB /* Czh_KYCCertificationVC.h */,
+				25245DA421781D65004B4BEB /* Czh_KYCCertificationVC.m */,
+				259F4C23217898D50010A00F /* Czh_KYCCertVC.h */,
+				259F4C24217898D50010A00F /* Czh_KYCCertVC.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -835,8 +886,8 @@
 		25558FB02175BC990031CBCE /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				25B7B90B2153DAB30053A2A5 /* Czh_HomeViewController.h */,
-				25B7B90C2153DAB30053A2A5 /* Czh_HomeViewController.m */,
+				25E80736217796D9004D06D1 /* Czh_HomeViewController.h */,
+				25E80735217796D8004D06D1 /* Czh_HomeViewController.m */,
 				25558FA021757EE20031CBCE /* Czh_WoWalletVC.h */,
 				25558FA121757EE20031CBCE /* Czh_WoWalletVC.m */,
 				25558FA92175B9D80031CBCE /* Czh_trustVC.h */,
@@ -869,6 +920,12 @@
 				25C0616C2176C762001468CA /* Czh_RechargeCell.m */,
 				25C0616F2176CE62001468CA /* Czh_RechargeField.h */,
 				25C061702176CE62001468CA /* Czh_RechargeField.m */,
+				25245DA6217826F2004B4BEB /* Czh_SelectionView.h */,
+				25245DA7217826F2004B4BEB /* Czh_SelectionView.m */,
+				25245DA921782779004B4BEB /* ZDAcountTypeBtn.h */,
+				25245DAA2178277A004B4BEB /* ZDAcountTypeBtn.m */,
+				25245DB021782DBE004B4BEB /* Czh_TypeBtn.h */,
+				25245DB121782DBE004B4BEB /* Czh_TypeBtn.m */,
 			);
 			path = MineView;
 			sourceTree = "<group>";
@@ -898,6 +955,8 @@
 			children = (
 				25B7B8DF2153DAB30053A2A5 /* Classes */,
 				258714C2215290CE0063ED99 /* Info.plist */,
+				25B7B90E2153DAB30053A2A5 /* AppDelegate.h */,
+				25B7B9112153DAB30053A2A5 /* AppDelegate.m */,
 				2553F1122170AFA100A92098 /* Assets.xcassets */,
 			);
 			path = ZhiHuiGu;
@@ -930,6 +989,21 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		259F4C1C217884FD0010A00F /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				259F4C1D2178853F0010A00F /* Czh_IconCell.h */,
+				259F4C1E2178853F0010A00F /* Czh_IconCell.m */,
+				259F4C20217889E10010A00F /* Czh_NameCell.h */,
+				259F4C21217889E10010A00F /* Czh_NameCell.m */,
+				259F4C2621789F590010A00F /* Czh_maleCell.h */,
+				259F4C2721789F590010A00F /* Czh_maleCell.m */,
+				259F4C292178AA180010A00F /* Czh_ZYbtn.h */,
+				259F4C2A2178AA180010A00F /* Czh_ZYbtn.m */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		25B7283B2154B06A00D22E94 /* CZHNSUserDefaultsModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -959,6 +1033,7 @@
 		25B7B8E02153DAB30053A2A5 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				25E80738217799FA004D06D1 /* BBGestureBack */,
 				250DD0E0215F78F000CD6D3E /* AFNetworking */,
 				25DD4D3C216856CB0076DC77 /* RegularVerification */,
 				25DD4D35216854FB0076DC77 /* WarnWindow */,
@@ -1075,10 +1150,8 @@
 		25B7B90D2153DAB30053A2A5 /* PublicFile-公共文件 */ = {
 			isa = PBXGroup;
 			children = (
-				25B7B90E2153DAB30053A2A5 /* AppDelegate.h */,
-				25B7B9112153DAB30053A2A5 /* AppDelegate.m */,
-				25B7B9102153DAB30053A2A5 /* main.m */,
 				25B7B9122153DAB30053A2A5 /* PrefixHeader.pch */,
+				25B7B9102153DAB30053A2A5 /* main.m */,
 			);
 			path = "PublicFile-公共文件";
 			sourceTree = "<group>";
@@ -1406,6 +1479,17 @@
 			path = RegularVerification;
 			sourceTree = "<group>";
 		};
+		25E80738217799FA004D06D1 /* BBGestureBack */ = {
+			isa = PBXGroup;
+			children = (
+				25E80739217799FA004D06D1 /* BBGestureBackConst.m */,
+				25E8073A217799FA004D06D1 /* BBGestureBaseController.h */,
+				25E8073B217799FA004D06D1 /* BBGestureBaseController.m */,
+				25E8073C217799FA004D06D1 /* BBGestureBackConst.h */,
+			);
+			path = BBGestureBack;
+			sourceTree = "<group>";
+		};
 		25ED23A9216A51A9001429CB /* Category */ = {
 			isa = PBXGroup;
 			children = (
@@ -1550,6 +1634,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				25245DB221782DBE004B4BEB /* Czh_TypeBtn.m in Sources */,
 				25B7B9262153DAB30053A2A5 /* Czh_ShoppingMallViewController.m in Sources */,
 				256E3424215B770B00BD681F /* Czh_HeaderView.m in Sources */,
 				25558FB62175BD350031CBCE /* Czh_mineAssetsView.m in Sources */,
@@ -1562,12 +1647,14 @@
 				25DD4D3F216856D70076DC77 /* Czh_RegularVerification.m in Sources */,
 				25B7B9972153E4720053A2A5 /* HeaderFourView.m in Sources */,
 				2553F0D021704A4E00A92098 /* AssetsTypeAlter.m in Sources */,
+				259F4C2B2178AA180010A00F /* Czh_ZYbtn.m in Sources */,
 				25B7B9252153DAB30053A2A5 /* Czh_TabBarController.m in Sources */,
 				252DC8412167BA06006BDE9C /* Czh_CWTextField.m in Sources */,
 				25B7B96C2153DFC70053A2A5 /* MJRefreshFooter.m in Sources */,
 				250DD0F4215F78F000CD6D3E /* AFSecurityPolicy.m in Sources */,
 				25DD4D20216849A70076DC77 /* NSString+MJExtension.m in Sources */,
 				252DC83421631B27006BDE9C /* UITableView+SDAutoTableViewCellHeight.m in Sources */,
+				25E8073E217799FA004D06D1 /* BBGestureBaseController.m in Sources */,
 				2553F10D2170A13E00A92098 /* AssetChangesView.m in Sources */,
 				25404795216E4C6A007637A3 /* CZHAlertView.m in Sources */,
 				2553F0D3217051BE00A92098 /* AssetsTableViewCell.m in Sources */,
@@ -1577,6 +1664,7 @@
 				25B7B92C2153DAB30053A2A5 /* Czh_FriendsViewController.m in Sources */,
 				252E40032168FFC00041DA4F /* RTDeviceHardware.m in Sources */,
 				25558FAB2175B9D80031CBCE /* Czh_trustVC.m in Sources */,
+				25245DAF21782973004B4BEB /* UIButton+Layout.m in Sources */,
 				25558FBA2175BF0B0031CBCE /* Czh_MineAssetsCell.m in Sources */,
 				2553F0FD2170769D00A92098 /* SWScannerView.m in Sources */,
 				250DD0FE215F79FF00CD6D3E /* CzhNetworking.m in Sources */,
@@ -1592,7 +1680,6 @@
 				250DD0FD215F79FF00CD6D3E /* CzhNetworkingTools.m in Sources */,
 				25DD4D23216849A70076DC77 /* MJFoundation.m in Sources */,
 				255EF937216B300100FBB4CF /* Czh_BSViewController.m in Sources */,
-				25B7B9282153DAB30053A2A5 /* Czh_HomeViewController.m in Sources */,
 				252DC83E2167AF54006BDE9C /* CreateWalletPdView.m in Sources */,
 				25DD4D1A216849A70076DC77 /* NSObject+MJKeyValue.m in Sources */,
 				25B7B9622153DFC70053A2A5 /* UIView+MJExtension.m in Sources */,
@@ -1623,6 +1710,8 @@
 				25ED23AF216A5996001429CB /* Czh_UILabel.m in Sources */,
 				25B728402154B06A00D22E94 /* LCUserDefaultsModel.m in Sources */,
 				25B7B9602153DFC70053A2A5 /* UIScrollView+MJExtension.m in Sources */,
+				25E80737217796D9004D06D1 /* Czh_HomeViewController.m in Sources */,
+				259F4C2821789F590010A00F /* Czh_maleCell.m in Sources */,
 				2553F0F92170769D00A92098 /* SWQRCodeConfig.m in Sources */,
 				259AD7BD217436EA00D3DE37 /* Czh_MarketTableViewCell.m in Sources */,
 				250DD0CA215F2C9A00CD6D3E /* Czh_promptLabel.m in Sources */,
@@ -1635,6 +1724,7 @@
 				25B7B9652153DFC70053A2A5 /* MJRefreshBackNormalFooter.m in Sources */,
 				25C0618321773C94001468CA /* Czh_PersonInfoVC.m in Sources */,
 				259AD7CA2174809400D3DE37 /* Czh_UnderlineTextField.m in Sources */,
+				25245DAB2178277A004B4BEB /* ZDAcountTypeBtn.m in Sources */,
 				250DD0F0215F78F000CD6D3E /* AFHTTPSessionManager.m in Sources */,
 				25FAFB362169FC51001116AC /* Czh_RememberParticalVC.m in Sources */,
 				25DD4D4521685BF30076DC77 /* Czh_NetWorkURL.m in Sources */,
@@ -1656,6 +1746,7 @@
 				25B7B9982153E4720053A2A5 /* UIView+Frame.m in Sources */,
 				259AD7B621742A3C00D3DE37 /* XLBasePageController.m in Sources */,
 				252E400C21690D7C0041DA4F /* Czh_UIView.m in Sources */,
+				25245DA521781D65004B4BEB /* Czh_KYCCertificationVC.m in Sources */,
 				2521CD24216D94F500E3D149 /* Czh_ImportWalletVC.m in Sources */,
 				2538E468216FA648000A30BC /* PXAlertView.m in Sources */,
 				259AD7CD2174A05200D3DE37 /* Czh_CreateMineWalletVC.m in Sources */,
@@ -1666,6 +1757,7 @@
 				25558FC421760ADF0031CBCE /* Czh_UserAgreementVC.m in Sources */,
 				25B7B9642153DFC70053A2A5 /* MJRefreshBackStateFooter.m in Sources */,
 				25E7C631216063750053F450 /* CZH_HTTPTool.m in Sources */,
+				25245DA8217826F2004B4BEB /* Czh_SelectionView.m in Sources */,
 				2506C19C215CC9A100530D13 /* Czh_LoginTextField.m in Sources */,
 				2521CD2D216DF2B900E3D149 /* NSData+AES128.m in Sources */,
 				25B7B91B2153DAB30053A2A5 /* NSObject+Log.m in Sources */,
@@ -1678,6 +1770,7 @@
 				259AD7C42174477000D3DE37 /* Czh_MarketModel.m in Sources */,
 				2520B6E3215DC8ED00956CB7 /* Czh_ClickBtnView.m in Sources */,
 				25B7B9162153DAB30053A2A5 /* NSString+MD5Addition.m in Sources */,
+				259F4C1F2178853F0010A00F /* Czh_IconCell.m in Sources */,
 				25C0618021771082001468CA /* Czh_RechargeTelVC.m in Sources */,
 				25B728412154B06A00D22E94 /* NSUserDefaultsModel.m in Sources */,
 				25DD4D1E216849A70076DC77 /* NSObject+MJProperty.m in Sources */,
@@ -1685,6 +1778,7 @@
 				2553F0CD217040A500A92098 /* YXCustomAlertView.m in Sources */,
 				2506C1A5215CDAE800530D13 /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */,
 				25B7B9242153DAB30053A2A5 /* CZHTabBar.m in Sources */,
+				259F4C22217889E10010A00F /* Czh_NameCell.m in Sources */,
 				252DC83B2167AE09006BDE9C /* Czh_CreateWalletVC.m in Sources */,
 				25C0616A2176C55A001468CA /* Czh_RechargePsdVC.m in Sources */,
 				253AECC72171E11F00AF7696 /* Czh_TopUpVC.m in Sources */,
@@ -1696,6 +1790,8 @@
 				25558F9F217577D30031CBCE /* Czh_UserInfoView.m in Sources */,
 				2504FD1B215A0FFD00691990 /* Czh_Button.m in Sources */,
 				25B7B9272153DAB30053A2A5 /* Czh_MeViewController.m in Sources */,
+				259F4C25217898D50010A00F /* Czh_KYCCertVC.m in Sources */,
+				25E8073D217799FA004D06D1 /* BBGestureBackConst.m in Sources */,
 				2506C192215CB74900530D13 /* Czh_MeUserView.m in Sources */,
 				25B7B91A2153DAB30053A2A5 /* UIViewController+Extend.m in Sources */,
 				25B7B9672153DFC70053A2A5 /* MJRefreshAutoGifFooter.m in Sources */,
@@ -1859,7 +1955,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = N33J78A7TA;
-				GCC_PREFIX_HEADER = "/Users/cyj/Desktop/项目备份/ZhiHuiGu/ZhiHuiGu/Classes/publicFile-公共文件/PrefixHeader.pch";
+				GCC_PREFIX_HEADER = "/Users/cyj/Desktop/CYJCZH/ZhiHuiGu/ZhiHuiGu/Classes/publicFile-公共文件/PrefixHeader.pch";
 				INFOPLIST_FILE = ZhiHuiGu/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1880,7 +1976,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = N33J78A7TA;
-				GCC_PREFIX_HEADER = "/Users/cyj/Desktop/项目备份/ZhiHuiGu/ZhiHuiGu/Classes/publicFile-公共文件/PrefixHeader.pch";
+				GCC_PREFIX_HEADER = "/Users/cyj/Desktop/CYJCZH/ZhiHuiGu/ZhiHuiGu/Classes/publicFile-公共文件/PrefixHeader.pch";
 				INFOPLIST_FILE = ZhiHuiGu/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (

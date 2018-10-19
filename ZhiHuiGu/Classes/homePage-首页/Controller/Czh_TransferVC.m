@@ -22,8 +22,8 @@
     [super viewDidLoad];
     self.title = @"转账";
 //    [self.navigationController.navigationBar setTitleTextAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:18], NSForegroundColorAttributeName:[UIColor whiteColor]}];
-    self.edgesForExtendedLayout = UIRectEdgeNone;
-    self.view.backgroundColor = [UIColor whiteColor];
+    
+    
     [self addRightBtn];
     [self addSelfViewWithCurrencyStr:@"WTO" NumberStr:@"100"];
 }

@@ -32,8 +32,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     _COUNTN = 0;
-    self.view.backgroundColor = [UIColor whiteColor];
-    self.edgesForExtendedLayout = UIRectEdgeNone;
+    
+    
     [self setupView];
     [self addRightBtn];
 }

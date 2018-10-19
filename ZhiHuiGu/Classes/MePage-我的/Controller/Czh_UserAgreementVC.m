@@ -14,8 +14,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"用户协议";
-    self.edgesForExtendedLayout = UIRectEdgeNone;
-    self.view.backgroundColor = [UIColor whiteColor];
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {

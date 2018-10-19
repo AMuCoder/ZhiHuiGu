@@ -44,8 +44,8 @@
     [super viewDidLoad];
     self.title = @"首页";
     [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor clearColor]}];//设置title颜色
-    self.view.backgroundColor = [UIColor whiteColor];
-    self.edgesForExtendedLayout = UIRectEdgeNone;
+    
+    
     [self setupNavBar];
     [self headerFourViewBtnClick];
     //[self setupSearchBarView];

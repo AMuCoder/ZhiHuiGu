@@ -39,7 +39,7 @@
 }
 #pragma mark -- 添加导航栏
 -(void)setNav{
-    self.view.backgroundColor = [UIColor whiteColor];
+    
     self.navigationController.navigationBar.translucent = NO;
     [self.navigationController setNavigationBarHidden:YES];
     UINavigationBar *nav = [RTNavigationBar defaultBar];
@@ -69,7 +69,7 @@
     /**
      控制前添加ScrollView（非必备）
      */
-    self.edgesForExtendedLayout = UIRectEdgeNone;
+    
     TPKeyboardAvoidingScrollView * contentScrollView = [[TPKeyboardAvoidingScrollView alloc] initWithFrame:CGRectMake(0, 0, Main_Screen_Width, Main_Screen_Height)];
     contentScrollView.bounces = NO;
     contentScrollView.showsVerticalScrollIndicator = NO;

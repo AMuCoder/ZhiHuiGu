@@ -4,8 +4,9 @@
 //  用途：我的钱包界面
 
 #import <UIKit/UIKit.h>
+#import "BBGestureBaseController.h"
 @class Czh_WoWalletView;
-@interface Czh_WoWalletVC : UIViewController
+@interface Czh_WoWalletVC : BBGestureBaseController
 @property(nonatomic,strong) Czh_WoWalletView *walletView;
 
 @end

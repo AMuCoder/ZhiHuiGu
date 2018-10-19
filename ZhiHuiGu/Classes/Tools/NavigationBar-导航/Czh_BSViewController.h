@@ -5,8 +5,8 @@
 
 #import <UIKit/UIKit.h>
 @class RTNavigationBar;
-
-@interface Czh_BSViewController : UIViewController
+#import "BBGestureBaseController.h"
+@interface Czh_BSViewController : BBGestureBaseController
 
 //返回按钮
 @property(nonatomic,strong) UIButton * backButton;

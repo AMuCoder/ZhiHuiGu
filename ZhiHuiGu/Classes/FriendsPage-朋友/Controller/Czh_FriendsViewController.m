@@ -20,8 +20,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.title = @"朋友";
-    self.edgesForExtendedLayout = UIRectEdgeNone;
-    self.view.backgroundColor = [UIColor whiteColor];
+    
+    
 //    Czh_ClickBtnView *clickBtnView = [[Czh_ClickBtnView alloc] initWithFrame:CGRectMake(0, 50, Main_Screen_Width, 200)];
 
      Czh_ClickBtnView *clickBtnView = [[Czh_ClickBtnView alloc] init];

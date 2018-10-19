@@ -4,7 +4,7 @@
 //  用途：已登录界面
 
 #import <UIKit/UIKit.h>
-
-@interface Czh_LoginedVC : UIViewController
+#import "BBGestureBaseController.h"
+@interface Czh_LoginedVC : BBGestureBaseController
 
 @end

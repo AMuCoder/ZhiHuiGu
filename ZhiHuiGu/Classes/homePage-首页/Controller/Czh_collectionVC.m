@@ -26,8 +26,8 @@
     [super viewDidLoad];
     self.title = @"收款";
 //    [self.navigationController.navigationBar setTitleTextAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:18], NSForegroundColorAttributeName:[UIColor whiteColor]}];
-    self.edgesForExtendedLayout = UIRectEdgeNone;
-    self.view.backgroundColor = [UIColor whiteColor];
+    
+    
     [self setSubViewWithNumberStr:@"3000" CurrencyStr:@"WEC" QrcodeImage:@"XXX"];
 }
 -(void)setSubViewWithNumberStr:(NSString *)numberStrtext

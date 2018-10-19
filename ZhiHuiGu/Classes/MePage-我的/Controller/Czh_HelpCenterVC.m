@@ -14,8 +14,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"帮助中心";
-    self.edgesForExtendedLayout = UIRectEdgeNone;
-    self.view.backgroundColor = [UIColor whiteColor];
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {

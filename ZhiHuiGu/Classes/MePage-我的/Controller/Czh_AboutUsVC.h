@@ -4,7 +4,7 @@
 //  用途：
 
 #import <UIKit/UIKit.h>
-
-@interface Czh_AboutUsVC : UIViewController
+#import "BBGestureBaseController.h"
+@interface Czh_AboutUsVC : BBGestureBaseController
 
 @end

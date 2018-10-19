@@ -21,12 +21,12 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.title = @"重置登录密码";
-    self.edgesForExtendedLayout = UIRectEdgeNone;
-    self.view.backgroundColor = [UIColor whiteColor];
+    
+    
     [self setViews];
 }
 -(void)setViews{
-    Czh_RechargeField *oldPsd = [[Czh_RechargeField alloc] initWithFrame:CGRectMake(10, 0, self.view.CZH_width-20, 50) LeftLabel:@"原登录密码: " Placeholder:@"请输入当前登录密码"];
+    Czh_RechargeField *oldPsd = [[Czh_RechargeField alloc] initWithFrame:CGRectMake(10, 0, self.view.CZH_width-20, 50) placeHolder:@"请输入当前登录密码" boolRView:NO LeftViewTitle:@"原登录密码: " rightTitle:nil];
     [self.view addSubview:oldPsd];
     _oldPsd = oldPsd;
     
@@ -34,7 +34,7 @@
     lines.backgroundColor = CZHRGBColor(244, 244, 244);
     [self.view addSubview:lines];
     
-    Czh_RechargeField *psdNew = [[Czh_RechargeField alloc] initWithFrame:CGRectMake(10, CGRectGetMaxY(lines.frame), self.view.CZH_width-20, 50) LeftLabel:@"新登录密码: " Placeholder:@"请输入新登录密码"];
+    Czh_RechargeField *psdNew = [[Czh_RechargeField alloc] initWithFrame:CGRectMake(10, CGRectGetMaxY(lines.frame), self.view.CZH_width-20, 50) placeHolder:@"请输入新登录密码" boolRView:NO LeftViewTitle:@"新登录密码: " rightTitle:nil];
     [self.view addSubview:psdNew];
     _psdNew = psdNew;
     
@@ -42,7 +42,7 @@
     lineOne.backgroundColor = [UIColor lightGrayColor];
     [self.view addSubview:lineOne];
     
-    Czh_RechargeField *psdNewToo = [[Czh_RechargeField alloc] initWithFrame:CGRectMake(10, CGRectGetMaxY(lineOne.frame), self.view.CZH_width-20, 50) LeftLabel:@"再次输入密码: " Placeholder:@"请再次输入新登录密码"];
+    Czh_RechargeField *psdNewToo = [[Czh_RechargeField alloc] initWithFrame:CGRectMake(10, CGRectGetMaxY(lineOne.frame), self.view.CZH_width-20, 50) placeHolder:@"请再次输入新登录密码" boolRView:NO LeftViewTitle:@"再次输入密码: " rightTitle:nil];
     [self.view addSubview:psdNewToo];
     _psdNewToo = psdNewToo;
     

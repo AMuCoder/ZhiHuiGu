@@ -7,10 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "BBGestureBaseController.h"
 NS_ASSUME_NONNULL_BEGIN
 
-@interface Czh_HomeViewController : UIViewController
+@interface Czh_HomeViewController : BBGestureBaseController
 
 @end
 
