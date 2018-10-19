@@ -364,7 +364,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ZhiHuiGu/Classes/MePage-&#x6211;&#x7684;/Controller/Czh_KYCCertificationVC.m"
-            timestampString = "561571838.1524071"
+            timestampString = "561605728.744628"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "129"
@@ -380,7 +380,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ZhiHuiGu/Classes/MePage-&#x6211;&#x7684;/Controller/Czh_KYCCertificationVC.m"
-            timestampString = "561571838.15301"
+            timestampString = "561605728.744997"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "156"
@@ -396,7 +396,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ZhiHuiGu/Classes/MePage-&#x6211;&#x7684;/Controller/Czh_KYCCertificationVC.m"
-            timestampString = "561571838.153464"
+            timestampString = "561605728.745235"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "159"
@@ -412,12 +412,76 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ZhiHuiGu/Classes/MePage-&#x6211;&#x7684;/Controller/Czh_KYCCertVC.m"
-            timestampString = "561571838.153821"
+            timestampString = "561637320.872732"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "89"
-            endingLineNumber = "89"
+            startingLineNumber = "96"
+            endingLineNumber = "96"
             landmarkName = "-actionSheet:clickedButtonAtIndex:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ZhiHuiGu/Classes/MePage-&#x6211;&#x7684;/Controller/Czh_ImportWalletVC.m"
+            timestampString = "561608161.8403111"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "152"
+            endingLineNumber = "152"
+            landmarkName = "-textView:shouldChangeTextInRange:replacementText:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ZhiHuiGu/Classes/MePage-&#x6211;&#x7684;/Controller/Czh_PersonInfoVC.m"
+            timestampString = "561637320.8728729"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "207"
+            endingLineNumber = "207"
+            landmarkName = "-dealloc"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ZhiHuiGu/Classes/MePage-&#x6211;&#x7684;/Controller/Czh_PersonInfoVC.m"
+            timestampString = "561637320.873394"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "155"
+            endingLineNumber = "155"
+            landmarkName = "-saveBtnClick"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ZhiHuiGu/Classes/MePage-&#x6211;&#x7684;/Controller/Czh_PersonInfoVC.m"
+            timestampString = "561637387.957788"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "183"
+            endingLineNumber = "183"
+            landmarkName = "-saveBtnClick"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

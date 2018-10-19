@@ -8,7 +8,7 @@
 #import "Czh_maleCell.h"
 #import "Czh_LoginBtn.h"
 
-@interface Czh_KYCCertVC ()<UITableViewDataSource, UITableViewDelegate,UIActionSheetDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate,Czh_maleCellDelegate> //一定要声明这三个协议，缺一不可
+@interface Czh_KYCCertVC ()<UITableViewDataSource, UITableViewDelegate,UIActionSheetDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate,Czh_maleCellDelegate,UITextFieldDelegate>
 @property(nonatomic,strong) UIImagePickerController *imagePicker; //声明全局的UIImagePickerController
 @property(nonatomic,strong) UIImageView *positeImageView;
 @property(nonatomic,strong) UIImageView *reverseImageView;
@@ -18,10 +18,13 @@
 @property(nonatomic,copy) NSString *reverseImageStr;
 @property(nonatomic,strong) NSString *maleorfemale;
 @property(nonatomic,assign) NSInteger clickIndex;
-
+@property(nonatomic,copy) NSString *certStr;//检查认证情况
 //判断状态的按钮
 @property (strong, nonatomic) Czh_ZYbtn *tempBtn;
 @property(nonatomic,strong) UITableView *tableView;
+@property(nonatomic,strong) Czh_NameCell *IDcell;
+@property(nonatomic,strong) Czh_NameCell *Namecell;
+@property(nonatomic,strong) Czh_maleCell *maleCell;
 
 @end
 
@@ -31,12 +34,16 @@
         _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, Main_Screen_Width, 270)];
         _tableView.delegate = self;
         _tableView.dataSource = self;
+        _tableView.scrollEnabled =NO;
     }
     return _tableView;
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.view addSubview:self.tableView];
+//    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    NSString *certificationStr = [Myuser objectForKey:KUserSubmitCertification];
+    self.certStr = certificationStr;
     /**证件照正面*/
     UIImageView *positeImageView = [[UIImageView alloc] initWithFrame:CGRectMake(10, 280, (self.view.CZH_width-30)/2, self.view.CZH_width/3)];
     
@@ -165,46 +172,7 @@
     NSString *encodedImageStr = [data base64EncodedStringWithOptions:NSDataBase64Encoding64CharacterLineLength];
     return encodedImageStr;
 }
-/***
-- (void)tureBtnClick{
-    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-    NSString *idStr = [userDefaults objectForKey:kUserIDKey];
-    NSInteger intString = [idStr intValue];
-    // 1.URL
-    NSURL *url = [NSURL URLWithString:@"http://119.23.206.144:8000/v1/user/apply-kyc"];
-    // 2.请求
-    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
-    // 3.请求方法
-    request.HTTPMethod = @"POST";
-    // 4.设置请求体（请求参数）
-    // 创建一个描述订单信息的JSON数据
-    NSDictionary *orderInfo = @{
-                                @"cert_num" : self.IDNum.text,
-                                @"cert_type" : @1,
-                                @"gender" : self.maleorfemale,
-                                @"name" : self.userName.text,
-                                @"photo_back" : self.reverseImageStr,
-                                @"photo_front" : self.positeImageStr,
-                                @"user_id" : @(intString)
-                                };
-    //把字典转换为可以传输的NSData类型
-    NSData *json = [NSJSONSerialization dataWithJSONObject:orderInfo options:NSJSONWritingPrettyPrinted error:nil];
-    request.HTTPBody = json;
-    // 5.设置请求头：这次请求体的数据不再是普通的参数，而是一个JSON数据
-    [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
-    // 6.发送请求
-    [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
-        if (data == nil || connectionError) return;
-        NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableLeaves error:nil];
-        NSString *error = dict[@"error"];
-        if (error) {
-            CZHLog(@"-------");
-        } else {
-            NSString *success = dict[@"success"];
-            CZHLog(@"-------%@",dict);
-        }
-    }];
-}*/
+
 #pragma mark - UITableViewDataSource , UITableViewDelegate
 -(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
     return nil;
@@ -232,42 +200,50 @@
     }
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
     static NSString *CellIdentifierID = @"cell_KYCVC";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifierID];
     if (!cell) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:CellIdentifierID];
     }
-    //cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator; //显示最右边的箭头
-    //NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-    //NSString *userTel = [userDefaults objectForKey:kUserTelKey];
+    
     if (indexPath.section == 0) {
         if (indexPath.row == 0) {
-            Czh_NameCell *cell = [Czh_NameCell cellWithTableView:tableView];
-            cell.leftLabel.text = @"姓名";
-            cell.textField.placeholder = @"请输入您的真实名字";
-            return cell;
+            _Namecell.selectionStyle = UITableViewCellSelectionStyleNone;
+            _Namecell = [Czh_NameCell cellWithTableView:tableView];
+            _Namecell.leftLabel.text = @"姓名";
+            _Namecell.textField.placeholder = @"请输入您的真实名字";
+            return _Namecell;
         }else if (indexPath.row == 1){
-            Czh_maleCell *cell = [Czh_maleCell cellWithTableView:tableView];
-            cell.delegate = self;
-            cell.leftLabel.text = @"性别";
-            return cell;
+            _maleCell.selectionStyle = UITableViewCellSelectionStyleNone;
+            _maleCell = [Czh_maleCell cellWithTableView:tableView];
+            _maleCell.delegate = self;
+            _maleCell.leftLabel.text = @"性别";
+            return _maleCell;
         }
     }else{
         if (indexPath.row == 0) {
             Czh_NameCell *cell = [Czh_NameCell cellWithTableView:tableView];
+            cell.selectionStyle = UITableViewCellSelectionStyleNone;
             cell.leftLabel.text = @"证件类型";
             cell.textField.placeholder = @"身份证";
             cell.userInteractionEnabled =NO;
             return cell;
         }else if (indexPath.row == 1) {
-            Czh_NameCell *cell = [Czh_NameCell cellWithTableView:tableView];
-            cell.leftLabel.text = @"证件号码";
-            cell.textField.placeholder = @"请输入证件号码";
-            return cell;
+            _IDcell = [Czh_NameCell cellWithTableView:tableView];
+            _IDcell.selectionStyle = UITableViewCellSelectionStyleNone;
+            _IDcell.leftLabel.text = @"证件号码";
+            _IDcell.textField.placeholder = @"请输入证件号码";
+            return _IDcell;
         }else if (indexPath.row == 2) {
             Czh_NameCell *cell = [Czh_NameCell cellWithTableView:tableView];
+            cell.selectionStyle = UITableViewCellSelectionStyleNone;
             cell.leftLabel.text = @"上传证件照";
-            cell.userInteractionEnabled =NO;
+            if ([self.certStr isEqualToString:@"1"]) {
+                cell.textField.placeholder = @"";
+            }else{
+                
+            }
             return cell;
         }
     }
@@ -276,7 +252,73 @@
 
 
 -(void)didClickButton:(UIButton *)sender{
-    CZHLog(@"----------%@",sender.titleLabel.text);
+    self.maleorfemale = sender.titleLabel.text;
+    if ([sender.titleLabel.text isEqualToString:@"男"]) {
+        self.maleorfemale = @"male";
+    }else{
+        self.maleorfemale = @"female";
+    }
+    CZHLog(@"----------%@",self.maleorfemale);
 }
-
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    [self.view endEditing:YES];
+}
+/***/
+ - (void)tureBtnClick{
+     if (self.IDcell.textField.text.length == 0) {
+         [Czh_WarnWindow HUD:self.view andWarnText:@"请输入身份证号码！" andXoffset:0 andYoffset:Main_Screen_Width/2];
+     }else if (self.maleorfemale.length == 0){
+         [Czh_WarnWindow HUD:self.view andWarnText:@"请选择性别！" andXoffset:0 andYoffset:Main_Screen_Width/2];
+     }else if (self.Namecell.textField.text.length == 0){
+         [Czh_WarnWindow HUD:self.view andWarnText:@"请输入您的真实姓名！" andXoffset:0 andYoffset:Main_Screen_Width/2];
+     }else if (self.reverseImageStr.length == 0 || self.positeImageStr.length == 0){
+         [Czh_WarnWindow HUD:self.view andWarnText:@"请上传您的证件照片！" andXoffset:0 andYoffset:Main_Screen_Width/2];
+     }else{
+         [self tureToHttp];
+     }
+     
+ }
+-(void)tureToHttp{
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    NSString *idStr = [userDefaults objectForKey:kUserIDKey];
+    NSInteger intString = [idStr intValue];
+    // 1.URL
+    NSURL *url = [NSURL URLWithString:@"http://119.23.206.144:8000/v1/user/apply-kyc"];
+    // 2.请求
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
+    // 3.请求方法
+    request.HTTPMethod = @"POST";
+    // 4.设置请求体（请求参数）
+    // 创建一个描述订单信息的JSON数据
+    NSDictionary *orderInfo = @{
+                                @"cert_num" : self.IDcell.textField.text,
+                                @"cert_type" : @1,
+                                @"gender" : self.maleorfemale,
+                                @"name" : self.Namecell.textField.text,
+                                @"photo_back" : self.reverseImageStr,
+                                @"photo_front" : self.positeImageStr,
+                                @"user_id" : @(intString)
+                                };
+    //把字典转换为可以传输的NSData类型
+    NSData *json = [NSJSONSerialization dataWithJSONObject:orderInfo options:NSJSONWritingPrettyPrinted error:nil];
+    request.HTTPBody = json;
+    // 5.设置请求头：这次请求体的数据不再是普通的参数，而是一个JSON数据
+    [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+    // 6.发送请求
+    [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
+        if (data == nil || connectionError) return;
+        NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableLeaves error:nil];
+        NSString *error = dict[@"error"];
+        if (error) {
+            CZHLog(@"-------");
+        } else {
+            CZHLog(@"-------%@",dict);
+            [userDefaults setObject:dict[@"data"]  forKey:KUserSubmitCertification];//已提交认证
+            [userDefaults setObject:self.maleorfemale  forKey:kUserGenderKey];//保存性别
+            [userDefaults setObject:self.Namecell.textField.text  forKey:KUserRealUserNameKey];//保存真实姓名
+            [userDefaults setObject:self.IDcell.textField.text  forKey:KUserRealUserIDNumKey];//保存身份证号码
+            [userDefaults synchronize];//写入沙盒
+        }
+    }];
+}
 @end

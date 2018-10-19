@@ -5,6 +5,8 @@
 
 #import "Czh_NameCell.h"
 
+
+
 @implementation Czh_NameCell
 + (instancetype)cellWithTableView:(UITableView *)tableView{
     static NSString *ID = @"Czh_NameCell";
@@ -21,7 +23,6 @@
     if (self=[super initWithStyle:style reuseIdentifier:reuseIdentifier])
     {
         self.backgroundColor = [UIColor whiteColor];
-        
         _leftLabel = [[UILabel alloc] init];
         _leftLabel.textColor = [UIColor blackColor];
         _leftLabel.font = [UIFont systemFontOfSize:14];
@@ -29,6 +30,7 @@
         [self.contentView addSubview:_leftLabel];
         
         _textField = [[UITextField alloc] init];
+        _textField.delegate = self;//设置代理方法的实现类
         _textField.keyboardType = UIKeyboardTypeDefault;
         _textField.font = [UIFont systemFontOfSize:14];
         _textField.textAlignment = NSTextAlignmentRight;
@@ -44,8 +46,6 @@
     self.leftLabel.frame = CGRectMake(15, 20, labelContentWidth, self.CZH_height-40);
     self.textField.frame = CGRectMake(labelContentWidth+15, 10, self.CZH_width-labelContentWidth-30, 30);
 }
-
-
 
 
 

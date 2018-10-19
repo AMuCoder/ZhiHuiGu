@@ -37,7 +37,8 @@ static char bbListenTabbarViewMove[] = "bbListenTabbarViewMove";
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.edgesForExtendedLayout = UIRectEdgeNone;
-    self.view.backgroundColor = [UIColor whiteColor];
+//    self.view.backgroundColor = [UIColor whiteColor];
+    self.view.backgroundColor = CZHRGBColor(244, 245, 246);
 }
 
 

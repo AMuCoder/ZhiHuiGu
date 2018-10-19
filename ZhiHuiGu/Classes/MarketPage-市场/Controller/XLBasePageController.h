@@ -35,7 +35,7 @@
 -(CGFloat)heightForHeaderViewPager:(XLBasePageController *)viewPager;
 @end
 
-@interface XLBasePageController : UIViewController
+@interface XLBasePageController : BBGestureBaseController
 @property (nonatomic,weak) id<XLBasePageControllerDataSource> dataSource;
 @property (nonatomic,weak) id<XLBasePageControllerDelegate> delegate;
 ///刷新

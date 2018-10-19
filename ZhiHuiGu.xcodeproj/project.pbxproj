@@ -98,6 +98,7 @@
 		259F4C25217898D50010A00F /* Czh_KYCCertVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 259F4C24217898D50010A00F /* Czh_KYCCertVC.m */; };
 		259F4C2821789F590010A00F /* Czh_maleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 259F4C2721789F590010A00F /* Czh_maleCell.m */; };
 		259F4C2B2178AA180010A00F /* Czh_ZYbtn.m in Sources */ = {isa = PBXBuildFile; fileRef = 259F4C2A2178AA180010A00F /* Czh_ZYbtn.m */; };
+		25B6C82E2179C17A0041C92A /* Czh_UserIconVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 25B6C82D2179C17A0041C92A /* Czh_UserIconVC.m */; };
 		25B728402154B06A00D22E94 /* LCUserDefaultsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 25B7283C2154B06A00D22E94 /* LCUserDefaultsModel.m */; };
 		25B728412154B06A00D22E94 /* NSUserDefaultsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 25B7283E2154B06A00D22E94 /* NSUserDefaultsModel.m */; };
 		25B7B9162153DAB30053A2A5 /* NSString+MD5Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 25B7B8E12153DAB30053A2A5 /* NSString+MD5Addition.m */; };
@@ -384,6 +385,8 @@
 		259F4C2721789F590010A00F /* Czh_maleCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Czh_maleCell.m; sourceTree = "<group>"; };
 		259F4C292178AA180010A00F /* Czh_ZYbtn.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Czh_ZYbtn.h; sourceTree = "<group>"; };
 		259F4C2A2178AA180010A00F /* Czh_ZYbtn.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Czh_ZYbtn.m; sourceTree = "<group>"; };
+		25B6C82C2179C17A0041C92A /* Czh_UserIconVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Czh_UserIconVC.h; sourceTree = "<group>"; };
+		25B6C82D2179C17A0041C92A /* Czh_UserIconVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Czh_UserIconVC.m; sourceTree = "<group>"; };
 		25B7283C2154B06A00D22E94 /* LCUserDefaultsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCUserDefaultsModel.m; sourceTree = "<group>"; };
 		25B7283D2154B06A00D22E94 /* NSUserDefaultsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSUserDefaultsModel.h; sourceTree = "<group>"; };
 		25B7283E2154B06A00D22E94 /* NSUserDefaultsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSUserDefaultsModel.m; sourceTree = "<group>"; };
@@ -785,6 +788,8 @@
 				25245DA421781D65004B4BEB /* Czh_KYCCertificationVC.m */,
 				259F4C23217898D50010A00F /* Czh_KYCCertVC.h */,
 				259F4C24217898D50010A00F /* Czh_KYCCertVC.m */,
+				25B6C82C2179C17A0041C92A /* Czh_UserIconVC.h */,
+				25B6C82D2179C17A0041C92A /* Czh_UserIconVC.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1786,6 +1791,7 @@
 				259AD7BA21742C9000D3DE37 /* ViewController.m in Sources */,
 				25B7B9962153E4720053A2A5 /* CZHButton.m in Sources */,
 				25DD4D1D216849A70076DC77 /* MJExtensionConst.m in Sources */,
+				25B6C82E2179C17A0041C92A /* Czh_UserIconVC.m in Sources */,
 				252E4006216901050041DA4F /* RTNavigationBar.m in Sources */,
 				25558F9F217577D30031CBCE /* Czh_UserInfoView.m in Sources */,
 				2504FD1B215A0FFD00691990 /* Czh_Button.m in Sources */,

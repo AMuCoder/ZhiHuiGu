@@ -6,5 +6,4 @@
 #import "BBGestureBaseController.h"
 
 @interface Czh_KYCCertVC : BBGestureBaseController
-- (void)clickTest:(NSString *)tag;
 @end

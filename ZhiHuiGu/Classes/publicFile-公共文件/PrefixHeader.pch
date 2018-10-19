@@ -31,6 +31,7 @@
 #import "MJExtension.h"
 #import "Czh_AccountTool.h"
 #import "CZHAlertView.h"
+#import "MBProgressHUD+MJ.h"
 //----------------------头文件--------------------------
 /**/
 //----------------------主请求路径--------------------------
@@ -99,6 +100,11 @@
 #define KcellAssetsCurrencyTypeText @"cellInfoCurrencyLabelText"//选择资产类型
 #define KUserhas_pay_pwdKey @"has_pay_pwd"//是否有支付密码
 #define KUserauthorizedKey @"authorized"//实名认证
+#define KUserSubmitCertification @"SubmitCertification"//已提交认证（审核中）
+#define KUserCertificationSucess @"CertificationSucess"//认证成功
+#define KUserRealUserNameKey @"RealUserName"//保存真实姓名
+#define KUserRealUserIDNumKey @"RealUserIDNum"//保存身份证号码
+#define KUserUserIconStrKey @"UserIconStr"//保存身份证号码
 //----------------------沙盒--------------------------
 
 //判断是真机还是模拟器
